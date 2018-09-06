@@ -8,81 +8,50 @@ namespace BigRogue.Avatar {
 
         [Header ("身体部分")]
 
-        // 身体
-        public int m_avatarPartBodyID;
-        public BodyAvatar avatarPartBody;
+        // avatar IDs
+        public int bodyAvatarID;
+        public int beardAvatarID;
+        public int earsAvatarID;
+        public int hornsAvatarID;
+        public int hairAvatarID;
 
+        // avatar Resources
+        public BodyAvatar bodyAvatar;
+        public GameObject beardAvatar;
+        public GameObject earsAvatar;
+        public GameObject hornsAvatar;
+        public GameObject hairAvatar;
 
-        public int m_bodyMatId;
-        public Material bodyMat;
-
-        // public int m_sexId;
-
-        // public int m_skinColorId;
-
-        // public int m_skinPictureId;
-
-        // public int m_skinPictureColorId;
-
-        [Header ("头部")]
-
-        // 胡子
-
-        public int m_beardMeshId;
-        public int m_beardMatId;
-
-        // public int m_beardColorId;
-
-        // 耳朵
-
-        public int m_earsMeshId;
-        public int m_earsMatId;
-
-        // public int m_earPictureId;
-
-        // 角
-
-        public int m_hornsMeshId;
-        public int m_hornsMatId;
-        // public int m_hornsPictureId;
 
         // 装备部分
+        /// <summary>
+        /// 内衣ID,更换内衣会改变BodyAvatar和贴图
+        /// </summary>
+        public int underwearID;
+        public int bodyMatID;
+        public Material bodyMat;
 
-        public int m_headEquipId; // 皇冠,帽子,头巾,头盔,面具
 
-        public int m_bagEquipId; // 背包,麻袋,背篮
+        public int headEquipID; // 皇冠,帽子,头巾,头盔,面具
+        public int bagEquipID; // 背包,麻袋,背篮
+        public int wingEquipID; // 翅膀,神器
+        public int jacketID;   // 衣服
+        public int weaponID;   // 武器类型很多
 
-        public int m_wingEquipId; // 翅膀,神器
 
-        public int m_jacketId;
-
-        public int m_weaponId;
 
         /// <summary>
-        /// 设置默认值
+        /// 创建BodyAvatar
         /// </summary>
-        public void SetDefault () {
-
-        }
-
-        /// <summary>
-        /// 根据数据生成模型
-        /// </summary>
-        public void Create () {
-
-        }
-
-        private void Awake () {
-            avatarPartBody = AvatarDataUtil.GetAvatarPartBody(m_avatarPartBodyID);
-            BodyAvatar bodyGo = Instantiate<BodyAvatar>(avatarPartBody);
-            bodyGo.transform.SetParent(transform);
-
-            bodyGo.bodyMaterial = bodyMat;
+        void CreateBodyAvatar() {
+            bodyAvatar = Instantiate<BodyAvatar>(AvatarDataUtil.GetAvatarPartBody(bodyAvatarID));
+            bodyAvatar.transform.SetParent(transform);
+            bodyAvatar.bodyMaterial = bodyMat;
         }
 
         private void OnGUI() {
             if(GUI.Button(new Rect(50, 50, 50, 50), "ChangeBody")) {
-                m_avatarPartBodyID = 2;
+                bodyAvatarID = 2;
             }
         }
     }
