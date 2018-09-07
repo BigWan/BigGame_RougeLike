@@ -113,15 +113,15 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &520930053
+--- !u!1 &1024758308
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 520930055}
-  - component: {fileID: 520930054}
+  - component: {fileID: 1024758310}
+  - component: {fileID: 1024758309}
   m_Layer: 0
   m_Name: Avatar
   m_TagString: Untagged
@@ -129,38 +129,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &520930054
+--- !u!114 &1024758309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 520930053}
+  m_GameObject: {fileID: 1024758308}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7874647d4042f9844b5521eebc9ecbca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_avatarPartBodyID: 1
-  avatarPartBody: {fileID: 0}
-  m_bodyMatId: 0
-  bodyMat: {fileID: 2100000, guid: 47aeea4092e8e634b85da7d3df3e8da1, type: 2}
-  m_beardMeshId: 0
-  m_beardMatId: 0
-  m_earsMeshId: 0
-  m_earsMatId: 0
-  m_hornsMeshId: 0
-  m_hornsMatId: 0
-  m_headEquipId: 0
-  m_bagEquipId: 0
-  m_wingEquipId: 0
-  m_jacketId: 0
-  m_weaponId: 0
---- !u!4 &520930055
+--- !u!4 &1024758310
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 520930053}
+  m_GameObject: {fileID: 1024758308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
