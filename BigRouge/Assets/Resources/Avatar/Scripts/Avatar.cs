@@ -15,6 +15,12 @@ namespace BigRogue.Avatar {
         Dictionary<AvatarPartType, GameObject> avatarGOs;
 
 
+        public BodyAvatar bodyAvatar {
+            get {
+                return GetAvatarGameObject(AvatarPartType.Body).GetComponent<BodyAvatar>();
+            }
+        }
+
         public int GetAvatarID(AvatarPartType apt) {
             if (avatarIDs.ContainsKey(apt))
                 return avatarIDs[apt];
@@ -61,18 +67,33 @@ namespace BigRogue.Avatar {
 
         }
 
+        public void MainBody() {
+
+        }
+
         public void BuildAvatarPart(AvatarPartType apt) {
-            if (apt == AvatarPartType.Body)
+            if (apt == AvatarPartType.Body) {
                 BuildBody();
-            else
-                BuildBody();
+                return;
+            }
+
+            if (GetAvatarID(apt) == -1) return;
+            GameObject newPart = LoadAvatar(apt);
+            GameObject oldPart = GetAvatarGameObject(apt);
+            if (oldPart != null) Destroy(oldPart);
+
+            GameObject go = Instantiate<GameObject>(newPart);
+
+            
+            
+
         }
 
 
         public void BuildBody() {
             AvatarPartType body = AvatarPartType.Body;
             if (GetAvatarID(AvatarPartType.Body) == -1) return;
-            GameObject newBody = LoadAvatar(body, GetAvatarID(body));
+            GameObject newBody = LoadAvatar(body);
 
             GameObject oldBody = GetAvatarGameObject(body);
             if (oldBody != null)
@@ -87,7 +108,8 @@ namespace BigRogue.Avatar {
         }
 
 
-        public static GameObject LoadAvatar(AvatarPartType apt, int aID) {
+        public  GameObject LoadAvatar(AvatarPartType apt ) {
+            int aID = GetAvatarID(apt);
             string path = AvatarDataHandler.GetResourcePath(apt, aID);
             GameObject go = Resources.Load<GameObject>(path);
             if (go == null) throw new UnityException($"载入资源出错{path}");
