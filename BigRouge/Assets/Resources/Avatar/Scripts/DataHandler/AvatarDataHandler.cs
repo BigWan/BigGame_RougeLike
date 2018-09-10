@@ -3,114 +3,147 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace BigRogue.Avatar {
+    /// <summary>
+    /// 部件信息
+    /// </summary>
+    public struct AvatarPartRecord {
 
-    public enum AvatarPartType {
-        Body = 1,
-        Beard = 2,
-        Ears = 3,
-        Hair = 4,
-        Horns = 5
+        public static AvatarPartRecord empty = new AvatarPartRecord(-1,"","");
+
+
+        /// <summary>
+        /// 部件ID
+        /// </summary>
+        public int id;
+        /// <summary>
+        /// 部件的AvatarPartTypeRecord类型
+        /// </summary>
+        public string avatarPartTypeName;
+        /// <summary>
+        /// 部件美术路径
+        /// </summary>
+        public string path;
+
+        public AvatarPartRecord(int id = -1,string avatarPartTypeName = "", string path = "") {
+            this.id = id;
+            this.path = path;
+            this.avatarPartTypeName = avatarPartTypeName;
+        }
+
+        
     }
-
-    public enum SexType {
-        Both = 0,
-        Female = 1,
-        Male = 2
-    }
-
 
     /// <summary>
     /// 负责读取数据表
+    /// 部件类型表(部件类型名字和部件挂点类型)
+    /// 部件表(部件id,部件类型,部件资源)
     /// </summary>
     public static class AvatarDataHandler {
 
-        public static string avatarDataPath = "Avatar/Texts/";
+        const string avatarPartTypeFileName = "Avatar/Texts/AvatarPartType";
+        const string avatarPartFileName     = "Avatar/Texts/AvatarPart";
 
-
-        /// <summary>
-        /// Avatar 配置文件名
-        /// </summary>
-        static Dictionary<AvatarPartType, string> avatarDataFileNames;
+        const string avatarResFolder = "Avatar/AvatarParts/";
 
         /// <summary>
-        /// Avatar 配置数据
+        /// AvatarPartTypeRecord 的数据库
+        /// key = 部件类型名称
+        /// value = 资源的挂点类型
         /// </summary>
-        static Dictionary<AvatarPartType, AvatarData> avatarDatas;
+        static Dictionary<string, MountingType> avatarPartTypeDataSheet;
 
+        /// <summary>
+        /// avatar 的部件ID 表
+        /// key 部件ID
+        /// value 部件记录
+        /// </summary>
+        static Dictionary<int, AvatarPartRecord> avatarPartDataSheet;
 
+        public static int Count {
+            get {
+                return avatarPartDataSheet.Count;
+            }
+        }
 
         static AvatarDataHandler() {
-            avatarDataFileNames = new Dictionary<AvatarPartType, string>();
-            avatarDatas = new Dictionary<AvatarPartType, AvatarData>();
+            avatarPartTypeDataSheet = new Dictionary<string, MountingType>();
+            avatarPartDataSheet = new Dictionary<int, AvatarPartRecord>();
 
-            InitFileNames();
-            ReloadAvatarDatas();
+            LoadAvatarPartType();
+            LoadAvatarPart();
         }
 
         /// <summary>
-        /// 构造文件名
+        /// 载入类型描述文件
         /// </summary>
-        static void InitFileNames() {
-            foreach (int avatarPartTypeID in System.Enum.GetValues(typeof(AvatarPartType))) {
-                AvatarPartType item = (AvatarPartType)avatarPartTypeID;
-                avatarDataFileNames.Add(
-                    item,
-                    "Avatar" + item.ToString()
-                );
+        static void LoadAvatarPartType() {
+
+            string[] lines = Util.SimpleCsv.OpenCsv(avatarPartTypeFileName);
+
+            string[] cells;
+            for (int i = 0; i < lines.Length; i++) {
+                try {
+
+                    cells = lines[i].Split(',');
+                    if (cells == null || cells.Length < 2) continue;
+                    avatarPartTypeDataSheet.Add(
+                        cells[0],
+                        (MountingType)System.Enum.Parse(typeof(MountingType), cells[1])
+                        );
+
+                } catch (System.Exception) {
+
+                    throw;
+                }
+               
             }
         }
 
-        /// <summary>
-        /// 重新加载配置文件
-        /// </summary>
-        public static void ReloadAvatarDatas() {
-            string path;
-            AvatarData data;
-            avatarDatas.Clear();
-            foreach (int avatarPartTypeID in System.Enum.GetValues(typeof(AvatarPartType))) {
-                AvatarPartType avatarPartType = (AvatarPartType)avatarPartTypeID;
+        // 载入部件信息表
+        static void LoadAvatarPart() {
+            string[] lines = Util.SimpleCsv.OpenCsv(avatarPartFileName);
+            string[] cells;
 
-                path = avatarDataFileNames[avatarPartType];
+            for (int i = 0; i < lines.Length; i++) {
+                try {
+                    cells = lines[i].Split(',');
+                    AvatarPartRecord apr = new AvatarPartRecord(
+                    int.Parse(cells[0]), cells[1], avatarResFolder+cells[2]
+                    );
 
-                data = new AvatarData(avatarPartType.ToString(), avatarDataPath + path);
-                avatarDatas.Add(avatarPartType, data);
+                    avatarPartDataSheet.Add(apr.id, apr);
+                } catch (System.Exception) {
+
+                    throw;
+                }
+                
             }
 
         }
 
-        /// <summary>
-        /// 获取资源路径
-        /// </summary>
-        /// <param name="avatarPartTypeID">部件的类型ID</param>
-        /// <param name="avatarID">部件的ID</param>
-        public static (MountPointType,string) GetAvatarInfo(AvatarPartType partType, int avatarID) {
-            if (avatarDatas == null) ReloadAvatarDatas();
-            if (avatarDatas == null || avatarDatas[partType] == null) throw new UnityException("数据异常!!!");
-            AvatarRecord record = avatarDatas[partType][avatarID];
 
-            return (record.mpt, record.path);
+        // API
+        /// <summary>
+        /// 根据部件类型名查询部件的挂点信息
+        /// </summary>
+        /// <param name="avatarPartName">部件的名称信息</param>
+        /// <returns>挂载类型</returns>
+        public static MountingType GetMountingType(string avatarPartName) {
+            return avatarPartTypeDataSheet[avatarPartName];
         }
 
-        ///// <summary>
-        ///// 返回空的资源
-        ///// </summary>
-        ///// <returns></returns>
-        //public static List<string> GetNullResources() {
-        //    List<string> result = new List<string>();
-        //    foreach (int avatarPartTypeID in System.Enum.GetValues(typeof(AvatarPartType))) {
-        //        foreach (var item in avatarDatas[(AvatarPartType)avatarPartTypeID]) {
-        //            GameObject go = Resources.Load<GameObject>(item.Value);
-        //            if(go ==null)
-        //                result.Add(item.Value);
-                    
-        //        }
-
-        //    }
-        //    return result;
-        //}
-
-
-
+        /// <summary>
+        /// 获取Apr
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static AvatarPartRecord GetAvatarPartRecord(int id) {
+            if (avatarPartDataSheet.ContainsKey(id))
+                return avatarPartDataSheet[id];
+            else
+                return AvatarPartRecord.empty;
+        }
 
     }
+
 }

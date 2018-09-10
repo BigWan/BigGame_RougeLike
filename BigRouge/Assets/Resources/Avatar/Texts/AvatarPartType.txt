@@ -1,0 +1,13 @@
+//Enum,MountPointType
+MainBody,Root
+Jacket,Base
+Beard,Head
+Ears,Head
+Hair,Head
+Face,Head
+Horn,Head
+Wing,Back
+Bag,Back
+MainHand,Left
+OffHand,Right
+Quiver,Back

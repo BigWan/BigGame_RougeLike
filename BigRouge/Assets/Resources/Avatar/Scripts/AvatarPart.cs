@@ -4,18 +4,38 @@ using UnityEngine;
 
 namespace BigRogue.Avatar {
 
-
     /// <summary>
     /// 一个换装部件的基类
     /// </summary>
-    public class AvatarPartBase :MonoBehaviour {
+    public class AvatarPart : MonoBehaviour {
+
+        public AvatarPartRecord apr { get; set; }
+
+
         // 这个 Avatar 的类型
-        public AvatarPartType avatarPartType;
+        public string avatarPartTypeName {
+            get {
+                return apr.avatarPartTypeName;
+            }
+        }
 
-        // 这个东西需要挂在哪里
-        public MountPointType[] mountPoints;
+        public int id {
+            get {
+                return apr.id;
+            }
+        }
 
-        //public GameObject avatarGO;
+
+
+        // 这个东西可以被挂在哪里
+        public MountingType mountingType {
+            get {
+                return AvatarDataHandler.GetMountingType(avatarPartTypeName);
+            }
+        }
+
+
+        
 
     }
 }

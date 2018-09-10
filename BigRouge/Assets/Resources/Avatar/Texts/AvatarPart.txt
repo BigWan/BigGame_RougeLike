@@ -1,0 +1,339 @@
+//ID,AvatarPartType,RES
+0,MainBody,MainBody/AvatarBodyNormal
+1,MainBody,MainBody/AvatarBodySRobe
+2,MainBody,MainBody/AvatarBodyLRobe
+20001,Beard,Beards/Beard 01 Black
+20002,Beard,Beards/Beard 01 Blonde
+20003,Beard,Beards/Beard 01 Brown
+20004,Beard,Beards/Beard 01 Cyan
+20005,Beard,Beards/Beard 01 Grey
+20006,Beard,Beards/Beard 01 Purple
+20007,Beard,Beards/Beard 01 Red
+20008,Beard,Beards/Beard 02 Black
+20009,Beard,Beards/Beard 02 Blonde
+20010,Beard,Beards/Beard 02 Brown
+20011,Beard,Beards/Beard 02 Cyan
+20012,Beard,Beards/Beard 02 Grey
+20013,Beard,Beards/Beard 02 Purple
+20014,Beard,Beards/Beard 02 Red
+20015,Beard,Beards/Beard 03 Black
+20016,Beard,Beards/Beard 03 Blonde
+20017,Beard,Beards/Beard 03 Brown
+20018,Beard,Beards/Beard 03 Cyan
+20019,Beard,Beards/Beard 03 Grey
+20020,Beard,Beards/Beard 03 Purple
+20021,Beard,Beards/Beard 03 Red
+20022,Beard,Beards/Beard 04 Black
+20023,Beard,Beards/Beard 04 Blonde
+20024,Beard,Beards/Beard 04 Blue
+20025,Beard,Beards/Beard 04 Brown
+20026,Beard,Beards/Beard 04 Purple
+20027,Beard,Beards/Beard 04 Red
+20028,Beard,Beards/Beard 04 White
+20029,Beard,Beards/Jaw 01 Black
+20030,Beard,Beards/Jaw 01 Blue
+20031,Beard,Beards/Jaw 01 Green
+20032,Beard,Beards/Jaw 01 Purple
+20033,Beard,Beards/Jaw 01 Red
+30001,Ears,Ears/Bunny Ears Black Blue
+30002,Ears,Ears/Bunny Ears Black Pink
+30003,Ears,Ears/Bunny Ears Black Purple
+30004,Ears,Ears/Bunny Ears Strips Black
+30005,Ears,Ears/Bunny Ears Strips Blue
+30006,Ears,Ears/Bunny Ears Strips Brown
+30007,Ears,Ears/Bunny Ears Strips Purple
+30008,Ears,Ears/Bunny Ears White Pink
+30009,Ears,Ears/Bunny Ears White Purple
+30010,Ears,Ears/Cat Ears Black Blue
+30011,Ears,Ears/Cat Ears Black Green
+30012,Ears,Ears/Cat Ears Black Pink
+30013,Ears,Ears/Cat Ears Black Purple
+30014,Ears,Ears/Cat Ears Black Red
+30015,Ears,Ears/Cat Ears Black Yellow
+30016,Ears,Ears/Cat Ears White Blue
+30017,Ears,Ears/Cat Ears White Purple
+30018,Ears,Ears/Cat Ears White Red
+30019,Ears,Ears/Cat Ears White Yellow
+30020,Ears,Ears/Elf Ears Black 01
+30021,Ears,Ears/Elf Ears Brown 01
+30022,Ears,Ears/Elf Ears White 01
+41001,Hair,Hairs/Female/Hair Female 01 Black
+41002,Hair,Hairs/Female/Hair Female 01 Blonde
+41003,Hair,Hairs/Female/Hair Female 01 Brown
+41004,Hair,Hairs/Female/Hair Female 01 Cyan
+41005,Hair,Hairs/Female/Hair Female 01 Purple
+41006,Hair,Hairs/Female/Hair Female 01 Red
+41007,Hair,Hairs/Female/Hair Female 01 White
+41008,Hair,Hairs/Female/Hair Female 02 Black
+41009,Hair,Hairs/Female/Hair Female 02 Blonde
+41010,Hair,Hairs/Female/Hair Female 02 Brown
+41011,Hair,Hairs/Female/Hair Female 02 Cyan
+41012,Hair,Hairs/Female/Hair Female 02 Grey
+41013,Hair,Hairs/Female/Hair Female 02 Purple
+41014,Hair,Hairs/Female/Hair Female 02 Red
+41015,Hair,Hairs/Female/Hair Female 03 Black
+41016,Hair,Hairs/Female/Hair Female 03 Blonde
+41017,Hair,Hairs/Female/Hair Female 03 Brown
+41018,Hair,Hairs/Female/Hair Female 03 Cyan
+41019,Hair,Hairs/Female/Hair Female 03 Grey
+41020,Hair,Hairs/Female/Hair Female 03 Purple
+41021,Hair,Hairs/Female/Hair Female 03 Red
+41022,Hair,Hairs/Female/Hair Female 04 Black
+41023,Hair,Hairs/Female/Hair Female 04 Blonde
+41024,Hair,Hairs/Female/Hair Female 04 Brown
+41025,Hair,Hairs/Female/Hair Female 04 Cyan
+41026,Hair,Hairs/Female/Hair Female 04 Grey
+41027,Hair,Hairs/Female/Hair Female 04 Purple
+41028,Hair,Hairs/Female/Hair Female 04 Red
+41029,Hair,Hairs/Female/Hair Female 05 Black
+41030,Hair,Hairs/Female/Hair Female 05 Blonde
+41031,Hair,Hairs/Female/Hair Female 05 Brown
+41032,Hair,Hairs/Female/Hair Female 05 Cyan
+41033,Hair,Hairs/Female/Hair Female 05 Grey
+41034,Hair,Hairs/Female/Hair Female 05 Purple
+41035,Hair,Hairs/Female/Hair Female 05 Red
+41036,Hair,Hairs/Female/Hair Female 06 Black
+41037,Hair,Hairs/Female/Hair Female 06 Blonde
+41038,Hair,Hairs/Female/Hair Female 06 Brown
+41039,Hair,Hairs/Female/Hair Female 06 Cyan
+41040,Hair,Hairs/Female/Hair Female 06 Grey
+41041,Hair,Hairs/Female/Hair Female 06 Purple
+41042,Hair,Hairs/Female/Hair Female 06 Red
+41043,Hair,Hairs/Female/Hair Female 07 Black
+41044,Hair,Hairs/Female/Hair Female 07 Blonde
+41045,Hair,Hairs/Female/Hair Female 07 Brown
+41046,Hair,Hairs/Female/Hair Female 07 Cyan
+41047,Hair,Hairs/Female/Hair Female 07 Grey
+41048,Hair,Hairs/Female/Hair Female 07 Purple
+41049,Hair,Hairs/Female/Hair Female 07 Red
+41050,Hair,Hairs/Female/Hair Female 08 Black
+41051,Hair,Hairs/Female/Hair Female 08 Blonde
+41052,Hair,Hairs/Female/Hair Female 08 Brown
+41053,Hair,Hairs/Female/Hair Female 08 Cyan
+41054,Hair,Hairs/Female/Hair Female 08 Grey
+41055,Hair,Hairs/Female/Hair Female 08 Purple
+41056,Hair,Hairs/Female/Hair Female 08 Red
+41057,Hair,Hairs/Female/Hair Female 09 Black
+41058,Hair,Hairs/Female/Hair Female 09 Blonde
+41059,Hair,Hairs/Female/Hair Female 09 Brown
+41060,Hair,Hairs/Female/Hair Female 09 Cyan
+41061,Hair,Hairs/Female/Hair Female 09 Grey
+41062,Hair,Hairs/Female/Hair Female 09 Purple
+41063,Hair,Hairs/Female/Hair Female 09 Red
+41064,Hair,Hairs/Female/Hair Female 10 Black
+41065,Hair,Hairs/Female/Hair Female 10 Blonde
+41066,Hair,Hairs/Female/Hair Female 10 Brown
+41067,Hair,Hairs/Female/Hair Female 10 Cyan
+41068,Hair,Hairs/Female/Hair Female 10 Grey
+41069,Hair,Hairs/Female/Hair Female 10 Purple
+41070,Hair,Hairs/Female/Hair Female 10 Red
+41071,Hair,Hairs/Female/Hair Female 11 Black
+41072,Hair,Hairs/Female/Hair Female 11 Blonde
+41073,Hair,Hairs/Female/Hair Female 11 Brown
+41074,Hair,Hairs/Female/Hair Female 11 Cyan
+41075,Hair,Hairs/Female/Hair Female 11 Grey
+41076,Hair,Hairs/Female/Hair Female 11 Purple
+41077,Hair,Hairs/Female/Hair Female 11 Red
+41078,Hair,Hairs/Female/Hair Female 12 Black
+41079,Hair,Hairs/Female/Hair Female 12 Blonde
+41080,Hair,Hairs/Female/Hair Female 12 Brown
+41081,Hair,Hairs/Female/Hair Female 12 Cyan
+41082,Hair,Hairs/Female/Hair Female 12 Grey
+41083,Hair,Hairs/Female/Hair Female 12 Purple
+41084,Hair,Hairs/Female/Hair Female 12 Red
+41085,Hair,Hairs/Female/Hair Female 13 Black
+41086,Hair,Hairs/Female/Hair Female 13 Blonde
+41087,Hair,Hairs/Female/Hair Female 13 Brown
+41088,Hair,Hairs/Female/Hair Female 13 Cyan
+41089,Hair,Hairs/Female/Hair Female 13 Grey
+41090,Hair,Hairs/Female/Hair Female 13 Purple
+41091,Hair,Hairs/Female/Hair Female 13 Red
+41092,Hair,Hairs/Female/Hair Female 14 Black
+41093,Hair,Hairs/Female/Hair Female 14 Blonde
+41094,Hair,Hairs/Female/Hair Female 14 Brown
+41095,Hair,Hairs/Female/Hair Female 14 Cyan
+41096,Hair,Hairs/Female/Hair Female 14 Grey
+41097,Hair,Hairs/Female/Hair Female 14 Purple
+41098,Hair,Hairs/Female/Hair Female 14 Red
+41099,Hair,Hairs/Female/Hair Female 15 Black
+41100,Hair,Hairs/Female/Hair Female 15 Blonde
+41101,Hair,Hairs/Female/Hair Female 15 Brown
+41102,Hair,Hairs/Female/Hair Female 15 Cyan
+41103,Hair,Hairs/Female/Hair Female 15 Grey
+41104,Hair,Hairs/Female/Hair Female 15 Purple
+41105,Hair,Hairs/Female/Hair Female 15 Red
+41106,Hair,Hairs/Female/Hair Female 16 Black
+41107,Hair,Hairs/Female/Hair Female 16 Blonde
+41108,Hair,Hairs/Female/Hair Female 16 Brown
+41109,Hair,Hairs/Female/Hair Female 16 Cyan
+41110,Hair,Hairs/Female/Hair Female 16 Grey
+41111,Hair,Hairs/Female/Hair Female 16 Purple
+41112,Hair,Hairs/Female/Hair Female 16 Red
+41113,Hair,Hairs/Female/Hair Female 17 Aqua
+41114,Hair,Hairs/Female/Hair Female 17 Black
+41115,Hair,Hairs/Female/Hair Female 17 Blonde
+41116,Hair,Hairs/Female/Hair Female 17 Brown
+41117,Hair,Hairs/Female/Hair Female 17 Cyan
+41118,Hair,Hairs/Female/Hair Female 17 Fire
+41119,Hair,Hairs/Female/Hair Female 17 Grey
+41120,Hair,Hairs/Female/Hair Female 17 Purple
+41121,Hair,Hairs/Female/Hair Female 17 Red
+41122,Hair,Hairs/Female/Hair Female 18 Black
+41123,Hair,Hairs/Female/Hair Female 18 Blue
+41124,Hair,Hairs/Female/Hair Female 18 Green
+41125,Hair,Hairs/Female/Hair Female 18 Magenta
+41126,Hair,Hairs/Female/Hair Female 18 Purple
+41127,Hair,Hairs/Female/Hair Female 18 Red
+41128,Hair,Hairs/Female/Hair Female 18 White
+41129,Hair,Hairs/Female/Hair Female 18 Yellow
+42001,Hair,Hairs/Male/Hair Male 01 Black
+42002,Hair,Hairs/Male/Hair Male 01 Blonde
+42003,Hair,Hairs/Male/Hair Male 01 Brown
+42004,Hair,Hairs/Male/Hair Male 01 Cyan
+42005,Hair,Hairs/Male/Hair Male 01 Grey
+42006,Hair,Hairs/Male/Hair Male 01 Purple
+42007,Hair,Hairs/Male/Hair Male 01 Red
+42008,Hair,Hairs/Male/Hair Male 02 Black
+42009,Hair,Hairs/Male/Hair Male 02 Blonde
+42010,Hair,Hairs/Male/Hair Male 02 Brown
+42011,Hair,Hairs/Male/Hair Male 02 Cyan
+42012,Hair,Hairs/Male/Hair Male 02 Grey
+42013,Hair,Hairs/Male/Hair Male 02 Purple
+42014,Hair,Hairs/Male/Hair Male 02 Red
+42015,Hair,Hairs/Male/Hair Male 03 Old Black
+42016,Hair,Hairs/Male/Hair Male 03 Old Blonde
+42017,Hair,Hairs/Male/Hair Male 03 Old Brown
+42018,Hair,Hairs/Male/Hair Male 03 Old Cyan
+42019,Hair,Hairs/Male/Hair Male 03 Old Grey
+42020,Hair,Hairs/Male/Hair Male 03 Old Purple
+42021,Hair,Hairs/Male/Hair Male 03 Old Red
+42022,Hair,Hairs/Male/Hair Male 04 Black
+42023,Hair,Hairs/Male/Hair Male 04 Blonde
+42024,Hair,Hairs/Male/Hair Male 04 Brown
+42025,Hair,Hairs/Male/Hair Male 04 Cyan
+42026,Hair,Hairs/Male/Hair Male 04 Grey
+42027,Hair,Hairs/Male/Hair Male 04 Purple
+42028,Hair,Hairs/Male/Hair Male 04 Red
+42029,Hair,Hairs/Male/Hair Male 05 Black
+42030,Hair,Hairs/Male/Hair Male 05 Blonde
+42031,Hair,Hairs/Male/Hair Male 05 Brown
+42032,Hair,Hairs/Male/Hair Male 05 Cyan
+42033,Hair,Hairs/Male/Hair Male 05 Grey
+42034,Hair,Hairs/Male/Hair Male 05 Purple
+42035,Hair,Hairs/Male/Hair Male 05 Red
+42036,Hair,Hairs/Male/Hair Male 06 Black
+42037,Hair,Hairs/Male/Hair Male 06 Blonde
+42038,Hair,Hairs/Male/Hair Male 06 Brown
+42039,Hair,Hairs/Male/Hair Male 06 Cyan
+42040,Hair,Hairs/Male/Hair Male 06 Grey
+42041,Hair,Hairs/Male/Hair Male 06 Purple
+42042,Hair,Hairs/Male/Hair Male 06 Red
+42043,Hair,Hairs/Male/Hair Male 07 Black
+42044,Hair,Hairs/Male/Hair Male 07 Blonde
+42045,Hair,Hairs/Male/Hair Male 07 Brown
+42046,Hair,Hairs/Male/Hair Male 07 Cyan
+42047,Hair,Hairs/Male/Hair Male 07 Grey
+42048,Hair,Hairs/Male/Hair Male 07 Purple
+42049,Hair,Hairs/Male/Hair Male 07 Red
+42050,Hair,Hairs/Male/Hair Male 08 Black
+42051,Hair,Hairs/Male/Hair Male 08 Blonde
+42052,Hair,Hairs/Male/Hair Male 08 Brown
+42053,Hair,Hairs/Male/Hair Male 08 Cyan
+42054,Hair,Hairs/Male/Hair Male 08 Grey
+42055,Hair,Hairs/Male/Hair Male 08 Purple
+42056,Hair,Hairs/Male/Hair Male 08 Red
+42057,Hair,Hairs/Male/Hair Male 09 Black
+42058,Hair,Hairs/Male/Hair Male 09 Blonde
+42059,Hair,Hairs/Male/Hair Male 09 Brown
+42060,Hair,Hairs/Male/Hair Male 09 Cyan
+42061,Hair,Hairs/Male/Hair Male 09 Grey
+42062,Hair,Hairs/Male/Hair Male 09 Purple
+42063,Hair,Hairs/Male/Hair Male 09 Red
+42064,Hair,Hairs/Male/Hair Male 10 Black
+42065,Hair,Hairs/Male/Hair Male 10 Blonde
+42066,Hair,Hairs/Male/Hair Male 10 Brown
+42067,Hair,Hairs/Male/Hair Male 10 Cyan
+42068,Hair,Hairs/Male/Hair Male 10 Grey
+42069,Hair,Hairs/Male/Hair Male 10 Purple
+42070,Hair,Hairs/Male/Hair Male 10 Red
+42071,Hair,Hairs/Male/Hair Male 11 Black
+42072,Hair,Hairs/Male/Hair Male 11 Blonde
+42073,Hair,Hairs/Male/Hair Male 11 Brown
+42074,Hair,Hairs/Male/Hair Male 11 Cyan
+42075,Hair,Hairs/Male/Hair Male 11 Grey
+42076,Hair,Hairs/Male/Hair Male 11 Purple
+42077,Hair,Hairs/Male/Hair Male 11 Red
+42078,Hair,Hairs/Male/Hair Male 12 Black
+42079,Hair,Hairs/Male/Hair Male 12 Blonde
+42080,Hair,Hairs/Male/Hair Male 12 Brown
+42081,Hair,Hairs/Male/Hair Male 12 Cyan
+42082,Hair,Hairs/Male/Hair Male 12 Grey
+42083,Hair,Hairs/Male/Hair Male 12 Purple
+42084,Hair,Hairs/Male/Hair Male 12 Red
+42085,Hair,Hairs/Male/Hair Male 13 Black
+42086,Hair,Hairs/Male/Hair Male 13 Blonde
+42087,Hair,Hairs/Male/Hair Male 13 Brown
+42088,Hair,Hairs/Male/Hair Male 13 Cyan
+42089,Hair,Hairs/Male/Hair Male 13 Grey
+42090,Hair,Hairs/Male/Hair Male 13 Purple
+42091,Hair,Hairs/Male/Hair Male 13 Red
+42092,Hair,Hairs/Male/Hair Male 14 Black
+42093,Hair,Hairs/Male/Hair Male 14 Blonde
+42094,Hair,Hairs/Male/Hair Male 14 Brown
+42095,Hair,Hairs/Male/Hair Male 14 Cyan
+42096,Hair,Hairs/Male/Hair Male 14 Grey
+42097,Hair,Hairs/Male/Hair Male 14 Purple
+42098,Hair,Hairs/Male/Hair Male 14 Red
+42099,Hair,Hairs/Male/Hair Male 15 Black
+42100,Hair,Hairs/Male/Hair Male 15 Blonde
+42101,Hair,Hairs/Male/Hair Male 15 Brown
+42102,Hair,Hairs/Male/Hair Male 15 Cyan
+42103,Hair,Hairs/Male/Hair Male 15 Grey
+42104,Hair,Hairs/Male/Hair Male 15 Purple
+42105,Hair,Hairs/Male/Hair Male 15 Red
+42106,Hair,Hairs/Male/Hair Male 16 Black
+42107,Hair,Hairs/Male/Hair Male 16 Blonde
+42108,Hair,Hairs/Male/Hair Male 16 Brown
+42109,Hair,Hairs/Male/Hair Male 16 Cyan
+42110,Hair,Hairs/Male/Hair Male 16 Grey
+42111,Hair,Hairs/Male/Hair Male 16 Purple
+42112,Hair,Hairs/Male/Hair Male 16 Red
+42113,Hair,Hairs/Male/Hair Male 17 Aqua
+42114,Hair,Hairs/Male/Hair Male 17 Black
+42115,Hair,Hairs/Male/Hair Male 17 Blonde
+42116,Hair,Hairs/Male/Hair Male 17 Brown
+42117,Hair,Hairs/Male/Hair Male 17 Cyan
+42118,Hair,Hairs/Male/Hair Male 17 Fire
+42119,Hair,Hairs/Male/Hair Male 17 Grey
+42120,Hair,Hairs/Male/Hair Male 17 Purple
+42121,Hair,Hairs/Male/Hair Male 17 Red
+42122,Hair,Hairs/Male/Hair Male 18 Black
+42123,Hair,Hairs/Male/Hair Male 18 Blonde
+42124,Hair,Hairs/Male/Hair Male 18 Brown
+42125,Hair,Hairs/Male/Hair Male 18 Cyan
+42126,Hair,Hairs/Male/Hair Male 18 Grey
+42127,Hair,Hairs/Male/Hair Male 18 Purple
+42128,Hair,Hairs/Male/Hair Male 18 Red
+60001,Horns,Horns/Antlers Blue
+60002,Horns,Horns/Antlers Dark
+60003,Horns,Horns/Antlers Green
+60004,Horns,Horns/Antlers Light
+60005,Horns,Horns/Antlers Purple
+60006,Horns,Horns/Antlers Red
+60007,Horns,Horns/Horn 01 Front Black
+60008,Horns,Horns/Horn 01 Front Red
+60009,Horns,Horns/Horn 01 Front White
+60010,Horns,Horns/Horn 02 Side Black Blue
+60011,Horns,Horns/Horn 02 Side Black Green
+60012,Horns,Horns/Horn 02 Side Black Orange
+60013,Horns,Horns/Horn 02 Side Black Purple
+60014,Horns,Horns/Horn 02 Side Black Red
+60015,Horns,Horns/Horn 02 Side Green Green
+60016,Horns,Horns/Horn 02 Side Red Yellow
+60017,Horns,Horns/Horn 02 Side White
+60018,Horns,Horns/Horn 02 Side Yellow
+60019,Horns,Horns/Horn 03 Blue
+60020,Horns,Horns/Horn 03 Green
+60021,Horns,Horns/Horn 03 Purple
+60022,Horns,Horns/Horn 03 Red
+60023,Horns,Horns/Horn 03 Yellow

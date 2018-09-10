@@ -4,70 +4,58 @@ using UnityEngine;
 
 namespace BigRogue.Avatar {
 
+
+
+
     public class Avatar : MonoBehaviour {
 
-        public int bodyID;
-        public int beardID;
-        public int earsID;
-        public int hornsID;
-        public int hairID;
 
-        public void SetIDS() {
-            SetAvatarID(AvatarPartType.Body, bodyID);
-            SetAvatarID(AvatarPartType.Beard, beardID);
-            SetAvatarID(AvatarPartType.Ears, earsID);
-            SetAvatarID(AvatarPartType.Horns, hornsID);
-            SetAvatarID(AvatarPartType.Hair, hairID);
-        }
+        [Header("身体部分")]
 
+        // key avatar enum
+        // value avatarid
+        Dictionary<string,int> allAvatars;
 
+        Dictionary<string, AvatarPart> allAvatarPart;
 
-        [Header ("身体部分")]
-
-        //Avatar ID
-        Dictionary<AvatarPartType, int> avatarIDs;
-
-        // Avatar Part 引用
-        Dictionary<AvatarPartType, GameObject> avatarGOs;
-
-
-        public BodyAvatar bodyAvatar {
-            get {
-                return GetAvatarGameObject(AvatarPartType.Body).GetComponent<BodyAvatar>();
-            }
-        }
-
-        public int GetAvatarID(AvatarPartType apt) {
-            if (avatarIDs.ContainsKey(apt))
-                return avatarIDs[apt];
+        public int GetAvatarID(string apt) {
+            if (allAvatars.ContainsKey(apt))
+                return allAvatars[apt];
             else
                 return -1;
         }
 
-        public void SetAvatarID(AvatarPartType apt,int id) {
-            if (avatarIDs.ContainsKey(apt))
-                avatarIDs[apt] = id;
+        public void SetAvatarID(string apt,int id) {
+            if (allAvatars.ContainsKey(apt))
+                allAvatars[apt] = id;
             else
-                avatarIDs.Add(apt, id);
+                allAvatars.Add(apt, id);
         }
 
-        public GameObject GetAvatarGameObject(AvatarPartType apt) {
-            if (avatarGOs.ContainsKey(apt))
-                return avatarGOs[apt];
+
+        public void SetAvatar(string apt, AvatarPart ap) {
+            if (ap == null) {
+                Destroy(allAvatarPart[apt].gameObject);
+                return;
+            }
+            if (allAvatarPart.ContainsKey(apt)) {
+                Destroy(allAvatarPart[apt].gameObject);
+                allAvatarPart[apt] = ap;
+            } else
+                allAvatarPart.Add(apt, ap);
+        }
+
+        public AvatarPart GetAvatar(string apt) {
+            if (allAvatarPart.ContainsKey(apt))
+                return allAvatarPart[apt];
             else
                 return null;
         }
 
-        public void SetAvatarGameObject(AvatarPartType apt,GameObject go) {
-            if (avatarGOs.ContainsKey(apt))
-                avatarGOs[apt] = go;
-            else
-                avatarGOs.Add(apt, go);
-        }
 
         void Init() {
-            avatarIDs = new Dictionary<AvatarPartType, int>();
-            avatarGOs = new Dictionary<AvatarPartType, GameObject>();
+            allAvatars = new Dictionary<string, int>();
+            allAvatarPart = new Dictionary<string, AvatarPart>();
         }
 
         private void Awake() {
@@ -78,88 +66,56 @@ namespace BigRogue.Avatar {
         /// 根据Avatar 部件信息,组建Avatar
         /// </summary>
         public void BuildAllAvatar() {
+            BuildBody();
+            foreach (var item in allAvatars) {
+                if (item.Key == "MainBody") continue;
+                SetAvatar(item.Key, LoadAvatarPartRes(item.Value));
+            }
+        }
 
-            foreach (var item in System.Enum.GetValues(typeof(AvatarPartType))) {
-                BuildAvatarPart((AvatarPartType)item);
+        void BuildBody() {
+
+        }
+         
+
+
+
+        public AvatarPart LoadAvatarPartRes(int apID) {
+            AvatarPartRecord apr = AvatarDataHandler.GetAvatarPartRecord(apID);
+
+            MountingType mp = AvatarDataHandler.GetMountingType(apr.avatarPartTypeName);
+
+            Debug.Log(apr.path);
+            Debug.Log(apr.id);
+            Debug.Log(apr.avatarPartTypeName);
+
+            if (apr.id == -1) return null;
+
+            GameObject prefab = Resources.Load<GameObject>(apr.path);
+
+            if (prefab == null) {
+                Debug.Log($"没有找到预制物体{apr.path}");
+                return null;
             }
 
-        }
+            GameObject go = Instantiate<GameObject>(prefab);
 
-        public void MainBody() {
 
-        }
 
-        public void BuildAvatarPart(AvatarPartType apt) {
-            if (apt == AvatarPartType.Body) {
-                BuildBody();
-                return;
-            }
+            AvatarPart ap = go.AddComponent<AvatarPart>();
+            ap.apr = apr;
 
-            if (GetAvatarID(apt) == -1) return;
-            GameObject newPart = LoadAvatar(apt);
-            GameObject oldPart = GetAvatarGameObject(apt);
-            if (oldPart != null) Destroy(oldPart);
-
-            GameObject go = Instantiate<GameObject>(newPart);
-            //go.transform.SetParent();
+            return ap;
 
         }
-
-
-        public void BuildBody() {
-            AvatarPartType body = AvatarPartType.Body;
-            if (GetAvatarID(AvatarPartType.Body) == -1) return;
-            GameObject newBody = LoadAvatar(body);
-
-            GameObject oldBody = GetAvatarGameObject(body);
-            if (oldBody != null)
-                Destroy(oldBody);
-
-            GameObject go = Instantiate<GameObject>(newBody);
-            go.transform.SetParent(transform, false);
-            go.transform.localPosition = Vector3.zero;
-
-            SetAvatarGameObject(body,go);
-
-        }
-
-
-        public GameObject LoadAvatar(AvatarPartType apt ) {
-            int aID = GetAvatarID(apt);
-            string path = AvatarDataHandler.GetAvatarInfo(apt, aID).Item2;
-            GameObject go = Resources.Load<GameObject>(path);
-            if (go == null) throw new UnityException($"载入资源出错{path}");
-            return go;
-        }
-
-        //// 装备部分
-        ///// <summary>
-        ///// 内衣ID,更换内衣会改变BodyAvatar和贴图
-        ///// </summary>
-        //public int underwearID;
-        //public int bodyMatID;
-        //public Material bodyMat;
-
-
-        //public int headEquipID; // 皇冠,帽子,头巾,头盔,面具
-        //public int bagEquipID; // 背包,麻袋,背篮
-        //public int wingEquipID; // 翅膀,神器
-        //public int jacketID;   // 衣服
-        //public int weaponID;   // 武器类型很多
 
 
         private void OnGUI() {
-            if (GUI.Button(new Rect(50, 50, 50, 50), "Build")) {
-                SetIDS();
+            if (GUI.Button(new Rect(300,300,300,300),"按钮")) {
+                SetAvatarID("MainBody", 0);
+                SetAvatarID("Beard", 20001);
                 BuildAllAvatar();
             }
-
-            for (int i = 0; i < 3; i++) {
-                if(GUI.Button(new Rect(100, 100 + i * 50, 100, 50),$"设置为{i}号身体")) {
-                    SetAvatarID(AvatarPartType.Body, i);
-                }
-            }
-
         }
     }
 }

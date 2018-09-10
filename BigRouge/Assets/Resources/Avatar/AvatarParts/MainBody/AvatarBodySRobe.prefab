@@ -456,7 +456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4091687628288280}
   - component: {fileID: 95556156363586484}
-  - component: {fileID: 114921176398306568}
+  - component: {fileID: 114294514486387676}
   m_Layer: 0
   m_Name: AvatarBodySRobe
   m_TagString: Untagged
@@ -1075,7 +1075,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114921176398306568
+--- !u!114 &114294514486387676
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1086,13 +1086,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 304509f908ae1ad4581351f6c2a040e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarPartType: 1
-  mountPoints: 00000000
-  basePoint: {fileID: 4091687628288280}
-  headPoint: {fileID: 4004792487399476}
-  backPoint: {fileID: 4728367328599570}
-  leftPoint: {fileID: 4673196962572390}
-  rightPoint: {fileID: 4787184446024464}
+  headPoint: {fileID: 0}
+  backPoint: {fileID: 0}
+  leftPoint: {fileID: 0}
+  rightPoint: {fileID: 0}
 --- !u!137 &137938775285929646
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

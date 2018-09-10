@@ -1,3 +1,0 @@
-0,Avatar/AvatarParts/Bodys/AvatarBodyNormal
-1,Avatar/AvatarParts/Bodys/AvatarBodySRobe
-2,Avatar/AvatarParts/Bodys/AvatarBodyLRobe
