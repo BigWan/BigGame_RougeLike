@@ -6,27 +6,44 @@ using UnityEngine;
 
 namespace BigRogue.Avatar {
 
+    public struct AvatarRecord {
+        public int id;
+        public MountPointType mpt;
+        public string path;
+
+        public AvatarRecord(int id,MountPointType mpt, string path) {
+            this.id = id;
+            this.mpt = mpt;
+            this.path = path;
+        }
+    }
+
+
     /// <summary>
     /// 一个AvatarData 实例表示一个Avatar中的内容
     /// </summary>
-    public class AvatarData:IEnumerable<KeyValuePair<int ,string>> {
+    public class AvatarData:IEnumerable<AvatarRecord> {
 
         // 文件中的记录
         public string dataFileName;
 
         // ID PATH
-        Dictionary<int, string> records;
+        //Dictionary<int, string> records;
+
+        List<AvatarRecord> records;
 
         // 构造方法
         public AvatarData(string dataFileName,TextAsset text) {
             this.dataFileName = dataFileName;
-            records = new Dictionary<int, string>();
+            //records = new Dictionary<int, string>();
+            records = new List<AvatarRecord>();
             ParseText(text);
         }
 
         public AvatarData(string dataFileName,string path) {
             this.dataFileName = dataFileName;
-            records = new Dictionary<int, string>();
+            //records = new Dictionary<int, string>();
+            records = new List<AvatarRecord>();
             TextAsset text = Resources.Load<TextAsset>(path);
             if (text == null) throw new UnityException($"文件不存在{path}");
             ParseText(text);
@@ -50,7 +67,11 @@ namespace BigRogue.Avatar {
                 
                 if (cells == null || cells.Length < 2) continue;
 
-                records.Add(int.Parse(cells[0]), cells[1].Trim());
+                records.Add(new AvatarRecord( 
+                    int.Parse(cells[0]), 
+                    (MountPointType)(int.Parse(cells[1])), 
+                    cells[1].Trim() 
+                ));
                 j++;
             }
         }
@@ -61,7 +82,7 @@ namespace BigRogue.Avatar {
         /// 外部迭代方法
         /// </summary>
         /// <returns></returns>
-        public IEnumerator<KeyValuePair<int, string>> GetEnumerator() {
+        public IEnumerator<AvatarRecord> GetEnumerator() {
             foreach (var item in records) {
                 yield return item;
             }
@@ -71,7 +92,7 @@ namespace BigRogue.Avatar {
             return GetEnumerator();
         }
 
-        public string this[int key]{
+        public AvatarRecord this[int key]{
             get { return records[key]; }
         }
 

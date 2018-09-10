@@ -13,19 +13,21 @@ namespace BigRogue.Avatar {
         public Transform leftPoint;
         public Transform rightPoint;
 
-        //[Header("Components Refs")]
-        //// 身体的材质球
-        //public SkinnedMeshRenderer m_bodyMeshRenderer;
+        [Header("Components Refs")]
+        // 身体的材质球
+        public SkinnedMeshRenderer m_bodyMeshRenderer;
 
 
-        //public Material bodyMaterial {
-        //    get {
-        //        return m_bodyMeshRenderer.material;
-        //    }
-        //    set {
-        //        m_bodyMeshRenderer.material = value;
-        //    }
-        //}
+        public Material bodyMaterial {
+            get {
+                return m_bodyMeshRenderer.material;
+            }
+            set {
+                m_bodyMeshRenderer.material = value;
+            }
+        }
+
+
 
 
 

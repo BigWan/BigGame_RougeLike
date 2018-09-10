@@ -83,11 +83,12 @@ namespace BigRogue.Avatar {
         /// </summary>
         /// <param name="avatarPartTypeID">部件的类型ID</param>
         /// <param name="avatarID">部件的ID</param>
-        public static string GetResourcePath(AvatarPartType partType, int avatarID) {
+        public static (MountPointType,string) GetAvatarInfo(AvatarPartType partType, int avatarID) {
             if (avatarDatas == null) ReloadAvatarDatas();
             if (avatarDatas == null || avatarDatas[partType] == null) throw new UnityException("数据异常!!!");
+            AvatarRecord record = avatarDatas[partType][avatarID];
 
-            return avatarDatas[partType][avatarID];
+            return (record.mpt, record.path);
         }
 
         ///// <summary>

@@ -6,12 +6,28 @@ namespace BigRogue.Avatar {
 
     public class Avatar : MonoBehaviour {
 
+        public int bodyID;
+        public int beardID;
+        public int earsID;
+        public int hornsID;
+        public int hairID;
+
+        public void SetIDS() {
+            SetAvatarID(AvatarPartType.Body, bodyID);
+            SetAvatarID(AvatarPartType.Beard, beardID);
+            SetAvatarID(AvatarPartType.Ears, earsID);
+            SetAvatarID(AvatarPartType.Horns, hornsID);
+            SetAvatarID(AvatarPartType.Hair, hairID);
+        }
+
+
+
         [Header ("身体部分")]
 
         //Avatar ID
         Dictionary<AvatarPartType, int> avatarIDs;
 
-        // Avatar Part 在场景中的引用
+        // Avatar Part 引用
         Dictionary<AvatarPartType, GameObject> avatarGOs;
 
 
@@ -61,9 +77,11 @@ namespace BigRogue.Avatar {
         /// <summary>
         /// 根据Avatar 部件信息,组建Avatar
         /// </summary>
-        public void BuildAvatar() {
+        public void BuildAllAvatar() {
 
-
+            foreach (var item in System.Enum.GetValues(typeof(AvatarPartType))) {
+                BuildAvatarPart((AvatarPartType)item);
+            }
 
         }
 
@@ -83,9 +101,7 @@ namespace BigRogue.Avatar {
             if (oldPart != null) Destroy(oldPart);
 
             GameObject go = Instantiate<GameObject>(newPart);
-
-            
-            
+            //go.transform.SetParent();
 
         }
 
@@ -108,9 +124,9 @@ namespace BigRogue.Avatar {
         }
 
 
-        public  GameObject LoadAvatar(AvatarPartType apt ) {
+        public GameObject LoadAvatar(AvatarPartType apt ) {
             int aID = GetAvatarID(apt);
-            string path = AvatarDataHandler.GetResourcePath(apt, aID);
+            string path = AvatarDataHandler.GetAvatarInfo(apt, aID).Item2;
             GameObject go = Resources.Load<GameObject>(path);
             if (go == null) throw new UnityException($"载入资源出错{path}");
             return go;
@@ -132,12 +148,10 @@ namespace BigRogue.Avatar {
         //public int weaponID;   // 武器类型很多
 
 
-
-
-
         private void OnGUI() {
-            if (GUI.Button(new Rect(50, 50, 50, 50), "Build")) {                
-                BuildBody();
+            if (GUI.Button(new Rect(50, 50, 50, 50), "Build")) {
+                SetIDS();
+                BuildAllAvatar();
             }
 
             for (int i = 0; i < 3; i++) {
