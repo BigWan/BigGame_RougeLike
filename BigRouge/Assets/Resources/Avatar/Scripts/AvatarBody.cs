@@ -44,7 +44,7 @@ namespace BigRogue.Avatar {
 
 
 
-        public Transform GetMountingPoint(MountingPoint pointType) {
+        public Transform GetMountingParent(MountingPoint pointType) {
             switch (pointType) {
                 case MountingPoint.Base:return transform;
                 case MountingPoint.Head:return headPoint;

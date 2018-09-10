@@ -1086,10 +1086,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 304509f908ae1ad4581351f6c2a040e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headPoint: {fileID: 0}
-  backPoint: {fileID: 0}
-  leftPoint: {fileID: 0}
-  rightPoint: {fileID: 0}
+  headPoint: {fileID: 4090930891468674}
+  backPoint: {fileID: 4413235266082938}
+  leftPoint: {fileID: 4554279269740232}
+  rightPoint: {fileID: 4178712909084838}
 --- !u!137 &137289793196702188
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
