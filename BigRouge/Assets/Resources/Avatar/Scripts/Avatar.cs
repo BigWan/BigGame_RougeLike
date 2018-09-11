@@ -14,7 +14,7 @@ namespace BigRogue.Avatar {
 
         AvatarBody m_bodyAvatar;
 
-        Material m_bodyMat;
+        //Material m_bodyMat;
 
 
         int GetAvatarID(string apt) {
@@ -76,7 +76,7 @@ namespace BigRogue.Avatar {
         void BuildNormalAvatar(string avatarPartTypeName) {
             if (m_bodyAvatar == null) return;
             if (!m_allAvatarIDs.ContainsKey(avatarPartTypeName)) return;
-            if (avatarPartTypeName == "MainBody" || avatarPartTypeName == "Underwear") {
+            if (avatarPartTypeName == "MainBody" ) {
                 return;
             }
             int avID = m_allAvatarIDs[avatarPartTypeName];
@@ -84,7 +84,7 @@ namespace BigRogue.Avatar {
                 SetDefaultAvatar(avatarPartTypeName);
                 return;
             } 
-            AvatarPart ap = LoadAvatarPartGameObject(avID);
+            AvatarPart ap = LoadAvatarPart(avID);
             if (ap == null) {
                 SetDefaultAvatar(avatarPartTypeName);
                 return;
@@ -110,37 +110,12 @@ namespace BigRogue.Avatar {
             SetAvatarID(avatarPartTypeName, -1);
         }
 
-        /// <summary>
-        /// 衬衣部件
-        /// </summary>
-        void BuildBodyMat() {
-            if (!m_allAvatarIDs.ContainsKey("Underwear")) return;
-            Material mat = LoadAvatarPartMaterial(m_allAvatarIDs["Underwear"]);
-            if (mat == null || m_bodyAvatar == null) return;
-            m_bodyMat = mat;
 
-            m_bodyAvatar.SetBodyMaterial(m_bodyMat);
-        }
-
-        void ReBuildUnderwear() {
-            if (m_bodyMat != null)
-                m_bodyAvatar.SetBodyMaterial(m_bodyMat);
-        }
-
-        /// <summary>
-        /// 身体部件,换完身体需要重新设置衬衣材质球
-        /// </summary>
         void BuildBody() {
-            BuildBodyMesh();
-            BuildBodyMat();
-            //ReBuildUnderwear();
-        }
-
-        void BuildBodyMesh() {
-            AvatarPart ap = LoadAvatarPartGameObject(m_allAvatarIDs["MainBody"]);
+            AvatarPart ap = LoadAvatarPart(m_allAvatarIDs["MainBody"]);
             MountAvatarPart(ap);
             SetAvatar("MainBody", ap);
-            m_bodyAvatar = ap.GetComponent<AvatarBody>();
+            m_bodyAvatar = ap.gameObject.AddComponent<AvatarBody>();
         }
 
 
@@ -173,17 +148,12 @@ namespace BigRogue.Avatar {
             }
         }
 
-        Material LoadAvatarPartMaterial(int matID) {
-
-            AvatarPartRecord apr = AvatarDataHandler.GetAvatarPartRecord(matID);
-            if (apr.id == -1) return null;
-            Material mat = Resources.Load<Material>(apr.path);
-            if (mat == null)
-                throw new UnityException($"没有找到资源:{apr.path}");
-            return mat;
-        }
-
-        AvatarPart LoadAvatarPartGameObject(int apID) {
+        /// <summary>
+        /// 载入模型,添加AvatarPart脚本
+        /// </summary>
+        /// <param name="apID"></param>
+        /// <returns></returns>
+        AvatarPart LoadAvatarPart(int apID) {
             AvatarPartRecord apr = AvatarDataHandler.GetAvatarPartRecord(apID);
 
             if (apr.id == -1) return null;
@@ -209,8 +179,6 @@ namespace BigRogue.Avatar {
             SetAvatarID(avatarTypeName, apID);
             if (avatarTypeName == "MainBody")
                 BuildAllAvatar();
-            else if (avatarTypeName == "Underwear")
-                BuildBodyMat();
             else
                 BuildNormalAvatar(avatarTypeName);
         }

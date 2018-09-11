@@ -34,10 +34,10 @@ namespace BigRogue.Avatar {
     public class AvatarBody : MonoBehaviour {
 
         [Header("Mount Points")]
-        public Transform headPoint;
-        public Transform backPoint;
-        public Transform leftPoint;
-        public Transform rightPoint;
+        private Transform headPoint;
+        private Transform backPoint;
+        private Transform leftPoint;
+        private Transform rightPoint;
 
         [Header("Components Refs")]
         // 身体的材质球
@@ -57,6 +57,10 @@ namespace BigRogue.Avatar {
 
         private void Awake() {
             m_bodyMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+            headPoint = transform.Find("RigPelvis/RigSpine1/RigSpine2/RigRibcage/RigNeck/RigHead/Dummy Prop Head");
+            backPoint = transform.Find("RigPelvis/RigSpine1/RigSpine2/RigRibcage/Dummy Prop Back");
+            leftPoint = transform.Find("RigPelvis/RigSpine1/RigSpine2/RigRibcage/RigLArm1/RigLArm2/RigLArmPalm/Dummy Prop Left");
+            rightPoint = transform.Find("RigPelvis/RigSpine1/RigSpine2/RigRibcage/RigRArm1/RigRArm2/RigRArmPalm/Dummy Prop Right");
         }
 
         public void SetBodyMaterial(Material mat) {
