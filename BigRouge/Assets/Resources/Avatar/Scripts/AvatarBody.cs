@@ -8,6 +8,7 @@ namespace BigRogue.Avatar {
     /// 挂载类型
     /// </summary>
     public enum MountingType {
+        None = -1,
         Root = 0,
         Base = 1,
         Head = 2,
@@ -41,8 +42,6 @@ namespace BigRogue.Avatar {
         [Header("Components Refs")]
         // 身体的材质球
         private SkinnedMeshRenderer m_bodyMeshRenderer;
-
-
 
         public Transform GetMountingParent(MountingPoint pointType) {
             switch (pointType) {

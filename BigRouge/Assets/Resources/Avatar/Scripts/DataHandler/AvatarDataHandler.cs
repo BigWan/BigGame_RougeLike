@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace BigRogue.Avatar {
     /// <summary>
@@ -114,7 +115,7 @@ namespace BigRogue.Avatar {
                     avatarPartDataSheet.Add(apr.id, apr);
                 } catch (System.Exception) {
 
-                    throw;
+                    throw new UnityException($"{avatarPartFileName}文件解析错误");
                 }
                 
             }
@@ -143,6 +144,23 @@ namespace BigRogue.Avatar {
             else
                 return AvatarPartRecord.empty;
         }
+
+
+        public static List<AvatarPartRecord> GetAvatarPartTypedList(string avatarPartName) {
+
+            List<AvatarPartRecord> list = new List<AvatarPartRecord>();
+
+            foreach (var item in avatarPartDataSheet) {
+                if(item.Value.avatarPartTypeName == avatarPartName) {
+                    list.Add(item.Value);
+                }
+            }
+
+            return list;
+            
+
+        }
+
 
     }
 

@@ -1,13 +1,15 @@
 //Enum,MountPointType
 MainBody,Root
-Jacket,Base
+Jacket,Root
 Beard,Head
 Ears,Head
 Hair,Head
 Face,Head
-Horn,Head
+Horns,Head
 Wing,Back
 Bag,Back
 MainHand,Left
 OffHand,Right
 Quiver,Back
+BodyEffect,Root
+Underwear,Root
