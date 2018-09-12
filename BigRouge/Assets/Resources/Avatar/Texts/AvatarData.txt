@@ -1,0 +1,1125 @@
+//avatarID,AvatarType,MountingType,Sex,category,Path
+//Female,,,,,
+11001,MainBody,Root,Female,Other,MainBody/Female/Female Aqua 01 Blue
+11002,MainBody,Root,Female,Other,MainBody/Female/Female Aqua 01 Cyan
+11003,MainBody,Root,Female,Black,MainBody/Female/Female Black Archer 01 Black
+11004,MainBody,Root,Female,Black,MainBody/Female/Female Black Barbarian 01 Blue
+11005,MainBody,Root,Female,Black,MainBody/Female/Female Black Casual 01A
+11006,MainBody,Root,Female,Black,MainBody/Female/Female Black Elf 01
+11007,MainBody,Root,Female,Black,MainBody/Female/Female Black Knight 01 Green
+11008,MainBody,Root,Female,Black,MainBody/Female/Female Black L Dress 04 Red
+11009,MainBody,Root,Female,Black,MainBody/Female/Female Black Naked
+11010,MainBody,Root,Female,Black,MainBody/Female/Female Black Sorceress 01 Blue
+11011,MainBody,Root,Female,Brown,MainBody/Female/Female Brown Archer 01 Black
+11012,MainBody,Root,Female,Brown,MainBody/Female/Female Brown Barbarian 01 Blue
+11013,MainBody,Root,Female,Brown,MainBody/Female/Female Brown Casual 01A
+11014,MainBody,Root,Female,Brown,MainBody/Female/Female Brown Elf 01
+11015,MainBody,Root,Female,Brown,MainBody/Female/Female Brown Knight 01 Green
+11016,MainBody,Root,Female,Brown,MainBody/Female/Female Brown L Dress 04 Red
+11017,MainBody,Root,Female,Brown,MainBody/Female/Female Brown Naked
+11018,MainBody,Root,Female,Brown,MainBody/Female/Female Brown Sorceress 01 Blue
+11019,MainBody,Root,Female,Other,MainBody/Female/Female Fire 01 Orange
+11020,MainBody,Root,Female,Other,MainBody/Female/Female Fire 01 Yellow
+11021,MainBody,Root,Female,Other,MainBody/Female/Female Gorgon 03 Yellow
+11022,MainBody,Root,Female,Other,MainBody/Female/Female Gorgon Underwear
+11023,MainBody,Root,Female,Other,MainBody/Female/Female Spideress 03 Yellow
+11024,MainBody,Root,Female,Other,MainBody/Female/Female Spideress Underwear
+11025,MainBody,Root,Female,White,MainBody/Female/Female White Archer 01 Black
+11026,MainBody,Root,Female,White,MainBody/Female/Female White Barbarian 01 Blue
+11027,MainBody,Root,Female,White,MainBody/Female/Female White Casual 01A
+11028,MainBody,Root,Female,White,MainBody/Female/Female White Elf 01
+11029,MainBody,Root,Female,White,MainBody/Female/Female White Knight 01 Green
+11030,MainBody,Root,Female,White,MainBody/Female/Female White L Dress 04 Red
+11031,MainBody,Root,Female,White,MainBody/Female/Female White Naked
+11032,MainBody,Root,Female,White,MainBody/Female/Female White Sorceress 01 Blue
+//Male,,,,,
+12001,MainBody,Root,Male,Other,MainBody/Male/Male Aqua 01 Blue
+12002,MainBody,Root,Male,Other,MainBody/Male/Male Aqua 01 Cyan
+12003,MainBody,Root,Male,Black,MainBody/Male/Male Black Archer 01 Black
+12004,MainBody,Root,Male,Black,MainBody/Male/Male Black Barbarian 06 Yellow
+12005,MainBody,Root,Male,Black,MainBody/Male/Male Black Casual 01A
+12006,MainBody,Root,Male,Black,MainBody/Male/Male Black King 01 Black
+12007,MainBody,Root,Male,Black,MainBody/Male/Male Black L Robe 01 Blue
+12008,MainBody,Root,Male,Black,MainBody/Male/Male Black Naked
+12009,MainBody,Root,Male,Black,MainBody/Male/Male Black S Robe 01 Blue
+12010,MainBody,Root,Male,Black,MainBody/Male/Male Black Santa 01
+12011,MainBody,Root,Male,Black,MainBody/Male/Male Black Wizard 01 Black
+12012,MainBody,Root,Male,Brown,MainBody/Male/Male Brown Archer 01 Black
+12013,MainBody,Root,Male,Brown,MainBody/Male/Male Brown Barbarian 01 Blue
+12014,MainBody,Root,Male,Brown,MainBody/Male/Male Brown Casual 01A
+12015,MainBody,Root,Male,Brown,MainBody/Male/Male Brown King 01 Black
+12016,MainBody,Root,Male,Brown,MainBody/Male/Male Brown L Robe 01 Purple
+12017,MainBody,Root,Male,Brown,MainBody/Male/Male Brown Naked
+12018,MainBody,Root,Male,Brown,MainBody/Male/Male Brown S Robe 02 Red
+12019,MainBody,Root,Male,Brown,MainBody/Male/Male Brown Santa 01
+12020,MainBody,Root,Male,Brown,MainBody/Male/Male Brown Wizard 06 White
+12021,MainBody,Root,Male,Other,MainBody/Male/Male Fire 01 Orange
+12022,MainBody,Root,Male,Other,MainBody/Male/Male Fire 01 Yellow
+12023,MainBody,Root,Male,White,MainBody/Male/Male White Archer 01 Black
+12024,MainBody,Root,Male,White,MainBody/Male/Male White Barbarian 01 Blue
+12025,MainBody,Root,Male,White,MainBody/Male/Male White Casual 01A
+12026,MainBody,Root,Male,White,MainBody/Male/Male White Knight 04 White
+12027,MainBody,Root,Male,White,MainBody/Male/Male White L Robe 01 Blue
+12028,MainBody,Root,Male,White,MainBody/Male/Male White Naked
+12029,MainBody,Root,Male,White,MainBody/Male/Male White S Robe 01 Blue
+12030,MainBody,Root,Male,White,MainBody/Male/Male White Santa 01
+12031,MainBody,Root,Male,White,MainBody/Male/Male White Wizard 06 Red
+20001,Beard,Head,None,Beard 01,Beards/Beard 01 Black
+20002,Beard,Head,None,Beard 01,Beards/Beard 01 Blonde
+20003,Beard,Head,None,Beard 01,Beards/Beard 01 Brown
+20004,Beard,Head,None,Beard 01,Beards/Beard 01 Cyan
+20005,Beard,Head,None,Beard 01,Beards/Beard 01 Grey
+20006,Beard,Head,None,Beard 01,Beards/Beard 01 Purple
+20007,Beard,Head,None,Beard 01,Beards/Beard 01 Red
+20008,Beard,Head,None,Beard 02,Beards/Beard 02 Black
+20009,Beard,Head,None,Beard 02,Beards/Beard 02 Blonde
+20010,Beard,Head,None,Beard 02,Beards/Beard 02 Brown
+20011,Beard,Head,None,Beard 02,Beards/Beard 02 Cyan
+20012,Beard,Head,None,Beard 02,Beards/Beard 02 Grey
+20013,Beard,Head,None,Beard 02,Beards/Beard 02 Purple
+20014,Beard,Head,None,Beard 02,Beards/Beard 02 Red
+20015,Beard,Head,None,Beard 03,Beards/Beard 03 Black
+20016,Beard,Head,None,Beard 03,Beards/Beard 03 Blonde
+20017,Beard,Head,None,Beard 03,Beards/Beard 03 Brown
+20018,Beard,Head,None,Beard 03,Beards/Beard 03 Cyan
+20019,Beard,Head,None,Beard 03,Beards/Beard 03 Grey
+20020,Beard,Head,None,Beard 03,Beards/Beard 03 Purple
+20021,Beard,Head,None,Beard 03,Beards/Beard 03 Red
+20022,Beard,Head,None,Beard 04,Beards/Beard 04 Black
+20023,Beard,Head,None,Beard 04,Beards/Beard 04 Blonde
+20024,Beard,Head,None,Beard 04,Beards/Beard 04 Blue
+20025,Beard,Head,None,Beard 04,Beards/Beard 04 Brown
+20026,Beard,Head,None,Beard 04,Beards/Beard 04 Purple
+20027,Beard,Head,None,Beard 04,Beards/Beard 04 Red
+20028,Beard,Head,None,Beard 04,Beards/Beard 04 White
+20029,Beard,Head,None,Jaw,Beards/Jaw 01 Black
+20030,Beard,Head,None,Jaw,Beards/Jaw 01 Blue
+20031,Beard,Head,None,Jaw,Beards/Jaw 01 Green
+20032,Beard,Head,None,Jaw,Beards/Jaw 01 Purple
+20033,Beard,Head,None,Jaw,Beards/Jaw 01 Red
+30001,Ears,Head,None,Bunny Ears,Ears/Bunny Ears Black Blue
+30002,Ears,Head,None,Bunny Ears,Ears/Bunny Ears Black Pink
+30003,Ears,Head,None,Bunny Ears,Ears/Bunny Ears Black Purple
+30004,Ears,Head,None,Bunny Ears,Ears/Bunny Ears Strips Black
+30005,Ears,Head,None,Bunny Ears,Ears/Bunny Ears Strips Blue
+30006,Ears,Head,None,Bunny Ears,Ears/Bunny Ears Strips Brown
+30007,Ears,Head,None,Bunny Ears,Ears/Bunny Ears Strips Purple
+30008,Ears,Head,None,Bunny Ears,Ears/Bunny Ears White Pink
+30009,Ears,Head,None,Bunny Ears,Ears/Bunny Ears White Purple
+30010,Ears,Head,None,Cat Ears,Ears/Cat Ears Black Blue
+30011,Ears,Head,None,Cat Ears,Ears/Cat Ears Black Green
+30012,Ears,Head,None,Cat Ears,Ears/Cat Ears Black Pink
+30013,Ears,Head,None,Cat Ears,Ears/Cat Ears Black Purple
+30014,Ears,Head,None,Cat Ears,Ears/Cat Ears Black Red
+30015,Ears,Head,None,Cat Ears,Ears/Cat Ears Black Yellow
+30016,Ears,Head,None,Cat Ears,Ears/Cat Ears White Blue
+30017,Ears,Head,None,Cat Ears,Ears/Cat Ears White Purple
+30018,Ears,Head,None,Cat Ears,Ears/Cat Ears White Red
+30019,Ears,Head,None,Cat Ears,Ears/Cat Ears White Yellow
+30020,Ears,Head,None,Elf Ears,Ears/Elf Ears Black 01
+30021,Ears,Head,None,Elf Ears,Ears/Elf Ears Brown 01
+30022,Ears,Head,None,Elf Ears,Ears/Elf Ears White 01
+41001,Hair,Head,Female,Female 01,Hair/Female/Hair Female 01 Black
+41002,Hair,Head,Female,Female 01,Hair/Female/Hair Female 01 Blonde
+41003,Hair,Head,Female,Female 01,Hair/Female/Hair Female 01 Brown
+41004,Hair,Head,Female,Female 01,Hair/Female/Hair Female 01 Cyan
+41005,Hair,Head,Female,Female 01,Hair/Female/Hair Female 01 Purple
+41006,Hair,Head,Female,Female 01,Hair/Female/Hair Female 01 Red
+41007,Hair,Head,Female,Female 01,Hair/Female/Hair Female 01 White
+41008,Hair,Head,Female,Female 02,Hair/Female/Hair Female 02 Black
+41009,Hair,Head,Female,Female 02,Hair/Female/Hair Female 02 Blonde
+41010,Hair,Head,Female,Female 02,Hair/Female/Hair Female 02 Brown
+41011,Hair,Head,Female,Female 02,Hair/Female/Hair Female 02 Cyan
+41012,Hair,Head,Female,Female 02,Hair/Female/Hair Female 02 Grey
+41013,Hair,Head,Female,Female 02,Hair/Female/Hair Female 02 Purple
+41014,Hair,Head,Female,Female 02,Hair/Female/Hair Female 02 Red
+41015,Hair,Head,Female,Female 03,Hair/Female/Hair Female 03 Black
+41016,Hair,Head,Female,Female 03,Hair/Female/Hair Female 03 Blonde
+41017,Hair,Head,Female,Female 03,Hair/Female/Hair Female 03 Brown
+41018,Hair,Head,Female,Female 03,Hair/Female/Hair Female 03 Cyan
+41019,Hair,Head,Female,Female 03,Hair/Female/Hair Female 03 Grey
+41020,Hair,Head,Female,Female 03,Hair/Female/Hair Female 03 Purple
+41021,Hair,Head,Female,Female 03,Hair/Female/Hair Female 03 Red
+41022,Hair,Head,Female,Female 04,Hair/Female/Hair Female 04 Black
+41023,Hair,Head,Female,Female 04,Hair/Female/Hair Female 04 Blonde
+41024,Hair,Head,Female,Female 04,Hair/Female/Hair Female 04 Brown
+41025,Hair,Head,Female,Female 04,Hair/Female/Hair Female 04 Cyan
+41026,Hair,Head,Female,Female 04,Hair/Female/Hair Female 04 Grey
+41027,Hair,Head,Female,Female 04,Hair/Female/Hair Female 04 Purple
+41028,Hair,Head,Female,Female 04,Hair/Female/Hair Female 04 Red
+41029,Hair,Head,Female,Female 05,Hair/Female/Hair Female 05 Black
+41030,Hair,Head,Female,Female 05,Hair/Female/Hair Female 05 Blonde
+41031,Hair,Head,Female,Female 05,Hair/Female/Hair Female 05 Brown
+41032,Hair,Head,Female,Female 05,Hair/Female/Hair Female 05 Cyan
+41033,Hair,Head,Female,Female 05,Hair/Female/Hair Female 05 Grey
+41034,Hair,Head,Female,Female 05,Hair/Female/Hair Female 05 Purple
+41035,Hair,Head,Female,Female 05,Hair/Female/Hair Female 05 Red
+41036,Hair,Head,Female,Female 06,Hair/Female/Hair Female 06 Black
+41037,Hair,Head,Female,Female 06,Hair/Female/Hair Female 06 Blonde
+41038,Hair,Head,Female,Female 06,Hair/Female/Hair Female 06 Brown
+41039,Hair,Head,Female,Female 06,Hair/Female/Hair Female 06 Cyan
+41040,Hair,Head,Female,Female 06,Hair/Female/Hair Female 06 Grey
+41041,Hair,Head,Female,Female 06,Hair/Female/Hair Female 06 Purple
+41042,Hair,Head,Female,Female 06,Hair/Female/Hair Female 06 Red
+41043,Hair,Head,Female,Female 07,Hair/Female/Hair Female 07 Black
+41044,Hair,Head,Female,Female 07,Hair/Female/Hair Female 07 Blonde
+41045,Hair,Head,Female,Female 07,Hair/Female/Hair Female 07 Brown
+41046,Hair,Head,Female,Female 07,Hair/Female/Hair Female 07 Cyan
+41047,Hair,Head,Female,Female 07,Hair/Female/Hair Female 07 Grey
+41048,Hair,Head,Female,Female 07,Hair/Female/Hair Female 07 Purple
+41049,Hair,Head,Female,Female 07,Hair/Female/Hair Female 07 Red
+41050,Hair,Head,Female,Female 08,Hair/Female/Hair Female 08 Black
+41051,Hair,Head,Female,Female 08,Hair/Female/Hair Female 08 Blonde
+41052,Hair,Head,Female,Female 08,Hair/Female/Hair Female 08 Brown
+41053,Hair,Head,Female,Female 08,Hair/Female/Hair Female 08 Cyan
+41054,Hair,Head,Female,Female 08,Hair/Female/Hair Female 08 Grey
+41055,Hair,Head,Female,Female 08,Hair/Female/Hair Female 08 Purple
+41056,Hair,Head,Female,Female 08,Hair/Female/Hair Female 08 Red
+41057,Hair,Head,Female,Female 09,Hair/Female/Hair Female 09 Black
+41058,Hair,Head,Female,Female 09,Hair/Female/Hair Female 09 Blonde
+41059,Hair,Head,Female,Female 09,Hair/Female/Hair Female 09 Brown
+41060,Hair,Head,Female,Female 09,Hair/Female/Hair Female 09 Cyan
+41061,Hair,Head,Female,Female 09,Hair/Female/Hair Female 09 Grey
+41062,Hair,Head,Female,Female 09,Hair/Female/Hair Female 09 Purple
+41063,Hair,Head,Female,Female 09,Hair/Female/Hair Female 09 Red
+41064,Hair,Head,Female,Female 10,Hair/Female/Hair Female 10 Black
+41065,Hair,Head,Female,Female 10,Hair/Female/Hair Female 10 Blonde
+41066,Hair,Head,Female,Female 10,Hair/Female/Hair Female 10 Brown
+41067,Hair,Head,Female,Female 10,Hair/Female/Hair Female 10 Cyan
+41068,Hair,Head,Female,Female 10,Hair/Female/Hair Female 10 Grey
+41069,Hair,Head,Female,Female 10,Hair/Female/Hair Female 10 Purple
+41070,Hair,Head,Female,Female 10,Hair/Female/Hair Female 10 Red
+41071,Hair,Head,Female,Female 11,Hair/Female/Hair Female 11 Black
+41072,Hair,Head,Female,Female 11,Hair/Female/Hair Female 11 Blonde
+41073,Hair,Head,Female,Female 11,Hair/Female/Hair Female 11 Brown
+41074,Hair,Head,Female,Female 11,Hair/Female/Hair Female 11 Cyan
+41075,Hair,Head,Female,Female 11,Hair/Female/Hair Female 11 Grey
+41076,Hair,Head,Female,Female 11,Hair/Female/Hair Female 11 Purple
+41077,Hair,Head,Female,Female 11,Hair/Female/Hair Female 11 Red
+41078,Hair,Head,Female,Female 12,Hair/Female/Hair Female 12 Black
+41079,Hair,Head,Female,Female 12,Hair/Female/Hair Female 12 Blonde
+41080,Hair,Head,Female,Female 12,Hair/Female/Hair Female 12 Brown
+41081,Hair,Head,Female,Female 12,Hair/Female/Hair Female 12 Cyan
+41082,Hair,Head,Female,Female 12,Hair/Female/Hair Female 12 Grey
+41083,Hair,Head,Female,Female 12,Hair/Female/Hair Female 12 Purple
+41084,Hair,Head,Female,Female 12,Hair/Female/Hair Female 12 Red
+41085,Hair,Head,Female,Female 13,Hair/Female/Hair Female 13 Black
+41086,Hair,Head,Female,Female 13,Hair/Female/Hair Female 13 Blonde
+41087,Hair,Head,Female,Female 13,Hair/Female/Hair Female 13 Brown
+41088,Hair,Head,Female,Female 13,Hair/Female/Hair Female 13 Cyan
+41089,Hair,Head,Female,Female 13,Hair/Female/Hair Female 13 Grey
+41090,Hair,Head,Female,Female 13,Hair/Female/Hair Female 13 Purple
+41091,Hair,Head,Female,Female 13,Hair/Female/Hair Female 13 Red
+41092,Hair,Head,Female,Female 14,Hair/Female/Hair Female 14 Black
+41093,Hair,Head,Female,Female 14,Hair/Female/Hair Female 14 Blonde
+41094,Hair,Head,Female,Female 14,Hair/Female/Hair Female 14 Brown
+41095,Hair,Head,Female,Female 14,Hair/Female/Hair Female 14 Cyan
+41096,Hair,Head,Female,Female 14,Hair/Female/Hair Female 14 Grey
+41097,Hair,Head,Female,Female 14,Hair/Female/Hair Female 14 Purple
+41098,Hair,Head,Female,Female 14,Hair/Female/Hair Female 14 Red
+41099,Hair,Head,Female,Female 15,Hair/Female/Hair Female 15 Black
+41100,Hair,Head,Female,Female 15,Hair/Female/Hair Female 15 Blonde
+41101,Hair,Head,Female,Female 15,Hair/Female/Hair Female 15 Brown
+41102,Hair,Head,Female,Female 15,Hair/Female/Hair Female 15 Cyan
+41103,Hair,Head,Female,Female 15,Hair/Female/Hair Female 15 Grey
+41104,Hair,Head,Female,Female 15,Hair/Female/Hair Female 15 Purple
+41105,Hair,Head,Female,Female 15,Hair/Female/Hair Female 15 Red
+41106,Hair,Head,Female,Female 16,Hair/Female/Hair Female 16 Black
+41107,Hair,Head,Female,Female 16,Hair/Female/Hair Female 16 Blonde
+41108,Hair,Head,Female,Female 16,Hair/Female/Hair Female 16 Brown
+41109,Hair,Head,Female,Female 16,Hair/Female/Hair Female 16 Cyan
+41110,Hair,Head,Female,Female 16,Hair/Female/Hair Female 16 Grey
+41111,Hair,Head,Female,Female 16,Hair/Female/Hair Female 16 Purple
+41112,Hair,Head,Female,Female 16,Hair/Female/Hair Female 16 Red
+41113,Hair,Head,Female,Female 17,Hair/Female/Hair Female 17 Aqua
+41114,Hair,Head,Female,Female 17,Hair/Female/Hair Female 17 Black
+41115,Hair,Head,Female,Female 17,Hair/Female/Hair Female 17 Blonde
+41116,Hair,Head,Female,Female 17,Hair/Female/Hair Female 17 Brown
+41117,Hair,Head,Female,Female 17,Hair/Female/Hair Female 17 Cyan
+41118,Hair,Head,Female,Female 17,Hair/Female/Hair Female 17 Fire
+41119,Hair,Head,Female,Female 17,Hair/Female/Hair Female 17 Grey
+41120,Hair,Head,Female,Female 17,Hair/Female/Hair Female 17 Purple
+41121,Hair,Head,Female,Female 17,Hair/Female/Hair Female 17 Red
+41122,Hair,Head,Female,Female 18,Hair/Female/Hair Female 18 Black
+41123,Hair,Head,Female,Female 18,Hair/Female/Hair Female 18 Blue
+41124,Hair,Head,Female,Female 18,Hair/Female/Hair Female 18 Green
+41125,Hair,Head,Female,Female 18,Hair/Female/Hair Female 18 Magenta
+41126,Hair,Head,Female,Female 18,Hair/Female/Hair Female 18 Purple
+41127,Hair,Head,Female,Female 18,Hair/Female/Hair Female 18 Red
+41128,Hair,Head,Female,Female 18,Hair/Female/Hair Female 18 White
+41129,Hair,Head,Female,Female 18,Hair/Female/Hair Female 18 Yellow
+//Male,,,,,
+42001,Hair,Head,Male,Male 01 ,Hair/Male/Hair Male 01 Black
+42002,Hair,Head,Male,Male 01 ,Hair/Male/Hair Male 01 Blonde
+42003,Hair,Head,Male,Male 01 ,Hair/Male/Hair Male 01 Brown
+42004,Hair,Head,Male,Male 01 ,Hair/Male/Hair Male 01 Cyan
+42005,Hair,Head,Male,Male 01 ,Hair/Male/Hair Male 01 Grey
+42006,Hair,Head,Male,Male 01 ,Hair/Male/Hair Male 01 Purple
+42007,Hair,Head,Male,Male 01 ,Hair/Male/Hair Male 01 Red
+42008,Hair,Head,Male,Male 02 ,Hair/Male/Hair Male 02 Black
+42009,Hair,Head,Male,Male 02 ,Hair/Male/Hair Male 02 Blonde
+42010,Hair,Head,Male,Male 02 ,Hair/Male/Hair Male 02 Brown
+42011,Hair,Head,Male,Male 02 ,Hair/Male/Hair Male 02 Cyan
+42012,Hair,Head,Male,Male 02 ,Hair/Male/Hair Male 02 Grey
+42013,Hair,Head,Male,Male 02 ,Hair/Male/Hair Male 02 Purple
+42014,Hair,Head,Male,Male 02 ,Hair/Male/Hair Male 02 Red
+42015,Hair,Head,Male,Male 03 ,Hair/Male/Hair Male 03 Old Black
+42016,Hair,Head,Male,Male 03 ,Hair/Male/Hair Male 03 Old Blonde
+42017,Hair,Head,Male,Male 03 ,Hair/Male/Hair Male 03 Old Brown
+42018,Hair,Head,Male,Male 03 ,Hair/Male/Hair Male 03 Old Cyan
+42019,Hair,Head,Male,Male 03 ,Hair/Male/Hair Male 03 Old Grey
+42020,Hair,Head,Male,Male 03 ,Hair/Male/Hair Male 03 Old Purple
+42021,Hair,Head,Male,Male 03 ,Hair/Male/Hair Male 03 Old Red
+42022,Hair,Head,Male,Male 04 ,Hair/Male/Hair Male 04 Black
+42023,Hair,Head,Male,Male 04 ,Hair/Male/Hair Male 04 Blonde
+42024,Hair,Head,Male,Male 04 ,Hair/Male/Hair Male 04 Brown
+42025,Hair,Head,Male,Male 04 ,Hair/Male/Hair Male 04 Cyan
+42026,Hair,Head,Male,Male 04 ,Hair/Male/Hair Male 04 Grey
+42027,Hair,Head,Male,Male 04 ,Hair/Male/Hair Male 04 Purple
+42028,Hair,Head,Male,Male 04 ,Hair/Male/Hair Male 04 Red
+42029,Hair,Head,Male,Male 05 ,Hair/Male/Hair Male 05 Black
+42030,Hair,Head,Male,Male 05 ,Hair/Male/Hair Male 05 Blonde
+42031,Hair,Head,Male,Male 05 ,Hair/Male/Hair Male 05 Brown
+42032,Hair,Head,Male,Male 05 ,Hair/Male/Hair Male 05 Cyan
+42033,Hair,Head,Male,Male 05 ,Hair/Male/Hair Male 05 Grey
+42034,Hair,Head,Male,Male 05 ,Hair/Male/Hair Male 05 Purple
+42035,Hair,Head,Male,Male 05 ,Hair/Male/Hair Male 05 Red
+42036,Hair,Head,Male,Male 06 ,Hair/Male/Hair Male 06 Black
+42037,Hair,Head,Male,Male 06 ,Hair/Male/Hair Male 06 Blonde
+42038,Hair,Head,Male,Male 06 ,Hair/Male/Hair Male 06 Brown
+42039,Hair,Head,Male,Male 06 ,Hair/Male/Hair Male 06 Cyan
+42040,Hair,Head,Male,Male 06 ,Hair/Male/Hair Male 06 Grey
+42041,Hair,Head,Male,Male 06 ,Hair/Male/Hair Male 06 Purple
+42042,Hair,Head,Male,Male 06 ,Hair/Male/Hair Male 06 Red
+42043,Hair,Head,Male,Male 07 ,Hair/Male/Hair Male 07 Black
+42044,Hair,Head,Male,Male 07 ,Hair/Male/Hair Male 07 Blonde
+42045,Hair,Head,Male,Male 07 ,Hair/Male/Hair Male 07 Brown
+42046,Hair,Head,Male,Male 07 ,Hair/Male/Hair Male 07 Cyan
+42047,Hair,Head,Male,Male 07 ,Hair/Male/Hair Male 07 Grey
+42048,Hair,Head,Male,Male 07 ,Hair/Male/Hair Male 07 Purple
+42049,Hair,Head,Male,Male 07 ,Hair/Male/Hair Male 07 Red
+42050,Hair,Head,Male,Male 08 ,Hair/Male/Hair Male 08 Black
+42051,Hair,Head,Male,Male 08 ,Hair/Male/Hair Male 08 Blonde
+42052,Hair,Head,Male,Male 08 ,Hair/Male/Hair Male 08 Brown
+42053,Hair,Head,Male,Male 08 ,Hair/Male/Hair Male 08 Cyan
+42054,Hair,Head,Male,Male 08 ,Hair/Male/Hair Male 08 Grey
+42055,Hair,Head,Male,Male 08 ,Hair/Male/Hair Male 08 Purple
+42056,Hair,Head,Male,Male 08 ,Hair/Male/Hair Male 08 Red
+42057,Hair,Head,Male,Male 09 ,Hair/Male/Hair Male 09 Black
+42058,Hair,Head,Male,Male 09 ,Hair/Male/Hair Male 09 Blonde
+42059,Hair,Head,Male,Male 09 ,Hair/Male/Hair Male 09 Brown
+42060,Hair,Head,Male,Male 09 ,Hair/Male/Hair Male 09 Cyan
+42061,Hair,Head,Male,Male 09 ,Hair/Male/Hair Male 09 Grey
+42062,Hair,Head,Male,Male 09 ,Hair/Male/Hair Male 09 Purple
+42063,Hair,Head,Male,Male 09 ,Hair/Male/Hair Male 09 Red
+42064,Hair,Head,Male,Male 10 ,Hair/Male/Hair Male 10 Black
+42065,Hair,Head,Male,Male 10 ,Hair/Male/Hair Male 10 Blonde
+42066,Hair,Head,Male,Male 10 ,Hair/Male/Hair Male 10 Brown
+42067,Hair,Head,Male,Male 10 ,Hair/Male/Hair Male 10 Cyan
+42068,Hair,Head,Male,Male 10 ,Hair/Male/Hair Male 10 Grey
+42069,Hair,Head,Male,Male 10 ,Hair/Male/Hair Male 10 Purple
+42070,Hair,Head,Male,Male 10 ,Hair/Male/Hair Male 10 Red
+42071,Hair,Head,Male,Male 11 ,Hair/Male/Hair Male 11 Black
+42072,Hair,Head,Male,Male 11 ,Hair/Male/Hair Male 11 Blonde
+42073,Hair,Head,Male,Male 11 ,Hair/Male/Hair Male 11 Brown
+42074,Hair,Head,Male,Male 11 ,Hair/Male/Hair Male 11 Cyan
+42075,Hair,Head,Male,Male 11 ,Hair/Male/Hair Male 11 Grey
+42076,Hair,Head,Male,Male 11 ,Hair/Male/Hair Male 11 Purple
+42077,Hair,Head,Male,Male 11 ,Hair/Male/Hair Male 11 Red
+42078,Hair,Head,Male,Male 12 ,Hair/Male/Hair Male 12 Black
+42079,Hair,Head,Male,Male 12 ,Hair/Male/Hair Male 12 Blonde
+42080,Hair,Head,Male,Male 12 ,Hair/Male/Hair Male 12 Brown
+42081,Hair,Head,Male,Male 12 ,Hair/Male/Hair Male 12 Cyan
+42082,Hair,Head,Male,Male 12 ,Hair/Male/Hair Male 12 Grey
+42083,Hair,Head,Male,Male 12 ,Hair/Male/Hair Male 12 Purple
+42084,Hair,Head,Male,Male 12 ,Hair/Male/Hair Male 12 Red
+42085,Hair,Head,Male,Male 13 ,Hair/Male/Hair Male 13 Black
+42086,Hair,Head,Male,Male 13 ,Hair/Male/Hair Male 13 Blonde
+42087,Hair,Head,Male,Male 13 ,Hair/Male/Hair Male 13 Brown
+42088,Hair,Head,Male,Male 13 ,Hair/Male/Hair Male 13 Cyan
+42089,Hair,Head,Male,Male 13 ,Hair/Male/Hair Male 13 Grey
+42090,Hair,Head,Male,Male 13 ,Hair/Male/Hair Male 13 Purple
+42091,Hair,Head,Male,Male 13 ,Hair/Male/Hair Male 13 Red
+42092,Hair,Head,Male,Male 14 ,Hair/Male/Hair Male 14 Black
+42093,Hair,Head,Male,Male 14 ,Hair/Male/Hair Male 14 Blonde
+42094,Hair,Head,Male,Male 14 ,Hair/Male/Hair Male 14 Brown
+42095,Hair,Head,Male,Male 14 ,Hair/Male/Hair Male 14 Cyan
+42096,Hair,Head,Male,Male 14 ,Hair/Male/Hair Male 14 Grey
+42097,Hair,Head,Male,Male 14 ,Hair/Male/Hair Male 14 Purple
+42098,Hair,Head,Male,Male 14 ,Hair/Male/Hair Male 14 Red
+42099,Hair,Head,Male,Male 15 ,Hair/Male/Hair Male 15 Black
+42100,Hair,Head,Male,Male 15 ,Hair/Male/Hair Male 15 Blonde
+42101,Hair,Head,Male,Male 15 ,Hair/Male/Hair Male 15 Brown
+42102,Hair,Head,Male,Male 15 ,Hair/Male/Hair Male 15 Cyan
+42103,Hair,Head,Male,Male 15 ,Hair/Male/Hair Male 15 Grey
+42104,Hair,Head,Male,Male 15 ,Hair/Male/Hair Male 15 Purple
+42105,Hair,Head,Male,Male 15 ,Hair/Male/Hair Male 15 Red
+42106,Hair,Head,Male,Male 16 ,Hair/Male/Hair Male 16 Black
+42107,Hair,Head,Male,Male 16 ,Hair/Male/Hair Male 16 Blonde
+42108,Hair,Head,Male,Male 16 ,Hair/Male/Hair Male 16 Brown
+42109,Hair,Head,Male,Male 16 ,Hair/Male/Hair Male 16 Cyan
+42110,Hair,Head,Male,Male 16 ,Hair/Male/Hair Male 16 Grey
+42111,Hair,Head,Male,Male 16 ,Hair/Male/Hair Male 16 Purple
+42112,Hair,Head,Male,Male 16 ,Hair/Male/Hair Male 16 Red
+42113,Hair,Head,Male,Male 17 ,Hair/Male/Hair Male 17 Aqua
+42114,Hair,Head,Male,Male 17 ,Hair/Male/Hair Male 17 Black
+42115,Hair,Head,Male,Male 17 ,Hair/Male/Hair Male 17 Blonde
+42116,Hair,Head,Male,Male 17 ,Hair/Male/Hair Male 17 Brown
+42117,Hair,Head,Male,Male 17 ,Hair/Male/Hair Male 17 Cyan
+42118,Hair,Head,Male,Male 17 ,Hair/Male/Hair Male 17 Fire
+42119,Hair,Head,Male,Male 17 ,Hair/Male/Hair Male 17 Grey
+42120,Hair,Head,Male,Male 17 ,Hair/Male/Hair Male 17 Purple
+42121,Hair,Head,Male,Male 17 ,Hair/Male/Hair Male 17 Red
+42122,Hair,Head,Male,Male 18 ,Hair/Male/Hair Male 18 Black
+42123,Hair,Head,Male,Male 18 ,Hair/Male/Hair Male 18 Blonde
+42124,Hair,Head,Male,Male 18 ,Hair/Male/Hair Male 18 Brown
+42125,Hair,Head,Male,Male 18 ,Hair/Male/Hair Male 18 Cyan
+42126,Hair,Head,Male,Male 18 ,Hair/Male/Hair Male 18 Grey
+42127,Hair,Head,Male,Male 18 ,Hair/Male/Hair Male 18 Purple
+42128,Hair,Head,Male,Male 18 ,Hair/Male/Hair Male 18 Red
+50001,Horns,Head,None,Antlers,Horns/Antlers Blue
+50002,Horns,Head,None,Antlers,Horns/Antlers Dark
+50003,Horns,Head,None,Antlers,Horns/Antlers Green
+50004,Horns,Head,None,Antlers,Horns/Antlers Light
+50005,Horns,Head,None,Antlers,Horns/Antlers Purple
+50006,Horns,Head,None,Antlers,Horns/Antlers Red
+50007,Horns,Head,None,Front,Horns/Horn 01 Front Black
+50008,Horns,Head,None,Front,Horns/Horn 01 Front Red
+50009,Horns,Head,None,Front,Horns/Horn 01 Front White
+50010,Horns,Head,None,Side,Horns/Horn 02 Side Black Blue
+50011,Horns,Head,None,Side,Horns/Horn 02 Side Black Green
+50012,Horns,Head,None,Side,Horns/Horn 02 Side Black Orange
+50013,Horns,Head,None,Side,Horns/Horn 02 Side Black Purple
+50014,Horns,Head,None,Side,Horns/Horn 02 Side Black Red
+50015,Horns,Head,None,Side,Horns/Horn 02 Side Green Green
+50016,Horns,Head,None,Side,Horns/Horn 02 Side Red Yellow
+50017,Horns,Head,None,Side,Horns/Horn 02 Side White
+50018,Horns,Head,None,Side,Horns/Horn 02 Side Yellow
+50019,Horns,Head,None,Other,Horns/Horn 03 Blue
+50020,Horns,Head,None,Other,Horns/Horn 03 Green
+50021,Horns,Head,None,Other,Horns/Horn 03 Purple
+50022,Horns,Head,None,Other,Horns/Horn 03 Red
+50023,Horns,Head,None,Other,Horns/Horn 03 Yellow
+60001,Bag,Back,None,Bag,Bag/Bag 01 Blue
+60002,Bag,Back,None,Bag,Bag/Bag 01 Green
+60003,Bag,Back,None,Bag,Bag/Bag 01 Magenta
+60004,Bag,Back,None,Bag,Bag/Bag 01 Purple
+60005,Bag,Back,None,Bag,Bag/Bag 01 Red
+60006,Bag,Back,None,Bag,Bag/Bag 01 Yellow
+60007,Bag,Back,None,Basket,Bag/Basket 01 Blue Tomato
+60008,Bag,Back,None,Basket,Bag/Basket 01 Blue Vege
+60009,Bag,Back,None,Basket,Bag/Basket 01 Blue Water
+60010,Bag,Back,None,Basket,Bag/Basket 01 Brown Tomato
+60011,Bag,Back,None,Basket,Bag/Basket 01 Brown Vege
+60012,Bag,Back,None,Basket,Bag/Basket 01 Brown Water
+60013,Bag,Back,None,Basket,Bag/Basket 01 Green Tomato
+60014,Bag,Back,None,Basket,Bag/Basket 01 Green Vege
+60015,Bag,Back,None,Basket,Bag/Basket 01 Green Water
+60016,Bag,Back,None,Basket,Bag/Basket 01 Purple Tomato
+60017,Bag,Back,None,Basket,Bag/Basket 01 Purple Vege
+60018,Bag,Back,None,Basket,Bag/Basket 01 Purple Water
+60019,Bag,Back,None,Sack,Bag/Sack 01 Black
+60020,Bag,Back,None,Sack,Bag/Sack 01 Blue
+60021,Bag,Back,None,Sack,Bag/Sack 01 Brown
+60022,Bag,Back,None,Sack,Bag/Sack 01 Green
+60023,Bag,Back,None,Sack,Bag/Sack 01 Magenta
+60024,Bag,Back,None,Sack,Bag/Sack 01 Purple
+60025,Bag,Back,None,Sack,Bag/Sack 01 Red
+60026,Bag,Back,None,Sack,Bag/Sack 01 White
+60101,Bag,Back,None,Quiver,Quiver/Quiver 01 Blue Arrow Black
+60102,Bag,Back,None,Quiver,Quiver/Quiver 01 Blue Arrow Blue
+60103,Bag,Back,None,Quiver,Quiver/Quiver 01 Blue Arrow Green
+60104,Bag,Back,None,Quiver,Quiver/Quiver 01 Blue Arrow Purple
+60105,Bag,Back,None,Quiver,Quiver/Quiver 01 Blue Arrow Red
+60106,Bag,Back,None,Quiver,Quiver/Quiver 01 Blue Arrow White
+60107,Bag,Back,None,Quiver,Quiver/Quiver 01 Blue Arrow Yellow
+60108,Bag,Back,None,Quiver,Quiver/Quiver 01 Green Arrow Black
+60109,Bag,Back,None,Quiver,Quiver/Quiver 01 Green Arrow Blue
+60110,Bag,Back,None,Quiver,Quiver/Quiver 01 Green Arrow Green
+60111,Bag,Back,None,Quiver,Quiver/Quiver 01 Green Arrow Purple
+60112,Bag,Back,None,Quiver,Quiver/Quiver 01 Green Arrow Red
+60113,Bag,Back,None,Quiver,Quiver/Quiver 01 Green Arrow White
+60114,Bag,Back,None,Quiver,Quiver/Quiver 01 Green Arrow Yellow
+60115,Bag,Back,None,Quiver,Quiver/Quiver 01 Purple Arrow Black
+60116,Bag,Back,None,Quiver,Quiver/Quiver 01 Purple Arrow Blue
+60117,Bag,Back,None,Quiver,Quiver/Quiver 01 Purple Arrow Green
+60118,Bag,Back,None,Quiver,Quiver/Quiver 01 Purple Arrow Purple
+60119,Bag,Back,None,Quiver,Quiver/Quiver 01 Purple Arrow Red
+60120,Bag,Back,None,Quiver,Quiver/Quiver 01 Purple Arrow White
+60121,Bag,Back,None,Quiver,Quiver/Quiver 01 Purple Arrow Yellow
+60122,Bag,Back,None,Quiver,Quiver/Quiver 01 Red Arrow Black
+60123,Bag,Back,None,Quiver,Quiver/Quiver 01 Red Arrow Blue
+60124,Bag,Back,None,Quiver,Quiver/Quiver 01 Red Arrow Green
+60125,Bag,Back,None,Quiver,Quiver/Quiver 01 Red Arrow Purple
+60126,Bag,Back,None,Quiver,Quiver/Quiver 01 Red Arrow Red
+60127,Bag,Back,None,Quiver,Quiver/Quiver 01 Red Arrow White
+60128,Bag,Back,None,Quiver,Quiver/Quiver 01 Red Arrow Yellow
+70001,Wing,Back,None,Magnet,Wing/Back Prop 01 Black
+70002,Wing,Back,None,Magnet,Wing/Back Prop 01 Blue
+70003,Wing,Back,None,Magnet,Wing/Back Prop 01 Green
+70004,Wing,Back,None,Magnet,Wing/Back Prop 01 Magenta
+70005,Wing,Back,None,Magnet,Wing/Back Prop 01 Purple
+70006,Wing,Back,None,Magnet,Wing/Back Prop 01 Red
+70007,Wing,Back,None,Magnet,Wing/Back Prop 01 White
+70008,Wing,Back,None,Magnet,Wing/Back Prop 01 Yellow
+70009,Wing,Back,None,Spider,Wing/Back Prop 02 Blue
+70010,Wing,Back,None,Spider,Wing/Back Prop 02 Green
+70011,Wing,Back,None,Spider,Wing/Back Prop 02 Magenta
+70012,Wing,Back,None,Spider,Wing/Back Prop 02 Purple
+70013,Wing,Back,None,Spider,Wing/Back Prop 02 Red
+70014,Wing,Back,None,Spider,Wing/Back Prop 02 Yellow
+70015,Wing,Back,None,Wings 01,Wing/Wings 01 Black
+70016,Wing,Back,None,Wings 01,Wing/Wings 01 Gold
+70017,Wing,Back,None,Wings 01,Wing/Wings 01 White
+70018,Wing,Back,None,Wings 02,Wing/Wings 02 Dragon Black
+70019,Wing,Back,None,Wings 02,Wing/Wings 02 Dragon Blue
+70020,Wing,Back,None,Wings 02,Wing/Wings 02 Dragon Green
+70021,Wing,Back,None,Wings 02,Wing/Wings 02 Dragon Purple
+70022,Wing,Back,None,Wings 02,Wing/Wings 02 Dragon Red
+70023,Wing,Back,None,Wings 02,Wing/Wings 02 Dragon White
+70024,Wing,Back,None,Wings 03,Wing/Wings 03 Bone Black
+70025,Wing,Back,None,Wings 03,Wing/Wings 03 Bone Blue
+70026,Wing,Back,None,Wings 03,Wing/Wings 03 Bone Green
+70027,Wing,Back,None,Wings 03,Wing/Wings 03 Bone Purple
+70028,Wing,Back,None,Wings 03,Wing/Wings 03 Bone Red
+70029,Wing,Back,None,Wings 03,Wing/Wings 03 Bone White
+70030,Wing,Back,None,Wings 04,Wing/Wings 04 Dragonfly Blue
+70031,Wing,Back,None,Wings 04,Wing/Wings 04 Dragonfly Brown
+70032,Wing,Back,None,Wings 04,Wing/Wings 04 Dragonfly Grey
+70033,Wing,Back,None,Wings 04,Wing/Wings 04 Dragonfly Purple
+70034,Wing,Back,None,Wings 04,Wing/Wings 04 Dragonfly White
+70035,Wing,Back,None,Wings 05,Wing/Wings 05 Butterfly Blue
+70036,Wing,Back,None,Wings 05,Wing/Wings 05 Butterfly Green
+70037,Wing,Back,None,Wings 05,Wing/Wings 05 Butterfly Orange
+70038,Wing,Back,None,Wings 05,Wing/Wings 05 Butterfly Purple
+70039,Wing,Back,None,Wings 05,Wing/Wings 05 Butterfly Rainbow
+70040,Wing,Back,None,Wings 05,Wing/Wings 05 Butterfly Red
+70041,Wing,Back,None,Wings 05,Wing/Wings 05 Butterfly Yellow
+70042,Wing,Back,None,Wings 06,Wing/Wings 06 Leaves Blue
+70043,Wing,Back,None,Wings 06,Wing/Wings 06 Leaves Brown Green
+70044,Wing,Back,None,Wings 06,Wing/Wings 06 Leaves Brown
+70045,Wing,Back,None,Wings 06,Wing/Wings 06 Leaves Green Yellow
+70046,Wing,Back,None,Wings 06,Wing/Wings 06 Leaves Green
+70047,Wing,Back,None,Wings 06,Wing/Wings 06 Leaves Mint
+70048,Wing,Back,None,Wings 06,Wing/Wings 06 Leaves Purple
+70049,Wing,Back,None,Wings 06,Wing/Wings 06 Leaves Yellow
+70050,Wing,Back,None,Wings 07,Wing/Wings 07 Love Blue
+70051,Wing,Back,None,Wings 07,Wing/Wings 07 Love Green
+70052,Wing,Back,None,Wings 07,Wing/Wings 07 Love Orange
+70053,Wing,Back,None,Wings 07,Wing/Wings 07 Love Pink
+70054,Wing,Back,None,Wings 07,Wing/Wings 07 Love Purple
+70055,Wing,Back,None,Wings 07,Wing/Wings 07 Love Yellow
+70056,Wing,Back,None,Wings 08,Wing/Wings 08 Black
+70057,Wing,Back,None,Wings 08,Wing/Wings 08 Blue
+70058,Wing,Back,None,Wings 08,Wing/Wings 08 Brown
+70059,Wing,Back,None,Wings 08,Wing/Wings 08 Green
+70060,Wing,Back,None,Wings 08,Wing/Wings 08 Magenta
+70061,Wing,Back,None,Wings 08,Wing/Wings 08 Purple
+70062,Wing,Back,None,Wings 08,Wing/Wings 08 Red
+70063,Wing,Back,None,Wings 08,Wing/Wings 08 White
+70064,Wing,Back,None,Wings 09,Wing/Wings 09 Black Red
+70065,Wing,Back,None,Wings 09,Wing/Wings 09 Black
+70066,Wing,Back,None,Wings 09,Wing/Wings 09 Blue
+70067,Wing,Back,None,Wings 09,Wing/Wings 09 Gold White
+70068,Wing,Back,None,Wings 09,Wing/Wings 09 Green
+70069,Wing,Back,None,Wings 09,Wing/Wings 09 Magenta
+70070,Wing,Back,None,Wings 09,Wing/Wings 09 Purple
+70071,Wing,Back,None,Wings 09,Wing/Wings 09 Red
+70072,Wing,Back,None,Wings 09,Wing/Wings 09 White
+70073,Wing,Back,None,Wings 09,Wing/Wings 09 Yellow
+70074,Wing,Back,None,Wings 10,Wing/Wings 10 Black Purple
+70075,Wing,Back,None,Wings 10,Wing/Wings 10 Gold White
+70076,Wing,Back,None,Wings 10,Wing/Wings 10 Purple Green
+70077,Wing,Back,None,Wings 10,Wing/Wings 10 Purple Magenta
+70078,Wing,Back,None,Wings 10,Wing/Wings 10 Purple Red
+70079,Wing,Back,None,Wings 10,Wing/Wings 10 Red Yellow
+70080,Wing,Back,None,Wings 10,Wing/Wings 10 White Black
+70081,Wing,Back,None,Wings 10,Wing/Wings 10 White Blue
+70082,Wing,Back,None,Wings 11,Wing/Wings 11 Blue
+70083,Wing,Back,None,Wings 11,Wing/Wings 11 Green
+70084,Wing,Back,None,Wings 11,Wing/Wings 11 Purple
+70085,Wing,Back,None,Wings 11,Wing/Wings 11 Red
+70086,Wing,Back,None,Wings 11,Wing/Wings 11 Yellow
+81001,Face,Head,Female,Black,Face/Female/Face Black 21
+81002,Face,Head,Female,Black,Face/Female/Face Black 22
+81003,Face,Head,Female,Black,Face/Female/Face Black 23
+81004,Face,Head,Female,Black,Face/Female/Face Black 24
+81005,Face,Head,Female,Black,Face/Female/Face Black 25
+81006,Face,Head,Female,Black,Face/Female/Face Black 26
+81007,Face,Head,Female,Black,Face/Female/Face Black 27
+81008,Face,Head,Female,Black,Face/Female/Face Black 28
+81009,Face,Head,Female,Black,Face/Female/Face Black 29
+81010,Face,Head,Female,Black,Face/Female/Face Black 30
+81011,Face,Head,Female,Black,Face/Female/Face Black 31
+81012,Face,Head,Female,Black,Face/Female/Face Black 32
+81013,Face,Head,Female,Black,Face/Female/Face Black 33
+81014,Face,Head,Female,Black,Face/Female/Face Black 34
+81015,Face,Head,Female,Black,Face/Female/Face Black 35
+81016,Face,Head,Female,Black,Face/Female/Face Black 36
+81017,Face,Head,Female,Black,Face/Female/Face Black 37
+81018,Face,Head,Female,Black,Face/Female/Face Black 38
+81019,Face,Head,Female,Brown,Face/Female/Face Brown 21
+81020,Face,Head,Female,Brown,Face/Female/Face Brown 22
+81021,Face,Head,Female,Brown,Face/Female/Face Brown 23
+81022,Face,Head,Female,Brown,Face/Female/Face Brown 24
+81023,Face,Head,Female,Brown,Face/Female/Face Brown 25
+81024,Face,Head,Female,Brown,Face/Female/Face Brown 26
+81025,Face,Head,Female,Brown,Face/Female/Face Brown 27
+81026,Face,Head,Female,Brown,Face/Female/Face Brown 28
+81027,Face,Head,Female,Brown,Face/Female/Face Brown 29
+81028,Face,Head,Female,Brown,Face/Female/Face Brown 30
+81029,Face,Head,Female,Brown,Face/Female/Face Brown 31
+81030,Face,Head,Female,Brown,Face/Female/Face Brown 32
+81031,Face,Head,Female,Brown,Face/Female/Face Brown 33
+81032,Face,Head,Female,Brown,Face/Female/Face Brown 34
+81033,Face,Head,Female,Brown,Face/Female/Face Brown 35
+81034,Face,Head,Female,Brown,Face/Female/Face Brown 36
+81035,Face,Head,Female,Brown,Face/Female/Face Brown 37
+81036,Face,Head,Female,Brown,Face/Female/Face Brown 38
+81037,Face,Head,Female,White,Face/Female/Face White 21
+81038,Face,Head,Female,White,Face/Female/Face White 22
+81039,Face,Head,Female,White,Face/Female/Face White 23
+81040,Face,Head,Female,White,Face/Female/Face White 24
+81041,Face,Head,Female,White,Face/Female/Face White 25
+81042,Face,Head,Female,White,Face/Female/Face White 26
+81043,Face,Head,Female,White,Face/Female/Face White 27
+81044,Face,Head,Female,White,Face/Female/Face White 28
+81045,Face,Head,Female,White,Face/Female/Face White 29
+81046,Face,Head,Female,White,Face/Female/Face White 30
+81047,Face,Head,Female,White,Face/Female/Face White 31
+81048,Face,Head,Female,White,Face/Female/Face White 32
+81049,Face,Head,Female,White,Face/Female/Face White 33
+81050,Face,Head,Female,White,Face/Female/Face White 34
+81051,Face,Head,Female,White,Face/Female/Face White 35
+81052,Face,Head,Female,White,Face/Female/Face White 36
+81053,Face,Head,Female,White,Face/Female/Face White 37
+81054,Face,Head,Female,White,Face/Female/Face White 38
+82001,Face,Head,Male,Black,Face/Male/Face Black 01
+82002,Face,Head,Male,Black,Face/Male/Face Black 02
+82003,Face,Head,Male,Black,Face/Male/Face Black 03
+82004,Face,Head,Male,Black,Face/Male/Face Black 04
+82005,Face,Head,Male,Black,Face/Male/Face Black 05
+82006,Face,Head,Male,Black,Face/Male/Face Black 06
+82007,Face,Head,Male,Black,Face/Male/Face Black 07
+82008,Face,Head,Male,Black,Face/Male/Face Black 08
+82009,Face,Head,Male,Black,Face/Male/Face Black 09
+82010,Face,Head,Male,Black,Face/Male/Face Black 10
+82011,Face,Head,Male,Black,Face/Male/Face Black 11
+82012,Face,Head,Male,Black,Face/Male/Face Black 12
+82013,Face,Head,Male,Black,Face/Male/Face Black 13
+82014,Face,Head,Male,Black,Face/Male/Face Black 14
+82015,Face,Head,Male,Black,Face/Male/Face Black 15
+82016,Face,Head,Male,Black,Face/Male/Face Black 19
+82017,Face,Head,Male,Black,Face/Male/Face Black 20
+82018,Face,Head,Male,Brown,Face/Male/Face Brown 01
+82019,Face,Head,Male,Brown,Face/Male/Face Brown 02
+82020,Face,Head,Male,Brown,Face/Male/Face Brown 03
+82021,Face,Head,Male,Brown,Face/Male/Face Brown 04
+82022,Face,Head,Male,Brown,Face/Male/Face Brown 05
+82023,Face,Head,Male,Brown,Face/Male/Face Brown 06
+82024,Face,Head,Male,Brown,Face/Male/Face Brown 07
+82025,Face,Head,Male,Brown,Face/Male/Face Brown 08
+82026,Face,Head,Male,Brown,Face/Male/Face Brown 09
+82027,Face,Head,Male,Brown,Face/Male/Face Brown 10
+82028,Face,Head,Male,Brown,Face/Male/Face Brown 11
+82029,Face,Head,Male,Brown,Face/Male/Face Brown 12
+82030,Face,Head,Male,Brown,Face/Male/Face Brown 13
+82031,Face,Head,Male,Brown,Face/Male/Face Brown 14
+82032,Face,Head,Male,Brown,Face/Male/Face Brown 15
+82033,Face,Head,Male,Brown,Face/Male/Face Brown 19
+82034,Face,Head,Male,Brown,Face/Male/Face Brown 20
+82035,Face,Head,Male,White,Face/Male/Face White 01
+82036,Face,Head,Male,White,Face/Male/Face White 02
+82037,Face,Head,Male,White,Face/Male/Face White 03
+82038,Face,Head,Male,White,Face/Male/Face White 04
+82039,Face,Head,Male,White,Face/Male/Face White 05
+82040,Face,Head,Male,White,Face/Male/Face White 06
+82041,Face,Head,Male,White,Face/Male/Face White 07
+82042,Face,Head,Male,White,Face/Male/Face White 08
+82043,Face,Head,Male,White,Face/Male/Face White 09
+82044,Face,Head,Male,White,Face/Male/Face White 10
+82045,Face,Head,Male,White,Face/Male/Face White 11
+82046,Face,Head,Male,White,Face/Male/Face White 12
+82047,Face,Head,Male,White,Face/Male/Face White 13
+82048,Face,Head,Male,White,Face/Male/Face White 14
+82049,Face,Head,Male,White,Face/Male/Face White 15
+82050,Face,Head,Male,White,Face/Male/Face White 19
+82051,Face,Head,Male,White,Face/Male/Face White 20
+80001,Face,Head,None,Black,Face/One Eyed/Face Black 16
+80002,Face,Head,None,Black,Face/One Eyed/Face Black 17
+80003,Face,Head,None,Black,Face/One Eyed/Face Black 18
+80004,Face,Head,None,Brown,Face/One Eyed/Face Brown 16
+80005,Face,Head,None,Brown,Face/One Eyed/Face Brown 17
+80006,Face,Head,None,Brown,Face/One Eyed/Face Brown 18
+80007,Face,Head,None,White,Face/One Eyed/Face White 16
+80008,Face,Head,None,White,Face/One Eyed/Face White 17
+80009,Face,Head,None,White,Face/One Eyed/Face White 18
+90101,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Black Red
+90102,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Blue Blue
+90103,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Gold White
+90104,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Grey Purple
+90105,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Grey White
+90106,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Purple Green
+90107,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Purple Red
+90108,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Red Yellow
+90109,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 02 Blue
+90110,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 02 Green
+90111,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 02 Purple
+90112,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 02 Red
+90113,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 02 White
+90114,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Black
+90115,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Blue
+90116,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Green
+90117,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Magenta
+90118,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Purple
+90119,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Red
+90120,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 White
+90121,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Yellow
+90201,Weapon,BothHand,None,Hand Aura,BothHand/Hand Aura/Hand Aura 01 Blue
+90202,Weapon,BothHand,None,Hand Aura,BothHand/Hand Aura/Hand Aura 01 Green
+90203,Weapon,BothHand,None,Hand Aura,BothHand/Hand Aura/Hand Aura 01 Purple
+90204,Weapon,BothHand,None,Hand Aura,BothHand/Hand Aura/Hand Aura 01 Red
+90205,Weapon,BothHand,None,Hand Aura,BothHand/Hand Aura/Hand Aura 01 Yellow
+90301,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Black Purple
+90302,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Blue Blue
+90303,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold Blue
+90304,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold Green
+90305,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold Purple
+90306,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold Red
+90307,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold White
+90308,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold Yellow
+90309,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Grey White
+90310,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Grey Yellow
+90311,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Black
+90312,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Blue
+90313,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Brown
+90314,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Green
+90315,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Magenta
+90316,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Purple
+90317,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Red
+90318,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 White
+90319,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Black
+90320,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Blue
+90321,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Brown
+90322,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Green
+90323,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Magenta
+90324,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Purple
+90325,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Red
+90326,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 White
+90401,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Black
+90402,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Blue
+90403,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Green
+90404,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Black
+90405,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Blue
+90406,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Green
+90407,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Purple
+90408,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Red
+90409,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow White
+90410,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Yellow
+90411,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Purple
+90412,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Red
+90413,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 White
+90414,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Yellow
+90415,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Black
+90416,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Blue
+90417,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Green
+90418,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Black
+90419,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Blue
+90420,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Green
+90421,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Orange
+90422,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Purple
+90423,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Red
+90424,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow White
+90425,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Yellow
+90426,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Orange
+90427,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Purple
+90428,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Red
+90429,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 White
+90430,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Yellow
+90431,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 03 Black
+90432,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 03 Blue
+90433,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 03 Green
+90434,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 03 Purple
+90435,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 03 Red
+90501,Weapon,LeftHand,None,Guitar,LeftHand/Guitar/Guitar 01 Blue
+90502,Weapon,LeftHand,None,Guitar,LeftHand/Guitar/Guitar 01 Brown
+90503,Weapon,LeftHand,None,Guitar,LeftHand/Guitar/Guitar 01 Green
+90504,Weapon,LeftHand,None,Guitar,LeftHand/Guitar/Guitar 01 Purple
+90601,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Black
+90602,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Blue
+90603,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Green
+90604,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Magenta
+90605,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Purple
+90606,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Red
+90607,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 White
+90608,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Yellow
+90609,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Black
+90610,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Blue
+90611,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Green
+90612,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Magenta
+90613,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Purple
+90614,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Red
+90615,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 White
+90616,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Yellow
+90617,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Black
+90618,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Blue
+90619,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Green
+90620,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Magenta
+90621,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Purple
+90622,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Red
+90623,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 White
+90624,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Yellow
+90701,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 01 Black
+90702,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 01 Blue
+90703,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 01 Green
+90704,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 01 Red
+90705,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 01 White
+90706,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 02 Blue
+90707,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 02 Brown
+90708,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 02 Green
+90709,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 02 Grey
+90710,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 02 Purple
+90711,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 03 Blue
+90712,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 03 Brown
+90713,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 03 Green
+90714,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 03 Magenta
+90715,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 03 Purple
+90716,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 04 Blue
+90717,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 04 Orange
+90718,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 04 Purple
+90719,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 04 Red
+90720,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 04 Yellow
+90721,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 05 Blue
+90722,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 05 Green
+90723,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 05 Purple
+90724,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 05 Red
+90725,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 05 Yellow
+90726,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 Black
+90727,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 Blue
+90728,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 Green
+90729,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 Purple
+90730,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 Red
+90731,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 White
+90732,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Black
+90733,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Blue
+90734,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Green
+90735,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Purple
+90736,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Red
+90737,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Yellow
+90738,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Black
+90739,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Blue
+90740,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Green
+90741,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Orange
+90742,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Purple
+90743,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Red
+90744,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 White
+90745,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Yellow
+90746,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 Black
+90747,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 Blue
+90748,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 Green
+90749,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 Purple
+90750,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 Red
+90751,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 White
+90752,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Black
+90753,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Blue
+90754,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Brown
+90755,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Green
+90756,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Purple
+90757,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Red
+90758,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 White
+90801,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 01
+90802,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 02 Blue
+90803,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 02 Green
+90804,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 02 Purple
+90805,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 02 Red
+90806,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 03 Blue
+90807,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 03 Green
+90808,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 03 Purple
+90809,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 03 Red
+90901,Weapon,RightHand,None,Club,RightHand/Club/Bell 01 Gold
+90902,Weapon,RightHand,None,Club,RightHand/Club/Club 01
+90903,Weapon,RightHand,None,Club,RightHand/Club/Club 02 Blue
+90904,Weapon,RightHand,None,Club,RightHand/Club/Club 02 Green
+90905,Weapon,RightHand,None,Club,RightHand/Club/Club 02 Purple
+90906,Weapon,RightHand,None,Club,RightHand/Club/Club 02 Red
+90907,Weapon,RightHand,None,Club,RightHand/Club/Club 03 Blue
+90908,Weapon,RightHand,None,Club,RightHand/Club/Club 03 Green
+90909,Weapon,RightHand,None,Club,RightHand/Club/Club 03 Purple
+90910,Weapon,RightHand,None,Club,RightHand/Club/Club 03 Red
+90911,Weapon,RightHand,None,Club,RightHand/Club/Club 03 White
+90001,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 01 Blue
+90002,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 01 Green
+90003,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 01 Purple
+90004,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 01 Red
+90005,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 02 Blue
+90006,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 02 Green
+90007,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 02 Purple
+90008,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 02 Red
+90009,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Black
+90010,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Blue
+90011,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Green
+90012,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Magenta
+90013,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Purple
+90014,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Red
+90015,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 White
+90016,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Yellow
+91001,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Black
+91002,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Blue
+91003,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Green
+91004,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Magenta
+91005,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Purple
+91006,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Red
+91007,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 White
+91008,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Yellow
+91009,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Black
+91010,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Blue
+91011,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Green
+91012,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Magenta
+91013,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Purple
+91014,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Red
+91015,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Yellow
+91016,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Black
+91017,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Blue
+91018,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Green
+91019,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Magenta
+91020,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Purple
+91021,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Red
+91022,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 White
+91023,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Yellow
+91024,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Black
+91025,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Blue
+91026,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Green
+91027,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Purple
+91028,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Red
+91029,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Yellow
+91030,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Black
+91031,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Blue
+91032,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Fire
+91033,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Green
+91034,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Ice
+91035,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Poison
+91036,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Purple
+91037,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Red
+91038,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Yellow
+91101,Weapon,RightHand,None,Peasant Tool,RightHand/Peasant Tool/Peasant Tool 01 Rake
+91102,Weapon,RightHand,None,Peasant Tool,RightHand/Peasant Tool/Peasant Tool 02 Hammer
+91103,Weapon,RightHand,None,Peasant Tool,RightHand/Peasant Tool/Peasant Tool 03 Axe
+91104,Weapon,RightHand,None,Peasant Tool,RightHand/Peasant Tool/Peasant Tool 04 Scyth
+91105,Weapon,RightHand,None,Peasant Tool,RightHand/Peasant Tool/Pickaxe 01
+91201,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Black
+91202,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Blue
+91203,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Green
+91204,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Magenta
+91205,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Purple
+91206,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Red
+91207,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 White
+91208,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Yellow
+91301,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Black
+91302,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Blue
+91303,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Green
+91304,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Magenta
+91305,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Purple
+91306,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Red
+91307,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 White
+91308,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Yellow
+91309,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Blue
+91310,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Green
+91311,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Magenta
+91312,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Purple
+91313,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Red
+91314,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 White
+91315,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Yellow
+91316,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Black
+91317,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Blue
+91318,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Green
+91319,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Magenta
+91320,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Purple
+91321,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Red
+91322,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 White
+91323,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Yellow
+91401,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Black
+91402,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Blue
+91403,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Brown
+91404,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Green
+91405,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Magenta
+91406,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Purple
+91407,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Red
+91408,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 White
+91409,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Black
+91410,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Blue
+91411,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Green
+91412,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Magenta
+91413,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Purple
+91414,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Red
+91415,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 White
+91416,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Yellow
+91417,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Black
+91418,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Blue
+91419,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Brown
+91420,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Green
+91421,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Magenta
+91422,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Purple
+91423,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Red
+91424,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 White
+91501,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 01 Black
+91502,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 01 Blue
+91503,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 01 Green
+91504,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 01 Red
+91505,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 01 White
+91506,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 02 Fire
+91507,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 02 Ice
+91508,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 02 Normal
+91509,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 02 Poison
+91510,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 03 Blue
+91511,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 03 Gold
+91512,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 03 Green
+91513,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 03 Red
+91514,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 Black
+91515,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 Blue
+91516,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 Brown
+91517,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 Green
+91518,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 Purple
+91519,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 White
+91520,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Fire Ice
+91521,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Light Dark
+91522,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Lightning
+91523,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Normal Blue
+91524,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Normal Green
+91525,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Normal Purple
+91526,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Normal Red
+91527,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Poison
+91528,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 06 Blue
+91529,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 06 Green
+91530,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 06 Purple
+91531,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 06 Red
+91532,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 06 Yellow
+91533,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 07 Blue
+91534,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 07 Green
+91535,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 07 Grey
+91536,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 07 Purple
+91537,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 08 Blue
+91538,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 08 Green
+91539,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 08 Purple
+91540,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 08 Red
+91541,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 08 Yellow
+91542,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Green
+91543,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Grey
+91544,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Pink
+91545,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Purple
+91546,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Red
+91547,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Yellow
+91548,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 Black Gold
+91549,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 Blue Gold
+91550,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 Green Gold
+91551,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 Purple Gold
+91552,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 Red Gold
+91553,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 White Gold
+91601,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Black
+91602,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Blue
+91603,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Green
+91604,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Magenta
+91605,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Purple
+91606,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Red
+91607,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 White
+91608,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Yellow
+91609,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Black
+91610,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Blue
+91611,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Green
+91612,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Magenta
+91613,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Purple
+91614,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Red
+91615,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 White
+91616,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Yellow
+91617,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Black
+91618,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Blue
+91619,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Green
+91620,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Magenta
+91621,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Purple
+91622,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Red
+91623,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 White
+91624,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Yellow
+91701,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Black
+91702,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Blue
+91703,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Green
+91704,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Magenta
+91705,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Purple
+91706,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Red
+91707,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 White
+91708,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Yellow
+91709,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Black
+91710,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Blue
+91711,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Green
+91712,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Magenta
+91713,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Purple
+91714,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Red
+91715,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 White
+91716,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Yellow
+91717,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Black
+91718,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Blue
+91719,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Green
+91720,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Magenta
+91721,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Purple
+91722,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Red
+91723,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 White
+91724,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Yellow
+91801,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Blue
+91802,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Green
+91803,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Orange
+91804,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Purple
+91805,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Red
+91806,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick White
+91807,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Yellow
+91808,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 Blue
+91809,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 Green
+91810,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 Purple
+91811,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 Red
+91812,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 White
+91813,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 Yellow
+91814,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 03 Blue
+91815,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 03 Green
+91816,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 03 Purple
+91817,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 03 Red
+91818,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 Blue
+91819,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 Green
+91820,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 Purple
+91821,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 Red
+91822,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 White
+91823,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 Yellow
+91824,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 05 Blue
+91825,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 05 Green
+91826,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 05 Purple
+91827,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 05 Red
+91828,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 05 Yellow
+91829,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Black
+91830,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Blue
+91831,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Brown
+91832,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Green
+91833,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Purple
+91834,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Red
+91835,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom White
+91836,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 Blue
+91837,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 Green
+91838,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 Purple
+91839,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 Red
+91840,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 White
+91841,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 Yellow
+91842,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Black
+91843,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Blue
+91844,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Green
+91845,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Purple
+91846,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Red
+91847,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 White
+91848,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Yellow
+91849,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Blue
+91850,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Green
+91851,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Magenta
+91852,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Pink
+91853,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Purple
+91854,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Red
+91855,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 Black
+91856,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 Blue
+91857,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 Green
+91858,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 Purple
+91859,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 Red
+91860,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 White
+91861,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 11 Santa

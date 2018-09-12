@@ -29,7 +29,7 @@ namespace BigRogue.Util {
             if (text != null)
                 return OpenCsv(text);
             else
-                throw new UnityException($"文件错误{path}");
+                throw new UnityException($"读取文件错误:{path}");
         }
 
 

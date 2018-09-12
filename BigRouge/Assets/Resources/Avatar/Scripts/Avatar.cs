@@ -4,58 +4,105 @@ using UnityEngine;
 
 namespace BigRogue.Avatar {
 
+    public enum AvatarSlot {
+        MainBody = 0,
+        Beard = 1,
+        Ears = 2,
+        Hair = 3,
+        Face = 4,
+        Horns = 5,
+        Wing = 6,
+        Bag = 7,
+        MainHand = 101,
+        OffHand = 102
+    }
+    public enum AvatarPartType {
+        MainBody = 0,
+        Beard = 1,
+        Ears = 2,
+        Hair = 3,
+        Face = 4,
+        Horns = 5,
+        Wing = 6,
+        Bag = 7,
+        Weapon = 100
+    }
+
+    /// <summary>
+    /// 挂载类型
+    /// </summary>
+    public enum MountingType {
+        None = -1,
+        Root = 0,
+        Base = 1,
+        Head = 2,
+        Back = 3,
+        LeftHand = 4,
+        RightHand = 5,
+        BothHand = 6,
+    }
+
+    /// <summary>
+    /// 挂点位置枚举
+    /// </summary>
+    public enum MountingPoint {
+        Root, Base, Head, Back, Left, Right
+    }
+
+    public enum SexType {
+        None = 0,
+        Female = 1,
+        Male = 2,
+        Other = 3,
+    }
+
     public class Avatar : MonoBehaviour {
 
         // key avatar enum
         // value avatarid
-        Dictionary<string, int> m_allAvatarIDs;
+        Dictionary<AvatarSlot, AvatarRecord> m_allAvatarRecords;
 
-        Dictionary<string, AvatarPart> m_allAvatarPart;
+        Dictionary<AvatarSlot, AvatarPart> m_allAvatarPart;
 
         AvatarBody m_bodyAvatar;
 
-        //Material m_bodyMat;
-
-
-        int GetAvatarID(string apt) {
-            if (m_allAvatarIDs.ContainsKey(apt))
-                return m_allAvatarIDs[apt];
+        AvatarRecord GetAvatarRecord(AvatarSlot avSlot) {
+            if (m_allAvatarRecords.ContainsKey(avSlot))
+                return m_allAvatarRecords[avSlot];
             else
-                return -1;
-        }
-
-        public void SetAvatarID(string apt, int id) {
-            if (m_allAvatarIDs.ContainsKey(apt))
-                m_allAvatarIDs[apt] = id;
-            else
-                m_allAvatarIDs.Add(apt, id);
+                return AvatarRecord.empty;
         }
 
 
-        void SetAvatar(string apt, AvatarPart ap) {
+        void SetAvatarRecord(AvatarSlot avSlot, int avID) {
+            AvatarRecord record = AvatarDataHandler.GetAvatarRecord(avID);
 
-            if (m_allAvatarPart.ContainsKey(apt)) {
-                //Destroy(m_allAvatarPart[apt].gameObject);
-                m_allAvatarPart[apt] = ap;
-            } else
-                m_allAvatarPart.Add(apt, ap);
-        }
-
-        AvatarPart GetAvatar(string apt) {
-            if (m_allAvatarPart.ContainsKey(apt))
-                return m_allAvatarPart[apt];
-            else
-                return null;
+            if (record.isEmpty()) {
+                if (m_allAvatarRecords.ContainsKey(avSlot))
+                    m_allAvatarRecords.Remove(avSlot);
+                return;
+            }
+            m_allAvatarRecords[avSlot] = record;
         }
 
 
-        void Init() {
-            m_allAvatarIDs = new Dictionary<string, int>();
-            m_allAvatarPart = new Dictionary<string, AvatarPart>();
+        void SetAvatarPart(AvatarSlot avSlot, AvatarPart ap) {
+            if (m_allAvatarPart.ContainsKey(avSlot)) {
+                Destroy(m_allAvatarPart[avSlot].gameObject);
+            }
+            m_allAvatarPart[avSlot] = ap;
+        }
+
+        AvatarPart GetAvatarPart(AvatarSlot avSlot) {
+            if (m_allAvatarPart.ContainsKey(avSlot)) {
+                return m_allAvatarPart[avSlot];
+            }
+
+            return null;
         }
 
         private void Awake() {
-            Init();
+            m_allAvatarRecords = new Dictionary<AvatarSlot, AvatarRecord>();
         }
 
         /// <summary>
@@ -64,123 +111,106 @@ namespace BigRogue.Avatar {
         public void BuildAllAvatar() {
             BuildBody();
             //BuildBodyMat();
-            foreach (var item in m_allAvatarIDs) {
-                BuildNormalAvatar(item.Key);
+            foreach (var item in m_allAvatarRecords) {
+                BuildAvatar(item.Key);
             }
         }
 
         /// <summary>
-        /// 组建非身体部件的Avatar
+        /// 根据record 生成avatarpart
         /// </summary>
-        /// <param name="avatarPartTypeName"></param>
-        void BuildNormalAvatar(string avatarPartTypeName) {
+        /// <param name="avSlot"></param>
+        void BuildAvatar(AvatarSlot avSlot) {
             if (m_bodyAvatar == null) return;
-            if (!m_allAvatarIDs.ContainsKey(avatarPartTypeName)) return;
-            if (avatarPartTypeName == "MainBody" ) {
+            if (!m_allAvatarRecords.ContainsKey(avSlot)) return;
+            if (avSlot == AvatarSlot.MainBody) {
                 return;
             }
-            int avID = m_allAvatarIDs[avatarPartTypeName];
-            if (avID == -1) {
-                SetDefaultAvatar(avatarPartTypeName);
-                return;
-            } 
-            AvatarPart ap = LoadAvatarPart(avID);
-            if (ap == null) {
-                SetDefaultAvatar(avatarPartTypeName);
+
+            AvatarRecord avRecord = m_allAvatarRecords[avSlot];
+
+            if (avRecord.isEmpty()) {
+                if (m_allAvatarPart.ContainsKey(avSlot))
+                    Destroy(m_allAvatarPart[avSlot].gameObject);
                 return;
             }
-            MountAvatarPart(ap);
-            SetAvatar(avatarPartTypeName, ap);
+
+            AvatarPart ap = LoadAvatarPart(avRecord);
+            ap.mountPoint = GetMountingPoint(avSlot);
+
+            ap.transform.SetParent(m_bodyAvatar.GetMountParent(ap.mountPoint),false);
+
+            SetAvatarPart(avSlot, ap);
         }
-
-        /// <summary>
-        /// 清除部件
-        /// </summary>
-        /// <param name="avatarPartTypeName"></param>
-        void SetDefaultAvatar(string avatarPartTypeName) {
-            if (avatarPartTypeName == "MainBody") {
-                return;
-            }
-            if (avatarPartTypeName == "Underwear") {
-                return;
-            }
-            if(m_allAvatarPart.ContainsKey(avatarPartTypeName))
-                Destroy(m_allAvatarPart[avatarPartTypeName].gameObject);
-
-            SetAvatarID(avatarPartTypeName, -1);
-        }
-
 
         void BuildBody() {
-            AvatarPart ap = LoadAvatarPart(m_allAvatarIDs["MainBody"]);
-            MountAvatarPart(ap);
-            SetAvatar("MainBody", ap);
+            if (m_bodyAvatar != null)
+                Destroy(m_bodyAvatar.gameObject);
+            if (!m_allAvatarRecords.ContainsKey(AvatarSlot.MainBody))
+                return;
+
+            AvatarRecord avRecord = m_allAvatarRecords[AvatarSlot.MainBody];
+
+            if (avRecord.isEmpty()) 
+                return;
+            
+            AvatarPart ap = LoadAvatarPart(avRecord);
+            ap.transform.SetParent(transform,false);
+
+            SetAvatarPart(AvatarSlot.MainBody, ap);
             m_bodyAvatar = ap.gameObject.AddComponent<AvatarBody>();
         }
 
-
-        void MountAvatarPart(AvatarPart ap) {
-
-            switch (ap.mountingType) {
-                case MountingType.Root:
-                    ap.transform.SetParent(transform);
-                    break;
-                case MountingType.Base:
-                    ap.transform.SetParent(m_bodyAvatar.GetMountingParent(MountingPoint.Base), false);
-                    break;
-                case MountingType.Head:
-                    ap.transform.SetParent(m_bodyAvatar.GetMountingParent(MountingPoint.Head), false);
-                    break;
-                case MountingType.Back:
-                    ap.transform.SetParent(m_bodyAvatar.GetMountingParent(MountingPoint.Back), false);
-                    break;
-                case MountingType.Left:
-                    ap.transform.SetParent(m_bodyAvatar.GetMountingParent(MountingPoint.Left), false);
-                    break;
-                case MountingType.Right:
-                    ap.transform.SetParent(m_bodyAvatar.GetMountingParent(MountingPoint.Right), false);
-                    break;
-                case MountingType.BothHand:
-                    ap.transform.SetParent(m_bodyAvatar.GetMountingParent(MountingPoint.Left), false);
-                    break;
+        MountingPoint GetMountingPoint(AvatarSlot avSlot) {
+            switch (avSlot) {
+                case AvatarSlot.MainBody:   return MountingPoint.Root;
+                case AvatarSlot.Beard:  return MountingPoint.Head;
+                case AvatarSlot.Ears:   return MountingPoint.Head;
+                case AvatarSlot.Hair:   return MountingPoint.Head;
+                case AvatarSlot.Face:   return MountingPoint.Head;
+                case AvatarSlot.Horns:  return MountingPoint.Head;
+                case AvatarSlot.Wing:   return MountingPoint.Back;
+                case AvatarSlot.Bag:    return MountingPoint.Back;
+                case AvatarSlot.MainHand:   return MountingPoint.Left;
+                case AvatarSlot.OffHand:    return MountingPoint.Right;
                 default:
-                    break;
+                    throw new UnityException($"avSlot 不存在{avSlot}");
             }
         }
+
+
+
+
 
         /// <summary>
         /// 载入模型,添加AvatarPart脚本
         /// </summary>
         /// <param name="apID"></param>
         /// <returns></returns>
-        AvatarPart LoadAvatarPart(int apID) {
-            AvatarPartRecord apr = AvatarDataHandler.GetAvatarPartRecord(apID);
+        AvatarPart LoadAvatarPart(AvatarRecord avRecord) {
 
-            if (apr.id == -1) return null;
+            GameObject res = Resources.Load<GameObject>(avRecord.path);
 
-            GameObject prefab = Resources.Load<GameObject>(apr.path);
-
-            if (prefab == null)
-                throw new UnityException($"没有找到资源:{apr.path}");
+            if (res == null)
+                throw new UnityException($"没有找到资源:{avRecord.path}");
 
 
-            GameObject go = Instantiate<GameObject>(prefab);
+            GameObject go = Instantiate<GameObject>(res);
+
             AvatarPart ap = go.AddComponent<AvatarPart>();
-            ap.apr = apr;
+            ap.avatarRecord = avRecord;
 
             return ap;
-
         }
-
 
         // API
 
-        public void SetAndBuildAvatar(string avatarTypeName, int apID) {
-            SetAvatarID(avatarTypeName, apID);
-            if (avatarTypeName == "MainBody")
+        public void SetAndBuildAvatar(AvatarSlot avSlot, int apID) {
+            SetAvatarRecord(avSlot, apID);
+            if (avSlot == AvatarSlot.MainBody)
                 BuildAllAvatar();
             else
-                BuildNormalAvatar(avatarTypeName);
+                BuildAvatar(avSlot);
         }
 
         //private void OnGUI() {

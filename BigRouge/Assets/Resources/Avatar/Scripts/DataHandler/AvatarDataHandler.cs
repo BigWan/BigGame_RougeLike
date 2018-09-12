@@ -4,35 +4,7 @@ using UnityEngine;
 using System.Linq;
 
 namespace BigRogue.Avatar {
-    /// <summary>
-    /// 部件信息
-    /// </summary>
-    public struct AvatarPartRecord {
 
-        public static AvatarPartRecord empty = new AvatarPartRecord(-1,"","");
-
-
-        /// <summary>
-        /// 部件ID
-        /// </summary>
-        public int id;
-        /// <summary>
-        /// 部件的AvatarPartTypeRecord类型
-        /// </summary>
-        public string avatarPartTypeName;
-        /// <summary>
-        /// 部件美术路径
-        /// </summary>
-        public string path;
-
-        public AvatarPartRecord(int id = -1,string avatarPartTypeName = "", string path = "") {
-            this.id = id;
-            this.path = path;
-            this.avatarPartTypeName = avatarPartTypeName;
-        }
-
-        
-    }
 
     /// <summary>
     /// 负责读取数据表
@@ -41,124 +13,63 @@ namespace BigRogue.Avatar {
     /// </summary>
     public static class AvatarDataHandler {
 
-        const string avatarPartTypeFileName = "Avatar/Texts/AvatarPartType";
-        const string avatarPartFileName     = "Avatar/Texts/AvatarPart";
+        const string avatarDataFile = "Avatar/Texts/AvatarData";
 
-        const string avatarResFolder = "Avatar/AvatarParts/";
+        static Dictionary<int, AvatarRecord> s_avatarDatas;
 
-        /// <summary>
-        /// AvatarPartTypeRecord 的数据库
-        /// key = 部件类型名称
-        /// value = 资源的挂点类型
-        /// </summary>
-        static Dictionary<string, MountingType> avatarPartTypeDataSheet;
+        private static void LoadAvatarData() {
 
-        /// <summary>
-        /// avatar 的部件ID 表
-        /// key 部件ID
-        /// value 部件记录
-        /// </summary>
-        static Dictionary<int, AvatarPartRecord> avatarPartDataSheet;
+            string[] lines = Util.SimpleCsv.OpenCsv(avatarDataFile);
+            if (lines.Length == 0)
+                throw new UnityException($"avatardatas:{s_avatarDatas}没有数据");
 
-        public static int Count {
-            get {
-                return avatarPartDataSheet.Count;
+            for (int i = 0; i < lines.Length; i++) {
+                AvatarRecord record = new AvatarRecord(lines[i]);
+                s_avatarDatas.Add(record.id, record);
             }
+
         }
+
 
         static AvatarDataHandler() {
-            avatarPartTypeDataSheet = new Dictionary<string, MountingType>();
-            avatarPartDataSheet = new Dictionary<int, AvatarPartRecord>();
-
-            LoadAvatarPartType();
-            LoadAvatarPart();
-        }
-
-        /// <summary>
-        /// 载入类型描述文件
-        /// </summary>
-        static void LoadAvatarPartType() {
-
-            string[] lines = Util.SimpleCsv.OpenCsv(avatarPartTypeFileName);
-
-            string[] cells;
-            for (int i = 0; i < lines.Length; i++) {
-                try {
-
-                    cells = lines[i].Split(',');
-                    if (cells == null || cells.Length < 2) continue;
-                    avatarPartTypeDataSheet.Add(
-                        cells[0],
-                        (MountingType)System.Enum.Parse(typeof(MountingType), cells[1])
-                        );
-
-                } catch (System.Exception) {
-
-                    throw;
-                }
-               
-            }
-        }
-
-        // 载入部件信息表
-        static void LoadAvatarPart() {
-            string[] lines = Util.SimpleCsv.OpenCsv(avatarPartFileName);
-            string[] cells;
-
-            for (int i = 0; i < lines.Length; i++) {
-                try {
-                    cells = lines[i].Split(',');
-                    AvatarPartRecord apr = new AvatarPartRecord(
-                    int.Parse(cells[0]), cells[1], avatarResFolder+cells[2]
-                    );
-
-                    avatarPartDataSheet.Add(apr.id, apr);
-                } catch (System.Exception) {
-
-                    throw new UnityException($"{avatarPartFileName}文件解析错误");
-                }
-                
-            }
-
+            s_avatarDatas = new Dictionary<int, AvatarRecord>();
+            LoadAvatarData();
         }
 
 
-        // API
-        /// <summary>
-        /// 根据部件类型名查询部件的挂点信息
-        /// </summary>
-        /// <param name="avatarPartName">部件的名称信息</param>
-        /// <returns>挂载类型</returns>
-        public static MountingType GetMountingType(string avatarPartName) {
-            return avatarPartTypeDataSheet[avatarPartName];
-        }
-
-        /// <summary>
-        /// 获取Apr
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public static AvatarPartRecord GetAvatarPartRecord(int id) {
-            if (avatarPartDataSheet.ContainsKey(id))
-                return avatarPartDataSheet[id];
+        public static AvatarRecord GetAvatarRecord(int id) {
+            if (s_avatarDatas.ContainsKey(id))
+                return s_avatarDatas[id];
             else
-                return AvatarPartRecord.empty;
+                return AvatarRecord.empty;
         }
 
+        /// <summary>
+        /// 数据筛选
+        /// </summary>
+        /// <param name="avSlot"></param>
+        /// <returns></returns>
+        //public static Dictionary<int,AvatarRecord> SelectRecords(AvatarPartType apt,SexType sex,string cat) {
 
-        public static List<AvatarPartRecord> GetAvatarPartTypedList(string avatarPartName) {
+        //    return s_avatarDatas.Where(x =>
+        //        x.Value.avatarType == apt &&
+        //        x.Value.sex == sex &&
+        //        x.Value.category == cat).ToDictionary(key => key.Key, value => value.Value);
+        //}
 
-            List<AvatarPartRecord> list = new List<AvatarPartRecord>();
 
-            foreach (var item in avatarPartDataSheet) {
-                if(item.Value.avatarPartTypeName == avatarPartName) {
-                    list.Add(item.Value);
-                }
-            }
+        public static List<int> SelectRecordIDs(AvatarPartType apt,SexType sex,string cat) {
+            var result = from x in s_avatarDatas
+                         where (x.Value.avatarType == apt && (x.Value.sex == sex || x.Value.sex == SexType.None) && x.Value.category == cat)
+                         select x.Key;
+            return result.ToList<int>();
+        }
 
-            return list;
-            
-
+        public static List<string> SelectCats(AvatarPartType apt,SexType sex) {
+            var result = from x in s_avatarDatas
+                         where (x.Value.avatarType == apt && (x.Value.sex == sex || x.Value.sex == SexType.None))
+                         select x.Value.category;
+            return result.ToList<string>().Distinct().ToList();
         }
 
 
