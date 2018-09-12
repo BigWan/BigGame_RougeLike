@@ -74,21 +74,33 @@ namespace BigRogue.Avatar {
         }
 
 
+
+
         void SetAvatarRecord(AvatarSlot avSlot, int avID) {
             AvatarRecord record = AvatarDataHandler.GetAvatarRecord(avID);
+            SetAvatarRecord(avSlot, record);
+        }
 
-            if (record.isEmpty()) {
-                if (m_allAvatarRecords.ContainsKey(avSlot))
+        void SetAvatarRecord(AvatarSlot avSlot,AvatarRecord avRecord) {
+            if (avRecord.isEmpty()) {
+                if (m_allAvatarRecords.ContainsKey(avSlot)) {                    
                     m_allAvatarRecords.Remove(avSlot);
+                }
+                if (m_allAvatarPart.ContainsKey(avSlot)) {
+                    if (m_allAvatarPart[avSlot] != null)
+                        Destroy(m_allAvatarPart[avSlot].gameObject);
+                    m_allAvatarPart.Remove(avSlot);
+                }
                 return;
             }
-            m_allAvatarRecords[avSlot] = record;
+            m_allAvatarRecords[avSlot] = avRecord;
         }
 
 
         void SetAvatarPart(AvatarSlot avSlot, AvatarPart ap) {
             if (m_allAvatarPart.ContainsKey(avSlot)) {
-                Destroy(m_allAvatarPart[avSlot].gameObject);
+                if(m_allAvatarPart[avSlot]!=null)
+                    Destroy(m_allAvatarPart[avSlot].gameObject);
             }
             m_allAvatarPart[avSlot] = ap;
         }
@@ -103,6 +115,7 @@ namespace BigRogue.Avatar {
 
         private void Awake() {
             m_allAvatarRecords = new Dictionary<AvatarSlot, AvatarRecord>();
+            m_allAvatarPart = new Dictionary<AvatarSlot, AvatarPart>();
         }
 
         /// <summary>
@@ -139,7 +152,9 @@ namespace BigRogue.Avatar {
             ap.mountPoint = GetMountingPoint(avSlot);
 
             ap.transform.SetParent(m_bodyAvatar.GetMountParent(ap.mountPoint),false);
-
+            if(avSlot == AvatarSlot.OffHand && avRecord.mountingType == MountingType.BothHand) {
+                ap.transform.localEulerAngles += new Vector3(0, 180, 0);
+            }
             SetAvatarPart(avSlot, ap);
         }
 
@@ -171,8 +186,8 @@ namespace BigRogue.Avatar {
                 case AvatarSlot.Horns:  return MountingPoint.Head;
                 case AvatarSlot.Wing:   return MountingPoint.Back;
                 case AvatarSlot.Bag:    return MountingPoint.Back;
-                case AvatarSlot.MainHand:   return MountingPoint.Left;
-                case AvatarSlot.OffHand:    return MountingPoint.Right;
+                case AvatarSlot.MainHand:   return MountingPoint.Right;
+                case AvatarSlot.OffHand:    return MountingPoint.Left;
                 default:
                     throw new UnityException($"avSlot 不存在{avSlot}");
             }
@@ -189,7 +204,7 @@ namespace BigRogue.Avatar {
         /// <returns></returns>
         AvatarPart LoadAvatarPart(AvatarRecord avRecord) {
 
-            GameObject res = Resources.Load<GameObject>(avRecord.path);
+            GameObject res = Resources.Load<GameObject>("Avatar/AvatarParts/" + avRecord.path);
 
             if (res == null)
                 throw new UnityException($"没有找到资源:{avRecord.path}");
@@ -211,6 +226,35 @@ namespace BigRogue.Avatar {
                 BuildAllAvatar();
             else
                 BuildAvatar(avSlot);
+        }
+
+
+        public void SaveData() {
+            PlayerPrefs.SetInt("Avatar_MainBody_ID", GetAvatarRecord(AvatarSlot.MainBody).id);
+            PlayerPrefs.SetInt("Avatar_Beard_ID", GetAvatarRecord(AvatarSlot.Beard).id);
+            PlayerPrefs.SetInt("Avatar_Hair_ID", GetAvatarRecord(AvatarSlot.Hair).id);
+            PlayerPrefs.SetInt("Avatar_Ears_ID", GetAvatarRecord(AvatarSlot.Ears).id);
+            PlayerPrefs.SetInt("Avatar_Face_ID", GetAvatarRecord(AvatarSlot.Face).id);
+            PlayerPrefs.SetInt("Avatar_Horns_ID", GetAvatarRecord(AvatarSlot.Horns).id);
+            PlayerPrefs.SetInt("Avatar_Wing_ID", GetAvatarRecord(AvatarSlot.Wing).id);
+            PlayerPrefs.SetInt("Avatar_Bag_ID", GetAvatarRecord(AvatarSlot.Bag).id);
+            PlayerPrefs.SetInt("Avatar_MainHand_ID", GetAvatarRecord(AvatarSlot.MainHand).id);
+            PlayerPrefs.SetInt("Avatar_OffHand_ID", GetAvatarRecord(AvatarSlot.OffHand).id);
+
+        }
+
+        public void ReadData() {
+            SetAvatarRecord(AvatarSlot.MainBody, PlayerPrefs.GetInt("Avatar_MainBody_ID"));
+            SetAvatarRecord(AvatarSlot.Beard, PlayerPrefs.GetInt("Avatar_Beard_ID"));
+            SetAvatarRecord(AvatarSlot.Hair, PlayerPrefs.GetInt("Avatar_Hair_ID"));
+            SetAvatarRecord(AvatarSlot.Ears, PlayerPrefs.GetInt("Avatar_Ears_ID"));
+            SetAvatarRecord(AvatarSlot.Face, PlayerPrefs.GetInt("Avatar_Face_ID"));
+            SetAvatarRecord(AvatarSlot.Horns, PlayerPrefs.GetInt("Avatar_Horns_ID"));
+            SetAvatarRecord(AvatarSlot.Wing, PlayerPrefs.GetInt("Avatar_Wing_ID"));
+            SetAvatarRecord(AvatarSlot.Bag, PlayerPrefs.GetInt("Avatar_Bag_ID"));
+            SetAvatarRecord(AvatarSlot.MainHand, PlayerPrefs.GetInt("Avatar_MainHand_ID"));
+            SetAvatarRecord(AvatarSlot.OffHand, PlayerPrefs.GetInt("Avatar_OffHand_ID"));
+            BuildAllAvatar();
         }
 
         //private void OnGUI() {

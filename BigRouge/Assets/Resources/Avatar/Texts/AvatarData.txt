@@ -1,4 +1,3 @@
-//avatarID,AvatarType,MountingType,Sex,category,Path
 //Female,,,,,
 11001,MainBody,Root,Female,Other,MainBody/Female/Female Aqua 01 Blue
 11002,MainBody,Root,Female,Other,MainBody/Female/Female Aqua 01 Cyan
@@ -654,472 +653,472 @@
 80007,Face,Head,None,White,Face/One Eyed/Face White 16
 80008,Face,Head,None,White,Face/One Eyed/Face White 17
 80009,Face,Head,None,White,Face/One Eyed/Face White 18
-90101,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Black Red
-90102,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Blue Blue
-90103,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Gold White
-90104,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Grey Purple
-90105,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Grey White
-90106,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Purple Green
-90107,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Purple Red
-90108,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 01 Red Yellow
-90109,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 02 Blue
-90110,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 02 Green
-90111,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 02 Purple
-90112,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 02 Red
-90113,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 02 White
-90114,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Black
-90115,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Blue
-90116,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Green
-90117,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Magenta
-90118,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Purple
-90119,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Red
-90120,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 White
-90121,Weapon,BothHand,None,Claw,BothHand/Claw/Claw 03 Yellow
-90201,Weapon,BothHand,None,Hand Aura,BothHand/Hand Aura/Hand Aura 01 Blue
-90202,Weapon,BothHand,None,Hand Aura,BothHand/Hand Aura/Hand Aura 01 Green
-90203,Weapon,BothHand,None,Hand Aura,BothHand/Hand Aura/Hand Aura 01 Purple
-90204,Weapon,BothHand,None,Hand Aura,BothHand/Hand Aura/Hand Aura 01 Red
-90205,Weapon,BothHand,None,Hand Aura,BothHand/Hand Aura/Hand Aura 01 Yellow
-90301,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Black Purple
-90302,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Blue Blue
-90303,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold Blue
-90304,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold Green
-90305,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold Purple
-90306,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold Red
-90307,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold White
-90308,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Gold Yellow
-90309,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Grey White
-90310,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 01 Grey Yellow
-90311,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Black
-90312,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Blue
-90313,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Brown
-90314,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Green
-90315,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Magenta
-90316,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Purple
-90317,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 Red
-90318,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 02 White
-90319,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Black
-90320,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Blue
-90321,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Brown
-90322,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Green
-90323,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Magenta
-90324,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Purple
-90325,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 Red
-90326,Weapon,BothHand,None,Knuckles,BothHand/Knuckles/Knuckles 03 White
-90401,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Black
-90402,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Blue
-90403,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Green
-90404,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Black
-90405,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Blue
-90406,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Green
-90407,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Purple
-90408,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Red
-90409,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow White
-90410,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 No Arrow Yellow
-90411,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Purple
-90412,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Red
-90413,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 White
-90414,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 01 Yellow
-90415,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Black
-90416,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Blue
-90417,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Green
-90418,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Black
-90419,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Blue
-90420,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Green
-90421,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Orange
-90422,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Purple
-90423,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Red
-90424,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow White
-90425,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 No Arrow Yellow
-90426,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Orange
-90427,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Purple
-90428,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Red
-90429,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 White
-90430,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 02 Yellow
-90431,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 03 Black
-90432,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 03 Blue
-90433,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 03 Green
-90434,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 03 Purple
-90435,Weapon,LeftHand,None,Crossbow,LeftHand/Crossbow/Crossbow 03 Red
-90501,Weapon,LeftHand,None,Guitar,LeftHand/Guitar/Guitar 01 Blue
-90502,Weapon,LeftHand,None,Guitar,LeftHand/Guitar/Guitar 01 Brown
-90503,Weapon,LeftHand,None,Guitar,LeftHand/Guitar/Guitar 01 Green
-90504,Weapon,LeftHand,None,Guitar,LeftHand/Guitar/Guitar 01 Purple
-90601,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Black
-90602,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Blue
-90603,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Green
-90604,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Magenta
-90605,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Purple
-90606,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Red
-90607,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 White
-90608,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 01 Yellow
-90609,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Black
-90610,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Blue
-90611,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Green
-90612,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Magenta
-90613,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Purple
-90614,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Red
-90615,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 White
-90616,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 02 Yellow
-90617,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Black
-90618,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Blue
-90619,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Green
-90620,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Magenta
-90621,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Purple
-90622,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Red
-90623,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 White
-90624,Weapon,LeftHand,None,LongBow,LeftHand/LongBow/Longbow 03 Yellow
-90701,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 01 Black
-90702,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 01 Blue
-90703,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 01 Green
-90704,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 01 Red
-90705,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 01 White
-90706,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 02 Blue
-90707,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 02 Brown
-90708,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 02 Green
-90709,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 02 Grey
-90710,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 02 Purple
-90711,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 03 Blue
-90712,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 03 Brown
-90713,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 03 Green
-90714,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 03 Magenta
-90715,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 03 Purple
-90716,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 04 Blue
-90717,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 04 Orange
-90718,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 04 Purple
-90719,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 04 Red
-90720,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 04 Yellow
-90721,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 05 Blue
-90722,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 05 Green
-90723,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 05 Purple
-90724,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 05 Red
-90725,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 05 Yellow
-90726,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 Black
-90727,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 Blue
-90728,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 Green
-90729,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 Purple
-90730,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 Red
-90731,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 06 White
-90732,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Black
-90733,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Blue
-90734,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Green
-90735,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Purple
-90736,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Red
-90737,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 07 Yellow
-90738,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Black
-90739,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Blue
-90740,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Green
-90741,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Orange
-90742,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Purple
-90743,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Red
-90744,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 White
-90745,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 08 Yellow
-90746,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 Black
-90747,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 Blue
-90748,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 Green
-90749,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 Purple
-90750,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 Red
-90751,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 09 White
-90752,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Black
-90753,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Blue
-90754,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Brown
-90755,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Green
-90756,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Purple
-90757,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 Red
-90758,Weapon,LeftHand,None,Shield,LeftHand/Shield/Shield 10 White
-90801,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 01
-90802,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 02 Blue
-90803,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 02 Green
-90804,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 02 Purple
-90805,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 02 Red
-90806,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 03 Blue
-90807,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 03 Green
-90808,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 03 Purple
-90809,Weapon,RightHand,None,Axe,RightHand/Axe/Axe 03 Red
-90901,Weapon,RightHand,None,Club,RightHand/Club/Bell 01 Gold
-90902,Weapon,RightHand,None,Club,RightHand/Club/Club 01
-90903,Weapon,RightHand,None,Club,RightHand/Club/Club 02 Blue
-90904,Weapon,RightHand,None,Club,RightHand/Club/Club 02 Green
-90905,Weapon,RightHand,None,Club,RightHand/Club/Club 02 Purple
-90906,Weapon,RightHand,None,Club,RightHand/Club/Club 02 Red
-90907,Weapon,RightHand,None,Club,RightHand/Club/Club 03 Blue
-90908,Weapon,RightHand,None,Club,RightHand/Club/Club 03 Green
-90909,Weapon,RightHand,None,Club,RightHand/Club/Club 03 Purple
-90910,Weapon,RightHand,None,Club,RightHand/Club/Club 03 Red
-90911,Weapon,RightHand,None,Club,RightHand/Club/Club 03 White
-90001,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 01 Blue
-90002,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 01 Green
-90003,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 01 Purple
-90004,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 01 Red
-90005,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 02 Blue
-90006,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 02 Green
-90007,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 02 Purple
-90008,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 02 Red
-90009,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Black
-90010,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Blue
-90011,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Green
-90012,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Magenta
-90013,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Purple
-90014,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Red
-90015,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 White
-90016,Weapon,RightHand,None,Dagger,RightHand/Dagger/Dagger 03 Yellow
-91001,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Black
-91002,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Blue
-91003,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Green
-91004,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Magenta
-91005,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Purple
-91006,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Red
-91007,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 White
-91008,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 01 Yellow
-91009,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Black
-91010,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Blue
-91011,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Green
-91012,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Magenta
-91013,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Purple
-91014,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Red
-91015,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 02 Yellow
-91016,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Black
-91017,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Blue
-91018,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Green
-91019,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Magenta
-91020,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Purple
-91021,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Red
-91022,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 White
-91023,Weapon,RightHand,None,Hammer,RightHand/Hammer/Hammer 03 Yellow
-91024,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Black
-91025,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Blue
-91026,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Green
-91027,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Purple
-91028,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Red
-91029,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 01 Yellow
-91030,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Black
-91031,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Blue
-91032,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Fire
-91033,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Green
-91034,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Ice
-91035,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Poison
-91036,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Purple
-91037,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Red
-91038,Weapon,RightHand,None,Hammer,RightHand/Hammer/Mace 02 Yellow
-91101,Weapon,RightHand,None,Peasant Tool,RightHand/Peasant Tool/Peasant Tool 01 Rake
-91102,Weapon,RightHand,None,Peasant Tool,RightHand/Peasant Tool/Peasant Tool 02 Hammer
-91103,Weapon,RightHand,None,Peasant Tool,RightHand/Peasant Tool/Peasant Tool 03 Axe
-91104,Weapon,RightHand,None,Peasant Tool,RightHand/Peasant Tool/Peasant Tool 04 Scyth
-91105,Weapon,RightHand,None,Peasant Tool,RightHand/Peasant Tool/Pickaxe 01
-91201,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Black
-91202,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Blue
-91203,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Green
-91204,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Magenta
-91205,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Purple
-91206,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Red
-91207,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 White
-91208,Weapon,RightHand,None,Scepter,RightHand/Scepter/Scepter 01 Yellow
-91301,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Black
-91302,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Blue
-91303,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Green
-91304,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Magenta
-91305,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Purple
-91306,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Red
-91307,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 White
-91308,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 01 Yellow
-91309,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Blue
-91310,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Green
-91311,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Magenta
-91312,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Purple
-91313,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Red
-91314,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 White
-91315,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 02 Yellow
-91316,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Black
-91317,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Blue
-91318,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Green
-91319,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Magenta
-91320,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Purple
-91321,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Red
-91322,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 White
-91323,Weapon,RightHand,None,Scythe,RightHand/Scythe/Scythe 03 Yellow
-91401,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Black
-91402,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Blue
-91403,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Brown
-91404,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Green
-91405,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Magenta
-91406,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Purple
-91407,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 Red
-91408,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 01 White
-91409,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Black
-91410,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Blue
-91411,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Green
-91412,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Magenta
-91413,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Purple
-91414,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Red
-91415,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 White
-91416,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 02 Yellow
-91417,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Black
-91418,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Blue
-91419,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Brown
-91420,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Green
-91421,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Magenta
-91422,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Purple
-91423,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 Red
-91424,Weapon,RightHand,None,Spear,RightHand/Spear/Spear 03 White
-91501,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 01 Black
-91502,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 01 Blue
-91503,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 01 Green
-91504,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 01 Red
-91505,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 01 White
-91506,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 02 Fire
-91507,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 02 Ice
-91508,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 02 Normal
-91509,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 02 Poison
-91510,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 03 Blue
-91511,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 03 Gold
-91512,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 03 Green
-91513,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 03 Red
-91514,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 Black
-91515,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 Blue
-91516,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 Brown
-91517,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 Green
-91518,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 Purple
-91519,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 04 White
-91520,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Fire Ice
-91521,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Light Dark
-91522,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Lightning
-91523,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Normal Blue
-91524,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Normal Green
-91525,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Normal Purple
-91526,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Normal Red
-91527,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 05 Poison
-91528,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 06 Blue
-91529,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 06 Green
-91530,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 06 Purple
-91531,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 06 Red
-91532,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 06 Yellow
-91533,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 07 Blue
-91534,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 07 Green
-91535,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 07 Grey
-91536,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 07 Purple
-91537,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 08 Blue
-91538,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 08 Green
-91539,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 08 Purple
-91540,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 08 Red
-91541,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 08 Yellow
-91542,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Green
-91543,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Grey
-91544,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Pink
-91545,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Purple
-91546,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Red
-91547,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 09 Yellow
-91548,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 Black Gold
-91549,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 Blue Gold
-91550,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 Green Gold
-91551,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 Purple Gold
-91552,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 Red Gold
-91553,Weapon,RightHand,None,Sword,RightHand/Sword/Sword 10 White Gold
-91601,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Black
-91602,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Blue
-91603,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Green
-91604,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Magenta
-91605,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Purple
-91606,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Red
-91607,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 White
-91608,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 01 Yellow
-91609,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Black
-91610,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Blue
-91611,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Green
-91612,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Magenta
-91613,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Purple
-91614,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Red
-91615,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 White
-91616,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 02 Yellow
-91617,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Black
-91618,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Blue
-91619,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Green
-91620,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Magenta
-91621,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Purple
-91622,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Red
-91623,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 White
-91624,Weapon,RightHand,None,Two Handed Axe,RightHand/Two Handed Axe/TH Axe 03 Yellow
-91701,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Black
-91702,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Blue
-91703,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Green
-91704,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Magenta
-91705,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Purple
-91706,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Red
-91707,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 White
-91708,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 01 Yellow
-91709,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Black
-91710,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Blue
-91711,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Green
-91712,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Magenta
-91713,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Purple
-91714,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Red
-91715,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 White
-91716,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 02 Yellow
-91717,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Black
-91718,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Blue
-91719,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Green
-91720,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Magenta
-91721,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Purple
-91722,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Red
-91723,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 White
-91724,Weapon,RightHand,None,Two Handed Sword,RightHand/Two Handed Sword/TH Sword 03 Yellow
-91801,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Blue
-91802,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Green
-91803,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Orange
-91804,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Purple
-91805,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Red
-91806,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick White
-91807,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 01 Stick Yellow
-91808,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 Blue
-91809,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 Green
-91810,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 Purple
-91811,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 Red
-91812,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 White
-91813,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 02 Yellow
-91814,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 03 Blue
-91815,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 03 Green
-91816,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 03 Purple
-91817,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 03 Red
-91818,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 Blue
-91819,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 Green
-91820,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 Purple
-91821,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 Red
-91822,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 White
-91823,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 04 Yellow
-91824,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 05 Blue
-91825,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 05 Green
-91826,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 05 Purple
-91827,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 05 Red
-91828,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 05 Yellow
-91829,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Black
-91830,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Blue
-91831,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Brown
-91832,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Green
-91833,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Purple
-91834,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom Red
-91835,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 06 Broom White
-91836,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 Blue
-91837,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 Green
-91838,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 Purple
-91839,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 Red
-91840,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 White
-91841,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 07 Yellow
-91842,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Black
-91843,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Blue
-91844,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Green
-91845,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Purple
-91846,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Red
-91847,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 White
-91848,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 08 Yellow
-91849,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Blue
-91850,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Green
-91851,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Magenta
-91852,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Pink
-91853,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Purple
-91854,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 09 Red
-91855,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 Black
-91856,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 Blue
-91857,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 Green
-91858,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 Purple
-91859,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 Red
-91860,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 10 White
-91861,Weapon,RightHand,None,Wand,RightHand/Wand/Wand 11 Santa
+90101,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 01 Black Red
+90102,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 01 Blue Blue
+90103,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 01 Gold White
+90104,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 01 Grey Purple
+90105,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 01 Grey White
+90106,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 01 Purple Green
+90107,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 01 Purple Red
+90108,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 01 Red Yellow
+90109,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 02 Blue
+90110,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 02 Green
+90111,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 02 Purple
+90112,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 02 Red
+90113,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 02 White
+90114,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 03 Black
+90115,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 03 Blue
+90116,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 03 Green
+90117,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 03 Magenta
+90118,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 03 Purple
+90119,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 03 Red
+90120,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 03 White
+90121,Weapon,BothHand,None,Claw,Weapon/BothHand/Claw/Claw 03 Yellow
+90201,Weapon,BothHand,None,Hand Aura,Weapon/BothHand/Hand Aura/Hand Aura 01 Blue
+90202,Weapon,BothHand,None,Hand Aura,Weapon/BothHand/Hand Aura/Hand Aura 01 Green
+90203,Weapon,BothHand,None,Hand Aura,Weapon/BothHand/Hand Aura/Hand Aura 01 Purple
+90204,Weapon,BothHand,None,Hand Aura,Weapon/BothHand/Hand Aura/Hand Aura 01 Red
+90205,Weapon,BothHand,None,Hand Aura,Weapon/BothHand/Hand Aura/Hand Aura 01 Yellow
+90301,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 01 Black Purple
+90302,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 01 Blue Blue
+90303,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 01 Gold Blue
+90304,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 01 Gold Green
+90305,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 01 Gold Purple
+90306,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 01 Gold Red
+90307,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 01 Gold White
+90308,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 01 Gold Yellow
+90309,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 01 Grey White
+90310,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 01 Grey Yellow
+90311,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 02 Black
+90312,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 02 Blue
+90313,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 02 Brown
+90314,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 02 Green
+90315,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 02 Magenta
+90316,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 02 Purple
+90317,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 02 Red
+90318,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 02 White
+90319,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 03 Black
+90320,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 03 Blue
+90321,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 03 Brown
+90322,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 03 Green
+90323,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 03 Magenta
+90324,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 03 Purple
+90325,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 03 Red
+90326,Weapon,BothHand,None,Knuckles,Weapon/BothHand/Knuckles/Knuckles 03 White
+90401,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 Black
+90402,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 Blue
+90403,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 Green
+90404,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 No Arrow Black
+90405,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 No Arrow Blue
+90406,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 No Arrow Green
+90407,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 No Arrow Purple
+90408,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 No Arrow Red
+90409,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 No Arrow White
+90410,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 No Arrow Yellow
+90411,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 Purple
+90412,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 Red
+90413,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 White
+90414,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 01 Yellow
+90415,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 Black
+90416,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 Blue
+90417,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 Green
+90418,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 No Arrow Black
+90419,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 No Arrow Blue
+90420,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 No Arrow Green
+90421,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 No Arrow Orange
+90422,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 No Arrow Purple
+90423,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 No Arrow Red
+90424,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 No Arrow White
+90425,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 No Arrow Yellow
+90426,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 Orange
+90427,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 Purple
+90428,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 Red
+90429,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 White
+90430,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 02 Yellow
+90431,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 03 Black
+90432,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 03 Blue
+90433,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 03 Green
+90434,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 03 Purple
+90435,Weapon,LeftHand,None,Crossbow,Weapon/LeftHand/Crossbow/Crossbow 03 Red
+90501,Weapon,LeftHand,None,Guitar,Weapon/LeftHand/Guitar/Guitar 01 Blue
+90502,Weapon,LeftHand,None,Guitar,Weapon/LeftHand/Guitar/Guitar 01 Brown
+90503,Weapon,LeftHand,None,Guitar,Weapon/LeftHand/Guitar/Guitar 01 Green
+90504,Weapon,LeftHand,None,Guitar,Weapon/LeftHand/Guitar/Guitar 01 Purple
+90601,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 01 Black
+90602,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 01 Blue
+90603,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 01 Green
+90604,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 01 Magenta
+90605,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 01 Purple
+90606,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 01 Red
+90607,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 01 White
+90608,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 01 Yellow
+90609,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 02 Black
+90610,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 02 Blue
+90611,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 02 Green
+90612,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 02 Magenta
+90613,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 02 Purple
+90614,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 02 Red
+90615,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 02 White
+90616,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 02 Yellow
+90617,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 03 Black
+90618,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 03 Blue
+90619,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 03 Green
+90620,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 03 Magenta
+90621,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 03 Purple
+90622,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 03 Red
+90623,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 03 White
+90624,Weapon,LeftHand,None,LongBow,Weapon/LeftHand/LongBow/Longbow 03 Yellow
+90701,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 01 Black
+90702,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 01 Blue
+90703,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 01 Green
+90704,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 01 Red
+90705,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 01 White
+90706,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 02 Blue
+90707,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 02 Brown
+90708,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 02 Green
+90709,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 02 Grey
+90710,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 02 Purple
+90711,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 03 Blue
+90712,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 03 Brown
+90713,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 03 Green
+90714,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 03 Magenta
+90715,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 03 Purple
+90716,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 04 Blue
+90717,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 04 Orange
+90718,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 04 Purple
+90719,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 04 Red
+90720,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 04 Yellow
+90721,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 05 Blue
+90722,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 05 Green
+90723,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 05 Purple
+90724,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 05 Red
+90725,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 05 Yellow
+90726,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 06 Black
+90727,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 06 Blue
+90728,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 06 Green
+90729,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 06 Purple
+90730,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 06 Red
+90731,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 06 White
+90732,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 07 Black
+90733,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 07 Blue
+90734,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 07 Green
+90735,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 07 Purple
+90736,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 07 Red
+90737,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 07 Yellow
+90738,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 08 Black
+90739,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 08 Blue
+90740,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 08 Green
+90741,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 08 Orange
+90742,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 08 Purple
+90743,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 08 Red
+90744,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 08 White
+90745,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 08 Yellow
+90746,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 09 Black
+90747,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 09 Blue
+90748,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 09 Green
+90749,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 09 Purple
+90750,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 09 Red
+90751,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 09 White
+90752,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 10 Black
+90753,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 10 Blue
+90754,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 10 Brown
+90755,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 10 Green
+90756,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 10 Purple
+90757,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 10 Red
+90758,Weapon,LeftHand,None,Shield,Weapon/LeftHand/Shield/Shield 10 White
+90801,Weapon,RightHand,None,Axe,Weapon/RightHand/Axe/Axe 01
+90802,Weapon,RightHand,None,Axe,Weapon/RightHand/Axe/Axe 02 Blue
+90803,Weapon,RightHand,None,Axe,Weapon/RightHand/Axe/Axe 02 Green
+90804,Weapon,RightHand,None,Axe,Weapon/RightHand/Axe/Axe 02 Purple
+90805,Weapon,RightHand,None,Axe,Weapon/RightHand/Axe/Axe 02 Red
+90806,Weapon,RightHand,None,Axe,Weapon/RightHand/Axe/Axe 03 Blue
+90807,Weapon,RightHand,None,Axe,Weapon/RightHand/Axe/Axe 03 Green
+90808,Weapon,RightHand,None,Axe,Weapon/RightHand/Axe/Axe 03 Purple
+90809,Weapon,RightHand,None,Axe,Weapon/RightHand/Axe/Axe 03 Red
+90901,Weapon,RightHand,None,Club,Weapon/RightHand/Club/Bell 01 Gold
+90902,Weapon,RightHand,None,Club,Weapon/RightHand/Club/Club 01
+90903,Weapon,RightHand,None,Club,Weapon/RightHand/Club/Club 02 Blue
+90904,Weapon,RightHand,None,Club,Weapon/RightHand/Club/Club 02 Green
+90905,Weapon,RightHand,None,Club,Weapon/RightHand/Club/Club 02 Purple
+90906,Weapon,RightHand,None,Club,Weapon/RightHand/Club/Club 02 Red
+90907,Weapon,RightHand,None,Club,Weapon/RightHand/Club/Club 03 Blue
+90908,Weapon,RightHand,None,Club,Weapon/RightHand/Club/Club 03 Green
+90909,Weapon,RightHand,None,Club,Weapon/RightHand/Club/Club 03 Purple
+90910,Weapon,RightHand,None,Club,Weapon/RightHand/Club/Club 03 Red
+90911,Weapon,RightHand,None,Club,Weapon/RightHand/Club/Club 03 White
+90001,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 01 Blue
+90002,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 01 Green
+90003,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 01 Purple
+90004,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 01 Red
+90005,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 02 Blue
+90006,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 02 Green
+90007,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 02 Purple
+90008,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 02 Red
+90009,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 03 Black
+90010,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 03 Blue
+90011,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 03 Green
+90012,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 03 Magenta
+90013,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 03 Purple
+90014,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 03 Red
+90015,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 03 White
+90016,Weapon,RightHand,None,Dagger,Weapon/RightHand/Dagger/Dagger 03 Yellow
+91001,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 01 Black
+91002,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 01 Blue
+91003,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 01 Green
+91004,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 01 Magenta
+91005,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 01 Purple
+91006,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 01 Red
+91007,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 01 White
+91008,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 01 Yellow
+91009,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 02 Black
+91010,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 02 Blue
+91011,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 02 Green
+91012,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 02 Magenta
+91013,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 02 Purple
+91014,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 02 Red
+91015,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 02 Yellow
+91016,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 03 Black
+91017,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 03 Blue
+91018,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 03 Green
+91019,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 03 Magenta
+91020,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 03 Purple
+91021,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 03 Red
+91022,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 03 White
+91023,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Hammer 03 Yellow
+91024,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 01 Black
+91025,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 01 Blue
+91026,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 01 Green
+91027,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 01 Purple
+91028,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 01 Red
+91029,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 01 Yellow
+91030,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 02 Black
+91031,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 02 Blue
+91032,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 02 Fire
+91033,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 02 Green
+91034,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 02 Ice
+91035,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 02 Poison
+91036,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 02 Purple
+91037,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 02 Red
+91038,Weapon,RightHand,None,Hammer,Weapon/RightHand/Hammer/Mace 02 Yellow
+91101,Weapon,RightHand,None,Peasant Tool,Weapon/RightHand/Peasant Tool/Peasant Tool 01 Rake
+91102,Weapon,RightHand,None,Peasant Tool,Weapon/RightHand/Peasant Tool/Peasant Tool 02 Hammer
+91103,Weapon,RightHand,None,Peasant Tool,Weapon/RightHand/Peasant Tool/Peasant Tool 03 Axe
+91104,Weapon,RightHand,None,Peasant Tool,Weapon/RightHand/Peasant Tool/Peasant Tool 04 Scyth
+91105,Weapon,RightHand,None,Peasant Tool,Weapon/RightHand/Peasant Tool/Pickaxe 01
+91201,Weapon,RightHand,None,Scepter,Weapon/RightHand/Scepter/Scepter 01 Black
+91202,Weapon,RightHand,None,Scepter,Weapon/RightHand/Scepter/Scepter 01 Blue
+91203,Weapon,RightHand,None,Scepter,Weapon/RightHand/Scepter/Scepter 01 Green
+91204,Weapon,RightHand,None,Scepter,Weapon/RightHand/Scepter/Scepter 01 Magenta
+91205,Weapon,RightHand,None,Scepter,Weapon/RightHand/Scepter/Scepter 01 Purple
+91206,Weapon,RightHand,None,Scepter,Weapon/RightHand/Scepter/Scepter 01 Red
+91207,Weapon,RightHand,None,Scepter,Weapon/RightHand/Scepter/Scepter 01 White
+91208,Weapon,RightHand,None,Scepter,Weapon/RightHand/Scepter/Scepter 01 Yellow
+91301,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 01 Black
+91302,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 01 Blue
+91303,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 01 Green
+91304,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 01 Magenta
+91305,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 01 Purple
+91306,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 01 Red
+91307,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 01 White
+91308,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 01 Yellow
+91309,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 02 Blue
+91310,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 02 Green
+91311,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 02 Magenta
+91312,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 02 Purple
+91313,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 02 Red
+91314,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 02 White
+91315,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 02 Yellow
+91316,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 03 Black
+91317,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 03 Blue
+91318,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 03 Green
+91319,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 03 Magenta
+91320,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 03 Purple
+91321,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 03 Red
+91322,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 03 White
+91323,Weapon,RightHand,None,Scythe,Weapon/RightHand/Scythe/Scythe 03 Yellow
+91401,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 01 Black
+91402,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 01 Blue
+91403,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 01 Brown
+91404,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 01 Green
+91405,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 01 Magenta
+91406,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 01 Purple
+91407,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 01 Red
+91408,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 01 White
+91409,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 02 Black
+91410,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 02 Blue
+91411,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 02 Green
+91412,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 02 Magenta
+91413,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 02 Purple
+91414,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 02 Red
+91415,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 02 White
+91416,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 02 Yellow
+91417,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 03 Black
+91418,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 03 Blue
+91419,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 03 Brown
+91420,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 03 Green
+91421,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 03 Magenta
+91422,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 03 Purple
+91423,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 03 Red
+91424,Weapon,RightHand,None,Spear,Weapon/RightHand/Spear/Spear 03 White
+91501,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 01 Black
+91502,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 01 Blue
+91503,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 01 Green
+91504,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 01 Red
+91505,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 01 White
+91506,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 02 Fire
+91507,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 02 Ice
+91508,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 02 Normal
+91509,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 02 Poison
+91510,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 03 Blue
+91511,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 03 Gold
+91512,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 03 Green
+91513,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 03 Red
+91514,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 04 Black
+91515,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 04 Blue
+91516,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 04 Brown
+91517,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 04 Green
+91518,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 04 Purple
+91519,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 04 White
+91520,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 05 Fire Ice
+91521,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 05 Light Dark
+91522,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 05 Lightning
+91523,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 05 Normal Blue
+91524,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 05 Normal Green
+91525,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 05 Normal Purple
+91526,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 05 Normal Red
+91527,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 05 Poison
+91528,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 06 Blue
+91529,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 06 Green
+91530,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 06 Purple
+91531,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 06 Red
+91532,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 06 Yellow
+91533,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 07 Blue
+91534,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 07 Green
+91535,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 07 Grey
+91536,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 07 Purple
+91537,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 08 Blue
+91538,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 08 Green
+91539,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 08 Purple
+91540,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 08 Red
+91541,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 08 Yellow
+91542,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 09 Green
+91543,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 09 Grey
+91544,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 09 Pink
+91545,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 09 Purple
+91546,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 09 Red
+91547,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 09 Yellow
+91548,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 10 Black Gold
+91549,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 10 Blue Gold
+91550,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 10 Green Gold
+91551,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 10 Purple Gold
+91552,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 10 Red Gold
+91553,Weapon,RightHand,None,Sword,Weapon/RightHand/Sword/Sword 10 White Gold
+91601,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 01 Black
+91602,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 01 Blue
+91603,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 01 Green
+91604,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 01 Magenta
+91605,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 01 Purple
+91606,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 01 Red
+91607,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 01 White
+91608,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 01 Yellow
+91609,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 02 Black
+91610,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 02 Blue
+91611,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 02 Green
+91612,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 02 Magenta
+91613,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 02 Purple
+91614,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 02 Red
+91615,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 02 White
+91616,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 02 Yellow
+91617,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 03 Black
+91618,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 03 Blue
+91619,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 03 Green
+91620,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 03 Magenta
+91621,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 03 Purple
+91622,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 03 Red
+91623,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 03 White
+91624,Weapon,RightHand,None,Two Handed Axe,Weapon/RightHand/Two Handed Axe/TH Axe 03 Yellow
+91701,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 01 Black
+91702,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 01 Blue
+91703,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 01 Green
+91704,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 01 Magenta
+91705,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 01 Purple
+91706,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 01 Red
+91707,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 01 White
+91708,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 01 Yellow
+91709,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 02 Black
+91710,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 02 Blue
+91711,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 02 Green
+91712,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 02 Magenta
+91713,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 02 Purple
+91714,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 02 Red
+91715,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 02 White
+91716,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 02 Yellow
+91717,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 03 Black
+91718,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 03 Blue
+91719,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 03 Green
+91720,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 03 Magenta
+91721,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 03 Purple
+91722,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 03 Red
+91723,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 03 White
+91724,Weapon,RightHand,None,Two Handed Sword,Weapon/RightHand/Two Handed Sword/TH Sword 03 Yellow
+91801,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 01 Stick Blue
+91802,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 01 Stick Green
+91803,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 01 Stick Orange
+91804,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 01 Stick Purple
+91805,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 01 Stick Red
+91806,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 01 Stick White
+91807,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 01 Stick Yellow
+91808,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 02 Blue
+91809,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 02 Green
+91810,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 02 Purple
+91811,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 02 Red
+91812,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 02 White
+91813,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 02 Yellow
+91814,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 03 Blue
+91815,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 03 Green
+91816,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 03 Purple
+91817,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 03 Red
+91818,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 04 Blue
+91819,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 04 Green
+91820,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 04 Purple
+91821,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 04 Red
+91822,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 04 White
+91823,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 04 Yellow
+91824,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 05 Blue
+91825,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 05 Green
+91826,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 05 Purple
+91827,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 05 Red
+91828,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 05 Yellow
+91829,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 06 Broom Black
+91830,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 06 Broom Blue
+91831,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 06 Broom Brown
+91832,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 06 Broom Green
+91833,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 06 Broom Purple
+91834,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 06 Broom Red
+91835,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 06 Broom White
+91836,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 07 Blue
+91837,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 07 Green
+91838,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 07 Purple
+91839,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 07 Red
+91840,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 07 White
+91841,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 07 Yellow
+91842,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 08 Black
+91843,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 08 Blue
+91844,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 08 Green
+91845,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 08 Purple
+91846,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 08 Red
+91847,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 08 White
+91848,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 08 Yellow
+91849,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 09 Blue
+91850,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 09 Green
+91851,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 09 Magenta
+91852,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 09 Pink
+91853,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 09 Purple
+91854,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 09 Red
+91855,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 10 Black
+91856,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 10 Blue
+91857,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 10 Green
+91858,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 10 Purple
+91859,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 10 Red
+91860,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 10 White
+91861,Weapon,RightHand,None,Wand,Weapon/RightHand/Wand/Wand 11 Santa

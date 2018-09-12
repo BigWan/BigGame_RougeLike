@@ -44,19 +44,6 @@ namespace BigRogue.Avatar {
                 return AvatarRecord.empty;
         }
 
-        /// <summary>
-        /// 数据筛选
-        /// </summary>
-        /// <param name="avSlot"></param>
-        /// <returns></returns>
-        //public static Dictionary<int,AvatarRecord> SelectRecords(AvatarPartType apt,SexType sex,string cat) {
-
-        //    return s_avatarDatas.Where(x =>
-        //        x.Value.avatarType == apt &&
-        //        x.Value.sex == sex &&
-        //        x.Value.category == cat).ToDictionary(key => key.Key, value => value.Value);
-        //}
-
 
         public static List<int> SelectRecordIDs(AvatarPartType apt,SexType sex,string cat) {
             var result = from x in s_avatarDatas

@@ -21,9 +21,11 @@ namespace BigRogue.UI {
         private AvatarSetter avSetter;
         public Dropdown sexDropDown;
         private Dropdown catDropDown;
+        private Button catPre;
+        private Button catNext;
         private Dropdown dropdown;
-        private Button pre;
-        private Button next;
+        private Button idPre;
+        private Button idNext;
         private Text path;
         private Dictionary<int,AvatarRecord> avDict;
 
@@ -36,27 +38,47 @@ namespace BigRogue.UI {
             avSetter = FindObjectOfType<AvatarSetter>();
 
             catDropDown = transform.GetChild(1).GetComponent<Dropdown>();
-            dropdown =  transform.GetChild(2).GetComponent<Dropdown>();
-            pre = transform.GetChild(3).GetComponent<Button>();
-            next = transform.GetChild(4).GetComponent<Button>();
-            path = transform.GetChild(5).GetComponent<Text>();
-
-        }
-
-        private void Start() {
-            //avDict = AvatarDataHandler.SelectRecords(apt , sex, cat);
+            catPre = transform.GetChild(2).GetComponent<Button>();
+            catNext = transform.GetChild(3).GetComponent<Button>();
+            dropdown =  transform.GetChild(4).GetComponent<Dropdown>();
+            idPre = transform.GetChild(5).GetComponent<Button>();
+            idNext = transform.GetChild(6).GetComponent<Button>();
+            path = transform.GetChild(7).GetComponent<Text>();
 
             catDropDown.onValueChanged.AddListener(OnCatChange);
             dropdown.onValueChanged.AddListener(OnAvatarIDChange);
             sexDropDown.onValueChanged.AddListener(OnSexChange);
 
-            pre.onClick.AddListener(() => dropdown.value--);
-            next.onClick.AddListener(() => dropdown.value++);
+            idPre.onClick.AddListener(() => dropdown.value--);
+            idNext.onClick.AddListener(() => dropdown.value++);
+
+            catPre.onClick.AddListener(() => catDropDown.value--);
+            catNext.onClick.AddListener(() => catDropDown.value++);
+
+
+            catPre.GetComponentInChildren<Text>().text = "<";
+            catNext.GetComponentInChildren<Text>().text = ">";
+            idPre.GetComponentInChildren<Text>().text = "<";
+            idNext.GetComponentInChildren<Text>().text = ">";
+        }
+
+        private void Start() {
+            //avDict = AvatarDataHandler.SelectRecords(apt , sex, cat);
+
+
         }
 
         void OnSexChange(int id) {
             sex = (SexType)sexDropDown.value;
-            FillCatOptions();
+
+            catDropDown.ClearOptions();
+
+            List<string> cats = AvatarDataHandler.SelectCats(apt, sex);
+
+            catDropDown.AddOptions(cats);
+            catDropDown.value = 0;
+            OnCatChange(0);
+            catDropDown.RefreshShownValue();
         }
 
         /// <summary>
@@ -65,22 +87,23 @@ namespace BigRogue.UI {
         /// <param name="id"></param>
         void OnCatChange(int id) {
             cat = catDropDown.captionText.text;
-            FillAvatarIDOptions();
+
+
+            dropdown.ClearOptions();
+
+            List<int> ids = AvatarDataHandler.SelectRecordIDs(apt, sex, cat);
+            dropdown.options.Add(new Dropdown.OptionData("-1"));
+            for (int i = 0; i < ids.Count; i++) {
+                dropdown.options.Add(new Dropdown.OptionData(ids[i].ToString()));
+            }
+
+            dropdown.value = 0;
+
+            dropdown.RefreshShownValue();
 
         }
 
-        /// <summary>
-        ///  填充关键字
-        /// </summary>
-        void FillCatOptions() {
-            catDropDown.ClearOptions();
-
-            List<string> cats = AvatarDataHandler.SelectCats(apt, sex);
-
-            catDropDown.AddOptions(cats);
-
-            catDropDown.RefreshShownValue();
-        }
+ 
 
         /// <summary>
         /// 选择AvID
@@ -88,22 +111,16 @@ namespace BigRogue.UI {
         /// <param name="index"></param>
         void OnAvatarIDChange(int index) {
 
+            int id = int.Parse(dropdown.captionText.text);
+            avRecord = AvatarDataHandler.GetAvatarRecord(id);
 
+            path.text = avRecord.path;
+
+            avSetter.SetAndBuildAvatarPart(avSlot, id);
         }
 
 
 
-        void FillAvatarIDOptions() {
-            dropdown.ClearOptions();
-
-            List<int> ids = AvatarDataHandler.SelectRecordIDs(apt, sex, cat);
-            Debug.Log(ids.Count);
-            for (int i = 0; i < ids.Count; i++) {
-                dropdown.options.Add(new Dropdown.OptionData(ids[i].ToString()));
-            }
-
-            dropdown.RefreshShownValue();
-        }
 
 
   

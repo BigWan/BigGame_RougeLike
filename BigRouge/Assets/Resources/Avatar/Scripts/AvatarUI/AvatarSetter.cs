@@ -23,5 +23,14 @@ namespace BigRogue.Avatar {
             avatar.SetAndBuildAvatar(avSlot, id);
         }
 
+        public void SaveData() {
+            avatar.SaveData();
+        }
+
+
+        public void ReadData() {
+            avatar.ReadData();
+        }
+
     }
 }
