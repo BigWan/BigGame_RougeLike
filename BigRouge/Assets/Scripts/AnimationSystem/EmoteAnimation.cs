@@ -23,12 +23,14 @@ namespace BigRogue.AnimationSystem {
 
         public void PlayEmote(int id) {
             m_animator.SetInteger("EmoteID", id);
-            m_animator.SetBool("Emoting", true);
         }
 
-        public void PlayEmoteSomeTime(int id,float time = 10f) {
+        void StopEmote() {
+            m_animator.SetInteger("EmoteID", 0);
+        }
+
+        public void PlayEmoteFixedTime(int id,float time = 10f) {
             m_animator.SetInteger("EmoteID", id);
-            m_animator.SetBool("Emoting", true);
             if (stopEmoteCoroutine != null)
                 stopEmoteCoroutine = null;
             stopEmoteCoroutine = StartCoroutine(StopEmoteDelay(time));
@@ -40,16 +42,13 @@ namespace BigRogue.AnimationSystem {
             StopEmote();
         }
 
-        void StopEmote() {
-            m_animator.SetInteger("EmoteID", 0);
-            m_animator.SetBool("Emoting", false);
-        }
+
 
 
         private void OnGUI() {
-            for (int i = 0; i < 9; i++) {
+            for (int i = 1; i <= 9; i++) {
                 if (GUI.Button(new Rect(30,30+50*i,100,50),$"播放{i.ToString()}号表情")) {
-                    PlayEmote(i,10f);
+                    PlayEmote(i);
                 }
             }
 
