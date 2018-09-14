@@ -5,59 +5,11 @@ using UnityEngine;
 
 namespace BigRogue.CharacterAvatar {
 
-    public enum AvatarSlot {
-        MainBody = 0,
-        Beard = 1,
-        Ears = 2,
-        Hair = 3,
-        Face = 4,
-        Horns = 5,
-        Wing = 6,
-        Bag = 7,
-        MainHand = 101,
-        OffHand = 102
-    }
-    public enum AvatarPartType {
-        MainBody = 0,
-        Beard = 1,
-        Ears = 2,
-        Hair = 3,
-        Face = 4,
-        Horns = 5,
-        Wing = 6,
-        Bag = 7,
-        Weapon = 100
-    }
-
     /// <summary>
-    /// 挂载类型
+    /// 管理角色的换装
     /// </summary>
-    public enum MountingType {
-        None = -1,
-        Root = 0,
-        Base = 1,
-        Head = 2,
-        Back = 3,
-        LeftHand = 4,
-        RightHand = 5,
-        BothHand = 6,
-    }
-
-    /// <summary>
-    /// 挂点位置枚举
-    /// </summary>
-    public enum MountingPoint {
-        Root, Base, Head, Back, Left, Right
-    }
-
-    public enum SexType {
-        None = 0,
-        Female = 1,
-        Male = 2,
-        Other = 3,
-    }
-
     public class Avatar : MonoBehaviour , Persistent.IPersistentable {
+
 
         Dictionary<AvatarSlot, AvatarRecord> m_allAvatarRecords;
 
@@ -101,7 +53,7 @@ namespace BigRogue.CharacterAvatar {
             m_allAvatarPart[avSlot] = ap;
         }
 
-        AvatarPart GetAvatarPart(AvatarSlot avSlot) {
+        public AvatarPart GetAvatarPart(AvatarSlot avSlot) {
             if (m_allAvatarPart.ContainsKey(avSlot)) {
                 return m_allAvatarPart[avSlot];
             }
@@ -255,23 +207,15 @@ namespace BigRogue.CharacterAvatar {
 
 
 
-        //private void OnGUI() {
-        //    if (GUI.Button(new Rect(300, 300, 300, 300), "按钮")) {
-        //        SetAvatarID("MainBody", 0);
-        //        SetAvatarID("Beard", 20002);
-        //        SetAvatarID("Ears", 30002);
-        //        SetAvatarID("Hair", 41002);
-        //        SetAvatarID("Wing", 70074);
-        //        SetAvatarID("Underwear", 122269);
-        //        BuildAllAvatar();
-        //    }
+        private void OnGUI() {
+
+            if (GUI.Button(new Rect(1000, 100, 200, 50), "adfadf")) {
+
+                Debug.Log(JsonUtility.ToJson(this));
+
+            }
 
 
-        //    if (GUI.Button(new Rect(600, 300, 300, 300), "按钮")) {
-        //        SetAvatarID("Underwear", GetAvatarID("Underwear") + 1);
-        //        BuildAllAvatar();
-        //    }
-
-        //}
+        }
     }
 }

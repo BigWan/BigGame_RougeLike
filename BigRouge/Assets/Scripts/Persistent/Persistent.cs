@@ -7,6 +7,8 @@ namespace BigRogue.Persistent {
     public interface IPersistentable {
         void SaveData();
         void ReadData();
+        //string SaveData();
+
     }
 
 }
