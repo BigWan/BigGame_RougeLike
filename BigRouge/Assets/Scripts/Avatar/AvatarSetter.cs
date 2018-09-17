@@ -21,7 +21,6 @@ namespace BigRogue.CharacterAvatar {
             bagID,
             mainHandID,
             offHandID;
-        
 
         private Avatar avatar;
 

@@ -108,7 +108,7 @@ namespace BigRogue.UI {
         void OnAvatarIDChange(int index) {
 
             int id = int.Parse(dropdown.captionText.text);
-            avRecord = AvatarDataHandler.GetAvatarRecord(id);
+            avRecord = AvatarDataHandler.GetRecord(id);
 
             path.text = avRecord.path;
 

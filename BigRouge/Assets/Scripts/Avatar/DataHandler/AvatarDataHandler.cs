@@ -18,22 +18,26 @@ namespace BigRogue.CharacterAvatar {
 
         private static void LoadAvatarData() {
 
-            string[] lines = Util.SimpleCsv.OpenCsv(avatarDataFile);
-            if (lines.Length == 0)
-                throw new UnityException($"avatardatas:{s_avatarDatas}没有数据");
+            
 
-            for (int i = 0; i < lines.Length; i++) {
-                AvatarRecord record = new AvatarRecord(lines[i]);
-                s_avatarDatas.Add(record.id, record);
-            }
+            //string[] lines = Util.SimpleCsv.OpenCsv(avatarDataFile);
+            //if (lines.Length == 0)
+            //    throw new UnityException($"avatardatas:{s_avatarDatas}没有数据");
+
+            //for (int i = 0; i < lines.Length; i++) {
+            //    AvatarRecord record = new AvatarRecord();
+            //    record.InitFromLine(lines[i]);
+            //    s_avatarDatas.Add(record.id, record);
+            //}
         }
 
         static AvatarDataHandler() {
             s_avatarDatas = new Dictionary<int, AvatarRecord>();
-            LoadAvatarData();
+            s_avatarDatas = Util.SimpleCsv.OpenCsvAs<AvatarRecord>(avatarDataFile);
+            //LoadAvatarData();
         }
 
-        public static AvatarRecord GetAvatarRecord(int id) {
+        public static AvatarRecord GetRecord(int id) {
             if (s_avatarDatas.ContainsKey(id))
                 return s_avatarDatas[id];
             else

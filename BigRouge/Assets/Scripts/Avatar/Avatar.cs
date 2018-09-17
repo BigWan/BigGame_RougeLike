@@ -25,7 +25,7 @@ namespace BigRogue.CharacterAvatar {
         }
 
         void SetAvatarRecord(AvatarSlot avSlot, int avID) {
-            AvatarRecord record = AvatarDataHandler.GetAvatarRecord(avID);
+            AvatarRecord record = AvatarDataHandler.GetRecord(avID);
             SetAvatarRecord(avSlot, record);
         }
 
