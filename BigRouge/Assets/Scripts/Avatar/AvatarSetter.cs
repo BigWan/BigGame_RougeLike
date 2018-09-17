@@ -8,7 +8,6 @@ namespace BigRogue.CharacterAvatar {
     /// <summary>
     /// 界面上负责设置avatar参数
     /// </summary>
-    [ExecuteInEditMode]
     [RequireComponent(typeof(Avatar))]
     public class AvatarSetter : MonoBehaviour {
 
@@ -61,7 +60,6 @@ namespace BigRogue.CharacterAvatar {
             SetAndBuildAvatarPart(AvatarSlot.Bag, bagID);
             SetAndBuildAvatarPart(AvatarSlot.MainHand, mainHandID);
             SetAndBuildAvatarPart(AvatarSlot.OffHand, offHandID);
-
         }
 
         private void OnGUI() {
