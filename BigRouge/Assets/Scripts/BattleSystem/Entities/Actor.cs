@@ -44,7 +44,7 @@ namespace BigRogue.BattleSystem {
         /// 行动
         /// </summary>
         /// <returns></returns>
-        public abstract bool Act();
+        public abstract IEnumerator Act();
 
         /// <summary>
         /// 能否到达目标点

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,12 +30,23 @@ namespace BigRogue.BattleSystem {
         /// </summary>
         public List<Actor> actors;
 
+        /// <summary>
+        /// 满足act条件的actor
+        /// </summary>
+        public Queue<Actor> actorQueue;
+
         public BattleState battleState;
 
-        const float energyToAct = 1000;
+        const float energyToAct = 100;
+
+        private void Awake() {
+            //actors = new List<Actor>();
+            actorQueue = new Queue<Actor>();
+        }
+
 
         public void Start() {
-
+            
         }
 
         public void Load() {
@@ -47,20 +59,31 @@ namespace BigRogue.BattleSystem {
                 BattleOver();
             }
 
-
-
-
-
             for (int i = 0; i < actors.Count; i++) {
                 actors[i].RegenEnergy();
                 if (actors[i].energy > energyToAct) {
-                    actors[i].Act();
+                    actorQueue.Enqueue(actors[i]);
                 }
+            }
+
+            if (actorQueue.Count > 0) {
+                battleState = BattleState.Acting;
+                StartCoroutine(ActActors());
             }
 
         }
 
+        /// <summary>
+        /// 让可以行动的单位行动
+        /// </summary>
+        IEnumerator ActActors() {
 
+            while (actorQueue.Count==0) {
+                yield return StartCoroutine(actorQueue.Dequeue().Act());
+            }
+
+
+        }
 
 
         public void BattleOver() {
@@ -87,11 +110,11 @@ namespace BigRogue.BattleSystem {
 
 
 
-        public void AddEntity(Entity e) { }
+        public void AddActor(Actor a) { }
 
-        public void RemoveEntity(Entity e) { }
+        public void RemoveActor(Actor a) { }
 
-        public void HasEntity(Entity e) { }
+        public void HasActor(Actor a) { }
 
     }
 }
