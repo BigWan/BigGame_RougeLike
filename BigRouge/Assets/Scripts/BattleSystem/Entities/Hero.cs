@@ -10,6 +10,10 @@ namespace BigRogue.BattleSystem {
     /// </summary>
     public class Hero : Actor {
 
+        private bool isMoving;
+        private bool isAttacking;
+        private int turn;
+
         private CombatState statGroup;
 
         private TakeDamageComponent takeDamageComponent;
@@ -20,9 +24,12 @@ namespace BigRogue.BattleSystem {
         /// </summary>
         /// <returns></returns>
         public override IEnumerator Act() {
-            
+            turn++;
+            Debug.Log($"{name}开始行动");
+            useEnergy();
             yield return StartCoroutine(MoveCoroutine());
             yield return StartCoroutine(AttackCoroutine());
+            Debug.Log($"{name}行动结束");
         }
 
 
@@ -33,31 +40,21 @@ namespace BigRogue.BattleSystem {
         /// </summary>
         /// <returns></returns>
         IEnumerator MoveCoroutine() {
-            Debug.Log("I'an Moving1");
-            yield return null;
-            Debug.Log("I'an Moving2");
-            yield return null;
-            Debug.Log("I'an Moving3");
-            yield return null;
-            Debug.Log("I'an Moving4");
-            yield return null;
-            Debug.Log("I'an Moving5");
-            yield return null;
+            isMoving = true;
+            Debug.Log($"{name}I'an Moving1");
+            yield return new WaitForSeconds(1f);
+
+            isMoving = true;
 
         }
 
 
         IEnumerator AttackCoroutine() {
+            isAttacking = true;
             Debug.Log("I'an attacking1");
-            yield return null;
-            Debug.Log("I'an attacking2");
-            yield return null;
-            Debug.Log("I'an attacking3");
-            yield return null;
-            Debug.Log("I'an attacking4");
-            yield return null;
-            Debug.Log("I'an attacking5");
-            yield return null;
+            yield return new WaitForSeconds(1f);
+            isAttacking = false;
+
         }
 
 
@@ -74,11 +71,13 @@ namespace BigRogue.BattleSystem {
         }
 
         public override void RegenEnergy() {
-            energy += 10;
+            energy += energyRegen;
         }
 
         public override void useEnergy() {
-            energy -= 10;
+            energy -= 1000;
         }
+
+
     }
 }

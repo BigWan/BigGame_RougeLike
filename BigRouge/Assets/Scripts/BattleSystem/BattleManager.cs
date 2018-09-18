@@ -37,7 +37,7 @@ namespace BigRogue.BattleSystem {
 
         public BattleState battleState;
 
-        const float energyToAct = 100;
+        const float energyToAct = 1000;
 
         private void Awake() {
             //actors = new List<Actor>();
@@ -61,14 +61,14 @@ namespace BigRogue.BattleSystem {
 
             for (int i = 0; i < actors.Count; i++) {
                 actors[i].RegenEnergy();
-                if (actors[i].energy > energyToAct) {
+                if (actors[i].energy >= energyToAct) {
                     actorQueue.Enqueue(actors[i]);
                 }
             }
 
             if (actorQueue.Count > 0) {
                 battleState = BattleState.Acting;
-                StartCoroutine(ActActors());
+                StartCoroutine(ActAll());
             }
 
         }
@@ -76,11 +76,13 @@ namespace BigRogue.BattleSystem {
         /// <summary>
         /// 让可以行动的单位行动
         /// </summary>
-        IEnumerator ActActors() {
-
-            while (actorQueue.Count==0) {
+        IEnumerator ActAll() {
+            Debug.Log(actorQueue.Count);
+            while (actorQueue.Count > 0) {
                 yield return StartCoroutine(actorQueue.Dequeue().Act());
             }
+            // act end
+            battleState = BattleState.Ticking;
 
 
         }
