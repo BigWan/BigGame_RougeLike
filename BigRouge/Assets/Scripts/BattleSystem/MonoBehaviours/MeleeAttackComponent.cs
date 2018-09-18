@@ -6,7 +6,7 @@ namespace BigRogue.BattleSystem {
     /// <summary>
     /// 近战攻击组件
     /// </summary>
-    public class MeleeAttacker:MonoBehaviour {
+    public class MeleeAttackComponent : MonoBehaviour {
 
         void Attack() { }
         void OnAttack() { }

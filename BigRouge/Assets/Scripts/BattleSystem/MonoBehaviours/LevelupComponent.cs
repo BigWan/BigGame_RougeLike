@@ -5,7 +5,7 @@ namespace BigRogue.BattleSystem {
     /// <summary>
     /// 经验值升级组件
     /// </summary>
-    public class LevelupAble : MonoBehaviour {
+    public class LevelupComponent : MonoBehaviour {
 
         public Action<int> LevelupEventHandler;
 

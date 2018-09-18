@@ -4,14 +4,19 @@ using UnityEngine;
 
 namespace BigRogue.BattleSystem {
     /// <summary>
-    /// 管理被攻击的组件
+    /// 受击组件
     /// </summary>
-    public class DamageAble:MonoBehaviour {
+    public class TakeDamageComponent : MonoBehaviour {
 
         /// <summary>
         /// 受伤事件
         /// </summary>
         public Action TakeHitEventHandler;
+
+        /// <summary>
+        /// 治疗事件
+        /// </summary>
+        public Action TakeHealEventHandler;
 
         /// <summary>
         /// 死亡事件
@@ -21,19 +26,25 @@ namespace BigRogue.BattleSystem {
         /// <summary>
         /// 最大生命值
         /// </summary>
+        [SerializeField]
         float maxHp { get; set; }
-
 
         /// <summary>
         /// 当前生命值
-        /// </summary>
+        /// </summary>        
         float currentHp{ get; set; }
-
 
         /// <summary>
         /// 受伤
         /// </summary>
         void TakeHit() {
+
+        }
+
+        /// <summary>
+        /// 受到治疗加血
+        /// </summary>
+        void TakeHeal() {
 
         }
 

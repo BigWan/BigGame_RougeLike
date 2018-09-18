@@ -13,8 +13,8 @@ namespace BigRogue.BattleSystem {
     /// </summary>
     public abstract class Entity : MonoBehaviour {
 
+        [Header("Entity.coordinate")]
         public Vector3Int coordinate;
 
-        public abstract void Tick();
     }
 }
