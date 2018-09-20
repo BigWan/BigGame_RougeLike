@@ -10,26 +10,12 @@ namespace BigRogue.CharacterAvatar {
     /// 部件类型表(部件类型名字和部件挂点类型)
     /// 部件表(部件id,部件类型,部件资源)
     /// </summary>
-    public static class AvatarDataHandler {
+    public static class AvatarDataHandler  {
 
-        const string avatarDataFile = "Avatar/Texts/AvatarData";
+        const string avatarDataFile = "Texts/AvatarData";
 
         static Dictionary<int, AvatarRecord> s_avatarDatas;
 
-        private static void LoadAvatarData() {
-
-            
-
-            //string[] lines = Util.SimpleCsv.OpenCsv(avatarDataFile);
-            //if (lines.Length == 0)
-            //    throw new UnityException($"avatardatas:{s_avatarDatas}没有数据");
-
-            //for (int i = 0; i < lines.Length; i++) {
-            //    AvatarRecord record = new AvatarRecord();
-            //    record.InitFromLine(lines[i]);
-            //    s_avatarDatas.Add(record.id, record);
-            //}
-        }
 
         static AvatarDataHandler() {
             s_avatarDatas = new Dictionary<int, AvatarRecord>();

@@ -16,5 +16,6 @@ namespace BigRogue {
         bool isEmpty();
 
         void InitFromLine(string s);
+        
     }
 }

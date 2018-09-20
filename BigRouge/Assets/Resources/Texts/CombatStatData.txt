@@ -1,0 +1,7 @@
+//id,name,code,min,max,desc
+1,strength,str,0,999,力量
+2,intelligence,int,0,999,智力
+3,dexterity,dex,0,999,敏捷
+4,hp,hp,0,9999,生命
+5,atk,atk,0,999,攻击
+6,def,def,0,999,防御

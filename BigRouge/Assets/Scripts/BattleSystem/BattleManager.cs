@@ -12,10 +12,10 @@ namespace BigRogue.BattleSystem {
     /// 战斗状态
     /// </summary>
     public enum BattleState {
-        //Start,      // 开始状态
-        WaitingInput,  // 等待操作
+        //Start,        // 开始状态
+        WaitingInput,   // 等待操作
         Ticking,        // 自循环中
-        Acting,     // 执行操作
+        Acting,         // 执行操作
         BattleOver,
     }
 

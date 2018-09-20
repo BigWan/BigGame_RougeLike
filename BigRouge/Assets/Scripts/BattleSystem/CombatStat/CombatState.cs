@@ -15,12 +15,54 @@ namespace BigRogue.BattleSystem {
     /// </summary>
     public class CombatState {
 
-        public Attribute hp;
-        public Attribute strength;
-        public Attribute intelligence;
-        public Attribute dexterity;
-        public Attribute atk;
-        public Attribute def;
+        private Dictionary<int,Attribute> attributes;
+                        
+        CombatState() {
+            attributes = new Dictionary<int, Attribute>();
+        }
+
+
+        /// <summary>
+        /// 获取属性的值
+        /// </summary>
+        /// <param name="attrID"></param>
+        /// <returns></returns>
+        public float GetAttr(int attrID) {
+            return attributes[attrID].value;
+        }
+        public float GetAttr(string code) {
+            int id = AttributeDataHandler.GetID(code);
+            if (id == -1) return 0;
+            return GetAttr(id);
+        }
+
+        /// <summary>
+        /// 增加一条属性
+        /// </summary>
+        /// <param name="mod"></param>
+        public void AddAttributeModifier(AttributeModifer mod) {
+            attributes[mod.attrID].AddModifer(mod);
+        }
+
+        /// <summary>
+        /// 减少一条属性
+        /// </summary>
+        /// <param name="mod"></param>
+        public void RemoveAttributeModifier(AttributeModifer mod) {
+            attributes[mod.attrID].RemoveModifer(mod);
+        }
+
+        /// <summary>
+        /// 增加一系列属性
+        /// </summary>
+        /// <param name="mods"></param>
+        public void AppendAttributes(AttributeModifer[] mods) {
+            for (int i = 0; i < mods.Length; i++) {
+                AddAttributeModifier(mods[i]);
+            }
+        }
+
+
 
     }
 
