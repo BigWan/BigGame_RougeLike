@@ -13,6 +13,7 @@ namespace BigRogue.BattleSystem {
         static Dictionary<int, AttributeInfo> s_attrData;
 
         static AttributeDataHandler() {
+            
             s_attrData = new Dictionary<int, AttributeInfo>();
             s_attrData = Util.SimpleCsv.OpenCsvAs<AttributeInfo>(attributeDateFile);
         }

@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 480596657}
   - component: {fileID: 480596656}
   m_Layer: 0
-  m_Name: Character
+  m_Name: "\u5C0F\u660E"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,8 +202,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coordinate: {x: 0, y: 0, z: 0}
-  energy: 0
-  energyRegen: 0
+  energy: 20
+  energyRegen: 150
+  left: 100
 --- !u!4 &480596658
 Transform:
   m_ObjectHideFlags: 0
@@ -381,7 +382,7 @@ GameObject:
   - component: {fileID: 1007764320}
   - component: {fileID: 1007764319}
   m_Layer: 0
-  m_Name: Character (1)
+  m_Name: "\u5C0F\u738B"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -412,8 +413,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coordinate: {x: 0, y: 0, z: 0}
-  energy: 0
-  energyRegen: 0
+  energy: 30
+  energyRegen: 100
+  left: 500
 --- !u!4 &1007764321
 Transform:
   m_ObjectHideFlags: 0

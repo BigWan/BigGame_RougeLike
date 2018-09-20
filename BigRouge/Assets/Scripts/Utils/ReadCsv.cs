@@ -57,7 +57,7 @@ namespace BigRogue.Util {
             string[] lines = OpenCsv(text);
 
             if (lines.Length == 0)
-                throw new UnityException($"avatardatas:{text.name}没有数据");
+                throw new UnityException($"{text.name}没有数据");
 
             for (int i = 0; i < lines.Length; i++) {
                 T t = new T();
@@ -67,6 +67,19 @@ namespace BigRogue.Util {
             return dict;
         }
 
+
+        public static Dictionary<string, string> OpenCsvAsKV(TextAsset text) {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            string[] lines = OpenCsv(text);
+            if(lines.Length==0)
+                throw new UnityException($"{text.name}没有数据");
+            string[] cells;
+            for (int i = 0; i < lines.Length; i++) {
+                cells = lines[i].Split(',');
+                dict.Add(cells[0], cells[1]);
+            }
+            return dict;
+        }
 
     }
 }

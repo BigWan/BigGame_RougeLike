@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace BigRogue.BattleSystem {
@@ -37,11 +36,15 @@ namespace BigRogue.BattleSystem {
 
         public BattleState battleState;
 
-        const float energyToAct = 1000;
+        static int energyToAct;
 
         private void Awake() {
-            //actors = new List<Actor>();
+            // 初始化对象
             actorQueue = new Queue<Actor>();
+
+            // 获取配置
+            energyToAct = int.Parse(GameSetting.GetSetting("ENERGY_TO_ACT"));
+
         }
 
 
@@ -61,7 +64,7 @@ namespace BigRogue.BattleSystem {
 
             for (int i = 0; i < actors.Count; i++) {
                 actors[i].RegenEnergy();
-                if (actors[i].energy >= energyToAct) {
+                if (actors[i].isEnergyEnough(energyToAct)) {
                     actorQueue.Enqueue(actors[i]);
                 }
             }
@@ -73,18 +76,17 @@ namespace BigRogue.BattleSystem {
 
         }
 
+
         /// <summary>
         /// 让可以行动的单位行动
         /// </summary>
         IEnumerator ActAll() {
             Debug.Log(actorQueue.Count);
             while (actorQueue.Count > 0) {
-                yield return StartCoroutine(actorQueue.Dequeue().Act());
+                yield return StartCoroutine(actorQueue.Dequeue().ActCoroutine());
             }
             // act end
             battleState = BattleState.Ticking;
-
-
         }
 
 
@@ -93,10 +95,10 @@ namespace BigRogue.BattleSystem {
         }
 
         bool CheckBattleOver() {
-            return true;
+            return false;
         }
 
-        private void FixedUpdate() {
+        private  void FixedUpdate() {
             switch (battleState) {
                 case BattleState.Ticking:
                     Tick();

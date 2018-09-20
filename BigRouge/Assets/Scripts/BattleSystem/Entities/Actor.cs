@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+
 
 namespace BigRogue.BattleSystem {
 
@@ -10,57 +12,18 @@ namespace BigRogue.BattleSystem {
     /// </summary>
     public abstract class Actor : Entity {
 
+        // 一系列事件
 
-        [Header("Actor.EnergyGroup")]
-        /// <summary>
-        /// 能量值
-        /// </summary>
-        public float energy;
+        protected Action StartActEventHandler;
+        protected Action EndActEventHandler;
 
-        /// <summary>
-        /// 能量恢复值
-        /// </summary>
-        public float energyRegen;
-        
-        /// <summary>
-        /// 使用能量
-        /// </summary>
-        public abstract void useEnergy();
+        // 一系列判断
 
+        protected abstract bool CanAct();
 
-        /// <summary>
-        /// 恢复能量
-        /// </summary>
-        public abstract void RegenEnergy();
+        // 一系列操作
 
-        /// <summary>
-        /// 判断是否能行动
-        /// </summary>
-        /// <returns></returns>
-        public abstract bool CanAct();
-
-
-        /// <summary>
-        /// 行动
-        /// </summary>
-        /// <returns></returns>
-        public abstract IEnumerator Act();
-
-        /// <summary>
-        /// 能否到达目标点
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns></returns>
-        public abstract bool CanMoveTo(int x, int y);
-
-        /// <summary>
-        /// 移动到目标点
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <param name="force"></param>
-        public abstract void Move(int x, int y, bool force = false);
+        public abstract IEnumerator ActCoroutine();
 
     }
 }

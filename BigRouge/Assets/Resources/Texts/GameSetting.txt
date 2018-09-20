@@ -1,0 +1,8 @@
+//
+// Config Path
+//
+//
+// Battle Config
+//
+ENERGY_TO_ACT,1000
+
