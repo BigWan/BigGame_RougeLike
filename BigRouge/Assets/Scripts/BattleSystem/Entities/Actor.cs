@@ -12,6 +12,13 @@ namespace BigRogue.BattleSystem {
     /// </summary>
     public abstract class Actor : Entity {
 
+        // 属性
+        public float energy;
+        public float energyRegen;
+
+        public abstract void RegenEnergy();
+        public abstract bool isEnergyEnough(float energy);
+
         // 一系列事件
 
         protected Action StartActEventHandler;

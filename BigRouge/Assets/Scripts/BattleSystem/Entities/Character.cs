@@ -14,8 +14,7 @@ namespace BigRogue.BattleSystem {
         public int left;
 
 
-        public float energy;
-        public float energyRegen;
+
 
         private bool isMoving;
         private bool isAttacking;
@@ -31,6 +30,10 @@ namespace BigRogue.BattleSystem {
         /// </summary>
         /// <returns></returns>
         public override IEnumerator ActCoroutine() {
+
+            if (!CanAct())
+                yield break;
+
             turn++;
             Debug.Log($"{name}开始行动");
 
@@ -43,6 +46,15 @@ namespace BigRogue.BattleSystem {
             useEnergy();
             Debug.Log($"{name}行动结束===");
         }
+
+        /// <summary>
+        /// 等待玩家选择操作类型
+        /// </summary>
+        /// <returns></returns>
+        IEnumerator WaitForInput() {
+            yield return null;
+        }
+
 
 
         private bool hasMoveCommand;
@@ -80,7 +92,7 @@ namespace BigRogue.BattleSystem {
         }
 
 
-        public void RegenEnergy() {
+        public override void RegenEnergy() {
             energy += energyRegen;
         }
 
@@ -88,7 +100,7 @@ namespace BigRogue.BattleSystem {
             energy -= 1000;
         }
 
-        public bool isEnergyEnough(int eng) {
+        public override bool isEnergyEnough(float eng) {
             return energy >= eng;
         }
 
