@@ -24,6 +24,10 @@ namespace BigRogue.BattleSystem {
     /// </summary>
     public class BattleManager : MonoBehaviour {
 
+
+        [Header("Refs")]
+        public GameUI.OperateMenu opMenu;
+
         /// <summary>
         /// 需要处理的有能量的Entity
         /// </summary>
@@ -119,6 +123,33 @@ namespace BigRogue.BattleSystem {
         public void RemoveActor(Actor a) { }
 
         public void HasActor(Actor a) { }
+
+
+
+        public void Update() {
+
+            if (Input.GetMouseButtonDown(0)) {
+                Debug.Log("M0");
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hitinfo;
+                if (Physics.Raycast(ray, out hitinfo)) {
+                    Debug.Log(hitinfo.transform.name);
+                    if (hitinfo.transform.CompareTag("Character")) {
+                        Debug.Log("sHOW");
+                        ShowOperateMenu(hitinfo.transform.GetComponent<Character>());
+                    }
+                }
+            }
+
+        }
+
+
+        void ShowOperateMenu(Character c) {
+            opMenu.gameObject.SetActive(true);
+            opMenu.SetCharacter(c);
+            opMenu.FadeIn();
+        }
+
 
     }
 }
