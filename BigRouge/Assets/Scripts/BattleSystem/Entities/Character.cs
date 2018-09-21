@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.EventSystems;
 
 namespace BigRogue.BattleSystem {
 
@@ -13,59 +13,70 @@ namespace BigRogue.BattleSystem {
 
         public int left;
 
+        public int avatarID;
 
-
-
+        [Header("flags")]
         private bool isMoving;
-        private bool isAttacking;
+        private bool isActing;
+
+        private bool hasMoved;
+        private bool hasActed;
+        private bool hasTurnEnd;
 
         private int turn;
 
+
+        [Header("Refs")]
+        private BattleManager battleManager;
         private Animator anim;
 
         private CombatState combatState;
 
         /// <summary>
-        /// 行动
+        /// 开始回合
         /// </summary>
         /// <returns></returns>
-        public override IEnumerator ActCoroutine() {
+        public override IEnumerator StartTurn() {
 
-            if (!CanAct())
-                yield break;
-
+            TurnStartEventHandler?.Invoke(this);
             turn++;
-            Debug.Log($"{name}开始行动");
+            hasActed = false;
+            hasMoved = false;
+            hasTurnEnd = false;
+            while (!hasTurnEnd) {
+                yield return null;
+            }
 
-            yield return StartCoroutine(GetMoveInput());
-            yield return StartCoroutine(MoveCoroutine());
-
-            yield return StartCoroutine(GetAttackInput());
-            yield return StartCoroutine(AttackCoroutine());
-
-            useEnergy();
-            Debug.Log($"{name}行动结束===");
+            UseEnergy();
+            TurnEndEventHandler?.Invoke(this);
         }
 
         /// <summary>
-        /// 等待玩家选择操作类型
+        /// 移动操作
         /// </summary>
-        /// <returns></returns>
-        IEnumerator WaitForInput() {
-            yield return null;
+        public void MoveOperate() {
+
+
+
+
+            StartCoroutine(MoveCoroutine());
+        }
+
+        public void ShowMoveRadius() {
+            battleManager.ShowMoveRange(new Vector3Int(5, 0, 5), 3);
         }
 
 
 
-        private bool hasMoveCommand;
-        public IEnumerator GetMoveInput() {
-            Debug.Log("等待移动操作");
-            hasMoveCommand = false;
-            while (!hasMoveCommand) {
-                yield return null;
-            }
-            Debug.Log("得到移动操作");
-        }
+        //private bool hasMoveCommand;
+        //public IEnumerator GetMoveInput() {
+        //    Debug.Log("等待移动操作");
+        //    hasMoveCommand = false;
+        //    while (!hasMoveCommand) {
+        //        yield return null;
+        //    }
+        //    Debug.Log("得到移动操作");
+        //}
 
 
 
@@ -82,7 +93,7 @@ namespace BigRogue.BattleSystem {
 
 
 
-        protected override bool CanAct() {
+        protected  bool CanAct() {
             return true;
         }
 
@@ -96,24 +107,15 @@ namespace BigRogue.BattleSystem {
             energy += energyRegen;
         }
 
-        protected void useEnergy() {
+        public override void UseEnergy() {
             energy -= 1000;
         }
 
-        public override bool isEnergyEnough(float eng) {
+        public override bool IsEnergyEnough(float eng) {
             return energy >= eng;
         }
 
 
-
-        protected void OnGUI() {
-            if (GUI.Button(new Rect(left , 100, 200, 50), $"{name}移动操作")) {
-                hasMoveCommand = true;
-            }
-            if (GUI.Button(new Rect(left , 200, 200, 50), $"{name}攻击操作")) {
-                hasAttackCommand = true;
-            }
-        }
 
         protected  bool CanMove() {
             return true;
@@ -146,6 +148,30 @@ namespace BigRogue.BattleSystem {
             yield return null;
 
             isMoving = false;
+        }
+
+
+        void OnTurn() {
+
+        }
+        
+        private void OnMouseDown() {
+            TurnStartEventHandler?.Invoke(this);
+        }
+        
+
+
+        private void OnSelected() {
+
+        }
+
+        private void LoseSelected() {
+
+        }
+
+
+        private void Start() {
+            battleManager = FindObjectOfType<BattleManager>();
         }
 
     }

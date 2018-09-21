@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public static class TransfomrUtil { 
+public static class TransformUtil { 
 
 
     public static void SetLocalPositionX(this Transform trans,float x) {

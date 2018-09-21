@@ -9,8 +9,7 @@ namespace BigRogue.CharacterAvatar {
     /// 管理角色的换装
     /// </summary>
     public class Avatar : MonoBehaviour , Persistent.IPersistentable {
-
-
+        
         Dictionary<AvatarSlot, AvatarRecord> m_allAvatarRecords;
 
         Dictionary<AvatarSlot, AvatarPart> m_allAvatarPart;

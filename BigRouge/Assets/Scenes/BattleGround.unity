@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -112,6 +112,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &10381088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4185130913655208834, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+  m_PrefabInstance: {fileID: 4185130913647221922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &10381089 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+  m_PrefabInstance: {fileID: 4185130913647221922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &10381093
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10381088}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &15351127
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +146,7 @@ GameObject:
   - component: {fileID: 15351131}
   - component: {fileID: 15351130}
   - component: {fileID: 15351129}
+  - component: {fileID: 15351132}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -157,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 3, y: 0, z: 2}
 --- !u!23 &15351130
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -203,6 +226,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15351127}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &15351132
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15351127}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &35999332
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +251,7 @@ GameObject:
   - component: {fileID: 35999336}
   - component: {fileID: 35999335}
   - component: {fileID: 35999334}
+  - component: {fileID: 35999337}
   m_Layer: 0
   m_Name: Block_RockA(Clone)
   m_TagString: Untagged
@@ -248,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 1, y: 0, z: 5}
 --- !u!23 &35999335
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -294,6 +331,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35999332}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &35999337
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35999332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &49320842
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +356,7 @@ GameObject:
   - component: {fileID: 49320846}
   - component: {fileID: 49320845}
   - component: {fileID: 49320844}
+  - component: {fileID: 49320847}
   m_Layer: 0
   m_Name: Block_RockA(Clone)
   m_TagString: Untagged
@@ -339,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 1, y: 0, z: 7}
 --- !u!23 &49320845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -385,6 +436,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49320842}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &49320847
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49320842}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &62483163
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +461,7 @@ GameObject:
   - component: {fileID: 62483167}
   - component: {fileID: 62483166}
   - component: {fileID: 62483165}
+  - component: {fileID: 62483168}
   m_Layer: 0
   m_Name: Block_CrystalB(Clone)
   m_TagString: Untagged
@@ -430,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 1, y: 0, z: 9}
 --- !u!23 &62483166
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -476,6 +541,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62483163}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &62483168
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62483163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &92054864
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +566,7 @@ GameObject:
   - component: {fileID: 92054868}
   - component: {fileID: 92054867}
   - component: {fileID: 92054866}
+  - component: {fileID: 92054869}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -521,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 7, y: 0, z: 6}
 --- !u!23 &92054867
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -567,6 +646,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92054864}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &92054869
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92054864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &116176120
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +671,7 @@ GameObject:
   - component: {fileID: 116176124}
   - component: {fileID: 116176123}
   - component: {fileID: 116176122}
+  - component: {fileID: 116176125}
   m_Layer: 0
   m_Name: Block_CrystalA(Clone)
   m_TagString: Untagged
@@ -612,7 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 0, y: 0, z: 6}
 --- !u!23 &116176123
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -658,6 +751,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116176120}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &116176125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116176120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &141174069
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +776,7 @@ GameObject:
   - component: {fileID: 141174073}
   - component: {fileID: 141174072}
   - component: {fileID: 141174071}
+  - component: {fileID: 141174074}
   m_Layer: 0
   m_Name: Block_RockA(Clone)
   m_TagString: Untagged
@@ -703,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 8, y: 0, z: 0}
 --- !u!23 &141174072
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -749,6 +856,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141174069}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &141174074
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141174069}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &142413761
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +881,7 @@ GameObject:
   - component: {fileID: 142413765}
   - component: {fileID: 142413764}
   - component: {fileID: 142413763}
+  - component: {fileID: 142413766}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -794,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 3, y: 0, z: 4}
 --- !u!23 &142413764
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -840,6 +961,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142413761}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &142413766
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142413761}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &164828788
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +986,7 @@ GameObject:
   - component: {fileID: 164828792}
   - component: {fileID: 164828791}
   - component: {fileID: 164828790}
+  - component: {fileID: 164828793}
   m_Layer: 0
   m_Name: Block_RockA(Clone)
   m_TagString: Untagged
@@ -885,7 +1020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 9, y: 0, z: 4}
 --- !u!23 &164828791
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -931,6 +1066,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164828788}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &164828793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164828788}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &170421801
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +1091,7 @@ GameObject:
   - component: {fileID: 170421805}
   - component: {fileID: 170421804}
   - component: {fileID: 170421803}
+  - component: {fileID: 170421806}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -976,7 +1125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 8, y: 0, z: 7}
 --- !u!23 &170421804
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1022,6 +1171,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170421801}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &170421806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170421801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &183334115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1196,7 @@ GameObject:
   - component: {fileID: 183334119}
   - component: {fileID: 183334118}
   - component: {fileID: 183334117}
+  - component: {fileID: 183334120}
   m_Layer: 0
   m_Name: Block_GrassC(Clone)
   m_TagString: Untagged
@@ -1067,7 +1230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 7, y: 0, z: 7}
 --- !u!23 &183334118
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1113,6 +1276,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183334115}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &183334120
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183334115}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &192707476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,6 +1301,7 @@ GameObject:
   - component: {fileID: 192707480}
   - component: {fileID: 192707479}
   - component: {fileID: 192707478}
+  - component: {fileID: 192707481}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -1158,7 +1335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 5, y: 0, z: 2}
 --- !u!23 &192707479
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1204,6 +1381,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192707476}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &192707481
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192707476}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &193061219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1406,7 @@ GameObject:
   - component: {fileID: 193061223}
   - component: {fileID: 193061222}
   - component: {fileID: 193061221}
+  - component: {fileID: 193061224}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -1249,7 +1440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 6, y: 0, z: 8}
 --- !u!23 &193061222
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1295,6 +1486,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193061219}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &193061224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193061219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &243308730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,6 +1511,7 @@ GameObject:
   - component: {fileID: 243308734}
   - component: {fileID: 243308733}
   - component: {fileID: 243308732}
+  - component: {fileID: 243308735}
   m_Layer: 0
   m_Name: Block_CrystalA(Clone)
   m_TagString: Untagged
@@ -1340,7 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 2, y: 0, z: 0}
 --- !u!23 &243308733
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1386,6 +1591,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243308730}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &243308735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243308730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &272415378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,6 +1616,7 @@ GameObject:
   - component: {fileID: 272415382}
   - component: {fileID: 272415381}
   - component: {fileID: 272415380}
+  - component: {fileID: 272415383}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -1431,7 +1650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 7, y: 0, z: 5}
 --- !u!23 &272415381
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1477,6 +1696,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272415378}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &272415383
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272415378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &289763282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1721,7 @@ GameObject:
   - component: {fileID: 289763286}
   - component: {fileID: 289763285}
   - component: {fileID: 289763284}
+  - component: {fileID: 289763287}
   m_Layer: 0
   m_Name: Block_GrassC(Clone)
   m_TagString: Untagged
@@ -1522,7 +1755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 0, y: 0, z: 5}
 --- !u!23 &289763285
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1568,6 +1801,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289763282}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &289763287
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289763282}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &295839643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,6 +1826,7 @@ GameObject:
   - component: {fileID: 295839647}
   - component: {fileID: 295839646}
   - component: {fileID: 295839645}
+  - component: {fileID: 295839648}
   m_Layer: 0
   m_Name: Block_CrystalA(Clone)
   m_TagString: Untagged
@@ -1613,7 +1860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 4, y: 0, z: 6}
 --- !u!23 &295839646
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1659,6 +1906,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295839643}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &295839648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295839643}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &298388513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,6 +1931,7 @@ GameObject:
   - component: {fileID: 298388517}
   - component: {fileID: 298388516}
   - component: {fileID: 298388515}
+  - component: {fileID: 298388518}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -1704,7 +1965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 1, y: 0, z: 2}
 --- !u!23 &298388516
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1750,6 +2011,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298388513}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &298388518
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298388513}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &302979454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,6 +2036,7 @@ GameObject:
   - component: {fileID: 302979458}
   - component: {fileID: 302979457}
   - component: {fileID: 302979456}
+  - component: {fileID: 302979459}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -1795,7 +2070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 8, y: 0, z: 9}
 --- !u!23 &302979457
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1841,6 +2116,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302979454}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &302979459
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302979454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &319759268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1853,6 +2141,7 @@ GameObject:
   - component: {fileID: 319759272}
   - component: {fileID: 319759271}
   - component: {fileID: 319759270}
+  - component: {fileID: 319759273}
   m_Layer: 0
   m_Name: Block_RockC(Clone)
   m_TagString: Untagged
@@ -1886,7 +2175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 6, y: 0, z: 2}
 --- !u!23 &319759271
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1932,6 +2221,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319759268}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &319759273
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319759268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &328142675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,6 +2246,7 @@ GameObject:
   - component: {fileID: 328142679}
   - component: {fileID: 328142678}
   - component: {fileID: 328142677}
+  - component: {fileID: 328142680}
   m_Layer: 0
   m_Name: Block_RockC(Clone)
   m_TagString: Untagged
@@ -1977,7 +2280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 3, y: 0, z: 6}
 --- !u!23 &328142678
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2023,6 +2326,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328142675}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &328142680
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328142675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &334653653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,6 +2351,7 @@ GameObject:
   - component: {fileID: 334653657}
   - component: {fileID: 334653656}
   - component: {fileID: 334653655}
+  - component: {fileID: 334653658}
   m_Layer: 0
   m_Name: Block_GrassC(Clone)
   m_TagString: Untagged
@@ -2114,6 +2431,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334653653}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &334653658
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334653653}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &377955267
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,6 +2456,7 @@ GameObject:
   - component: {fileID: 377955271}
   - component: {fileID: 377955270}
   - component: {fileID: 377955269}
+  - component: {fileID: 377955272}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -2159,7 +2490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 4, y: 0, z: 1}
 --- !u!23 &377955270
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2205,6 +2536,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377955267}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &377955272
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377955267}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &380984382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,6 +2561,7 @@ GameObject:
   - component: {fileID: 380984386}
   - component: {fileID: 380984385}
   - component: {fileID: 380984384}
+  - component: {fileID: 380984387}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -2250,7 +2595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 2, y: 0, z: 1}
 --- !u!23 &380984385
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2296,6 +2641,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380984382}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &380984387
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380984382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &381732707
 GameObject:
   m_ObjectHideFlags: 0
@@ -2308,6 +2666,7 @@ GameObject:
   - component: {fileID: 381732711}
   - component: {fileID: 381732710}
   - component: {fileID: 381732709}
+  - component: {fileID: 381732712}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -2341,7 +2700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 9, y: 0, z: 7}
 --- !u!23 &381732710
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2387,6 +2746,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381732707}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &381732712
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381732707}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &394613032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,6 +2771,7 @@ GameObject:
   - component: {fileID: 394613036}
   - component: {fileID: 394613035}
   - component: {fileID: 394613034}
+  - component: {fileID: 394613037}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -2432,7 +2805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 7, y: 0, z: 0}
 --- !u!23 &394613035
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2478,6 +2851,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394613032}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &394613037
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394613032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &412710867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,6 +2876,7 @@ GameObject:
   - component: {fileID: 412710871}
   - component: {fileID: 412710870}
   - component: {fileID: 412710869}
+  - component: {fileID: 412710872}
   m_Layer: 0
   m_Name: Block_RockC(Clone)
   m_TagString: Untagged
@@ -2523,7 +2910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 3, y: 0, z: 3}
 --- !u!23 &412710870
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2569,6 +2956,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412710867}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &412710872
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412710867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &419924976
 GameObject:
   m_ObjectHideFlags: 0
@@ -2581,6 +2981,7 @@ GameObject:
   - component: {fileID: 419924980}
   - component: {fileID: 419924979}
   - component: {fileID: 419924978}
+  - component: {fileID: 419924981}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -2614,7 +3015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 5, y: 0, z: 4}
 --- !u!23 &419924979
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2660,6 +3061,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419924976}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &419924981
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419924976}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &464981916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2672,6 +3086,7 @@ GameObject:
   - component: {fileID: 464981920}
   - component: {fileID: 464981919}
   - component: {fileID: 464981918}
+  - component: {fileID: 464981921}
   m_Layer: 0
   m_Name: Block_RockC(Clone)
   m_TagString: Untagged
@@ -2705,7 +3120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 7, y: 0, z: 3}
 --- !u!23 &464981919
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2751,6 +3166,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464981916}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &464981921
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464981916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &508827026
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,6 +3191,7 @@ GameObject:
   - component: {fileID: 508827030}
   - component: {fileID: 508827029}
   - component: {fileID: 508827028}
+  - component: {fileID: 508827031}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -2796,7 +3225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 0, y: 0, z: 7}
 --- !u!23 &508827029
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2842,6 +3271,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508827026}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &508827031
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508827026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &533865259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,6 +3296,7 @@ GameObject:
   - component: {fileID: 533865263}
   - component: {fileID: 533865262}
   - component: {fileID: 533865261}
+  - component: {fileID: 533865264}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -2887,7 +3330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 3, y: 0, z: 5}
 --- !u!23 &533865262
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2933,6 +3376,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533865259}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &533865264
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533865259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &588814374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,6 +3401,7 @@ GameObject:
   - component: {fileID: 588814378}
   - component: {fileID: 588814377}
   - component: {fileID: 588814376}
+  - component: {fileID: 588814379}
   m_Layer: 0
   m_Name: Block_GrassC(Clone)
   m_TagString: Untagged
@@ -2978,7 +3435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 3, y: 0, z: 1}
 --- !u!23 &588814377
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3024,6 +3481,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588814374}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &588814379
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588814374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &593606728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3036,6 +3506,7 @@ GameObject:
   - component: {fileID: 593606732}
   - component: {fileID: 593606731}
   - component: {fileID: 593606730}
+  - component: {fileID: 593606733}
   m_Layer: 0
   m_Name: Block_CrystalB(Clone)
   m_TagString: Untagged
@@ -3069,7 +3540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 7, y: 0, z: 4}
 --- !u!23 &593606731
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3115,6 +3586,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593606728}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &593606733
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593606728}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &594808458
 GameObject:
   m_ObjectHideFlags: 0
@@ -3127,6 +3611,7 @@ GameObject:
   - component: {fileID: 594808462}
   - component: {fileID: 594808461}
   - component: {fileID: 594808460}
+  - component: {fileID: 594808463}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -3160,7 +3645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 1, y: 0, z: 3}
 --- !u!23 &594808461
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3206,6 +3691,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594808458}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &594808463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594808458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &605141367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3218,6 +3716,7 @@ GameObject:
   - component: {fileID: 605141371}
   - component: {fileID: 605141370}
   - component: {fileID: 605141369}
+  - component: {fileID: 605141372}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -3251,7 +3750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 6, y: 0, z: 0}
 --- !u!23 &605141370
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3297,6 +3796,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605141367}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &605141372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605141367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &620171404
 GameObject:
   m_ObjectHideFlags: 0
@@ -3309,6 +3821,7 @@ GameObject:
   - component: {fileID: 620171408}
   - component: {fileID: 620171407}
   - component: {fileID: 620171406}
+  - component: {fileID: 620171409}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -3342,7 +3855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 8, y: 0, z: 3}
 --- !u!23 &620171407
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3388,6 +3901,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620171404}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &620171409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620171404}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &638983207
 GameObject:
   m_ObjectHideFlags: 0
@@ -3400,6 +3926,7 @@ GameObject:
   - component: {fileID: 638983211}
   - component: {fileID: 638983210}
   - component: {fileID: 638983209}
+  - component: {fileID: 638983212}
   m_Layer: 0
   m_Name: Block_GrassC(Clone)
   m_TagString: Untagged
@@ -3433,7 +3960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 2, y: 0, z: 4}
 --- !u!23 &638983210
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3479,6 +4006,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638983207}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &638983212
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638983207}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &665239204
 GameObject:
   m_ObjectHideFlags: 0
@@ -3491,6 +4031,7 @@ GameObject:
   - component: {fileID: 665239208}
   - component: {fileID: 665239207}
   - component: {fileID: 665239206}
+  - component: {fileID: 665239209}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -3524,7 +4065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 6, y: 0, z: 4}
 --- !u!23 &665239207
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3570,6 +4111,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665239204}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &665239209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665239204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &684426481
 GameObject:
   m_ObjectHideFlags: 0
@@ -3582,6 +4136,7 @@ GameObject:
   - component: {fileID: 684426485}
   - component: {fileID: 684426484}
   - component: {fileID: 684426483}
+  - component: {fileID: 684426486}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -3615,7 +4170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 7, y: 0, z: 8}
 --- !u!23 &684426484
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3661,6 +4216,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684426481}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &684426486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684426481}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &713791642
 GameObject:
   m_ObjectHideFlags: 0
@@ -3673,6 +4241,7 @@ GameObject:
   - component: {fileID: 713791646}
   - component: {fileID: 713791645}
   - component: {fileID: 713791644}
+  - component: {fileID: 713791647}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -3706,7 +4275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 5, y: 0, z: 1}
 --- !u!23 &713791645
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3752,6 +4321,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713791642}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &713791647
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713791642}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &747682555
 GameObject:
   m_ObjectHideFlags: 0
@@ -3919,6 +4501,7 @@ GameObject:
   - component: {fileID: 787808722}
   - component: {fileID: 787808721}
   - component: {fileID: 787808720}
+  - component: {fileID: 787808723}
   m_Layer: 0
   m_Name: Block_GrassC(Clone)
   m_TagString: Untagged
@@ -3952,7 +4535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 2, y: 0, z: 9}
 --- !u!23 &787808721
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3998,6 +4581,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787808718}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &787808723
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787808718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &799909038
 GameObject:
   m_ObjectHideFlags: 0
@@ -4010,6 +4606,7 @@ GameObject:
   - component: {fileID: 799909042}
   - component: {fileID: 799909041}
   - component: {fileID: 799909040}
+  - component: {fileID: 799909043}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -4043,7 +4640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 3, y: 0, z: 7}
 --- !u!23 &799909041
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4089,6 +4686,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799909038}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &799909043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799909038}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &829158517
 GameObject:
   m_ObjectHideFlags: 0
@@ -4101,6 +4711,7 @@ GameObject:
   - component: {fileID: 829158521}
   - component: {fileID: 829158520}
   - component: {fileID: 829158519}
+  - component: {fileID: 829158522}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -4134,7 +4745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 9, y: 0, z: 2}
 --- !u!23 &829158520
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4180,6 +4791,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829158517}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &829158522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829158517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &842035231
 GameObject:
   m_ObjectHideFlags: 0
@@ -4271,8 +4895,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1915790358233767248}
+  - {fileID: 10381089}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4291,6 +4916,7 @@ GameObject:
   - component: {fileID: 871960264}
   - component: {fileID: 871960263}
   - component: {fileID: 871960262}
+  - component: {fileID: 871960265}
   m_Layer: 0
   m_Name: Block_RockC(Clone)
   m_TagString: Untagged
@@ -4324,7 +4950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 4, y: 0, z: 3}
 --- !u!23 &871960263
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4370,6 +4996,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871960260}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &871960265
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871960260}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &878710015
 GameObject:
   m_ObjectHideFlags: 0
@@ -4418,8 +5057,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coordinate: {x: 0, y: 0, z: 0}
   energy: 0
-  energyRegen: 11
+  energyRegen: 100
   left: 200
+  avatarID: 0
 --- !u!114 &878710018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4480,6 +5120,7 @@ GameObject:
   - component: {fileID: 889681251}
   - component: {fileID: 889681250}
   - component: {fileID: 889681249}
+  - component: {fileID: 889681252}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -4513,7 +5154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 3, y: 0, z: 8}
 --- !u!23 &889681250
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4559,6 +5200,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889681247}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &889681252
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889681247}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &941935480
 GameObject:
   m_ObjectHideFlags: 0
@@ -4571,6 +5225,7 @@ GameObject:
   - component: {fileID: 941935484}
   - component: {fileID: 941935483}
   - component: {fileID: 941935482}
+  - component: {fileID: 941935485}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -4604,7 +5259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 6, y: 0, z: 1}
 --- !u!23 &941935483
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4650,6 +5305,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941935480}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &941935485
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941935480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &977812136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4662,6 +5330,7 @@ GameObject:
   - component: {fileID: 977812140}
   - component: {fileID: 977812139}
   - component: {fileID: 977812138}
+  - component: {fileID: 977812141}
   m_Layer: 0
   m_Name: Block_CrystalB(Clone)
   m_TagString: Untagged
@@ -4695,7 +5364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 0, y: 0, z: 8}
 --- !u!23 &977812139
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4741,6 +5410,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977812136}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &977812141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977812136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1022309577
 GameObject:
   m_ObjectHideFlags: 0
@@ -4753,6 +5435,7 @@ GameObject:
   - component: {fileID: 1022309581}
   - component: {fileID: 1022309580}
   - component: {fileID: 1022309579}
+  - component: {fileID: 1022309582}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -4786,7 +5469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 2, y: 0, z: 6}
 --- !u!23 &1022309580
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4832,6 +5515,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022309577}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1022309582
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022309577}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1026618556
 GameObject:
   m_ObjectHideFlags: 0
@@ -4844,6 +5540,7 @@ GameObject:
   - component: {fileID: 1026618560}
   - component: {fileID: 1026618559}
   - component: {fileID: 1026618558}
+  - component: {fileID: 1026618561}
   m_Layer: 0
   m_Name: Block_GrassC(Clone)
   m_TagString: Untagged
@@ -4877,7 +5574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 9, y: 0, z: 8}
 --- !u!23 &1026618559
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4923,6 +5620,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026618556}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1026618561
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026618556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1042667733
 GameObject:
   m_ObjectHideFlags: 0
@@ -4935,6 +5645,7 @@ GameObject:
   - component: {fileID: 1042667737}
   - component: {fileID: 1042667736}
   - component: {fileID: 1042667735}
+  - component: {fileID: 1042667738}
   m_Layer: 0
   m_Name: Block_RockC(Clone)
   m_TagString: Untagged
@@ -4968,7 +5679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 3, y: 0, z: 9}
 --- !u!23 &1042667736
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5014,6 +5725,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042667733}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1042667738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042667733}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1074479383
 GameObject:
   m_ObjectHideFlags: 0
@@ -5026,6 +5750,7 @@ GameObject:
   - component: {fileID: 1074479387}
   - component: {fileID: 1074479386}
   - component: {fileID: 1074479385}
+  - component: {fileID: 1074479388}
   m_Layer: 0
   m_Name: Block_RockA(Clone)
   m_TagString: Untagged
@@ -5059,7 +5784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 9, y: 0, z: 3}
 --- !u!23 &1074479386
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5105,6 +5830,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074479383}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1074479388
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074479383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1078009862
 GameObject:
   m_ObjectHideFlags: 0
@@ -5117,6 +5855,7 @@ GameObject:
   - component: {fileID: 1078009866}
   - component: {fileID: 1078009865}
   - component: {fileID: 1078009864}
+  - component: {fileID: 1078009867}
   m_Layer: 0
   m_Name: Block_RockC(Clone)
   m_TagString: Untagged
@@ -5150,7 +5889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 4, y: 0, z: 2}
 --- !u!23 &1078009865
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5196,6 +5935,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078009862}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1078009867
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078009862}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1113027416
 GameObject:
   m_ObjectHideFlags: 0
@@ -5260,7 +6012,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120646926
 GameObject:
@@ -5274,6 +6026,7 @@ GameObject:
   - component: {fileID: 1120646930}
   - component: {fileID: 1120646929}
   - component: {fileID: 1120646928}
+  - component: {fileID: 1120646931}
   m_Layer: 0
   m_Name: Block_CrystalB(Clone)
   m_TagString: Untagged
@@ -5307,7 +6060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 2, y: 0, z: 2}
 --- !u!23 &1120646929
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5353,6 +6106,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120646926}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1120646931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120646926}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1155551507
 GameObject:
   m_ObjectHideFlags: 0
@@ -5365,6 +6131,7 @@ GameObject:
   - component: {fileID: 1155551511}
   - component: {fileID: 1155551510}
   - component: {fileID: 1155551509}
+  - component: {fileID: 1155551512}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -5398,7 +6165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 9, y: 0, z: 9}
 --- !u!23 &1155551510
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5444,6 +6211,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155551507}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1155551512
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155551507}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1175850542
 GameObject:
   m_ObjectHideFlags: 0
@@ -5456,6 +6236,7 @@ GameObject:
   - component: {fileID: 1175850546}
   - component: {fileID: 1175850545}
   - component: {fileID: 1175850544}
+  - component: {fileID: 1175850547}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -5489,7 +6270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 0, y: 0, z: 1}
 --- !u!23 &1175850545
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5535,6 +6316,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175850542}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1175850547
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175850542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1196832980
 GameObject:
   m_ObjectHideFlags: 0
@@ -5547,6 +6341,7 @@ GameObject:
   - component: {fileID: 1196832984}
   - component: {fileID: 1196832983}
   - component: {fileID: 1196832982}
+  - component: {fileID: 1196832985}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -5580,7 +6375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 9, y: 0, z: 0}
 --- !u!23 &1196832983
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5626,6 +6421,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196832980}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1196832985
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196832980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1204279180
 GameObject:
   m_ObjectHideFlags: 0
@@ -5638,6 +6446,7 @@ GameObject:
   - component: {fileID: 1204279184}
   - component: {fileID: 1204279183}
   - component: {fileID: 1204279182}
+  - component: {fileID: 1204279185}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -5671,7 +6480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 6, y: 0, z: 6}
 --- !u!23 &1204279183
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5717,6 +6526,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204279180}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1204279185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204279180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1217035702
 GameObject:
   m_ObjectHideFlags: 0
@@ -5729,6 +6551,7 @@ GameObject:
   - component: {fileID: 1217035706}
   - component: {fileID: 1217035705}
   - component: {fileID: 1217035704}
+  - component: {fileID: 1217035707}
   m_Layer: 0
   m_Name: Block_RockA(Clone)
   m_TagString: Untagged
@@ -5762,7 +6585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 7, y: 0, z: 2}
 --- !u!23 &1217035705
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5808,6 +6631,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217035702}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1217035707
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217035702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1218827126
 GameObject:
   m_ObjectHideFlags: 0
@@ -5820,6 +6656,7 @@ GameObject:
   - component: {fileID: 1218827130}
   - component: {fileID: 1218827129}
   - component: {fileID: 1218827128}
+  - component: {fileID: 1218827131}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -5853,7 +6690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 1, y: 0, z: 1}
 --- !u!23 &1218827129
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5899,6 +6736,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218827126}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1218827131
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218827126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1224444754
 GameObject:
   m_ObjectHideFlags: 0
@@ -5911,6 +6761,7 @@ GameObject:
   - component: {fileID: 1224444758}
   - component: {fileID: 1224444757}
   - component: {fileID: 1224444756}
+  - component: {fileID: 1224444759}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -5944,7 +6795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 8, y: 0, z: 8}
 --- !u!23 &1224444757
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5990,6 +6841,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224444754}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1224444759
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224444754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1256489958
 GameObject:
   m_ObjectHideFlags: 0
@@ -6002,6 +6866,7 @@ GameObject:
   - component: {fileID: 1256489962}
   - component: {fileID: 1256489961}
   - component: {fileID: 1256489960}
+  - component: {fileID: 1256489963}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -6035,7 +6900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 8, y: 0, z: 2}
 --- !u!23 &1256489961
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6081,6 +6946,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256489958}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1256489963
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256489958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1264778634
 GameObject:
   m_ObjectHideFlags: 0
@@ -6093,6 +6971,7 @@ GameObject:
   - component: {fileID: 1264778638}
   - component: {fileID: 1264778637}
   - component: {fileID: 1264778636}
+  - component: {fileID: 1264778639}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -6126,7 +7005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 4, y: 0, z: 9}
 --- !u!23 &1264778637
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6172,6 +7051,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264778634}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1264778639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264778634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1282677020
 GameObject:
   m_ObjectHideFlags: 0
@@ -6184,6 +7076,7 @@ GameObject:
   - component: {fileID: 1282677024}
   - component: {fileID: 1282677023}
   - component: {fileID: 1282677022}
+  - component: {fileID: 1282677025}
   m_Layer: 0
   m_Name: Block_CrystalA(Clone)
   m_TagString: Untagged
@@ -6217,7 +7110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 8, y: 0, z: 6}
 --- !u!23 &1282677023
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6263,6 +7156,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282677020}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1282677025
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282677020}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1325204585
 GameObject:
   m_ObjectHideFlags: 0
@@ -6275,6 +7181,7 @@ GameObject:
   - component: {fileID: 1325204589}
   - component: {fileID: 1325204588}
   - component: {fileID: 1325204587}
+  - component: {fileID: 1325204590}
   m_Layer: 0
   m_Name: Block_RockC(Clone)
   m_TagString: Untagged
@@ -6308,7 +7215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 5, y: 0, z: 8}
 --- !u!23 &1325204588
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6354,6 +7261,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325204585}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1325204590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325204585}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1341208144
 GameObject:
   m_ObjectHideFlags: 0
@@ -6366,6 +7286,7 @@ GameObject:
   - component: {fileID: 1341208148}
   - component: {fileID: 1341208147}
   - component: {fileID: 1341208146}
+  - component: {fileID: 1341208149}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -6399,7 +7320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 9, y: 0, z: 5}
 --- !u!23 &1341208147
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6445,6 +7366,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341208144}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1341208149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341208144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1344305407
 GameObject:
   m_ObjectHideFlags: 0
@@ -6457,6 +7391,7 @@ GameObject:
   - component: {fileID: 1344305411}
   - component: {fileID: 1344305410}
   - component: {fileID: 1344305409}
+  - component: {fileID: 1344305412}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -6490,7 +7425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 0, y: 0, z: 3}
 --- !u!23 &1344305410
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6536,6 +7471,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344305407}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1344305412
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344305407}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1350569456
 GameObject:
   m_ObjectHideFlags: 0
@@ -6548,6 +7496,7 @@ GameObject:
   - component: {fileID: 1350569460}
   - component: {fileID: 1350569459}
   - component: {fileID: 1350569458}
+  - component: {fileID: 1350569461}
   m_Layer: 0
   m_Name: Block_CrystalA(Clone)
   m_TagString: Untagged
@@ -6581,7 +7530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 6, y: 0, z: 5}
 --- !u!23 &1350569459
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6627,6 +7576,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350569456}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1350569461
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350569456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1408744302
 GameObject:
   m_ObjectHideFlags: 0
@@ -6639,6 +7601,7 @@ GameObject:
   - component: {fileID: 1408744306}
   - component: {fileID: 1408744305}
   - component: {fileID: 1408744304}
+  - component: {fileID: 1408744307}
   m_Layer: 0
   m_Name: Block_CrystalA(Clone)
   m_TagString: Untagged
@@ -6672,7 +7635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 7, y: 0, z: 1}
 --- !u!23 &1408744305
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6718,6 +7681,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408744302}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1408744307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408744302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1447839881
 GameObject:
   m_ObjectHideFlags: 0
@@ -6730,6 +7706,7 @@ GameObject:
   - component: {fileID: 1447839885}
   - component: {fileID: 1447839884}
   - component: {fileID: 1447839883}
+  - component: {fileID: 1447839886}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -6763,7 +7740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 2, y: 0, z: 5}
 --- !u!23 &1447839884
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6809,6 +7786,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447839881}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1447839886
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447839881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1473095767
 GameObject:
   m_ObjectHideFlags: 0
@@ -6821,6 +7811,7 @@ GameObject:
   - component: {fileID: 1473095771}
   - component: {fileID: 1473095770}
   - component: {fileID: 1473095769}
+  - component: {fileID: 1473095772}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -6854,7 +7845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 8, y: 0, z: 5}
 --- !u!23 &1473095770
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6900,6 +7891,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473095767}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1473095772
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473095767}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1479416692
 GameObject:
   m_ObjectHideFlags: 0
@@ -6912,6 +7916,7 @@ GameObject:
   - component: {fileID: 1479416696}
   - component: {fileID: 1479416695}
   - component: {fileID: 1479416694}
+  - component: {fileID: 1479416697}
   m_Layer: 0
   m_Name: Block_GrassC(Clone)
   m_TagString: Untagged
@@ -6945,7 +7950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 9, y: 0, z: 1}
 --- !u!23 &1479416695
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6991,6 +7996,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479416692}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1479416697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479416692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1531250784
 GameObject:
   m_ObjectHideFlags: 0
@@ -7003,6 +8021,7 @@ GameObject:
   - component: {fileID: 1531250788}
   - component: {fileID: 1531250787}
   - component: {fileID: 1531250786}
+  - component: {fileID: 1531250789}
   m_Layer: 0
   m_Name: Block_CrystalA(Clone)
   m_TagString: Untagged
@@ -7036,7 +8055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 3, y: 0, z: 0}
 --- !u!23 &1531250787
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7082,6 +8101,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531250784}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1531250789
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531250784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1540380143
 GameObject:
   m_ObjectHideFlags: 0
@@ -7094,6 +8126,7 @@ GameObject:
   - component: {fileID: 1540380147}
   - component: {fileID: 1540380146}
   - component: {fileID: 1540380145}
+  - component: {fileID: 1540380148}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -7127,7 +8160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 5, y: 0, z: 7}
 --- !u!23 &1540380146
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7173,6 +8206,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540380143}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1540380148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540380143}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1545811784
 GameObject:
   m_ObjectHideFlags: 0
@@ -7185,6 +8231,7 @@ GameObject:
   - component: {fileID: 1545811788}
   - component: {fileID: 1545811787}
   - component: {fileID: 1545811786}
+  - component: {fileID: 1545811789}
   m_Layer: 0
   m_Name: Block_CrystalB(Clone)
   m_TagString: Untagged
@@ -7218,7 +8265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 8, y: 0, z: 1}
 --- !u!23 &1545811787
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7264,6 +8311,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545811784}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1545811789
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545811784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1546024411
 GameObject:
   m_ObjectHideFlags: 0
@@ -7276,6 +8336,7 @@ GameObject:
   - component: {fileID: 1546024415}
   - component: {fileID: 1546024414}
   - component: {fileID: 1546024413}
+  - component: {fileID: 1546024416}
   m_Layer: 0
   m_Name: Block_CrystalA(Clone)
   m_TagString: Untagged
@@ -7309,7 +8370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 4, y: 0, z: 5}
 --- !u!23 &1546024414
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7355,6 +8416,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546024411}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1546024416
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546024411}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1571602217
 GameObject:
   m_ObjectHideFlags: 0
@@ -7367,6 +8441,7 @@ GameObject:
   - component: {fileID: 1571602221}
   - component: {fileID: 1571602220}
   - component: {fileID: 1571602219}
+  - component: {fileID: 1571602222}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -7400,7 +8475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 0, y: 0, z: 4}
 --- !u!23 &1571602220
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7446,6 +8521,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571602217}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1571602222
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571602217}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1580192829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7475,11 +8563,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828b013dc907db943b3d7d222c0e7eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opMenu: {fileID: 2637764182957339264}
+  opMenu: {fileID: 0}
+  info: {fileID: 0}
   actors:
-  - {fileID: 1793615677}
-  - {fileID: 878710017}
+  - {fileID: 0}
+  - {fileID: 0}
+  actorQueue: []
+  currentActor: {fileID: 0}
+  selectedEntity: {fileID: 0}
   battleState: 0
+  bg: {fileID: 0}
 --- !u!4 &1580192831
 Transform:
   m_ObjectHideFlags: 0
@@ -7492,7 +8585,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1589295567
 GameObject:
@@ -7506,6 +8599,7 @@ GameObject:
   - component: {fileID: 1589295571}
   - component: {fileID: 1589295570}
   - component: {fileID: 1589295569}
+  - component: {fileID: 1589295572}
   m_Layer: 0
   m_Name: Block_RockC(Clone)
   m_TagString: Untagged
@@ -7539,7 +8633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 4, y: 0, z: 4}
 --- !u!23 &1589295570
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7585,6 +8679,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589295567}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1589295572
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589295567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1590874073
 GameObject:
   m_ObjectHideFlags: 0
@@ -7597,6 +8704,7 @@ GameObject:
   - component: {fileID: 1590874077}
   - component: {fileID: 1590874076}
   - component: {fileID: 1590874075}
+  - component: {fileID: 1590874078}
   m_Layer: 0
   m_Name: Block_CrystalB(Clone)
   m_TagString: Untagged
@@ -7630,7 +8738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 4, y: 0, z: 7}
 --- !u!23 &1590874076
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7676,6 +8784,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590874073}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1590874078
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590874073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1616257442
 GameObject:
   m_ObjectHideFlags: 0
@@ -7688,6 +8809,7 @@ GameObject:
   - component: {fileID: 1616257446}
   - component: {fileID: 1616257445}
   - component: {fileID: 1616257444}
+  - component: {fileID: 1616257447}
   m_Layer: 0
   m_Name: Block_CrystalB(Clone)
   m_TagString: Untagged
@@ -7721,7 +8843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 4, y: 0, z: 8}
 --- !u!23 &1616257445
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7767,6 +8889,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616257442}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1616257447
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616257442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1617812642
 GameObject:
   m_ObjectHideFlags: 0
@@ -7779,6 +8914,7 @@ GameObject:
   - component: {fileID: 1617812646}
   - component: {fileID: 1617812645}
   - component: {fileID: 1617812644}
+  - component: {fileID: 1617812647}
   m_Layer: 0
   m_Name: Block_RockC(Clone)
   m_TagString: Untagged
@@ -7812,7 +8948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 4, y: 0, z: 0}
 --- !u!23 &1617812645
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7858,6 +8994,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617812642}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1617812647
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617812642}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1693251495
 GameObject:
   m_ObjectHideFlags: 0
@@ -7870,6 +9019,7 @@ GameObject:
   - component: {fileID: 1693251499}
   - component: {fileID: 1693251498}
   - component: {fileID: 1693251497}
+  - component: {fileID: 1693251500}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -7903,7 +9053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 5, y: 0, z: 9}
 --- !u!23 &1693251498
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7949,6 +9099,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693251495}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1693251500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693251495}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1695047254
 GameObject:
   m_ObjectHideFlags: 0
@@ -7961,6 +9124,7 @@ GameObject:
   - component: {fileID: 1695047258}
   - component: {fileID: 1695047257}
   - component: {fileID: 1695047256}
+  - component: {fileID: 1695047259}
   m_Layer: 0
   m_Name: Block_RockA(Clone)
   m_TagString: Untagged
@@ -7994,7 +9158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 5, y: 0, z: 0}
 --- !u!23 &1695047257
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8040,6 +9204,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695047254}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1695047259
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695047254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1702853184
 GameObject:
   m_ObjectHideFlags: 0
@@ -8121,6 +9298,7 @@ GameObject:
   - component: {fileID: 1714285189}
   - component: {fileID: 1714285188}
   - component: {fileID: 1714285187}
+  - component: {fileID: 1714285190}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -8154,7 +9332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 2, y: 0, z: 3}
 --- !u!23 &1714285188
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8200,6 +9378,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714285185}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1714285190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714285185}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1739742260
 GameObject:
   m_ObjectHideFlags: 0
@@ -8212,6 +9403,7 @@ GameObject:
   - component: {fileID: 1739742264}
   - component: {fileID: 1739742263}
   - component: {fileID: 1739742262}
+  - component: {fileID: 1739742265}
   m_Layer: 0
   m_Name: Block_CrystalA(Clone)
   m_TagString: Untagged
@@ -8245,7 +9437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 2, y: 0, z: 7}
 --- !u!23 &1739742263
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8291,6 +9483,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739742260}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1739742265
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739742260}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1793615675
 GameObject:
   m_ObjectHideFlags: 0
@@ -8338,9 +9543,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coordinate: {x: 0, y: 0, z: 0}
-  energy: 10
-  energyRegen: 10
+  energy: 1
+  energyRegen: 100
   left: 0
+  avatarID: 0
 --- !u!114 &1793615678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8401,6 +9607,7 @@ GameObject:
   - component: {fileID: 1823012667}
   - component: {fileID: 1823012666}
   - component: {fileID: 1823012665}
+  - component: {fileID: 1823012668}
   m_Layer: 0
   m_Name: Block_RockA(Clone)
   m_TagString: Untagged
@@ -8434,7 +9641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 5, y: 0, z: 6}
 --- !u!23 &1823012666
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8480,6 +9687,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823012663}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1823012668
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823012663}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1824404034
 GameObject:
   m_ObjectHideFlags: 0
@@ -8492,6 +9712,7 @@ GameObject:
   - component: {fileID: 1824404038}
   - component: {fileID: 1824404037}
   - component: {fileID: 1824404036}
+  - component: {fileID: 1824404039}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -8525,7 +9746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 7, y: 0, z: 9}
 --- !u!23 &1824404037
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8571,6 +9792,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824404034}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1824404039
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824404034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1847747654
 GameObject:
   m_ObjectHideFlags: 0
@@ -8583,6 +9817,7 @@ GameObject:
   - component: {fileID: 1847747658}
   - component: {fileID: 1847747657}
   - component: {fileID: 1847747656}
+  - component: {fileID: 1847747659}
   m_Layer: 0
   m_Name: Block_GrassA(Clone)
   m_TagString: Untagged
@@ -8616,7 +9851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 0, y: 0, z: 9}
 --- !u!23 &1847747657
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8662,6 +9897,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847747654}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1847747659
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847747654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1858806805
 GameObject:
   m_ObjectHideFlags: 0
@@ -8674,6 +9922,7 @@ GameObject:
   - component: {fileID: 1858806809}
   - component: {fileID: 1858806808}
   - component: {fileID: 1858806807}
+  - component: {fileID: 1858806810}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -8707,7 +9956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 8, y: 0, z: 4}
 --- !u!23 &1858806808
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8753,6 +10002,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858806805}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1858806810
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858806805}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1882438274
 GameObject:
   m_ObjectHideFlags: 0
@@ -8765,6 +10027,7 @@ GameObject:
   - component: {fileID: 1882438278}
   - component: {fileID: 1882438277}
   - component: {fileID: 1882438276}
+  - component: {fileID: 1882438279}
   m_Layer: 0
   m_Name: Block_CrystalB(Clone)
   m_TagString: Untagged
@@ -8798,7 +10061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 1, y: 0, z: 4}
 --- !u!23 &1882438277
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8844,6 +10107,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882438274}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1882438279
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882438274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1892784776
 GameObject:
   m_ObjectHideFlags: 0
@@ -8856,6 +10132,7 @@ GameObject:
   - component: {fileID: 1892784780}
   - component: {fileID: 1892784779}
   - component: {fileID: 1892784778}
+  - component: {fileID: 1892784781}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -8889,7 +10166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 1, y: 0, z: 6}
 --- !u!23 &1892784779
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8935,6 +10212,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892784776}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1892784781
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892784776}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1914489898
 GameObject:
   m_ObjectHideFlags: 0
@@ -8947,6 +10237,7 @@ GameObject:
   - component: {fileID: 1914489902}
   - component: {fileID: 1914489901}
   - component: {fileID: 1914489900}
+  - component: {fileID: 1914489903}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -8980,7 +10271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 6, y: 0, z: 7}
 --- !u!23 &1914489901
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9026,6 +10317,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914489898}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1914489903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914489898}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1922439562
 GameObject:
   m_ObjectHideFlags: 0
@@ -9120,6 +10424,7 @@ GameObject:
   - component: {fileID: 1927825715}
   - component: {fileID: 1927825714}
   - component: {fileID: 1927825713}
+  - component: {fileID: 1927825716}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -9153,7 +10458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 0, y: 0, z: 2}
 --- !u!23 &1927825714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9199,6 +10504,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927825711}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1927825716
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927825711}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1929296788
 GameObject:
   m_ObjectHideFlags: 0
@@ -9211,6 +10529,7 @@ GameObject:
   - component: {fileID: 1929296792}
   - component: {fileID: 1929296791}
   - component: {fileID: 1929296790}
+  - component: {fileID: 1929296793}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -9244,7 +10563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 5, y: 0, z: 3}
 --- !u!23 &1929296791
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9290,6 +10609,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929296788}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1929296793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929296788}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1943922065
 GameObject:
   m_ObjectHideFlags: 0
@@ -9302,6 +10634,7 @@ GameObject:
   - component: {fileID: 1943922069}
   - component: {fileID: 1943922068}
   - component: {fileID: 1943922067}
+  - component: {fileID: 1943922070}
   m_Layer: 0
   m_Name: Block_CrystalA(Clone)
   m_TagString: Untagged
@@ -9335,7 +10668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 2, y: 0, z: 8}
 --- !u!23 &1943922068
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9381,6 +10714,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943922065}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1943922070
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943922065}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1968984433
 GameObject:
   m_ObjectHideFlags: 0
@@ -9393,6 +10739,7 @@ GameObject:
   - component: {fileID: 1968984437}
   - component: {fileID: 1968984436}
   - component: {fileID: 1968984435}
+  - component: {fileID: 1968984438}
   m_Layer: 0
   m_Name: Block_GrassB(Clone)
   m_TagString: Untagged
@@ -9426,7 +10773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 6, y: 0, z: 9}
 --- !u!23 &1968984436
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9472,6 +10819,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968984433}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &1968984438
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968984433}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2005238478
 GameObject:
   m_ObjectHideFlags: 0
@@ -9484,6 +10844,7 @@ GameObject:
   - component: {fileID: 2005238482}
   - component: {fileID: 2005238481}
   - component: {fileID: 2005238480}
+  - component: {fileID: 2005238483}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -9517,7 +10878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 1, y: 0, z: 0}
 --- !u!23 &2005238481
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9563,6 +10924,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005238478}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &2005238483
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005238478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2040015156
 GameObject:
   m_ObjectHideFlags: 0
@@ -9575,6 +10949,7 @@ GameObject:
   - component: {fileID: 2040015160}
   - component: {fileID: 2040015159}
   - component: {fileID: 2040015158}
+  - component: {fileID: 2040015161}
   m_Layer: 0
   m_Name: Block_RockC(Clone)
   m_TagString: Untagged
@@ -9608,7 +10983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 1, y: 0, z: 8}
 --- !u!23 &2040015159
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9654,6 +11029,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040015156}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &2040015161
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040015156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2076594755
 GameObject:
   m_ObjectHideFlags: 0
@@ -9666,6 +11054,7 @@ GameObject:
   - component: {fileID: 2076594759}
   - component: {fileID: 2076594758}
   - component: {fileID: 2076594757}
+  - component: {fileID: 2076594760}
   m_Layer: 0
   m_Name: Block_GrassC(Clone)
   m_TagString: Untagged
@@ -9699,7 +11088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 5, y: 0, z: 5}
 --- !u!23 &2076594758
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9745,6 +11134,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076594755}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &2076594760
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076594755}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2083672545
 GameObject:
   m_ObjectHideFlags: 0
@@ -9757,6 +11159,7 @@ GameObject:
   - component: {fileID: 2083672549}
   - component: {fileID: 2083672548}
   - component: {fileID: 2083672547}
+  - component: {fileID: 2083672550}
   m_Layer: 0
   m_Name: Block_RockB(Clone)
   m_TagString: Untagged
@@ -9790,7 +11193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 9, y: 0, z: 6}
 --- !u!23 &2083672548
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9836,6 +11239,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083672545}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &2083672550
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083672545}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2086514390
 GameObject:
   m_ObjectHideFlags: 0
@@ -9848,6 +11264,7 @@ GameObject:
   - component: {fileID: 2086514394}
   - component: {fileID: 2086514393}
   - component: {fileID: 2086514392}
+  - component: {fileID: 2086514395}
   m_Layer: 0
   m_Name: Block_CrystalC(Clone)
   m_TagString: Untagged
@@ -9881,7 +11298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coordinate: {x: 6, y: 0, z: 3}
 --- !u!23 &2086514393
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9927,6 +11344,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086514390}
   m_Mesh: {fileID: 4300000, guid: 818c643fea0cf6940b27d0bf1e38a010, type: 3}
+--- !u!65 &2086514395
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086514390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &290588180434046244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9934,6 +11364,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842035235}
     m_Modifications:
+    - target: {fileID: 3301812342117518218, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1915790358233767248, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9980,7 +11414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915790358233767248, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -50
+      value: 399.9995
       objectReference: {fileID: 0}
     - target: {fileID: 1915790358233767248, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -10022,26 +11456,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OperateMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 3253434791550658045, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5990904736921517465, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5990904736921517465, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5990904736921517465, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5990904736921517465, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8742606182085431060, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -10055,7 +11469,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8742606182085431060, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742606182085431060, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742606182085431060, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3061320878435219880, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
@@ -10071,7 +11493,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3061320878435219880, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061320878435219880, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061320878435219880, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3432365027925589683, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
@@ -10087,56 +11517,44 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3432365027925589683, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432365027925589683, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5990904736921517465, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5990904736921517465, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742606182085431060, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742606182085431060, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3061320878435219880, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3061320878435219880, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432365027925589683, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3432365027925589683, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7062179419614927535, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_FontData.m_BestFit
+    - target: {fileID: 5767299498378647416, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1892742831700421892, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_FontData.m_BestFit
+    - target: {fileID: 5767299498378647416, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_BlocksRaycasts
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3183192957688896123, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_FontData.m_BestFit
+    - target: {fileID: 3301812342117518218, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6595383606139137289, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 1
+    - target: {fileID: 3301812342117518218, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301812342117518218, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1793615677}
+    - target: {fileID: 3301812342117518218, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowMoveRadius
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301812342117518218, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
@@ -10145,31 +11563,104 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1915790358233767248, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
   m_PrefabInstance: {fileID: 290588180434046244}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2637764182957339264 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2637764182957339264, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-  m_PrefabInstance: {fileID: 290588180434046244}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3253434791550658045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07e2ffd7264e7c94696edaf36791adf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &3253434791550658045 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3253434791550658045, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
-  m_PrefabInstance: {fileID: 290588180434046244}
-  m_PrefabAsset: {fileID: 0}
---- !u!225 &3253434791550658046
-CanvasGroup:
+--- !u!1001 &4185130913647221922
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3253434791550658045}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 842035235}
+    m_Modifications:
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -700
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208835, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208834, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_Name
+      value: HeadBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185130913655208834, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7207d15a2d8338648a56e32b7f0e6e1f, type: 3}

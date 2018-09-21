@@ -9,6 +9,7 @@ namespace BigRogue.BattleSystem {
 
     /// <summary>
     /// 角色抽象类
+    /// 角色可以行动()
     /// </summary>
     public abstract class Actor : Entity {
 
@@ -17,20 +18,20 @@ namespace BigRogue.BattleSystem {
         public float energyRegen;
 
         public abstract void RegenEnergy();
-        public abstract bool isEnergyEnough(float energy);
+        public abstract void UseEnergy();
+        public abstract bool IsEnergyEnough(float energy);
 
         // 一系列事件
 
-        protected Action StartActEventHandler;
-        protected Action EndActEventHandler;
-
-        // 一系列判断
-
-        protected abstract bool CanAct();
-
+        protected Action<Actor> ActStartEventHandler;
+        protected Action<Actor> ActEndEventHandler;
+        public Action<Actor> TurnStartEventHandler;
+        public Action<Actor> TurnEndEventHandler;
+        public Action<Actor> MoveStartEventHandler;
+        public Action<Actor> MoveEndEventHandler;
         // 一系列操作
 
-        public abstract IEnumerator ActCoroutine();
+        public abstract IEnumerator StartTurn();
 
     }
 }

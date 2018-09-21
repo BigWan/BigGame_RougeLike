@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using BigRogue.BattleSystem;
+using DG.Tweening;
+
 
 namespace BigRogue.GameUI {
 
@@ -19,32 +21,25 @@ namespace BigRogue.GameUI {
 
         private Character character;
 
+        CanvasGroup cg ;
+        RectTransform rectTrans;
 
         private void Awake() {
-            
+            cg = GetComponent<CanvasGroup>();
+            rectTrans = GetComponent<RectTransform>();
         }
-
 
         public void SetCharacter(Character character) {
             this.character = character;
             CaptionText.text = character.name;
         }
 
-        Coroutine fadeinCo;
         public void FadeIn() {
-            if (fadeinCo != null)
-                fadeinCo = null;
-            fadeinCo = StartCoroutine(FadeInCoroutine());
+            rectTrans.anchoredPosition3D = new Vector3(400, 50, 0);
+            var x = rectTrans.DOAnchorPos3D(new Vector3(-50, 50, 0), 0.3f);
+            cg.alpha = 0;
+            var y = cg.DOFade(1, 1f);
         }
 
-        IEnumerator FadeInCoroutine() {
-            CanvasGroup cg = GetComponent<CanvasGroup>();
-            cg.alpha = 0;
-            while (cg.alpha < 0.99F) {
-                cg.alpha +=0.1f;
-                yield return new WaitForSeconds(0.1f);
-            }
-            cg.alpha = 1;
-        }
     }
 }
