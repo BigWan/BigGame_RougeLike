@@ -9,11 +9,11 @@ namespace BigRogue {
 
     public class MoveCommand : Command {
 
-        Character character;
+        Actor character;
         Vector3 speed;
         System.Action callBack;
 
-        MoveCommand(Character character, Vector3 speed, System.Action callBack) {
+        MoveCommand(Actor character, Vector3 speed, System.Action callBack) {
             this.character = character;
             this.speed = speed;
             this.callBack = callBack;

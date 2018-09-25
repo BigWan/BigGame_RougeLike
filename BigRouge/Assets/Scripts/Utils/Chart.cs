@@ -11,8 +11,6 @@ namespace BigRogue.Util {
     public class Chart<T>
         where T:struct {
 
-        Dictionary<int, IRecord> values;
-
 
     }
 }

@@ -26,7 +26,7 @@ namespace BigRogue.BattleSystem {
     public class BattleManager : MonoBehaviour {
 
 
-        [Header("Refs")]
+        [Header("UI Refs")]
         public GameUI.OperateMenu opMenu;
         public GameUI.HeadBar info;
 
@@ -34,15 +34,15 @@ namespace BigRogue.BattleSystem {
         /// <summary>
         /// 战斗场景内所有的Actor对象
         /// </summary>
-        public List<Actor> actors;
+        public List<Actor> chars;
         /// <summary>
         /// 满足act条件的actor
         /// </summary>
-        public List<Actor> actorQueue;
+        public List<Actor> charQueue;
         /// <summary>
         /// 当前行动的对象
         /// </summary>
-        public Actor currentActor;
+        public Actor currentChar;
         /// <summary>
         /// 当前选中的对象
         /// </summary>
@@ -50,9 +50,18 @@ namespace BigRogue.BattleSystem {
 
         public BattleState battleState;
 
-        public BattleGround bg;
+        public BattleGround ground;
 
         static int energyToAct;
+
+
+        /// <summary>
+        /// 进入谁的回合
+        /// </summary>
+        public Action<Actor> EnterTurnHandler;
+
+        public Action<Actor> EndTurnHandler;
+
 
         private void Awake() {
             Init();
@@ -62,22 +71,22 @@ namespace BigRogue.BattleSystem {
         void Init() {
 
             // 初始化对象
-            actors = new List<Actor>();
-            actorQueue = new List<Actor>();
+            chars = new List<Actor>();
+            charQueue = new List<Actor>();
 
             // 获取配置
             energyToAct = int.Parse(GameSetting.GetSetting("ENERGY_TO_ACT"));
 
             // 获取对象
-            actors = FindObjectsOfType<Actor>().ToList();
+            chars = FindObjectsOfType<Actor>().ToList();
             opMenu = FindObjectOfType<OperateMenu>();
             info = FindObjectOfType<HeadBar>();
-            bg = FindObjectOfType<BattleGround>();
+            ground = FindObjectOfType<BattleGround>();
 
 
             // 监听事件
-            foreach (var item in actors) {
-                item.TurnStartEventHandler += OnSelectActor;
+            foreach (var @char in chars) {
+                @char.EnterTurnHandler += OnSelectActor;
             }
 
         }
@@ -96,17 +105,17 @@ namespace BigRogue.BattleSystem {
             if (CheckBattleOver()) {
                 BattleOver();
             }
-            actorQueue.Clear();
+            charQueue.Clear();
 
-            for (int i = 0; i < actors.Count; i++) {
-                actors[i].RegenEnergy();
-                if (actors[i].IsEnergyEnough(energyToAct)) {
-                    actorQueue.Add(actors[i]);
+            for (int i = 0; i < chars.Count; i++) {
+                chars[i].RegenEnergy();
+                if (chars[i].IsEnergyEnough(energyToAct)) {
+                    charQueue.Add(chars[i]);
                 }
             }
-            actorQueue = actorQueue.OrderBy(x => -x.energy).ToList();
+            charQueue = charQueue.OrderBy(x => -x.energy).ToList();
 
-            if (actorQueue.Count > 0) {
+            if (charQueue.Count > 0) {
                 battleState = BattleState.Acting;
                 StartCoroutine(ActiveTurn());
             }
@@ -118,16 +127,13 @@ namespace BigRogue.BattleSystem {
         /// 激活单位的回合
         /// </summary>
         IEnumerator ActiveTurn() {
-            Debug.Log(actorQueue.Count);
-            //while (actorQueue.Count > 0) {
-            //    yield return StartCoroutine(actorQueue.Dequeue().ActCoroutine());
-            //}
-
-            for (int i = 0; i < actorQueue.Count; i++) {
-                currentActor = actorQueue[i];
-                yield return StartCoroutine(currentActor.ActiveTurn());
+            
+            for (int i = 0; i < charQueue.Count; i++) {
+                currentChar = charQueue[i];
+                EnterTurnHandler?.Invoke(currentChar);
+                yield return StartCoroutine(currentChar.ActiveTurn());
             }
-            currentActor = null;
+            currentChar = null;
             // act end
             battleState = BattleState.Ticking;
         }
@@ -156,16 +162,19 @@ namespace BigRogue.BattleSystem {
         }
 
         /// <summary>
-        /// 显示场景区域
+        /// 显示移动格子
         /// </summary>
         /// <param name="center"></param>
         /// <param name="range"></param>
         public void ShowMoveRange(Vector3Int center,int range) {
-            bg.HighlightArea(center, range, BlockHightLightType.Normal);
+            ground.HighlightArea(center, range,2);
         }
 
-        public void HideRange() {
-
+        /// <summary>
+        /// 关闭移动格子显示
+        /// </summary>
+        public void HideMoveRange() {
+            ground.CloseHighLight();
         }
 
 
@@ -176,7 +185,7 @@ namespace BigRogue.BattleSystem {
         public void HasActor(Actor a) { }
 
         public void OnSelectActor(Actor actor) {
-            ShowOperateMenu((Character)actor);
+            ShowOperateMenu((Actor)actor);
         }
 
         //public void Update() {
@@ -197,10 +206,13 @@ namespace BigRogue.BattleSystem {
         //}
 
 
-        public void ShowOperateMenu(Character c) {
+        public void ShowOperateMenu(Actor c) {
             opMenu.gameObject.SetActive(true);
-            opMenu.SetCharacter(c);
+            opMenu.Bind(c);
             opMenu.FadeIn();
+
+
+            
 
 
             info.gameObject.SetActive(true);

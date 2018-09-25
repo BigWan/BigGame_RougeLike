@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BigRogue {
+namespace BigRogue.Persistent {
 
     /// <summary>
     /// 从文件中来的数据记录

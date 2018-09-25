@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-namespace BigRogue.CharacterAvatar {
+namespace BigRogue.Persistent {
 
 
     public struct AvatarTemplateRecord :IRecord {

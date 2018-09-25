@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-namespace BigRogue.CharacterAvatar {
+namespace BigRogue.Persistent {
 
     /// <summary>
     /// 负责读取数据表

@@ -55,10 +55,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block_CrystalA
       objectReference: {fileID: 0}
-    - target: {fileID: 620164935228703488, guid: 9d320d4a9a082d740b304a1fee7c6d5d, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fddd10fda7efd2840826082c9a194b3f, type: 2}
     - target: {fileID: 8321367661276643822, guid: 9d320d4a9a082d740b304a1fee7c6d5d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

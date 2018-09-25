@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace BigRogue.BattleSystem {
+namespace BigRogue.Persistent {
 
     /// <summary>
     /// 属性相关数据和配置

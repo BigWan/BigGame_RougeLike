@@ -46,16 +46,16 @@ namespace BigRogue.AnimationSystem {
 
 
 
-        private void OnGUI() {
-            for (int i = 1; i <= 8; i++) {
-                if (GUI.Button(new Rect(30,30+50*i,100,50),$"播放{i.ToString()}号表情")) {
-                    PlayEmote(i);
-                }
-            }
+        //private void OnGUI() {
+        //    for (int i = 1; i <= 8; i++) {
+        //        if (GUI.Button(new Rect(30,30+50*i,100,50),$"播放{i.ToString()}号表情")) {
+        //            PlayEmote(i);
+        //        }
+        //    }
 
-            if(GUI.Button(new Rect(400, 100, 100, 50), "StopEmote")) {
-                StopEmote();
-            }
-        }
+        //    if(GUI.Button(new Rect(400, 100, 100, 50), "StopEmote")) {
+        //        StopEmote();
+        //    }
+        //}
     }
 }

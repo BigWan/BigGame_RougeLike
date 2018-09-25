@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 6272119956210937599}
   - component: {fileID: 8889302743281258603}
   m_Layer: 5
-  m_Name: EndCommand
+  m_Name: FinishButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,8 +383,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CaptionText: {fileID: 3157566332388160253}
   MoveButton: {fileID: 3301812342117518218}
-  AttackButton: {fileID: 6713944262471510668}
-  EndButton: {fileID: 6272119956210937599}
+  ActButton: {fileID: 0}
+  FinishButton: {fileID: 6272119956210937599}
 --- !u!225 &5767299498378647416
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 3301812342117518218}
   - component: {fileID: 6967816092612580386}
   m_Layer: 5
-  m_Name: MoveCommand
+  m_Name: MoveButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -511,7 +511,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7037693136371610896}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: ShowMoveRadius
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &6967816092612580386
 MonoBehaviour:
@@ -610,7 +621,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u653B\u51FB"
+  m_Text: "\u884C\u52A8(\u653B\u51FB/\u6CD5\u672F/\u9053\u5177)"
 --- !u!1 &3552717186592268511
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +735,7 @@ GameObject:
   - component: {fileID: 6713944262471510668}
   - component: {fileID: 2056172548932040104}
   m_Layer: 5
-  m_Name: AttackCommand
+  m_Name: ActButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

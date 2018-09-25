@@ -17,7 +17,7 @@ namespace BigRogue.GameUI {
         public Image  HeadImage;
         public Text NameText;
 
-        private Character character;
+        private Actor character;
 
         CanvasGroup cg ;
         RectTransform rectTrans;
@@ -27,7 +27,7 @@ namespace BigRogue.GameUI {
             rectTrans = GetComponent<RectTransform>();
         }
 
-        public void SetCharacter(Character character) {
+        public void SetCharacter(Actor character) {
             this.character = character;
             NameText.text = character.name;
         }

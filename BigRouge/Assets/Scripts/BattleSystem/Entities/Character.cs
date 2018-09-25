@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using System;
+using BigRogue.Persistent;
 
 namespace BigRogue.BattleSystem {
 
@@ -9,136 +11,113 @@ namespace BigRogue.BattleSystem {
     /// <summary>
     /// 角色对象,能穿装备,拥有技能,能战斗
     /// </summary>
-    public class Character : Actor {
+    public class Actor : Entity {
 
-        public int left;
+        /// <summary>
+        /// 配置表记录ID
+        /// </summary>
+        public int charInfoID;
 
-        public int avatarID;
+        [SerializeField]
+        /// <summary>
+        /// 角色基础信息
+        /// </summary>
+        private Persistent.CharacterRecord charInfo;
 
-        [Header("flags")]
-        private bool isMoving;
-        private bool isActing;
+        
 
-        private bool hasMoved;
-        private bool hasActed;
-        private bool turnEnd;
+        [Header("Energy")]
+        public float energy;
+        public float energyRegen {
+            get {
+                return charInfo.speed  + 10;
+            }
+        }
 
-        private int turn;
+        public int moveRange {
+            get {
+                return charInfo.moveRange;
+            }
+        }
+
+        public int attackRange {
+            get {
+                return charInfo.attackRange;
+            }
+        }
+
+
 
 
         [Header("Refs")]
         private BattleManager battleManager;
-        private Animator anim;
-
+        private Animator turnState;
         private CombatState combatState;
 
+        [Header("Event")]
 
-        Coroutine moveProcessCoroutineHandler;
-        Coroutine actProcessCoroutineHandler;
+
         /// <summary>
-        /// 进入回合
+        /// 角色进入回合
         /// </summary>
-        /// <returns></returns>
-        public override IEnumerator ActiveTurn() {
+        public Action<Actor> EnterTurnHandler; 
+        /// <summary>
+        /// 角色结束回合
+        /// </summary>
+        public Action<Actor> FinishTurnHandler;
 
-            TurnStartEventHandler?.Invoke(this);
-            turn++;
-            hasActed = false;
-            hasMoved = false;
-            turnEnd = false;
-            // 移动 
-            moveProcessCoroutineHandler = StartCoroutine(MoveProcessCoroutine());
-            // 行动
-            actProcessCoroutineHandler = StartCoroutine(ActProcessCoroutine());
+        /// <summary>
+        /// 
+        /// </summary>
+        protected Action<Actor> ActStartEventHandler;
+        protected Action<Actor> ActEndEventHandler;
 
-            while (!turnEnd) {
-                yield return null;
+        /// <summary>
+        /// 角色开始移动
+        /// </summary>
+        public Action<Actor> MoveStartEventHandler;
+        /// <summary>
+        /// 角色移动完毕
+        /// </summary>
+        public Action<Actor> MoveEndEventHandler;
+
+
+        #region "Mono"
+
+        private void Awake() {
+            battleManager = FindObjectOfType<BattleManager>();
+            turnState = GetComponent<Animator>();
+            GetCharInfo();
+        }
+
+
+
+        #endregion
+
+
+        
+        /// <summary>
+        /// 获取配置表数据
+        /// </summary>
+        void GetCharInfo() {
+            charInfo = CharacterInfoHandler.GetRecord(charInfoID);
+            if (charInfo.isEmpty()) {
+                throw new UnityException($"配置信息错误{charInfoID}");
             }
-
-            if (moveProcessCoroutineHandler != null) {
-                StopCoroutine(moveProcessCoroutineHandler);
-                moveProcessCoroutineHandler = null;
-            }
-
-            if(actProcessCoroutineHandler != null) {
-                StopCoroutine(actProcessCoroutineHandler);
-                actProcessCoroutineHandler = null;
-            }
         }
-
-
-        protected IEnumerator ActProcessCoroutine() {
-            yield return null;
-        }
-
-
-        protected IEnumerator MoveProcessCoroutine(int x = 0, int y = 0, int z = 0) {
-
-            yield return StartCoroutine(GetMoveTargetCoroutine());
-            yield return StartCoroutine(MoveToTargetCoroutine());
-            isMoving = true;
-            Debug.Log($"{name}I'an Moving1");
-
-
-            isMoving = false;
-        }
-
-        /// <summary>
-        /// 获取移动输入
-        /// 移动到哪个格子
-        /// </summary>
-        /// <returns></returns>
-        Vector3Int moveTarget;
-        IEnumerator GetMoveTargetCoroutine() {
-
-            ShowMoveAbleBlock();
-            yield return new WaitUntil(()=>moveTarget!=Vector3Int.zero);
-
-            
-        }
-
-
-        IEnumerator MoveToTargetCoroutine() {
-            yield return null;
-        }
-
-
-        public void EndTurn() {
-            UseEnergy();
-            turnEnd = true;
-            TurnEndEventHandler?.Invoke(this);
-        }
-
-        /// <summary>
-        /// 显示移动的格子
-        /// </summary>
-        void ShowMoveAbleBlock() {
-            battleManager.ShowMoveRange(new Vector3Int(5, 0, 5), 3);
-        }
-
-        /// <summary>
-        /// 隐藏移动的格子
-        /// </summary>
-        void HideMoveAbleBlock() {
-
-        }
-
-
-
-
 
 
         #region "能量相关"
 
-        public override void RegenEnergy() {
+        public void RegenEnergy() {
             energy += energyRegen;
         }
 
-        public override void UseEnergy() {
+        public void UseEnergy() {
             energy -= 1000;
         }
 
-        public override bool IsEnergyEnough(float eng) {
+        public bool IsEnergyEnough(float eng) {
             return energy >= eng;
         }
 
@@ -159,44 +138,163 @@ namespace BigRogue.BattleSystem {
             return true;
         }
 
-        protected  bool CanAttack() {
+        protected bool CanAttack() {
             return true;
         }
 
-        protected  bool CanShoot() {
+        protected bool CanShoot() {
             return true;
         }
 
-        protected  bool CanCastSpell() {
+        protected bool CanCastSpell() {
             return true;
         }
 
         #endregion
 
 
+        #region "Avatar相关"
+        // some
+        #endregion
+
+
+        #region "状态机相关"
+
+        [Header("flags")]
+        private bool isMoving;
+        private bool isActing;
+
+        private bool hasMoved;
+        private bool hasActed;
+        private bool isTurnFinished;
+
+        private int turn;
+
+        [Header("Co")]
+        Coroutine moveProcessCoroutineHandler;
+        Coroutine actProcessCoroutineHandler;
+
+        /// <summary>
+        /// 进入回合
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerator ActiveTurn() { 
+
+            EnterTurnHandler?.Invoke(this);
+            turn++;
+            hasActed = false;
+
+            hasMoved = false;
+
+            isTurnFinished = false;
+
+            while (!isTurnFinished) {
+                yield return null;
+            }
+        }
+
+        protected IEnumerator ActProcessCoroutine() {
+            yield return null;
+        }
+
+
+        public void StartMove() {
+            Debug.Log("StartMove",transform);
+            moveProcessCoroutineHandler = StartCoroutine(MoveProcessCoroutine());
+        }
+
+        public void StartAct() {
+            Debug.Log("Move");
+            actProcessCoroutineHandler = StartCoroutine(ActProcessCoroutine());
+        }
+
+        public void StartUseItem() { }
+        public void StartAttack() { }
+        public void StartCastSpell() { }
+
+
+        public void FinishTurn() {
+            isTurnFinished = true;
+        }
+
+        protected IEnumerator MoveProcessCoroutine(int x = 0, int y = 0, int z = 0) {
+            // 选取坐标
+            yield return StartCoroutine(GetMoveTargetCoroutine());
+            // 移动到目的地
+            yield return StartCoroutine(MoveToTargetCoroutine());
+            isMoving = true;
+            Debug.Log($"{name}I'an Moving1");
+
+
+            isMoving = false;
+        }
+
+        /// <summary>
+        /// 获取移动输入
+        /// 移动到哪个格子
+        /// </summary>
+        /// <returns></returns>
+        Vector3Int moveTarget;
+        IEnumerator GetMoveTargetCoroutine() {
+
+            ShowMoveArea();
+
+            yield return new WaitUntil(() => moveTarget != Vector3Int.zero);
+
+            HideMoveArea();
+        }
+
+
+        IEnumerator MoveToTargetCoroutine() {
+            yield return null;
+        }
+
+
+        public void EndTurn() {
+            UseEnergy();
+            isTurnFinished = true;
+            FinishTurnHandler?.Invoke(this);
+        }
+
+        /// <summary>
+        /// 显示移动的格子
+        /// </summary>
+        void ShowMoveArea() {
+            Debug.Log("显示格子");
+            battleManager.ShowMoveRange(coordinate, moveRange);
+        }
+
+        /// <summary>
+        /// 隐藏移动的格子
+        /// </summary>
+        void HideMoveArea() {
+            battleManager.HideMoveRange();
+        }
 
         void OnTurn() {
 
         }
-        
-        private void OnMouseDown() {
-            TurnStartEventHandler?.Invoke(this);
-        }
-        
+
+        //private void OnMouseDown() {
+        //    TurnStartEventHandler?.Invoke(this);
+        //}
 
 
-        private void OnSelected() {
 
-        }
-
-        private void LoseSelected() {
+        private void Select() {
 
         }
 
+        private void Deselect() {
 
-        private void Start() {
-            battleManager = FindObjectOfType<BattleManager>();
         }
+
+        #endregion
+
+
+
+
+
 
 
 

@@ -1,7 +1,8 @@
 ﻿using System;
 using UnityEngine;
-namespace BigRogue.CharacterAvatar {
+using BigRogue.CharacterAvatar;
 
+namespace BigRogue.Persistent {
 
     public struct AvatarRecord :IRecord {
 

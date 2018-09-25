@@ -53,9 +53,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7519419927037531367, guid: 6225cc3bafd16904ab85fd2131bda975, type: 3}
       propertyPath: m_Name
-      value: Block_CrystalA Variant
+      value: Block_CrystalA_Surface
       objectReference: {fileID: 0}
     - target: {fileID: 7519419927038724327, guid: 6225cc3bafd16904ab85fd2131bda975, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 247dee0f181c27943a23ceddfb34bc91, type: 3}
+    - target: {fileID: 5220299453892676687, guid: 6225cc3bafd16904ab85fd2131bda975, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: 247dee0f181c27943a23ceddfb34bc91, type: 3}

@@ -1,16 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BigRogue.Persistent;
 
 namespace BigRogue.CharacterAvatar {
-
-
-
 
     public class AvatarPart :MonoBehaviour {
         
         public AvatarRecord avatarRecord;
-
 
         /// <summary>
         /// 双手皆可佩戴的武器要设置装备点是左手还是右手

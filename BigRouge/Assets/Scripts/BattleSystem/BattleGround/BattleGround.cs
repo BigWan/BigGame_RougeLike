@@ -25,6 +25,9 @@ namespace BigRogue.BattleSystem {
             terrain = GetComponentsInChildren<Block>().ToList();
         }
 
+        private void Start() {
+            SpawnBlock();
+        }
 
         [ContextMenu("Spawn")]
         void SpawnBlock() {
@@ -41,26 +44,48 @@ namespace BigRogue.BattleSystem {
                     b.transform.localPosition = new Vector3(i,0,j);
                     terrain.Add(b);
                     b.transform.SetParent(transform);
+                    b.coordinate = new Vector3Int(i, 0, j);
                 }
             }
         }
 
 
+
+        private List<Block> moveRange;
         /// <summary>
         /// 高亮显示场景区域
         /// </summary>
-        public void HighlightArea(Vector3Int center,int range,BlockHightLightType lightType) {
-
+        public void HighlightArea(Vector3Int center,int range,int lightColorIndex) {
+            Debug.Log("显示高丽囊格子");
             List<Vector3Int> keys = GetManhattanCoordinate(center, range);
-            List<Block> result = new List<Block>();
+            Debug.Log($"找到{keys.Count}");
+            if (moveRange == null)
+                moveRange = new List<Block>();
+
+            moveRange.Clear();
+            //List<Block> result = new List<Block>();
             foreach (var block in terrain) {
                 if(keys.Contains(block.coordinate)) {
-                    result.Add(block);
+                    moveRange.Add(block);
                 }
             }
+            Debug.Log($"有{moveRange.Count}个格子");
 
-            foreach (var block in result) {
-                block.HighLight(lightType);
+            foreach (var block in moveRange) {
+                block.HighLight(lightColorIndex);
+            }
+        }
+
+        /// <summary>
+        /// 关闭高亮的地块
+        /// </summary>
+        public void CloseHighLight() {
+            if (moveRange == null) {
+                return;
+            }
+
+            foreach (var block in moveRange) {
+                block.CloseHighLight();
             }
         }
 
@@ -71,17 +96,15 @@ namespace BigRogue.BattleSystem {
         /// <param name="range"></param>
         /// <returns></returns>
         List<Vector3Int> GetManhattanCoordinate(Vector3Int center,int range) {
-            range -= 1;
             List<Vector3Int> result = new List<Vector3Int>();
             int offset1 = 0;
             int offset2 = 0;
             for (int x =-range; x <= range; x++) {
-                offset1 = range - Mathf.Abs(x);
+                offset1 = range - Mathf.Abs(x); 
                 for (int z = - offset1; z <= +offset1; z++) {
                     offset2 = range - Mathf.Abs(x) - Mathf.Abs(z);
                     for (int y = -offset2; y <= offset2; y++) {
                        result.Add(new Vector3Int(x, y, z)+center);
-
                     }
                 }
             }
@@ -94,15 +117,7 @@ namespace BigRogue.BattleSystem {
             return null;
         }
 
-        private void Start() {
-            List<Vector3Int> aa = new List<Vector3Int>();
 
-            aa = GetManhattanCoordinate(new Vector3Int(5, 0, 5), 3);
-            Debug.Log(aa.Count);    
-            for (int i = 0; i < aa.Count; i++) {
-                Debug.Log(aa[i]);
-            }
-        }
 
     }
 }

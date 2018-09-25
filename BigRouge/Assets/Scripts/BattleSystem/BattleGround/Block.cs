@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using cakeslice;
 
 namespace BigRogue.BattleSystem {
 
@@ -20,15 +21,32 @@ namespace BigRogue.BattleSystem {
 
         private BattleGround bg;
 
+        private Outline outline;
 
-        private void OnMouseDown() {
-            Debug.Log(transform.localPosition);
+        private void Awake() {
+            outline = GetComponentInChildren<Outline>();
+            if (outline == null)
+                throw new UnityException("没有找到高亮组件");
+
+            
         }
 
-
-        public void HighLight(BlockHightLightType type) {
-            transform.localScale *= 0.8f;
+        private void Start() {
+            outline.enabled = false;
         }
+        //private void OnMouseDown() {
+        //    //Debug.Log(transform.localPosition);
+        //}
+
+        public void HighLight(int index) {
+            outline.color = index;
+            outline.enabled = true;
+        }
+
+        public void CloseHighLight() {
+            outline.enabled = false;
+        }
+
 
     }
 }

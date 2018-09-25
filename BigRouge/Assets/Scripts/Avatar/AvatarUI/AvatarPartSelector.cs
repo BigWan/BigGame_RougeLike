@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using BigRogue.CharacterAvatar;
-
+using BigRogue.Persistent;
 
 namespace BigRogue.UI {
 

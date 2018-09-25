@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text.RegularExpressions;
 using System.Linq;
-
+using BigRogue.Persistent;
 
 namespace BigRogue.Util {
 

@@ -14,8 +14,23 @@ namespace BigRogue.CharacterAvatar {
 
         Dictionary<AvatarSlot, AvatarPart> m_allAvatarPart;
 
+        Animator animator;
+
         public AvatarBody bodyAvatar { get; private set; }
 
+
+        #region "MonoMessage"
+
+        private void Awake() {
+            m_allAvatarRecords = new Dictionary<AvatarSlot, AvatarRecord>();
+            m_allAvatarPart = new Dictionary<AvatarSlot, AvatarPart>();
+            animator = GetComponentInChildren<Animator>();
+        }
+
+        #endregion
+
+
+        #region "Internal"
         AvatarRecord GetAvatarRecord(AvatarSlot avSlot) {
             if (m_allAvatarRecords.ContainsKey(avSlot))
                 return m_allAvatarRecords[avSlot];
@@ -52,29 +67,6 @@ namespace BigRogue.CharacterAvatar {
             m_allAvatarPart[avSlot] = ap;
         }
 
-        public AvatarPart GetAvatarPart(AvatarSlot avSlot) {
-            if (m_allAvatarPart.ContainsKey(avSlot)) {
-                return m_allAvatarPart[avSlot];
-            }
-
-            return null;
-        }
-
-        private void Awake() {
-            m_allAvatarRecords = new Dictionary<AvatarSlot, AvatarRecord>();
-            m_allAvatarPart = new Dictionary<AvatarSlot, AvatarPart>();
-        }
-
-        /// <summary>
-        /// 根据Avatar 部件信息,组建Avatar
-        /// </summary>
-        public void BuildAllAvatar() {
-            BuildBody();
-            //BuildBodyMat();
-            foreach (var item in m_allAvatarRecords) {
-                BuildAvatar(item.Key);
-            }
-        }
 
         /// <summary>
         /// 根据record 生成avatarpart
@@ -142,8 +134,6 @@ namespace BigRogue.CharacterAvatar {
 
 
 
-
-
         /// <summary>
         /// 载入模型,添加AvatarPart脚本
         /// </summary>
@@ -164,8 +154,10 @@ namespace BigRogue.CharacterAvatar {
 
             return ap;
         }
+        #endregion
 
-        // API
+
+        #region "API"
 
         public void SetAndBuildAvatar(AvatarSlot avSlot, int apID) {
             SetAvatarRecord(avSlot, apID);
@@ -205,16 +197,28 @@ namespace BigRogue.CharacterAvatar {
         }
 
 
-
-        private void OnGUI() {
-
-            if (GUI.Button(new Rect(1000, 100, 200, 50), "adfadf")) {
-
-                Debug.Log(JsonUtility.ToJson(this));
-
+        public AvatarPart GetAvatarPart(AvatarSlot avSlot) {
+            if (m_allAvatarPart.ContainsKey(avSlot)) {
+                return m_allAvatarPart[avSlot];
             }
 
-
+            return null;
         }
+
+
+
+        /// <summary>
+        /// 根据Avatar 部件信息,组建Avatar
+        /// </summary>
+        public void BuildAllAvatar() {
+            BuildBody();
+            //BuildBodyMat();
+            foreach (var item in m_allAvatarRecords) {
+                BuildAvatar(item.Key);
+            }
+        }
+
+        #endregion
+
     }
 }
