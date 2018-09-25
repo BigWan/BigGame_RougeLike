@@ -19,20 +19,21 @@ namespace BigRogue.BattleSystem {
         public int width;
         public int length;
 
-        private List<Block> terrain;
+        private List<Block> terrain=new List<Block>();
 
         private void Awake() {
-            terrain = new List<Block>();
             terrain = GetComponentsInChildren<Block>().ToList();
         }
 
 
         [ContextMenu("Spawn")]
         void SpawnBlock() {
-            foreach (var item in terrain) {
-                DestroyImmediate(item);
+            if (terrain != null) {
+                foreach (var item in terrain) {
+                    DestroyImmediate(item);
+                }
+                terrain.Clear();
             }
-            terrain.Clear();
 
             for (int i = 0; i < length; i++) {
                 for (int j = 0; j < width; j++) {

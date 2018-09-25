@@ -21,7 +21,7 @@ namespace BigRogue.BattleSystem {
 
         private bool hasMoved;
         private bool hasActed;
-        private bool hasTurnEnd;
+        private bool turnEnd;
 
         private int turn;
 
@@ -32,76 +32,103 @@ namespace BigRogue.BattleSystem {
 
         private CombatState combatState;
 
+
+        Coroutine moveProcessCoroutineHandler;
+        Coroutine actProcessCoroutineHandler;
         /// <summary>
-        /// 开始回合
+        /// 进入回合
         /// </summary>
         /// <returns></returns>
-        public override IEnumerator StartTurn() {
+        public override IEnumerator ActiveTurn() {
 
             TurnStartEventHandler?.Invoke(this);
             turn++;
             hasActed = false;
             hasMoved = false;
-            hasTurnEnd = false;
-            while (!hasTurnEnd) {
+            turnEnd = false;
+            // 移动 
+            moveProcessCoroutineHandler = StartCoroutine(MoveProcessCoroutine());
+            // 行动
+            actProcessCoroutineHandler = StartCoroutine(ActProcessCoroutine());
+
+            while (!turnEnd) {
                 yield return null;
             }
 
+            if (moveProcessCoroutineHandler != null) {
+                StopCoroutine(moveProcessCoroutineHandler);
+                moveProcessCoroutineHandler = null;
+            }
+
+            if(actProcessCoroutineHandler != null) {
+                StopCoroutine(actProcessCoroutineHandler);
+                actProcessCoroutineHandler = null;
+            }
+        }
+
+
+        protected IEnumerator ActProcessCoroutine() {
+            yield return null;
+        }
+
+
+        protected IEnumerator MoveProcessCoroutine(int x = 0, int y = 0, int z = 0) {
+
+            yield return StartCoroutine(GetMoveTargetCoroutine());
+            yield return StartCoroutine(MoveToTargetCoroutine());
+            isMoving = true;
+            Debug.Log($"{name}I'an Moving1");
+
+
+            isMoving = false;
+        }
+
+        /// <summary>
+        /// 获取移动输入
+        /// 移动到哪个格子
+        /// </summary>
+        /// <returns></returns>
+        Vector3Int moveTarget;
+        IEnumerator GetMoveTargetCoroutine() {
+
+            ShowMoveAbleBlock();
+            yield return new WaitUntil(()=>moveTarget!=Vector3Int.zero);
+
+            
+        }
+
+
+        IEnumerator MoveToTargetCoroutine() {
+            yield return null;
+        }
+
+
+        public void EndTurn() {
             UseEnergy();
+            turnEnd = true;
             TurnEndEventHandler?.Invoke(this);
         }
 
         /// <summary>
-        /// 移动操作
+        /// 显示移动的格子
         /// </summary>
-        public void MoveOperate() {
-
-
-
-
-            StartCoroutine(MoveCoroutine());
-        }
-
-        public void ShowMoveRadius() {
+        void ShowMoveAbleBlock() {
             battleManager.ShowMoveRange(new Vector3Int(5, 0, 5), 3);
         }
 
-
-
-        //private bool hasMoveCommand;
-        //public IEnumerator GetMoveInput() {
-        //    Debug.Log("等待移动操作");
-        //    hasMoveCommand = false;
-        //    while (!hasMoveCommand) {
-        //        yield return null;
-        //    }
-        //    Debug.Log("得到移动操作");
-        //}
-
-
-
-        private bool hasAttackCommand;
-        public IEnumerator GetAttackInput() {
-            Debug.Log("等待攻击操作");
-            hasAttackCommand = false;
-            while (!hasAttackCommand) {
-                yield return null;
-            }
-            Debug.Log("得到攻击操作");
+        /// <summary>
+        /// 隐藏移动的格子
+        /// </summary>
+        void HideMoveAbleBlock() {
 
         }
 
 
 
-        protected  bool CanAct() {
-            return true;
-        }
 
-        protected bool CanMoveTo(int x, int y) {
-            return true;
 
-        }
 
+        #region "能量相关"
 
         public override void RegenEnergy() {
             energy += energyRegen;
@@ -115,9 +142,20 @@ namespace BigRogue.BattleSystem {
             return energy >= eng;
         }
 
+        #endregion
 
 
-        protected  bool CanMove() {
+        #region "Check Funcs"
+
+        protected bool CanAct() {
+            return true;
+        }
+
+        protected bool CanMoveTo(int x, int y) {
+            return true;
+
+        }
+        protected bool CanMove() {
             return true;
         }
 
@@ -133,22 +171,8 @@ namespace BigRogue.BattleSystem {
             return true;
         }
 
+        #endregion
 
-        protected  IEnumerator AttackCoroutine() {
-            yield return null;
-        }
-
-
-        protected  IEnumerator MoveCoroutine(int x = 0,int y = 0, int z = 0) {
-            isMoving = true;
-            Debug.Log($"{name}I'an Moving1");
-
-            transform.SetLocalPositionX(Random.Range(1, 5));
-            transform.SetLocalPositionZ(Random.Range(1, 5));
-            yield return null;
-
-            isMoving = false;
-        }
 
 
         void OnTurn() {
@@ -173,6 +197,8 @@ namespace BigRogue.BattleSystem {
         private void Start() {
             battleManager = FindObjectOfType<BattleManager>();
         }
+
+
 
     }
 }

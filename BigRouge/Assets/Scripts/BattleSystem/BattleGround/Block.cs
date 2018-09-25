@@ -29,5 +29,6 @@ namespace BigRogue.BattleSystem {
         public void HighLight(BlockHightLightType type) {
             transform.localScale *= 0.8f;
         }
+
     }
 }

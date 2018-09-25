@@ -108,16 +108,16 @@ namespace BigRogue.BattleSystem {
 
             if (actorQueue.Count > 0) {
                 battleState = BattleState.Acting;
-                StartCoroutine(StartTurn());
+                StartCoroutine(ActiveTurn());
             }
 
         }
 
 
         /// <summary>
-        /// 让可以行动的单位行动
+        /// 激活单位的回合
         /// </summary>
-        IEnumerator StartTurn() {
+        IEnumerator ActiveTurn() {
             Debug.Log(actorQueue.Count);
             //while (actorQueue.Count > 0) {
             //    yield return StartCoroutine(actorQueue.Dequeue().ActCoroutine());
@@ -125,7 +125,7 @@ namespace BigRogue.BattleSystem {
 
             for (int i = 0; i < actorQueue.Count; i++) {
                 currentActor = actorQueue[i];
-                yield return StartCoroutine(currentActor.StartTurn());
+                yield return StartCoroutine(currentActor.ActiveTurn());
             }
             currentActor = null;
             // act end

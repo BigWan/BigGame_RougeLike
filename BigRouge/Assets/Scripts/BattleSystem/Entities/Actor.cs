@@ -29,9 +29,11 @@ namespace BigRogue.BattleSystem {
         public Action<Actor> TurnEndEventHandler;
         public Action<Actor> MoveStartEventHandler;
         public Action<Actor> MoveEndEventHandler;
+
+
         // 一系列操作
 
-        public abstract IEnumerator StartTurn();
+        public abstract IEnumerator ActiveTurn();
 
     }
 }
