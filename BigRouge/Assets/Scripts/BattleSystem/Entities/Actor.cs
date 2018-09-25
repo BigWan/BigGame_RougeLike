@@ -9,7 +9,7 @@ namespace BigRogue.BattleSystem {
 
 
     /// <summary>
-    /// 角色对象,能穿装备,拥有技能,能战斗
+    /// 角色
     /// </summary>
     public class Actor : Entity {
 
@@ -51,7 +51,6 @@ namespace BigRogue.BattleSystem {
 
         [Header("Refs")]
         private BattleManager battleManager;
-        private Animator turnState;
         private CombatState combatState;
 
         [Header("Event")]
@@ -82,17 +81,15 @@ namespace BigRogue.BattleSystem {
         public Action<Actor> MoveEndEventHandler;
 
 
-        #region "Mono"
+        // MonoBehaviour Message
 
         private void Awake() {
             battleManager = FindObjectOfType<BattleManager>();
-            turnState = GetComponent<Animator>();
             GetCharInfo();
         }
 
 
 
-        #endregion
 
 
         
@@ -160,16 +157,27 @@ namespace BigRogue.BattleSystem {
 
         #region "状态机相关"
 
-        [Header("flags")]
-        private bool isMoving;
-        private bool isActing;
 
-        private bool hasMoved;
-        private bool hasActed;
-        private bool isTurnFinished;
+        enum TurnState {
+            OutSide,   // 没有进入回合
+            WaitForInput,  // 等待输入
+            DecideMove,    // 移动输入操作
+            Moving,         // 移动
+            DecideAct,      // 行动输入
+            Acting,          // 行动
+            TurnFinish,     // 回合结束
+        }
+
+
+        //private bool isMoving;
+        //private bool isActing;
+
+        //private bool hasMoved;
+        //private bool hasActed;
+        //private bool isTurnFinished;
 
         private int turn;
-
+        TurnState turnState;        // 回合状态
         [Header("Co")]
         Coroutine moveProcessCoroutineHandler;
         Coroutine actProcessCoroutineHandler;
@@ -178,20 +186,21 @@ namespace BigRogue.BattleSystem {
         /// 进入回合
         /// </summary>
         /// <returns></returns>
-        public IEnumerator ActiveTurn() { 
-
+        public IEnumerator ActiveTurn() {
+            turnState = TurnState.WaitForInput;
             EnterTurnHandler?.Invoke(this);
             turn++;
-            hasActed = false;
 
-            hasMoved = false;
 
-            isTurnFinished = false;
-
-            while (!isTurnFinished) {
+            while (turnState!=TurnState.TurnFinish) {
                 yield return null;
             }
         }
+
+
+
+
+
 
         protected IEnumerator ActProcessCoroutine() {
             yield return null;
