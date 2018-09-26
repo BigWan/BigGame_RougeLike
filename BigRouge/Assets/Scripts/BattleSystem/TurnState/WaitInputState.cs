@@ -12,7 +12,7 @@ namespace BigRogue.BattleSystem {
     /// </summary>
     public class WaitInputState : TurnStateBase {
 
-        OperateMenu opMenu;
+        public OperateMenu opMenu;
 
         public WaitInputState(Actor actor) {
             this.actor = actor;
@@ -50,17 +50,20 @@ namespace BigRogue.BattleSystem {
             opMenu.gameObject.SetActive(true);
             opMenu.Bind(actor);
             if (actor.allowMove) {
+                opMenu.MoveButton.onClick.RemoveAllListeners();
                 opMenu.MoveButton.onClick.AddListener(MoveButton);
                 opMenu.MoveButton.gameObject.SetActive(true);
             } else {
                 opMenu.MoveButton.gameObject.SetActive(false);
             }
             if (actor.allowAct) {
+                opMenu.ActButton.onClick.RemoveAllListeners();
                 opMenu.ActButton.onClick.AddListener(ActButton);
                 opMenu.ActButton.gameObject.SetActive(true);
             } else {
                 opMenu.ActButton.gameObject.SetActive(false);
             }
+            opMenu.FinishButton.onClick.RemoveAllListeners();
             opMenu.FinishButton.onClick.AddListener(FinishButton);
 
             opMenu.FadeIn();

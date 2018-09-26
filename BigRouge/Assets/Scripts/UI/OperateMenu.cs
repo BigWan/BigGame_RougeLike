@@ -41,6 +41,7 @@ namespace BigRogue.GameUI {
         private void Awake() {
             cg = GetComponent<CanvasGroup>();
             rectTrans = GetComponent<RectTransform>();
+            ActSubGroup.SetActive(false);
         }
 
         //public void SetCharacter(Character character) {

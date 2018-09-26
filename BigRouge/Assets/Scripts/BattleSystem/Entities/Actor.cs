@@ -178,33 +178,13 @@ namespace BigRogue.BattleSystem {
 
         public bool turnFinished;
 
-        //public TurnStateBase outofTurn;
-        //public TurnStateBase turnWaitSelectAction;
-
-        //public TurnStateBase decideMoveState;
-        //public TurnStateBase movingState;
-
-        //public TurnStateBase decideActState;
-        //public TurnStateBase actingState;
-        
-
-        //void CreateState() {
-        //    outofTurn = 
-        //    turnWaitSelectAction = ;
-
-        //    decideMoveState = new DecideMoveState(this, battleManager.battleGround);
-        //    movingState = new MovingState(this);
-
-        //    decideActState = new DecideActState(this);
-        //    actingState = new ActingState(this);
-        //}
-
 
         /// <summary>
         /// 进入回合
         /// </summary>
         /// <returns></returns>
         public IEnumerator ActiveTurn() {
+            Debug.Log($"name{name}进入回合");
             turnFinished = false;
             allowMove = true;
             allowAct = true;
@@ -223,7 +203,9 @@ namespace BigRogue.BattleSystem {
 
 
         void FinishedTurn() {
-
+            Debug.Log("Im done");
+            turnState = null;
+            energy -= 1000f;
         }
 
 
