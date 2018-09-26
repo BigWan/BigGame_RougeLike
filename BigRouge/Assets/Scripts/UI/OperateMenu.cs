@@ -48,12 +48,6 @@ namespace BigRogue.GameUI {
         public void Bind(Actor character) {
             this.character = character;
             CaptionText.text = character.name;
-            MoveButton.onClick.AddListener(character.StartMove);
-            
-            FinishButton.onClick.AddListener(character.FinishTurn);
-
-            //AttackButton.onClick.AddListener()
-
         }
 
         public void Clear() {

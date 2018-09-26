@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using cakeslice;
-
+using DG.Tweening;
 namespace BigRogue.BattleSystem {
 
     /// <summary>
@@ -19,9 +19,14 @@ namespace BigRogue.BattleSystem {
     [RequireComponent(typeof(BoxCollider))]
     public class Block : Entity {
 
-        private BattleGround bg;
+        private bool selected;
+
+        public BattleGround battleGround;
+
 
         private Outline outline;
+
+
 
         private void Awake() {
             outline = GetComponentInChildren<Outline>();
@@ -47,6 +52,26 @@ namespace BigRogue.BattleSystem {
             outline.enabled = false;
         }
 
+        public void OnMouseDown() {
+            if (selected)
+                DeSelect();
+            else
+                Select();
+
+            battleGround.SelectBlock(this);
+        }
+
+
+        public void Select() {
+            selected = true;
+            HighLight(2);
+        }
+
+        public void DeSelect() {
+            selected = false;
+            CloseHighLight();
+        }
 
     }
+
 }

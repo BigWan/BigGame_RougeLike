@@ -13,16 +13,30 @@ namespace BigRogue.BattleSystem {
     /// </summary>
     public class BattleGround : MonoBehaviour {
 
-
+        [Header("Prefab Refs")]
         public List<Block> blockPrefabs;
 
+        [Header("BG Size")]
         public int width;
         public int length;
 
-        private List<Block> terrain=new List<Block>();
+        [Header("Selected")]
+        public List<Block> selectedBlocks;
+
+        public System.Action<Block> SelectBlockEventHandler;
+
+
+
+
+        // Refs
+        private List<Block> terrain;
+
+
 
         private void Awake() {
+            terrain = new List<Block>();
             terrain = GetComponentsInChildren<Block>().ToList();
+            selectedBlocks = new List<Block>();
         }
 
         private void Start() {
@@ -38,53 +52,70 @@ namespace BigRogue.BattleSystem {
                 terrain.Clear();
             }
 
-            for (int i = 0; i < length; i++) {
-                for (int j = 0; j < width; j++) {
+            for (int z = 0; z < length; z++) {
+                for (int x = 0; x < width; x++) {
                     Block b =  Instantiate<Block>(blockPrefabs[Random.Range(0, blockPrefabs.Count)]);
-                    b.transform.localPosition = new Vector3(i,0,j);
-                    terrain.Add(b);
+
+                    b.coordinate = new Vector3Int(x, 0, z);
+                    b.battleGround = this;
+
+                    b.transform.localPosition = b.coordinate;
                     b.transform.SetParent(transform);
-                    b.coordinate = new Vector3Int(i, 0, j);
+
+                    terrain.Add(b);
                 }
             }
         }
 
+        public bool allowMultiple = true;
+        public void SelectBlock(Block block) {
+            if (!allowMultiple) {
+                foreach (var b in selectedBlocks) {
+                    b.DeSelect();
+                }
+                selectedBlocks.Clear();
+            } 
+            selectedBlocks.Add(block);
+            SelectBlockEventHandler?.Invoke(block);
+        }
 
 
-        private List<Block> moveRange;
+
+        private List<Block> movingArea;
         /// <summary>
         /// 高亮显示场景区域
         /// </summary>
-        public void HighlightArea(Vector3Int center,int range,int lightColorIndex) {
+        public List<Block> HighlightArea(Vector3Int center,int range,int lightColorIndex) {
             Debug.Log("显示高丽囊格子");
             List<Vector3Int> keys = GetManhattanCoordinate(center, range);
             Debug.Log($"找到{keys.Count}");
-            if (moveRange == null)
-                moveRange = new List<Block>();
+            if (movingArea == null)
+                movingArea = new List<Block>();
 
-            moveRange.Clear();
+            movingArea.Clear();
             //List<Block> result = new List<Block>();
             foreach (var block in terrain) {
                 if(keys.Contains(block.coordinate)) {
-                    moveRange.Add(block);
+                    movingArea.Add(block);
                 }
             }
-            Debug.Log($"有{moveRange.Count}个格子");
+            Debug.Log($"有{movingArea.Count}个格子");
 
-            foreach (var block in moveRange) {
+            foreach (var block in movingArea) {
                 block.HighLight(lightColorIndex);
             }
+            return movingArea;
         }
 
         /// <summary>
         /// 关闭高亮的地块
         /// </summary>
-        public void CloseHighLight() {
-            if (moveRange == null) {
+        public void HideMovingArea() {
+            if (movingArea == null) {
                 return;
             }
 
-            foreach (var block in moveRange) {
+            foreach (var block in movingArea) {
                 block.CloseHighLight();
             }
         }

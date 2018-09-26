@@ -383,7 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CaptionText: {fileID: 3157566332388160253}
   MoveButton: {fileID: 3301812342117518218}
-  ActButton: {fileID: 0}
+  ActButton: {fileID: 6713944262471510668}
   FinishButton: {fileID: 6272119956210937599}
 --- !u!225 &5767299498378647416
 CanvasGroup:

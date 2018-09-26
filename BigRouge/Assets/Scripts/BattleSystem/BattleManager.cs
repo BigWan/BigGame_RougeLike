@@ -48,9 +48,10 @@ namespace BigRogue.BattleSystem {
         /// </summary>
         public Entity selectedEntity;
 
+
         public BattleState battleState;
 
-        public BattleGround ground;
+        public BattleGround battleGround;
 
         static int energyToAct;
 
@@ -81,13 +82,13 @@ namespace BigRogue.BattleSystem {
             chars = FindObjectsOfType<Actor>().ToList();
             opMenu = FindObjectOfType<OperateMenu>();
             info = FindObjectOfType<HeadBar>();
-            ground = FindObjectOfType<BattleGround>();
+            battleGround = FindObjectOfType<BattleGround>();
 
 
-            // 监听事件
-            foreach (var @char in chars) {
-                @char.EnterTurnHandler += OnSelectActor;
-            }
+            //// 监听事件
+            //foreach (var @char in chars) {
+            //    @char.EnterTurnHandler += OnSelectActor;
+            //}
 
         }
 
@@ -166,15 +167,15 @@ namespace BigRogue.BattleSystem {
         /// </summary>
         /// <param name="center"></param>
         /// <param name="range"></param>
-        public void ShowMoveRange(Vector3Int center,int range) {
-            ground.HighlightArea(center, range,2);
+        public void ShowMovingArea(Vector3Int center,int range) {
+            battleGround.HighlightArea(center, range,2);
         }
 
         /// <summary>
         /// 关闭移动格子显示
         /// </summary>
-        public void HideMoveRange() {
-            ground.CloseHighLight();
+        public void HideMovingArea() {
+            battleGround.HideMovingArea();
         }
 
 
@@ -184,9 +185,9 @@ namespace BigRogue.BattleSystem {
 
         public void HasActor(Actor a) { }
 
-        public void OnSelectActor(Actor actor) {
-            ShowOperateMenu((Actor)actor);
-        }
+        //public void OnSelectActor(Actor actor) {
+        //    ShowOperateMenu((Actor)actor);
+        //}
 
         //public void Update() {
 
@@ -206,19 +207,7 @@ namespace BigRogue.BattleSystem {
         //}
 
 
-        public void ShowOperateMenu(Actor c) {
-            opMenu.gameObject.SetActive(true);
-            opMenu.Bind(c);
-            opMenu.FadeIn();
-
-
-            
-
-
-            info.gameObject.SetActive(true);
-            info.SetCharacter(c);
-            info.FadeIn();
-        }
+        
 
 
     }

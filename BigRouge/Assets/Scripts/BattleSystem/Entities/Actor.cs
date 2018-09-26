@@ -24,13 +24,12 @@ namespace BigRogue.BattleSystem {
         /// </summary>
         private Persistent.CharacterRecord charInfo;
 
-        
 
         [Header("Energy")]
         public float energy;
         public float energyRegen {
             get {
-                return charInfo.speed  + 10;
+                return charInfo.speed + 10;
             }
         }
 
@@ -47,10 +46,15 @@ namespace BigRogue.BattleSystem {
         }
 
 
+        public BattleGround battleGround {
+            get {
+                return battleManager.battleGround;
+            }
+        }
 
 
         [Header("Refs")]
-        private BattleManager battleManager;
+        public BattleManager battleManager;
         private CombatState combatState;
 
         [Header("Event")]
@@ -59,7 +63,7 @@ namespace BigRogue.BattleSystem {
         /// <summary>
         /// 角色进入回合
         /// </summary>
-        public Action<Actor> EnterTurnHandler; 
+        public Action<Actor> EnterTurnHandler;
         /// <summary>
         /// 角色结束回合
         /// </summary>
@@ -88,11 +92,11 @@ namespace BigRogue.BattleSystem {
             GetCharInfo();
         }
 
+        private void Start() {
+            turnState = new OutofTurn(this); 
+        }
 
 
-
-
-        
         /// <summary>
         /// 获取配置表数据
         /// </summary>
@@ -110,7 +114,7 @@ namespace BigRogue.BattleSystem {
             energy += energyRegen;
         }
 
-        public void UseEnergy() {
+        public void DeductEnergy() {
             energy -= 1000;
         }
 
@@ -158,134 +162,103 @@ namespace BigRogue.BattleSystem {
         #region "状态机相关"
 
 
-        enum TurnState {
-            OutSide,   // 没有进入回合
-            WaitForInput,  // 等待输入
-            DecideMove,    // 移动输入操作
-            Moving,         // 移动
-            DecideAct,      // 行动输入
-            Acting,          // 行动
-            TurnFinish,     // 回合结束
+        int turn;
+        public bool allowMove;
+        public bool allowAct;
+        private TurnStateBase turnState;        // 回合状态
+
+        public Action MoveOverHandler;
+
+        public void ChangeTurnState(TurnStateBase newState) {
+            turnState.Exit();
+            turnState = newState;
+            turnState.Enter();
         }
+        
 
+        bool turnFinished;
 
-        //private bool isMoving;
-        //private bool isActing;
+        //public TurnStateBase outofTurn;
+        //public TurnStateBase turnWaitSelectAction;
 
-        //private bool hasMoved;
-        //private bool hasActed;
-        //private bool isTurnFinished;
+        //public TurnStateBase decideMoveState;
+        //public TurnStateBase movingState;
 
-        private int turn;
-        TurnState turnState;        // 回合状态
-        [Header("Co")]
-        Coroutine moveProcessCoroutineHandler;
-        Coroutine actProcessCoroutineHandler;
+        //public TurnStateBase decideActState;
+        //public TurnStateBase actingState;
+        
+
+        //void CreateState() {
+        //    outofTurn = 
+        //    turnWaitSelectAction = ;
+
+        //    decideMoveState = new DecideMoveState(this, battleManager.battleGround);
+        //    movingState = new MovingState(this);
+
+        //    decideActState = new DecideActState(this);
+        //    actingState = new ActingState(this);
+        //}
+
 
         /// <summary>
         /// 进入回合
         /// </summary>
         /// <returns></returns>
         public IEnumerator ActiveTurn() {
-            turnState = TurnState.WaitForInput;
+            turnFinished = false;
+            allowMove = true;
+            allowAct = true;
+
             EnterTurnHandler?.Invoke(this);
             turn++;
 
+            turnState = new WaitSelectActionState(this);
 
-            while (turnState!=TurnState.TurnFinish) {
+            while (turnFinished != true) {
                 yield return null;
             }
+
+            FinishedTurn();
         }
 
 
-
-
-
-
-        protected IEnumerator ActProcessCoroutine() {
-            yield return null;
-        }
-
-
-        public void StartMove() {
-            Debug.Log("StartMove",transform);
-            moveProcessCoroutineHandler = StartCoroutine(MoveProcessCoroutine());
-        }
-
-        public void StartAct() {
-            Debug.Log("Move");
-            actProcessCoroutineHandler = StartCoroutine(ActProcessCoroutine());
-        }
-
-        public void StartUseItem() { }
-        public void StartAttack() { }
-        public void StartCastSpell() { }
-
-
-        public void FinishTurn() {
-            isTurnFinished = true;
-        }
-
-        protected IEnumerator MoveProcessCoroutine(int x = 0, int y = 0, int z = 0) {
-            // 选取坐标
-            yield return StartCoroutine(GetMoveTargetCoroutine());
-            // 移动到目的地
-            yield return StartCoroutine(MoveToTargetCoroutine());
-            isMoving = true;
-            Debug.Log($"{name}I'an Moving1");
-
-
-            isMoving = false;
-        }
-
-        /// <summary>
-        /// 获取移动输入
-        /// 移动到哪个格子
-        /// </summary>
-        /// <returns></returns>
-        Vector3Int moveTarget;
-        IEnumerator GetMoveTargetCoroutine() {
-
-            ShowMoveArea();
-
-            yield return new WaitUntil(() => moveTarget != Vector3Int.zero);
-
-            HideMoveArea();
-        }
-
-
-        IEnumerator MoveToTargetCoroutine() {
-            yield return null;
-        }
-
-
-        public void EndTurn() {
-            UseEnergy();
-            isTurnFinished = true;
-            FinishTurnHandler?.Invoke(this);
-        }
-
-        /// <summary>
-        /// 显示移动的格子
-        /// </summary>
-        void ShowMoveArea() {
-            Debug.Log("显示格子");
-            battleManager.ShowMoveRange(coordinate, moveRange);
-        }
-
-        /// <summary>
-        /// 隐藏移动的格子
-        /// </summary>
-        void HideMoveArea() {
-            battleManager.HideMoveRange();
-        }
-
-        void OnTurn() {
+        void FinishedTurn() {
 
         }
 
-        //private void OnMouseDown() {
-        //    TurnStartEventHandler?.Invoke(this);
+        public string name2;
+        private void Update() {
+            name2=turnState.GetType().ToString();
+        }
+
+        public void GetFinishTurnCommand() { }
+
+        public void StartMove(Vector3Int target) {
+            StartCoroutine(MovingCoroutine(target));
+        }
+
+        public  IEnumerator MovingCoroutine(Vector3Int target) {
+            
+
+            while((transform.localPosition - target).magnitude>=0.1f) {
+                transform.localPosition = Vector3.Lerp(transform.localPosition, target, 0.35f);
+                 yield return null;
+            }
+
+
+
+            MoveOverHandler?.Invoke();
+        }
+        ///// <summary>
+        ///// 获取可以移动到的Block
+        ///// </summary>
+        ///// <returns></returns>
+        //public void ShowMovingArea() {
+        //    battleManager.ShowMovingArea(coordinate, moveRange);
+        //}
+
+        //public void HideMovingArea() {
+        //    battleManager.HideMovingArea();
         //}
 
 
