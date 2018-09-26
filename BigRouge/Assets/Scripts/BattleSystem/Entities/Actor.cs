@@ -93,7 +93,7 @@ namespace BigRogue.BattleSystem {
         }
 
         private void Start() {
-            turnState = new OutofTurn(this); 
+            //turnState = new IdleState(); 
         }
 
 
@@ -176,7 +176,7 @@ namespace BigRogue.BattleSystem {
         }
         
 
-        bool turnFinished;
+        public bool turnFinished;
 
         //public TurnStateBase outofTurn;
         //public TurnStateBase turnWaitSelectAction;
@@ -212,7 +212,7 @@ namespace BigRogue.BattleSystem {
             EnterTurnHandler?.Invoke(this);
             turn++;
 
-            turnState = new WaitSelectActionState(this);
+            turnState = new WaitInputState(this);
 
             while (turnFinished != true) {
                 yield return null;
@@ -226,10 +226,6 @@ namespace BigRogue.BattleSystem {
 
         }
 
-        public string name2;
-        private void Update() {
-            name2=turnState.GetType().ToString();
-        }
 
         public void GetFinishTurnCommand() { }
 
@@ -239,29 +235,15 @@ namespace BigRogue.BattleSystem {
 
         public  IEnumerator MovingCoroutine(Vector3Int target) {
             
-
             while((transform.localPosition - target).magnitude>=0.1f) {
                 transform.localPosition = Vector3.Lerp(transform.localPosition, target, 0.35f);
                  yield return null;
             }
-
+            transform.localPosition = target;
 
 
             MoveOverHandler?.Invoke();
         }
-        ///// <summary>
-        ///// 获取可以移动到的Block
-        ///// </summary>
-        ///// <returns></returns>
-        //public void ShowMovingArea() {
-        //    battleManager.ShowMovingArea(coordinate, moveRange);
-        //}
-
-        //public void HideMovingArea() {
-        //    battleManager.HideMovingArea();
-        //}
-
-
 
         private void Select() {
 

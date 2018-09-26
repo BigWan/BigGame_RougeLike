@@ -6,14 +6,15 @@ using BigRogue.GameUI;
 namespace BigRogue.BattleSystem {
 
     /// <summary>
-    /// 回合等待输入的状态
-    /// 需要处理按钮输入
+    /// 回合状态之等待操作 
+    /// 弹出操作菜单,
+    /// 这阶段可以进行的操作:移动,使用技能,使用道具,结束回合
     /// </summary>
-    public class WaitSelectActionState : TurnStateBase {
+    public class WaitInputState : TurnStateBase {
 
         OperateMenu opMenu;
 
-        public WaitSelectActionState(Actor actor) {
+        public WaitInputState(Actor actor) {
             this.actor = actor;
             this.opMenu = actor.battleManager.opMenu;
             Enter();
@@ -42,7 +43,7 @@ namespace BigRogue.BattleSystem {
         }
 
         void FinishButton() {
-            actor.ChangeTurnState(new FinishingState(actor));
+            actor.turnFinished = true;
         }
 
         public void ShowOperateMenu() {

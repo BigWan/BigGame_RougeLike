@@ -11,13 +11,13 @@ namespace BigRogue.BattleSystem {
 
         protected Actor actor{ get; set; }
 
-        public abstract void Enter();
-        public abstract void Exit();
+        public virtual void Enter() { }
+        public virtual void Exit() { }
 
 
-        public abstract void HandlerCommand();
-
-        public abstract void Update();
+        public virtual void HandlerCommand() { }
+    
+        public virtual void Update() { }
 
     }
 }

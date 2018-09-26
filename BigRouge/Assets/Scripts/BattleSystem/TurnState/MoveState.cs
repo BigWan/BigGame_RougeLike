@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace BigRogue.BattleSystem {
     /// <summary>
-    /// 决定移动状态
+    /// 移动处理 
+    /// 1.选择目的地
+    /// 2.移动
     /// </summary>
     public class MoveState : TurnStateBase {
 
@@ -23,10 +25,6 @@ namespace BigRogue.BattleSystem {
             actor.MoveOverHandler += MoveFinish;
         }
 
-
-        public override void HandlerCommand() {
-            throw new System.NotImplementedException();
-        }
 
         public void SelectBlock(Block b) {
             if (movingArea.Contains(b)) {
@@ -50,7 +48,7 @@ namespace BigRogue.BattleSystem {
 
         void MoveFinish() {
             actor.allowMove = false;
-            actor.ChangeTurnState(new WaitSelectActionState(actor));
+            actor.ChangeTurnState(new WaitInputState(actor));
         }
 
         public override void Exit() {
@@ -59,11 +57,6 @@ namespace BigRogue.BattleSystem {
             movingArea.Clear();
             battleGround.HideMovingArea();
             
-        }
-
-
-        public override void Update() {
-
         }
 
 

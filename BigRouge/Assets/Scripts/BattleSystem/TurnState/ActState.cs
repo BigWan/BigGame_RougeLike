@@ -4,10 +4,15 @@ using UnityEngine;
 
 namespace BigRogue.BattleSystem {
 
+
+    /// <summary>
+    /// 处理行动
+    /// 1.选择行动类型(道具,法术,攻击,特技等)
+    /// 2.选择行动目标
+    /// 3.执行行动
+    /// </summary>
     public class ActState : TurnStateBase {
-
-
-
+        
         public ActState(Actor actor) {
             this.actor = actor;
         }

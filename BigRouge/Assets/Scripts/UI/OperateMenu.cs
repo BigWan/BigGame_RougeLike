@@ -15,9 +15,23 @@ namespace BigRogue.GameUI {
     public class OperateMenu : MonoBehaviour {
 
         public Text CaptionText;
+
+        [Header("按钮")]
         public Button MoveButton;
         public Button ActButton;
         public Button FinishButton;
+
+        [Header("行动子菜单")]
+        public GameObject ActSubGroup;
+
+        public Button AttackButton;
+        public Button SpellButton;
+        public Button ItemButton;
+
+        [Header("法术子菜单")]
+        public GameObject SpellGroup;
+
+
 
         private Actor character;
 
