@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using BigRogue.PathFinding;
 
 namespace BigRogue.BattleSystem {
 
@@ -137,11 +138,23 @@ namespace BigRogue.BattleSystem {
         }
 
         /// <summary>
-        /// 获取寻路的结点
-        /// </summary>
-        /// <returns></returns>
-        public List<PathNode> GetPathNode() {
+        ///// 获取寻路的结点
+        ///// </summary>
+        ///// <returns></returns>
+        //public List<PathNode> GetPathNode() {
+        //    PathFinding.PathFinding.FindPath()
+        //}
 
+
+        /// <summary>
+        /// 生成寻路网
+        /// </summary>
+        public NodeMesh CreateNodeMesh(List<Block> blocks) {
+            NodeMesh mesh = new NodeMesh();
+            foreach (var block in blocks) {
+                mesh.AddNode(block.coordinate2D, new PathNode(block));
+            }
+            return mesh;
         }
 
     }

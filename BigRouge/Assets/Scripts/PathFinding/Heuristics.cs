@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// 寻路模块
-/// </summary>
+
+
 namespace BigRogue.PathFinding {
 
-    public delegate float HeuristicsDelegate(int x, int y);
+    public delegate float HeuristicsDelegate(Vector2Int p1,Vector2Int p2);
 
 
     public enum HeuristicsType {
@@ -25,22 +24,22 @@ namespace BigRogue.PathFinding {
         /// <summary>
         /// 曼哈顿
         /// </summary>
-        public static float Manhattan(int x,int y) {
-            return Mathf.Abs(x) + Mathf.Abs(y);
+        public static float Manhattan(Vector2Int n1,Vector2Int n2) {
+            return Mathf.Abs(n1.x-n2.x) + Mathf.Abs(n1.y-n2.y);
         }
         
         /// <summary>
         /// 欧几里得
         /// </summary>
-        public static float Euclidean(int x,int y) {
-            return Mathf.Sqrt(x * x + y * y);
+        public static float Euclidean(Vector2Int n1, Vector2Int n2) {
+            return Vector2Int.Distance(n1, n2);
         }
 
         /// <summary>
         /// 切比雪夫
         /// </summary>
-        public static float Chebyshev(int x,int y) {
-            return Mathf.Max(x, y);
+        public static float Chebyshev(Vector2Int n1, Vector2Int n2) {
+            return Mathf.Max(Mathf.Abs(n1.x-n2.x), Mathf.Abs(n1.y-n2.y));
         }
 
 

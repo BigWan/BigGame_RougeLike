@@ -25,6 +25,11 @@ namespace BigRogue.BattleSystem {
 
         private Outline outline;
 
+        public Vector2Int coordinate2D {
+            get {
+                return new Vector2Int(coordinate.x, coordinate.z);
+            }
+        }
 
         private void Awake() {
             outline = GetComponentInChildren<Outline>();

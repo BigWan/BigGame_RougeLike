@@ -23,6 +23,13 @@ namespace BigRogue.PathFinding {
             nodeDict = new Dictionary<Vector2Int, PathNode>();
         }
 
+        /// <summary>
+        /// 添加节点
+        /// </summary>
+        public void AddNode(Vector2Int key,PathNode value) {
+            nodeDict.Add(key, value);
+        }
+
         public PathNode GetNode(Vector2Int coordinate) {
             return nodeDict[coordinate];
         }

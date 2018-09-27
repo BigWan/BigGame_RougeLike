@@ -18,6 +18,24 @@ namespace BigRogue.PathFinding {
             new Vector2Int(-1,1)
         };
 
+
+        public static List<Vector2Int> GetEdgeNeighbours(this Vector2Int center) {
+            List<Vector2Int> result = new List<Vector2Int>();
+            for (int i = 0; i < edgeOffset.Length; i++) {
+                result.Add(edgeOffset[i]);
+            }
+            return result;
+        }
+
+
+        public static List<Vector2Int> GetCornerNeighbours(this Vector2Int center) {
+            List<Vector2Int> result = new List<Vector2Int>();
+            for (int i = 0; i < cornerOffset.Length; i++) {
+                result.Add(edgeOffset[i]);
+            }
+            return result;
+        }
+
         public static List<Vector2Int> GetNeightbours(this Vector2Int center,bool isIgnoreCorner) {
 
             List<Vector2Int> result = new List<Vector2Int>();
