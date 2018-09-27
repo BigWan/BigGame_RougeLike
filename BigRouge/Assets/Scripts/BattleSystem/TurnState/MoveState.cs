@@ -12,14 +12,14 @@ namespace BigRogue.BattleSystem {
 
         private BattleGround battleGround;
 
-        private List<Block> movingArea;
+        //private List<Block> movingArea;
 
         private Vector3Int moveTarget;
 
         public MoveState(Actor actor,BattleGround bg) {
             this.actor = actor;
             this.battleGround = bg;
-            movingArea = new List<Block>();
+            //movingArea = new List<Block>();
 
             battleGround.SelectBlockEventHandler += SelectBlock;
             actor.MoveOverHandler += MoveFinish;
@@ -27,7 +27,7 @@ namespace BigRogue.BattleSystem {
 
 
         public void SelectBlock(Block b) {
-            if (movingArea.Contains(b)) {
+            if (battleGround.movingArea.Contains(b)) {
                 moveTarget = b.coordinate;
                 StartMoving(moveTarget);
             } else {
@@ -41,24 +41,21 @@ namespace BigRogue.BattleSystem {
         }
 
         public override void Enter () {
-            movingArea = battleGround.HighlightArea(actor.coordinate, actor.moveRange, 2);
+            battleGround.ShowMovingArea(actor.coordinate, actor.moveRange, 2);
             
-            Debug.Log($"可行动区域有{movingArea.Count}");
+            Debug.Log($"可行动区域有{battleGround.movingArea.Count}");
         }
 
         void MoveFinish() {
             actor.allowMove = false;
-            actor.ChangeTurnState(new WaitInputState(actor));
+            actor.ChangeTurnState(new PrepareState(actor));
         }
 
         public override void Exit() {
             battleGround.SelectBlockEventHandler -= SelectBlock;
             actor.MoveOverHandler -= MoveFinish;
-            movingArea.Clear();
             battleGround.HideMovingArea();
-            
         }
-
 
     }
 }

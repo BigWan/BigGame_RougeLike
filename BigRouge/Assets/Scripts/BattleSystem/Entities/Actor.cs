@@ -45,7 +45,6 @@ namespace BigRogue.BattleSystem {
             }
         }
 
-
         public BattleGround battleGround {
             get {
                 return battleManager.battleGround;
@@ -56,6 +55,7 @@ namespace BigRogue.BattleSystem {
         [Header("Refs")]
         public BattleManager battleManager;
         private CombatState combatState;
+        private Animator m_animator;
 
         [Header("Event")]
 
@@ -69,9 +69,6 @@ namespace BigRogue.BattleSystem {
         /// </summary>
         public Action<Actor> FinishTurnHandler;
 
-        /// <summary>
-        /// 
-        /// </summary>
         protected Action<Actor> ActStartEventHandler;
         protected Action<Actor> ActEndEventHandler;
 
@@ -84,7 +81,6 @@ namespace BigRogue.BattleSystem {
         /// </summary>
         public Action<Actor> MoveEndEventHandler;
 
-
         // MonoBehaviour Message
 
         private void Awake() {
@@ -93,6 +89,7 @@ namespace BigRogue.BattleSystem {
         }
 
         private void Start() {
+            m_animator = GetComponentInChildren<Animator>();
             //turnState = new IdleState(); 
         }
 
@@ -125,7 +122,7 @@ namespace BigRogue.BattleSystem {
         #endregion
 
 
-        #region "Check Funcs"
+        #region "Check Flags"
 
         protected bool CanAct() {
             return true;
@@ -174,10 +171,8 @@ namespace BigRogue.BattleSystem {
             turnState = newState;
             turnState.Enter();
         }
-        
 
         public bool turnFinished;
-
 
         /// <summary>
         /// 进入回合
@@ -192,7 +187,7 @@ namespace BigRogue.BattleSystem {
             EnterTurnHandler?.Invoke(this);
             turn++;
 
-            turnState = new WaitInputState(this);
+            turnState = new PrepareState(this);
 
             while (turnFinished != true) {
                 yield return null;
@@ -208,21 +203,20 @@ namespace BigRogue.BattleSystem {
             energy -= 1000f;
         }
 
-
         public void GetFinishTurnCommand() { }
 
         public void StartMove(Vector3Int target) {
             StartCoroutine(MovingCoroutine(target));
         }
 
-        public  IEnumerator MovingCoroutine(Vector3Int target) {
-            
-            while((transform.localPosition - target).magnitude>=0.1f) {
+        public IEnumerator MovingCoroutine(Vector3Int target) {
+
+            while((transform.localPosition - target).magnitude >= 0.1f) {
                 transform.localPosition = Vector3.Lerp(transform.localPosition, target, 0.35f);
                  yield return null;
             }
             transform.localPosition = target;
-
+            coordinate = target;
 
             MoveOverHandler?.Invoke();
         }
@@ -236,12 +230,6 @@ namespace BigRogue.BattleSystem {
         }
 
         #endregion
-
-
-
-
-
-
 
 
     }

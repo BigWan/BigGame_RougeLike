@@ -12,7 +12,12 @@ namespace BigRogue.BattleSystem {
     /// 3.执行行动
     /// </summary>
     public class ActState : TurnStateBase {
-        
+
+        private int actType;
+        private Actor Target;
+        private int skillID;
+
+
         public ActState(Actor actor) {
             this.actor = actor;
         }

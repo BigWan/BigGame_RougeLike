@@ -5,9 +5,6 @@ using System.Linq;
 
 namespace BigRogue.BattleSystem {
 
-
-
-
     /// <summary>
     /// 战斗场景
     /// </summary>
@@ -26,17 +23,15 @@ namespace BigRogue.BattleSystem {
         public System.Action<Block> SelectBlockEventHandler;
 
 
-
-
         // Refs
         private List<Block> terrain;
-
 
 
         private void Awake() {
             terrain = new List<Block>();
             terrain = GetComponentsInChildren<Block>().ToList();
             selectedBlocks = new List<Block>();
+            movingArea = new List<Block>();
         }
 
         private void Start() {
@@ -59,7 +54,7 @@ namespace BigRogue.BattleSystem {
                     b.coordinate = new Vector3Int(x, 0, z);
                     b.battleGround = this;
 
-                    b.transform.localPosition = b.coordinate;
+                    b.transform.localPosition = b.coordinate + Vector3.up*Random.value*0.25f;
                     b.transform.SetParent(transform);
 
                     terrain.Add(b);
@@ -80,20 +75,15 @@ namespace BigRogue.BattleSystem {
         }
 
 
-
-        private List<Block> movingArea;
+        public List<Block> movingArea;
         /// <summary>
         /// 高亮显示场景区域
         /// </summary>
-        public List<Block> HighlightArea(Vector3Int center,int range,int lightColorIndex) {
-            Debug.Log("显示高丽囊格子");
+        public List<Block> ShowMovingArea(Vector3Int center,int range,int lightColorIndex) {
+
             List<Vector3Int> keys = GetManhattanCoordinate(center, range);
-            Debug.Log($"找到{keys.Count}");
-            if (movingArea == null)
-                movingArea = new List<Block>();
 
             movingArea.Clear();
-            //List<Block> result = new List<Block>();
             foreach (var block in terrain) {
                 if(keys.Contains(block.coordinate)) {
                     movingArea.Add(block);
@@ -107,14 +97,12 @@ namespace BigRogue.BattleSystem {
             return movingArea;
         }
 
+
+
         /// <summary>
         /// 关闭高亮的地块
         /// </summary>
         public void HideMovingArea() {
-            if (movingArea == null) {
-                return;
-            }
-
             foreach (var block in movingArea) {
                 block.CloseHighLight();
             }
@@ -148,7 +136,13 @@ namespace BigRogue.BattleSystem {
             return null;
         }
 
+        /// <summary>
+        /// 获取寻路的结点
+        /// </summary>
+        /// <returns></returns>
+        public List<PathNode> GetPathNode() {
 
+        }
 
     }
 }

@@ -168,7 +168,7 @@ namespace BigRogue.BattleSystem {
         /// <param name="center"></param>
         /// <param name="range"></param>
         public void ShowMovingArea(Vector3Int center,int range) {
-            battleGround.HighlightArea(center, range,2);
+            battleGround.ShowMovingArea(center, range,2);
         }
 
         /// <summary>

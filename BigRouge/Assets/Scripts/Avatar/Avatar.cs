@@ -24,7 +24,6 @@ namespace BigRogue.CharacterAvatar {
         private void Awake() {
             m_allAvatarRecords = new Dictionary<AvatarSlot, AvatarRecord>();
             m_allAvatarPart = new Dictionary<AvatarSlot, AvatarPart>();
-            animator = GetComponentInChildren<Animator>();
         }
 
         #endregion
@@ -73,6 +72,7 @@ namespace BigRogue.CharacterAvatar {
         /// </summary>
         /// <param name="avSlot"></param>
         void BuildAvatar(AvatarSlot avSlot) {
+
             if (bodyAvatar == null) return;
             if (!m_allAvatarRecords.ContainsKey(avSlot)) return;
             if (avSlot == AvatarSlot.MainBody) {
@@ -113,6 +113,7 @@ namespace BigRogue.CharacterAvatar {
 
             SetAvatarPart(AvatarSlot.MainBody, ap);
             bodyAvatar = ap.gameObject.AddComponent<AvatarBody>();
+            animator = bodyAvatar.GetComponent<Animator>();
         }
 
         MountingPoint GetMountingPoint(AvatarSlot avSlot) {
@@ -179,7 +180,6 @@ namespace BigRogue.CharacterAvatar {
             PlayerPrefs.SetInt("Avatar_Bag_ID", GetAvatarRecord(AvatarSlot.Bag).id);
             PlayerPrefs.SetInt("Avatar_MainHand_ID", GetAvatarRecord(AvatarSlot.MainHand).id);
             PlayerPrefs.SetInt("Avatar_OffHand_ID", GetAvatarRecord(AvatarSlot.OffHand).id);
-
         }
 
         public void ReadData() {
@@ -198,9 +198,9 @@ namespace BigRogue.CharacterAvatar {
 
 
         public AvatarPart GetAvatarPart(AvatarSlot avSlot) {
-            if (m_allAvatarPart.ContainsKey(avSlot)) {
+
+            if (m_allAvatarPart.ContainsKey(avSlot)) 
                 return m_allAvatarPart[avSlot];
-            }
 
             return null;
         }

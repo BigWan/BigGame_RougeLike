@@ -23,25 +23,18 @@ namespace BigRogue.BattleSystem {
 
         public BattleGround battleGround;
 
-
         private Outline outline;
-
 
 
         private void Awake() {
             outline = GetComponentInChildren<Outline>();
             if (outline == null)
                 throw new UnityException("没有找到高亮组件");
-
-            
         }
 
         private void Start() {
             outline.enabled = false;
         }
-        //private void OnMouseDown() {
-        //    //Debug.Log(transform.localPosition);
-        //}
 
         public void HighLight(int index) {
             outline.color = index;

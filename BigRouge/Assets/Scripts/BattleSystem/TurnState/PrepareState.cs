@@ -10,11 +10,11 @@ namespace BigRogue.BattleSystem {
     /// 弹出操作菜单,
     /// 这阶段可以进行的操作:移动,使用技能,使用道具,结束回合
     /// </summary>
-    public class WaitInputState : TurnStateBase {
+    public class PrepareState : TurnStateBase {
 
         public OperateMenu opMenu;
 
-        public WaitInputState(Actor actor) {
+        public PrepareState(Actor actor) {
             this.actor = actor;
             this.opMenu = actor.battleManager.opMenu;
             Enter();
