@@ -36,7 +36,7 @@ namespace BigRogue.PathFinding {
             return result;
         }
 
-        public static List<Vector2Int> GetNeightbours(this Vector2Int center,bool isIgnoreCorner) {
+        public static List<Vector2Int> GetNeightbours(this Vector2Int center,bool allowDiagonal) {
 
             List<Vector2Int> result = new List<Vector2Int>();
 
@@ -44,7 +44,7 @@ namespace BigRogue.PathFinding {
                 result.Add(edgeOffset[i] + center);
             }
 
-            if(isIgnoreCorner) return result;
+            if(!allowDiagonal) return result;
 
             for (int i = 0; i < cornerOffset.Length; i++) {
                 result.Add(cornerOffset[i]+ center);

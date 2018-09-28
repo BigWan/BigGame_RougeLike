@@ -55,7 +55,7 @@ namespace BigRogue.BattleSystem {
                     b.coordinate3D = new Vector3Int(x, 0, z);
                     b.battleGround = this;
 
-                    b.transform.localPosition = b.coordinate3D + Vector3.up * Random.value * 0.25f;
+                    b.transform.localPosition = b.localPosition;
                     b.transform.SetParent(transform);
 
                     terrain.Add(b);
@@ -78,7 +78,7 @@ namespace BigRogue.BattleSystem {
 
         public List<Block> movingArea;
         /// <summary>
-        /// 高亮显示场景区域
+        /// 显示一个单位可以移动的距离
         /// </summary>
         public List<Block> ShowMovingArea(Vector3Int center, int range, int lightColorIndex) {
 
@@ -96,6 +96,10 @@ namespace BigRogue.BattleSystem {
                 block.HighLight(lightColorIndex);
             }
             return movingArea;
+        }
+
+        public List<Block> ShowMovingArea(Actor actor) {
+            return null;
         }
 
 
@@ -151,7 +155,7 @@ namespace BigRogue.BattleSystem {
         /// <summary>
         /// 生成寻路网
         /// </summary>
-        public NodeMesh CreateNodeMesh() {
+        public NodeMesh PathNodeMesh() {
             NodeMesh mesh = new NodeMesh();
             foreach (var block in terrain /*movingArea*/) {
                 mesh.AddNode(block.coordinate2D, new PathNode(block));

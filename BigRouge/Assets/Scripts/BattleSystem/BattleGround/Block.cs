@@ -19,17 +19,14 @@ namespace BigRogue.BattleSystem {
     [RequireComponent(typeof(BoxCollider))]
     public class Block : Entity {
 
+
         private bool selected;
 
         public BattleGround battleGround;
 
         private Outline outline;
 
-        public Vector2Int coordinate2D {
-            get {
-                return new Vector2Int(coordinate3D.x, coordinate3D.z);
-            }
-        }
+        public float edgeLength = 1f;
 
         private void Awake() {
             outline = GetComponentInChildren<Outline>();

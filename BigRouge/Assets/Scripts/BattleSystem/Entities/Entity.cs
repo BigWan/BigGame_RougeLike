@@ -20,9 +20,14 @@ namespace BigRogue.BattleSystem {
         public int z { get { return coordinate3D.z; } }
         public int y { get { return coordinate3D.y; } }
 
-        public float height { get { return y * 0.5f; } }
 
         public Vector2Int coordinate2D { get { return new Vector2Int(x, z); } }
+        public float height { get { return y * 0.5f; } }
     
+        public Vector3 localPosition {
+            get {
+                return new Vector3(x, height, z);
+            }
+        }
     }
 }

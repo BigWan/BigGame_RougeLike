@@ -17,18 +17,17 @@ namespace BigRogue.PathFinding {
 
         public bool aviable;   // 能否行走
 
+        public float height { get { return y * 0.5f; } }
 
-        /// <summary>
-        /// Node的坐标
-        /// </summary>
-        public Vector3 position {
-            get {
-                return new Vector3(x,y,z);
-            }
-        }
 
         public Vector3Int coordinate3D {
             get { return new Vector3Int(x, y, z); }
+        }
+
+        public Vector3 localPosition {
+            get {
+                return new Vector3(x, height, z);
+            }
         }
 
         /// <summary>
@@ -47,7 +46,7 @@ namespace BigRogue.PathFinding {
         public float f { get { return h + g; } }
 
         /// <summary>
-        /// 从Block构造
+        /// 从Block构造一个节点
         /// </summary>
         /// <param name="block"></param>
         public PathNode(BattleSystem.Block block) {
@@ -55,7 +54,10 @@ namespace BigRogue.PathFinding {
             y = block.y;
             aviable = true;
         }
-
+        /// <summary>
+        /// 从2d坐标构造一个寻路节点
+        /// </summary>
+        /// <param name="coordinate2D"></param>
         public PathNode(Vector2Int coordinate2D) {
             this.coordinate2D = coordinate2D;
             y = 0;
@@ -69,6 +71,10 @@ namespace BigRogue.PathFinding {
         public override bool Equals(object obj) {
             if (!(obj is PathNode)) return false;
             PathNode node = (PathNode)obj;
+            return coordinate2D == node.coordinate2D;
+        }
+
+        public bool Equals(PathNode node) {
             return coordinate2D == node.coordinate2D;
         }
 
@@ -91,7 +97,7 @@ namespace BigRogue.PathFinding {
         }
 
         // 发现一个新点
-        public void InitFrom(PathNode center,PathNode end,HeuristicsDelegate func) {
+        public void GetDataFrom(PathNode center,PathNode end,HeuristicsDelegate func) {
             float deltaG = func(this.coordinate2D, center.coordinate2D);
             g = center.g + deltaG;
             h = func(this.coordinate2D, end.coordinate2D);

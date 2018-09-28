@@ -31,31 +31,18 @@ namespace BigRogue.BattleSystem {
             if (battleGround.movingArea.Contains(b)) {
                 moveTarget = b.coordinate3D;
                 //StartMoving(moveTarget); // lerp
-
-                NodeMesh mesh = battleGround.CreateNodeMesh();
-
-                List<PathNode> path = AStar.FindPath(mesh,
-                    mesh.GetNode(actor.coordinate2D),
-                    mesh.GetNode(b.coordinate2D),HeuristicsType.Chebyshev,false,0 );
-
-                Debug.Log("发生错误的地方" + path.Count);
-
-                StartMove(path);
-
-
+                battleGround.HideMovingArea();
+                actor.StartMove(b);
             } else {
                 Debug.Log($"无法移动到{b.coordinate3D}");
             }
         }
 
-        void StartMove(List<PathNode> blocks) {
-            actor.StartMove(blocks);
-        }
-
-        void StartMove(Vector3Int target) {
-            actor.StartMove(target);
-            //actor.ChangeTurnState(new MovingState(actor, b));
-        }
+        //void StartMove(Vector3Int target) {
+        //    battleGround.HideMovingArea();
+        //    actor.StartMove(target);
+        //    //actor.ChangeTurnState(new MovingState(actor, b));
+        //}
 
         public override void Enter () {
             battleGround.ShowMovingArea(actor.coordinate3D, actor.moveRange, 2);

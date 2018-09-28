@@ -23,6 +23,15 @@ namespace BigRogue.PathFinding {
             nodeDict = new Dictionary<Vector2Int, PathNode>();
         }
 
+        /// <summary>
+        /// 是否存在某个节点
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public bool Exists(PathNode node) {
+            return nodeDict.ContainsValue(node);
+        }
+
 
 
         /// <summary>
@@ -39,16 +48,16 @@ namespace BigRogue.PathFinding {
         /// 获取邻居结点
         /// </summary>
         /// <param name="point"></param>
-        /// <param name="isIgnoreCorner">是否包括斜边</param>
+        /// <param name="allowDiagonal">是否包括斜边</param>
         /// <returns></returns>
-        public List<PathNode> GetNeighbour(PathNode point, bool isIgnoreCorner = true) {
+        public List<PathNode> GetNeighbour(PathNode point, bool allowDiagonal = true) {
 
             List<PathNode> temp = new List<PathNode>();
                       
 
             Vector2Int center = point.coordinate2D;
 
-            List<Vector2Int> neighbourCoordinates = center.GetNeightbours(isIgnoreCorner);
+            List<Vector2Int> neighbourCoordinates = center.GetNeightbours(allowDiagonal);
 
             foreach (var item in neighbourCoordinates) {
                 if (nodeDict.ContainsKey(item))

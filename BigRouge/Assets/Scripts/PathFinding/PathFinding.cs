@@ -31,17 +31,20 @@ namespace BigRogue.PathFinding {
             return neighbour.y - current.y <= hightLimit;
         }
 
-
+        
         /// <summary>
         /// 寻路主算法
         /// </summary>
-        /// <param name="mesh">寻路结点网格</param>
+        /// <param name="mesh">寻路网格</param>
         /// <param name="start">开始结点</param>
         /// <param name="end">结束结点</param>
         /// <param name="hType">启发函数类型</param>
+        /// <param name="allowDiagonal">允许走对角线</param>
         /// <param name="hightLimit">高度限制</param>
-        /// <returns>寻路结果,从起点到终点的结点列表</returns>
-        public static List<PathNode> FindPath(NodeMesh mesh, PathNode start, PathNode end, HeuristicsType hType, bool isIgnoreCorner, int hightLimit = 0) {
+        /// <returns></returns>
+        public static List<PathNode> FindPath(NodeMesh mesh, PathNode start, PathNode end, HeuristicsType hType, bool allowDiagonal, int hightLimit = 0) {
+
+            if (!mesh.Exists(start) || !mesh.Exists(end)) return null;
 
             HeuristicsDelegate hFunc = Heuristics.HeuristicsFactory(hType);
 
@@ -68,7 +71,7 @@ namespace BigRogue.PathFinding {
                 closeList.Add(current);
 
                 // 获取相邻节点
-                List<PathNode> neighbours = mesh.GetNeighbour(current, isIgnoreCorner);
+                List<PathNode> neighbours = mesh.GetNeighbour(current, allowDiagonal);
 
                 // 遍历处理邻居节点
                 foreach (PathNode nb in neighbours) {
@@ -82,7 +85,7 @@ namespace BigRogue.PathFinding {
                         nb.UpdateFrom(current, hFunc);
                     } else {
                         // 计算H 和parent和G// 新出现的节点
-                        nb.InitFrom(current, end, hFunc);
+                        nb.GetDataFrom(current, end, hFunc);
                         openList.Add(nb);
                     }
                 }
