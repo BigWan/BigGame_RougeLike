@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BigRogue.PathFinding;
 
 namespace BigRogue.BattleSystem {
     /// <summary>
@@ -28,20 +29,36 @@ namespace BigRogue.BattleSystem {
 
         public void SelectBlock(Block b) {
             if (battleGround.movingArea.Contains(b)) {
-                moveTarget = b.coordinate;
-                StartMoving(moveTarget);
+                moveTarget = b.coordinate3D;
+                //StartMoving(moveTarget); // lerp
+
+                NodeMesh mesh = battleGround.CreateNodeMesh();
+
+                List<PathNode> path = AStar.FindPath(mesh,
+                    mesh.GetNode(actor.coordinate2D),
+                    mesh.GetNode(b.coordinate2D),HeuristicsType.Chebyshev,false,0 );
+
+                Debug.Log("发生错误的地方" + path.Count);
+
+                StartMove(path);
+
+
             } else {
-                Debug.Log($"无法移动到{b.coordinate}");
+                Debug.Log($"无法移动到{b.coordinate3D}");
             }
         }
 
-        private void StartMoving(Vector3Int target) {
+        void StartMove(List<PathNode> blocks) {
+            actor.StartMove(blocks);
+        }
+
+        void StartMove(Vector3Int target) {
             actor.StartMove(target);
             //actor.ChangeTurnState(new MovingState(actor, b));
         }
 
         public override void Enter () {
-            battleGround.ShowMovingArea(actor.coordinate, actor.moveRange, 2);
+            battleGround.ShowMovingArea(actor.coordinate3D, actor.moveRange, 2);
             
             Debug.Log($"可行动区域有{battleGround.movingArea.Count}");
         }

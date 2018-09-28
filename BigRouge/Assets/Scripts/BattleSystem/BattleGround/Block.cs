@@ -27,7 +27,7 @@ namespace BigRogue.BattleSystem {
 
         public Vector2Int coordinate2D {
             get {
-                return new Vector2Int(coordinate.x, coordinate.z);
+                return new Vector2Int(coordinate3D.x, coordinate3D.z);
             }
         }
 

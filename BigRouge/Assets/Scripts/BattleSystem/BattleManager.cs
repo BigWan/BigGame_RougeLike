@@ -30,6 +30,11 @@ namespace BigRogue.BattleSystem {
         public GameUI.OperateMenu opMenu;
         public GameUI.HeadBar info;
 
+        /// <summary>
+        /// 寻路类型,计算距离使用欧几里得还是曼哈顿还是切比雪夫距离
+        /// </summary>
+        public PathFinding.HeuristicsType pathFindingType;
+
 
         /// <summary>
         /// 战斗场景内所有的Actor对象

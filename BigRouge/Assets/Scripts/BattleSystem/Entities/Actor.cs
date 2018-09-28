@@ -209,6 +209,15 @@ namespace BigRogue.BattleSystem {
             StartCoroutine(MovingCoroutine(target));
         }
 
+        public void StartMove(List<PathFinding.PathNode> blocks) {
+            StartCoroutine(MovingCoroutine(blocks));
+        }
+
+        /// <summary>
+        /// Lerp 到一个坐标
+        /// </summary>
+        /// <param name="target"></param>
+        /// <returns></returns>
         public IEnumerator MovingCoroutine(Vector3Int target) {
 
             while((transform.localPosition - target).magnitude >= 0.1f) {
@@ -216,10 +225,26 @@ namespace BigRogue.BattleSystem {
                  yield return null;
             }
             transform.localPosition = target;
-            coordinate = target;
+            coordinate3D = target;
 
             MoveOverHandler?.Invoke();
         }
+
+        /// <summary>
+        /// 一个一个的移动
+        /// </summary>
+        /// <param name="blocks"></param>
+        /// <returns></returns>
+        public IEnumerator MovingCoroutine(List<PathFinding.PathNode> blocks) {
+            for (int i = blocks.Count-1; i >=0 ; i--) {
+                transform.localPosition = blocks[i].position;
+                yield return new WaitForSeconds(0.1f);
+            }
+            transform.localPosition = blocks[0].position;
+            coordinate3D = blocks[0].coordinate3D;
+            MoveOverHandler?.Invoke();
+        }
+
 
         private void Select() {
 

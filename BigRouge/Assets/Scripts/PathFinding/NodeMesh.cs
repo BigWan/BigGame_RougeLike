@@ -23,6 +23,8 @@ namespace BigRogue.PathFinding {
             nodeDict = new Dictionary<Vector2Int, PathNode>();
         }
 
+
+
         /// <summary>
         /// 添加节点
         /// </summary>
@@ -44,7 +46,7 @@ namespace BigRogue.PathFinding {
             List<PathNode> temp = new List<PathNode>();
                       
 
-            Vector2Int center = point.coordinate;
+            Vector2Int center = point.coordinate2D;
 
             List<Vector2Int> neighbourCoordinates = center.GetNeightbours(isIgnoreCorner);
 

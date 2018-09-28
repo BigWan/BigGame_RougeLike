@@ -22,7 +22,7 @@ namespace BigRogue.PathFinding {
         public static List<Vector2Int> GetEdgeNeighbours(this Vector2Int center) {
             List<Vector2Int> result = new List<Vector2Int>();
             for (int i = 0; i < edgeOffset.Length; i++) {
-                result.Add(edgeOffset[i]);
+                result.Add(edgeOffset[i]+ center);
             }
             return result;
         }
@@ -31,7 +31,7 @@ namespace BigRogue.PathFinding {
         public static List<Vector2Int> GetCornerNeighbours(this Vector2Int center) {
             List<Vector2Int> result = new List<Vector2Int>();
             for (int i = 0; i < cornerOffset.Length; i++) {
-                result.Add(edgeOffset[i]);
+                result.Add(edgeOffset[i] + center);
             }
             return result;
         }
@@ -41,13 +41,13 @@ namespace BigRogue.PathFinding {
             List<Vector2Int> result = new List<Vector2Int>();
 
             for (int i = 0; i < edgeOffset.Length; i++) {
-                result.Add(edgeOffset[i]);
+                result.Add(edgeOffset[i] + center);
             }
 
             if(isIgnoreCorner) return result;
 
             for (int i = 0; i < cornerOffset.Length; i++) {
-                result.Add(cornerOffset[i]);
+                result.Add(cornerOffset[i]+ center);
             }
 
             return result;

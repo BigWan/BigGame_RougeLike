@@ -6,6 +6,12 @@ using UnityEngine;
 
 namespace BigRogue.PathFinding {
 
+    /// <summary>
+    /// 2D网格结点的距离计算
+    /// </summary>
+    /// <param name="p1"></param>
+    /// <param name="p2"></param>
+    /// <returns></returns>
     public delegate float HeuristicsDelegate(Vector2Int p1,Vector2Int p2);
 
 

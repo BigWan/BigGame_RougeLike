@@ -8,14 +8,12 @@ namespace BigRogue.PathFinding {
     /// <summary>
     /// 寻路功能主体
     /// </summary>
-    public static class PathFinding {
-
-
+    public static class AStar {
 
         static List<PathNode> openList;
         static List<PathNode> closeList;
 
-        static PathFinding() {
+        static AStar() {
             openList = new List<PathNode>();
             closeList = new List<PathNode>();
         }
@@ -27,10 +25,10 @@ namespace BigRogue.PathFinding {
         /// <param name="neighbour">邻点</param>
         /// <param name="hightLimit">高差限制(能从高处走到低处,不能从低处走向高处)</param>
         /// <returns></returns>
-        static bool CanMoveTo(PathNode current, PathNode neighbour, float hightLimit) {
+        static bool CanMoveTo(PathNode current, PathNode neighbour, int hightLimit) {
             if (!neighbour.aviable) return false;
 
-            return neighbour.height - current.height < hightLimit;
+            return neighbour.y - current.y <= hightLimit;
         }
 
 
@@ -43,7 +41,7 @@ namespace BigRogue.PathFinding {
         /// <param name="hType">启发函数类型</param>
         /// <param name="hightLimit">高度限制</param>
         /// <returns>寻路结果,从起点到终点的结点列表</returns>
-        public static List<PathNode> FindPath(NodeMesh mesh, PathNode start, PathNode end, HeuristicsType hType, bool isIgnoreCorner, float hightLimit = 0) {
+        public static List<PathNode> FindPath(NodeMesh mesh, PathNode start, PathNode end, HeuristicsType hType, bool isIgnoreCorner, int hightLimit = 0) {
 
             HeuristicsDelegate hFunc = Heuristics.HeuristicsFactory(hType);
 
@@ -54,14 +52,17 @@ namespace BigRogue.PathFinding {
             PathNode current;
             openList.Add(start);
 
+            bool canReach = false;
+
             // 循环处理开放节点列表(边界)
             while (openList.Count > 0) {
 
-                openList.OrderBy(n => n.f).ToList();
+                current = openList.OrderBy(n => n.f).First();
 
-                current = openList[0];
-
-                if (current == end) break;
+                if (current.Equals(end)) {
+                    canReach = true;
+                    break;
+                }
 
                 openList.Remove(current);
                 closeList.Add(current);
@@ -79,16 +80,25 @@ namespace BigRogue.PathFinding {
                     if (openList.IndexOf(nb) > -1) {   // nb在open列表中
                         // 检测,是否需要 (更新G值,设置parent为current)
                         nb.UpdateFrom(current, hFunc);
-                    }
-                    // 新出现的节点
-                    else {
-                        // 计算H 和parent和G
+                    } else {
+                        // 计算H 和parent和G// 新出现的节点
                         nb.InitFrom(current, end, hFunc);
-
+                        openList.Add(nb);
                     }
                 }
             }
-            return new List<PathNode>(); 
+
+            Debug.Log("CanReach" + canReach);
+            if (!canReach) return null;
+
+            current = end;
+            List<PathNode> result = new List<PathNode>();
+            while (current.parent != null) {
+                result.Add(current);
+                current = current.parent;
+            }
+
+            return result ;
         }
 
     }

@@ -50,12 +50,12 @@ namespace BigRogue.BattleSystem {
 
             for (int z = 0; z < length; z++) {
                 for (int x = 0; x < width; x++) {
-                    Block b =  Instantiate<Block>(blockPrefabs[Random.Range(0, blockPrefabs.Count)]);
+                    Block b = Instantiate<Block>(blockPrefabs[Random.Range(0, blockPrefabs.Count)]);
 
-                    b.coordinate = new Vector3Int(x, 0, z);
+                    b.coordinate3D = new Vector3Int(x, 0, z);
                     b.battleGround = this;
 
-                    b.transform.localPosition = b.coordinate + Vector3.up*Random.value*0.25f;
+                    b.transform.localPosition = b.coordinate3D + Vector3.up * Random.value * 0.25f;
                     b.transform.SetParent(transform);
 
                     terrain.Add(b);
@@ -70,7 +70,7 @@ namespace BigRogue.BattleSystem {
                     b.DeSelect();
                 }
                 selectedBlocks.Clear();
-            } 
+            }
             selectedBlocks.Add(block);
             SelectBlockEventHandler?.Invoke(block);
         }
@@ -80,13 +80,13 @@ namespace BigRogue.BattleSystem {
         /// <summary>
         /// 高亮显示场景区域
         /// </summary>
-        public List<Block> ShowMovingArea(Vector3Int center,int range,int lightColorIndex) {
+        public List<Block> ShowMovingArea(Vector3Int center, int range, int lightColorIndex) {
 
             List<Vector3Int> keys = GetManhattanCoordinate(center, range);
 
             movingArea.Clear();
             foreach (var block in terrain) {
-                if(keys.Contains(block.coordinate)) {
+                if (keys.Contains(block.coordinate3D)) {
                     movingArea.Add(block);
                 }
             }
@@ -115,22 +115,25 @@ namespace BigRogue.BattleSystem {
         /// <param name="center"></param>
         /// <param name="range"></param>
         /// <returns></returns>
-        List<Vector3Int> GetManhattanCoordinate(Vector3Int center,int range) {
+        List<Vector3Int> GetManhattanCoordinate(Vector3Int center, int range) {
             List<Vector3Int> result = new List<Vector3Int>();
             int offset1 = 0;
             int offset2 = 0;
-            for (int x =-range; x <= range; x++) {
-                offset1 = range - Mathf.Abs(x); 
-                for (int z = - offset1; z <= +offset1; z++) {
+            for (int x = -range; x <= range; x++) {
+                offset1 = range - Mathf.Abs(x);
+                for (int z = -offset1; z <= +offset1; z++) {
                     offset2 = range - Mathf.Abs(x) - Mathf.Abs(z);
                     for (int y = -offset2; y <= offset2; y++) {
-                       result.Add(new Vector3Int(x, y, z)+center);
+                        result.Add(new Vector3Int(x, y, z) + center);
                     }
                 }
             }
 
             return result;
         }
+
+
+
 
 
         public Texture2D BuildMiniMap() {
@@ -145,13 +148,12 @@ namespace BigRogue.BattleSystem {
         //    PathFinding.PathFinding.FindPath()
         //}
 
-
         /// <summary>
         /// 生成寻路网
         /// </summary>
-        public NodeMesh CreateNodeMesh(List<Block> blocks) {
+        public NodeMesh CreateNodeMesh() {
             NodeMesh mesh = new NodeMesh();
-            foreach (var block in blocks) {
+            foreach (var block in terrain /*movingArea*/) {
                 mesh.AddNode(block.coordinate2D, new PathNode(block));
             }
             return mesh;

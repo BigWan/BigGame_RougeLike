@@ -13,8 +13,16 @@ namespace BigRogue.BattleSystem {
     /// </summary>
     public abstract class Entity : MonoBehaviour {
 
-        [Header("Entity.coordinate")]
-        public Vector3Int coordinate;
+        [Header("Entity Base Property")]
+        public Vector3Int coordinate3D;
 
+        public int x { get { return coordinate3D.x; } }
+        public int z { get { return coordinate3D.z; } }
+        public int y { get { return coordinate3D.y; } }
+
+        public float height { get { return y * 0.5f; } }
+
+        public Vector2Int coordinate2D { get { return new Vector2Int(x, z); } }
+    
     }
 }
