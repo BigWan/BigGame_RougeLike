@@ -91,7 +91,6 @@ namespace BigRogue.PathFinding {
                 }
             }
 
-            Debug.Log("CanReach" + canReach);
             if (!canReach) return null;
 
             current = end;

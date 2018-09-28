@@ -39,7 +39,6 @@ namespace BigRogue.BattleSystem {
             SpawnBlock();
         }
 
-        [ContextMenu("Spawn")]
         void SpawnBlock() {
             if (terrain != null) {
                 foreach (var item in terrain) {
@@ -78,7 +77,7 @@ namespace BigRogue.BattleSystem {
 
         public List<Block> movingArea;
         /// <summary>
-        /// 显示一个单位可以移动的距离
+        /// 显示一个单位可以移动的范围
         /// </summary>
         public List<Block> ShowMovingArea(Vector3Int center, int range, int lightColorIndex) {
 
@@ -90,7 +89,6 @@ namespace BigRogue.BattleSystem {
                     movingArea.Add(block);
                 }
             }
-            Debug.Log($"有{movingArea.Count}个格子");
 
             foreach (var block in movingArea) {
                 block.HighLight(lightColorIndex);
@@ -99,7 +97,7 @@ namespace BigRogue.BattleSystem {
         }
 
         public List<Block> ShowMovingArea(Actor actor) {
-            return null;
+            throw new UnityException("功能未实现");
         }
 
 

@@ -6,7 +6,7 @@ using BigRogue.GameUI;
 namespace BigRogue.BattleSystem {
 
     /// <summary>
-    /// 回合状态之等待操作 
+    /// 准备状态,等待操作,根据状态显示不同的操作菜单
     /// 弹出操作菜单,
     /// 这阶段可以进行的操作:移动,使用技能,使用道具,结束回合
     /// </summary>

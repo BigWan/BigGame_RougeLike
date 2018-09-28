@@ -33,9 +33,7 @@ namespace BigRogue.BattleSystem {
                 //StartMoving(moveTarget); // lerp
                 battleGround.HideMovingArea();
                 actor.StartMove(b);
-            } else {
-                Debug.Log($"无法移动到{b.coordinate3D}");
-            }
+            } 
         }
 
         //void StartMove(Vector3Int target) {
