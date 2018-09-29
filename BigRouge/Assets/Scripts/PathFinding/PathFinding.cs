@@ -26,12 +26,12 @@ namespace BigRogue.PathFinding {
         /// <param name="hightLimit">高差限制(能从高处走到低处,不能从低处走向高处)</param>
         /// <returns></returns>
         static bool CanMoveTo(PathNode current, PathNode neighbour, int hightLimit) {
-            if (!neighbour.aviable) return false;
+            //if (!neighbour.aviable) return false;
 
-            return neighbour.y - current.y <= hightLimit;
+            return neighbour.height - current.height <= hightLimit;
         }
 
-        
+
         /// <summary>
         /// 寻路主算法
         /// </summary>

@@ -12,13 +12,16 @@ namespace BigRogue.PathFinding {
     /// <param name="p1"></param>
     /// <param name="p2"></param>
     /// <returns></returns>
-    public delegate float HeuristicsDelegate(Vector2Int p1,Vector2Int p2);
+    public delegate float HeuristicsDelegate(Vector3Int p1,Vector3Int p2);
 
 
     public enum HeuristicsType {
         Manhattan,
+        Manhattan2D,
         Chebyshev,
-        Euclidean
+        Chebyshev2D,
+        Euclidean,
+        Euclidean2D
     }
 
 
@@ -30,22 +33,35 @@ namespace BigRogue.PathFinding {
         /// <summary>
         /// 曼哈顿
         /// </summary>
-        public static float Manhattan(Vector2Int n1,Vector2Int n2) {
-            return Mathf.Abs(n1.x-n2.x) + Mathf.Abs(n1.y-n2.y);
+        public static float Manhattan(Vector3Int n1, Vector3Int n2) {
+            return Mathf.Abs(n1.x - n2.x) + Mathf.Abs(n1.y - n2.y) + Mathf.Abs(n1.z - n2.z);
         }
-        
+
+        public static float Manhattan2D(Vector3Int n1,Vector3Int n2) {
+            return Mathf.Abs(n1.x-n2.x) + Mathf.Abs(n1.z-n2.z);
+        }
+
+
         /// <summary>
         /// 欧几里得
         /// </summary>
-        public static float Euclidean(Vector2Int n1, Vector2Int n2) {
-            return Vector2Int.Distance(n1, n2);
+        public static float Euclidean(Vector3Int n1, Vector3Int n2) {
+            return Vector3Int.Distance(n1, n2);
         }
+        public static float Euclidean2D(Vector3Int n1, Vector3Int n2) {
+            return Mathf.Sqrt((n1.x - n2.x) ^ 2 + (n1.z - n2.z) ^ 2);
+        }
+
 
         /// <summary>
         /// 切比雪夫
         /// </summary>
-        public static float Chebyshev(Vector2Int n1, Vector2Int n2) {
-            return Mathf.Max(Mathf.Abs(n1.x-n2.x), Mathf.Abs(n1.y-n2.y));
+        public static float Chebyshev(Vector3Int n1, Vector3Int n2) {
+            return Mathf.Max(Mathf.Abs(n1.x-n2.x), Mathf.Abs(n1.y - n2.y), Mathf.Abs(n1.z-n2.z));
+        }
+
+        public static float Chebyshev2D(Vector3Int n1,Vector3Int n2) {
+            return Mathf.Max(Mathf.Abs(n1.x - n2.x), Mathf.Abs(n1.y - n2.y));
         }
 
 

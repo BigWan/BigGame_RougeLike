@@ -29,7 +29,7 @@ namespace BigRogue.BattleSystem {
 
         public void SelectBlock(Block b) {
             if (battleGround.movingArea.Contains(b)) {
-                moveTarget = b.coordinate3D;
+                moveTarget = b.coord;
                 //StartMoving(moveTarget); // lerp
                 battleGround.HideMovingArea();
                 actor.StartMove(b);
@@ -43,9 +43,9 @@ namespace BigRogue.BattleSystem {
         //}
 
         public override void Enter () {
-            battleGround.ShowMovingArea(actor.coordinate3D, actor.moveRange, 2);
+            battleGround.ShowMovingArea(actor.coord, actor.moveRange, 2);
             
-            Debug.Log($"可行动区域有{battleGround.movingArea.Count}");
+            //Debug.Log($"可行动区域有{battleGround.movingArea.Count}");
         }
 
         void MoveFinish() {

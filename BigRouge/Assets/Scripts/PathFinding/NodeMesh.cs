@@ -12,15 +12,15 @@ namespace BigRogue.PathFinding {
         /// <summary>
         /// 寻路的结点
         /// </summary>
-        private Dictionary<Vector2Int,PathNode> nodeDict;
+        private Dictionary<Vector3Int,PathNode> nodeDict;
 
 
-        public NodeMesh(Dictionary<Vector2Int, PathNode> nodeDict) {
+        public NodeMesh(Dictionary<Vector3Int, PathNode> nodeDict) {
             this.nodeDict = nodeDict;
         }
 
         public NodeMesh() {
-            nodeDict = new Dictionary<Vector2Int, PathNode>();
+            nodeDict = new Dictionary<Vector3Int, PathNode>();
         }
 
         /// <summary>
@@ -37,11 +37,11 @@ namespace BigRogue.PathFinding {
         /// <summary>
         /// 添加节点
         /// </summary>
-        public void AddNode(Vector2Int key,PathNode value) {
+        public void AddNode(Vector3Int key,PathNode value) {
             nodeDict.Add(key, value);
         }
 
-        public PathNode GetNode(Vector2Int coordinate) {
+        public PathNode GetNode(Vector3Int coordinate) {
             return nodeDict[coordinate];
         }
         /// <summary>
@@ -55,9 +55,9 @@ namespace BigRogue.PathFinding {
             List<PathNode> temp = new List<PathNode>();
                       
 
-            Vector2Int center = point.coordinate2D;
+            Vector3Int center = point.coord;
 
-            List<Vector2Int> neighbourCoordinates = center.GetNeightbours(allowDiagonal);
+            List<Vector3Int> neighbourCoordinates = center.GetNeightbours(allowDiagonal);
 
             foreach (var item in neighbourCoordinates) {
                 if (nodeDict.ContainsKey(item))

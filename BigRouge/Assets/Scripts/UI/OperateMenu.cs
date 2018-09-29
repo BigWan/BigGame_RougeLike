@@ -56,6 +56,9 @@ namespace BigRogue.GameUI {
             var y = cg.DOFade(1, 1f);
         }
 
+        public void FadeOut() {
+            var x = rectTrans.DOAnchorPos3D(new  Vector3(400, 50, 0),0.3f);
+        }
 
         /// <summary>
         /// 绑定事件

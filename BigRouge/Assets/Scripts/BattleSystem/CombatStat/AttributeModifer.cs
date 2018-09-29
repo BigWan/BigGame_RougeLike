@@ -18,7 +18,7 @@ namespace BigRogue.BattleSystem {
     }
 
     /// <summary>
-    /// 游戏中加属性的东西
+    /// 属性修改器对象
     /// </summary>
     public class AttributeModifer {
         public int attrID;              // 属性ID

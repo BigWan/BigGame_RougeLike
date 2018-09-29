@@ -7,7 +7,7 @@ namespace BigRogue.BattleSystem {
 
 
     /// <summary>
-    /// 属性类
+    /// 单条属性类
     /// </summary>
     public class Attribute {
 

@@ -12,5 +12,10 @@ namespace BigRogue.ItemSystem {
 
     }
 
-    public class Equip : Item { }
+
+
+
+    public class Equip : Item {
+
+    }
 }

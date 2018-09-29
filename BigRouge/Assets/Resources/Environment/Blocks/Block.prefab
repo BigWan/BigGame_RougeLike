@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7f3331d4d818c43a47579f10c379a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordinate: {x: 0, y: 0, z: 0}
+  coord: {x: 0, y: 0, z: 0}
   battleGround: {fileID: 0}
+  edgeLength: 1
 --- !u!65 &1916836089061211867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71,7 +72,7 @@ GameObject:
   - component: {fileID: 3425444565895166952}
   - component: {fileID: 2932730239781422440}
   - component: {fileID: 8321367661276643822}
-  - component: {fileID: 8483369300535940068}
+  - component: {fileID: 5896678596763791158}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -138,7 +139,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8483369300535940068
+--- !u!114 &5896678596763791158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 2
+  color: 0
   eraseRenderer: 0
   originalLayer: 0
   originalMaterials: []
