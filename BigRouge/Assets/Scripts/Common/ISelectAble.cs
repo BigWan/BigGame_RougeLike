@@ -8,7 +8,7 @@ namespace BigRogue {
     /// 可以被选择的接口
     /// </summary>
     public interface ISelectAble {
-
+        
         System.Action OnSelect();
         System.Action OnDeselect();
 

@@ -23,14 +23,23 @@ namespace BigRogue.BattleSystem {
         /// </summary>
         public float heightStep = 0.5f;
 
+        [Header("Block Highlight")]
+        public GameObject[] highlightPrefabs;
+
+
+
         [Header("Selected")]
         public List<Block> selectedBlocks;
 
         public System.Action<Block> SelectBlockEventHandler;
 
 
+
         // Refs
         private List<Block> terrain;
+
+
+
 
 
         private void Awake() {
@@ -38,6 +47,7 @@ namespace BigRogue.BattleSystem {
             terrain = GetComponentsInChildren<Block>().ToList();
             selectedBlocks = new List<Block>();
             movingArea = new List<Block>();
+            movingHighlight = new List<GameObject>();
         }
 
         private void Start() {
@@ -81,6 +91,7 @@ namespace BigRogue.BattleSystem {
 
 
         public List<Block> movingArea;
+        private List<GameObject> movingHighlight;
         /// <summary>
         /// 显示一个单位可以移动的范围
         /// </summary>
@@ -95,9 +106,11 @@ namespace BigRogue.BattleSystem {
                     movingArea.Add(block);
                 }
             }
+
             Debug.Log($"movingArea.Count:{movingArea.Count}");
+
             foreach (var block in movingArea) {
-                block.HighLight(lightColorIndex);
+                HighlightBlock(block,0);
             }
             return movingArea;
         }
@@ -106,15 +119,30 @@ namespace BigRogue.BattleSystem {
             throw new UnityException("功能未实现");
         }
 
+        GameObject HighlightBlock(Block block,int index) {
+
+            if (highlightPrefabs[index] == null) return null;
+
+            GameObject hl = Instantiate(highlightPrefabs[index]);
+            hl.transform.SetParent(this.transform);
+
+            hl.transform.localPosition = block.transform.localPosition;
+            movingHighlight.Add(hl);
+            return hl;
+
+        }
+
 
 
         /// <summary>
         /// 关闭高亮的地块
         /// </summary>
         public void HideMovingArea() {
-            foreach (var block in movingArea) {
-                block.CloseHighLight();
+            foreach (var hl in movingHighlight) {
+                Destroy(hl.gameObject);
             }
+            movingHighlight.Clear();
+
         }
 
         /// <summary>

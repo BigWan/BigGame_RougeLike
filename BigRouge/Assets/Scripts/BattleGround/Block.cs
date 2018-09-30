@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using cakeslice;
 using DG.Tweening;
 using System;
 
@@ -26,28 +25,6 @@ namespace BigRogue.BattleSystem {
 
         public BattleGround battleGround;
 
-        private Outline outline;
-
-        public float edgeLength = 1f;
-
-        private void Awake() {
-            outline = GetComponentInChildren<Outline>();
-            if (outline == null)
-                throw new UnityException("没有找到高亮组件");
-        }
-
-        private void Start() {
-            outline.enabled = false;
-        }
-
-        public void HighLight(int index) {
-            outline.color = index;
-            outline.enabled = true;
-        }
-
-        public void CloseHighLight() {
-            outline.enabled = false;
-        }
 
         public void OnMouseDown() {
             if (selected)
@@ -59,17 +36,14 @@ namespace BigRogue.BattleSystem {
         }
 
 
-
         #region "ISelectAble"
 
         public void Select() {
             selected = true;
-            HighLight(2);
         }
 
         public void Deselect() {
             selected = false;
-            CloseHighLight();
         }
 
         public Action OnSelect() {
