@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BigRogue.BattleSystem {
+namespace BigRogue.ATB {
 
     /// <summary>
     /// 状态内的回合

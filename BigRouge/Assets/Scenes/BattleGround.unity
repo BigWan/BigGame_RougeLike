@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -351,8 +351,7 @@ MonoBehaviour:
   heightStep: 0.5
   highlightPrefabs:
   - {fileID: 6822894477235222113, guid: 25d6c3e9b2092594ba70596a5f3416db, type: 3}
-  - {fileID: 6822894477235222113, guid: 25d6c3e9b2092594ba70596a5f3416db, type: 3}
-  - {fileID: 2556304698148111716, guid: b0374dcc3ca720b4f8deb334c329a173, type: 3}
+  - {fileID: 9060110725578084467, guid: 296e51094b5c2f34590eb41358a0bd0a, type: 3}
   selectedBlocks: []
   allowMultiple: 1
   movingArea: []
@@ -368,7 +367,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842035231
 GameObject:
@@ -463,7 +462,7 @@ RectTransform:
   - {fileID: 1915790358233767248}
   - {fileID: 10381089}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -483,6 +482,7 @@ GameObject:
   - component: {fileID: 878710019}
   - component: {fileID: 878710018}
   - component: {fileID: 878710020}
+  - component: {fileID: 878710021}
   m_Layer: 0
   m_Name: "\u602A\u7269"
   m_TagString: Character
@@ -502,7 +502,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &878710017
 MonoBehaviour:
@@ -588,6 +588,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &878710021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878710015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e840c69a0a36147821d960db8e1532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectPrefab: {fileID: 2378580114007485486, guid: c17bef2e3ab6f8643bc5c5cb41bac043, type: 3}
+  aviable: 1
+  selected: 0
 --- !u!1 &1113027416
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +711,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1580192831}
   - component: {fileID: 1580192830}
-  - component: {fileID: 1580192832}
   m_Layer: 0
   m_Name: BattleManager
   m_TagString: Untagged
@@ -737,57 +751,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1580192832
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580192829}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
 --- !u!1 &1702853184
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +855,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1793615677
 MonoBehaviour:
@@ -988,7 +953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e840c69a0a36147821d960db8e1532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectPrefab: {fileID: 6885196381072089233, guid: 01330ef7933317245a60dac0975ea3ca, type: 3}
+  selectPrefab: {fileID: 2378580114007485486, guid: c17bef2e3ab6f8643bc5c5cb41bac043, type: 3}
+  aviable: 1
   selected: 0
 --- !u!1 &1922439562
 GameObject:

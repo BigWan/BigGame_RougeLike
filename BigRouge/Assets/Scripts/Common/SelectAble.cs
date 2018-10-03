@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.EventSystems;
 namespace BigRogue {
 
-
     /// <summary>
-    /// 可以被点击
+    /// 可以被点选
     /// </summary>
     [RequireComponent(typeof(Collider))]
     public class SelectAble : MonoBehaviour {
@@ -15,43 +14,39 @@ namespace BigRogue {
         /// </summary>
         public GameObject selectPrefab;
 
+        public System.Action SelectEventHandler;
+
+        // Refs
         private GameObject selectgo;
         /// <summary>
         /// 是否被选中
         /// </summary>
-        public bool selected;
+        private bool selected;
 
         private void OnMouseDown() {
-
+            //if (!aviable) return;
+            if (EventSystem.current.IsPointerOverGameObject()) return;
             if (selected)
                 Deselect();
             else
                 Select();
         }
 
-
-        void Select() {
+        public void Select() {
             selected = true;
             selectgo = Instantiate(selectPrefab);
             selectgo.transform.SetParent(transform);
-            selectgo.transform.localPosition = Vector3.up * 2f;
+            selectgo.transform.localPosition = Vector3.zero; ;
 
+            SelectEventHandler?.Invoke();
         }
-        void Deselect() {
-            selected = true;
+
+        public void Deselect() {
+            selected = false;
             Destroy(selectgo);
-
         }
 
-
-        private void OnMouseEnter() {
-            
-        }
-
-        private void OnMouseExit() {
-            
-        }
-
+        
 
 
     }

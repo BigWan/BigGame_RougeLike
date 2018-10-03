@@ -68,7 +68,7 @@ namespace BigRogue.BattleSystem {
 
                     b.coord = new Vector3Int(x, 0, z);
                     b.battleGround = this;
-
+                    
                     b.transform.localPosition = b.coord;
                     b.transform.SetParent(transform);
 
@@ -189,7 +189,7 @@ namespace BigRogue.BattleSystem {
         /// </summary>
         public NodeMesh PathNodeMesh() {
             NodeMesh mesh = new NodeMesh();
-            foreach (var block in terrain /*movingArea*/) {
+            foreach (var block in  movingArea) {
                 mesh.AddNode(block.coord, new PathNode(block));
             }
             return mesh;

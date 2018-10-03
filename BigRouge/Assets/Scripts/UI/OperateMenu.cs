@@ -31,8 +31,6 @@ namespace BigRogue.GameUI {
         [Header("法术子菜单")]
         public GameObject SpellGroup;
 
-
-
         private Actor character;
 
         CanvasGroup cg ;

@@ -9,7 +9,7 @@ using BigRogue.Persistent;
 namespace BigRogue.BattleSystem {
     
     /// <summary>
-    /// 玩家所有属性
+    /// 玩家的战斗属性
     /// 
     /// 
     /// </summary>

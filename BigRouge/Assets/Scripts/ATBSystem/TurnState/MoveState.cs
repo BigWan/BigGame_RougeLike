@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using BigRogue.PathFinding;
+using BigRogue;
+using BigRogue.ATB;
+using BigRogue.BattleSystem;
 
-namespace BigRogue.BattleSystem {
+namespace BigRogue.ATB {
     /// <summary>
     /// 移动处理 
     /// 1.选择目的地
@@ -15,7 +18,7 @@ namespace BigRogue.BattleSystem {
 
         //private List<Block> movingArea;
 
-        private Vector3Int moveTarget;
+        private Vector3Int moveTargetCoord;
 
         public MoveState(Actor actor,BattleGround bg) {
             this.actor = actor;
@@ -29,7 +32,7 @@ namespace BigRogue.BattleSystem {
 
         public void SelectBlock(Block b) {
             if (battleGround.movingArea.Contains(b)) {
-                moveTarget = b.coord;
+                moveTargetCoord = b.coord;
                 //StartMoving(moveTarget); // lerp
                 battleGround.HideMovingArea();
                 actor.StartMove(b);

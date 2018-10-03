@@ -1,12 +1,12 @@
-﻿using System;
+﻿using BigRogue.BattleSystem;
+using BigRogue.GameUI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using UnityEngine;
-using BigRogue.GameUI;
 
-namespace BigRogue.BattleSystem {
+namespace BigRogue.ATB {
 
     /// <summary>
     /// 战斗状态

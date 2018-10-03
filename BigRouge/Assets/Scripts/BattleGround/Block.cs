@@ -18,42 +18,34 @@ namespace BigRogue.BattleSystem {
     /// 地图方块(一个Cube所代表的地形方块)
     /// </summary>
     [RequireComponent(typeof(BoxCollider))]
-    public class Block : Entity , ISelectAble{
+    [RequireComponent(typeof(SelectAble))]
+    public class Block : Entity {
 
-
-        private bool selected;
+        private SelectAble selectAble;
+        private BoxCollider boxCollider;
 
         public BattleGround battleGround;
 
 
-        public void OnMouseDown() {
-            if (selected)
-                Deselect();
-            else
-                Select();
 
+        private void Awake() {
+            selectAble = GetComponent<SelectAble>();
+            boxCollider = GetComponent<BoxCollider>();
+            selectAble.SelectEventHandler += OnSelect;
+        }
+
+
+        void OnSelect() {
             battleGround.SelectBlock(this);
         }
 
-
-        #region "ISelectAble"
-
-        public void Select() {
-            selected = true;
-        }
-
         public void Deselect() {
-            selected = false;
+            selectAble.Deselect();
         }
 
-        public Action OnSelect() {
-            throw new NotImplementedException();
-        }
 
-        public Action OnDeselect() {
-            throw new NotImplementedException();
-        }
-        #endregion
+
+
     }
 
 }

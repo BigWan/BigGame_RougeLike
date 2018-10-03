@@ -5,6 +5,7 @@ using System;
 using BigRogue.Persistent;
 using BigRogue.PathFinding;
 using BigRogue.BattleSystem;
+using BigRogue.ATB;
 
 namespace BigRogue {
 
@@ -12,11 +13,12 @@ namespace BigRogue {
     /// <summary>
     /// 角色
     /// </summary>
-    public class Actor : Entity,ISelectAble {
+    [RequireComponent(typeof(SelectAble))]
+    public class Actor : Entity {
 
 
         [Header("Actor Config")]
-        
+
         public float moveSpeed = 3f;
         public float rotationSpeed = 180f;
 
@@ -38,7 +40,7 @@ namespace BigRogue {
         public float energy;
         public float energyRegen {
             get {
-                return charInfo.speed *0.01f+ 10;
+                return charInfo.speed * 0.01f + 10;
             }
         }
 
@@ -64,6 +66,9 @@ namespace BigRogue {
         [Header("Refs")]
         public BattleManager battleManager;
         private CombatState combatState;
+
+        private SelectAble selectAble;
+
         private Animator m_animator {
             get {
                 return GetComponentInChildren<Animator>();
@@ -98,6 +103,8 @@ namespace BigRogue {
 
         private void Awake() {
             battleManager = FindObjectOfType<BattleManager>();
+            selectAble = GetComponent<SelectAble>();
+            selectAble.SelectEventHandler += OnSelect;
             GetCharInfo();
         }
 
@@ -106,6 +113,17 @@ namespace BigRogue {
             //turnState = new IdleState(); 
         }
 
+        void OnSelect() {
+            selectAble.SelectEventHandler += OnSelect;
+        }
+
+        public void Select() {
+            selectAble.Select();
+        }
+
+        private void OnDestroy() {
+            selectAble.SelectEventHandler -= OnSelect;
+        }
 
         /// <summary>
         /// 获取配置表数据
@@ -177,7 +195,7 @@ namespace BigRogue {
         public bool allowAct;
         private TurnStateBase turnState;        // 回合状态
 
-        
+
 
         public void ChangeTurnState(TurnStateBase newState) {
             turnState.Exit();
@@ -215,6 +233,7 @@ namespace BigRogue {
         void FinishedTurn() {
             Debug.Log("Im done");
             turnState = null;
+            Deselect();
             energy -= 1000f;
             battleManager.opMenu.FadeOut();
         }
@@ -222,12 +241,9 @@ namespace BigRogue {
         public void GetFinishTurnCommand() { }
 
 
-        private void Select() {
-
-        }
 
         private void Deselect() {
-
+            selectAble.Deselect();
         }
 
         #endregion
@@ -242,16 +258,16 @@ namespace BigRogue {
         /// <summary>
         /// 朝目标移动
         /// </summary>
-        /// <param name="target">行动范围内的一个地块</param>
-        public void StartMove(Block target) {
+        /// <param name="targetBlock">行动范围内的一个地块</param>
+        public void StartMove(Block targetBlock) {
 
             NodeMesh mesh = battleGround.PathNodeMesh();
 
             List<PathNode> path = AStar.FindPath(mesh,
                 mesh.GetNode(coord),
-                mesh.GetNode(target.coord),
+                mesh.GetNode(targetBlock.coord),
                 HeuristicsType.Manhattan, false, 10);
-            if(path==null||path.Count<=0) {
+            if (path == null || path.Count <= 0) {
                 Debug.Log("寻路结果为空");
                 MoveOverHandler?.Invoke();
                 return;
@@ -303,25 +319,6 @@ namespace BigRogue {
         #endregion
 
 
-        #region "ISelectAble"
-
-        public Action OnSelect() {
-            throw new NotImplementedException();
-        }
-
-        public Action OnDeselect() {
-            throw new NotImplementedException();
-        }
-
-        void ISelectAble.Select() {
-            throw new NotImplementedException();
-        }
-
-        void ISelectAble.Deselect() {
-            throw new NotImplementedException();
-        }
-
-        #endregion
 
     }
 }

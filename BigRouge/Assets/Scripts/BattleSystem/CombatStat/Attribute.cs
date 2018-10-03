@@ -8,6 +8,8 @@ namespace BigRogue.BattleSystem {
 
     /// <summary>
     /// 单条属性类
+    /// 属性的定义:
+    ///     属性是一个集合,内部由所有的属性修改器构成,属性修改器是属性的值的来源
     /// </summary>
     public class Attribute {
 

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using BigRogue.GameUI;
+using BigRogue;
 
-namespace BigRogue.BattleSystem {
+namespace BigRogue.ATB {
 
     /// <summary>
     /// 准备状态,等待操作,根据状态显示不同的操作菜单
@@ -27,6 +28,7 @@ namespace BigRogue.BattleSystem {
 
         public override void Enter() {
             Debug.Log($"进入状态{this.GetType()}");
+            actor.Select();
             ShowOperateMenu();
         }
 

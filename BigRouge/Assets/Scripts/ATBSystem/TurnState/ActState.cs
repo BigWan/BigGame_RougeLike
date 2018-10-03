@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BigRogue;
 
-namespace BigRogue.BattleSystem {
-
+namespace BigRogue.ATB {
 
     /// <summary>
     /// 处理行动
