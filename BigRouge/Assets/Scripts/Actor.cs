@@ -33,26 +33,26 @@ namespace BigRogue {
         /// <summary>
         /// 角色基础信息
         /// </summary>
-        private CharacterRecord charInfo;
+        private CharacterRecord charRecord;
 
 
         [Header("Energy")]
         public float energy;
         public float energyRegen {
             get {
-                return charInfo.speed * 0.01f + 10;
+                return charRecord.speed * 0.01f + 10;
             }
         }
 
         public int moveRange {
             get {
-                return charInfo.moveRange;
+                return charRecord.moveRange;
             }
         }
 
         public int attackRange {
             get {
-                return charInfo.attackRange;
+                return charRecord.attackRange;
             }
         }
 
@@ -65,7 +65,7 @@ namespace BigRogue {
 
         [Header("Refs")]
         public BattleManager battleManager;
-        private CombatState combatState;
+        private AttributeGroup attributeGroup;
 
         private SelectAble selectAble;
 
@@ -102,11 +102,31 @@ namespace BigRogue {
         // MonoBehaviour Message
 
         private void Awake() {
+
+            attributeGroup = new AttributeGroup();
+
             battleManager = FindObjectOfType<BattleManager>();
             selectAble = GetComponent<SelectAble>();
             selectAble.SelectEventHandler += OnSelect;
             GetCharInfo();
         }
+
+        AttributeModifer baseAtk;
+        AttributeModifer baseHp;
+        AttributeModifer baseDef;
+        AttributeModifer baseStr;
+        AttributeModifer baseInt;
+        AttributeModifer baseDex;
+
+
+
+        void InitBaseAttribute() {
+            baseAtk = new AttributeModifer("CHAR.BASE",1,)
+            attributeGroup.AddAttributeModifier(new attri)
+                //TODO
+        }
+
+
 
         private void Start() {
             //m_animator = GetComponentInChildren<Animator>();
@@ -129,8 +149,8 @@ namespace BigRogue {
         /// 获取配置表数据
         /// </summary>
         void GetCharInfo() {
-            charInfo = CharacterInfoHandler.GetRecord(charInfoID);
-            if (charInfo.isEmpty()) {
+            charRecord = CharacterInfoHandler.GetRecord(charInfoID);
+            if (charRecord.isEmpty()) {
                 throw new UnityException($"配置信息错误{charInfoID}");
             }
         }

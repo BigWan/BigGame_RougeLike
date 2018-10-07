@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BigRogue.Persistent {
 
@@ -8,21 +9,21 @@ namespace BigRogue.Persistent {
     /// </summary> 
     public static class AttributeDataHandler {
 
-        static string attributeDateFile = "Texts/CombatStatData";
+        static string attributeDateFile = "Texts/AttributeData";
 
-        static Dictionary<int, AttributeInfo> s_attrData;
+        static Dictionary<int, AttributeRecord> s_attrData;
 
         static AttributeDataHandler() {
             
-            s_attrData = new Dictionary<int, AttributeInfo>();
-            s_attrData = Util.SimpleCsv.OpenCsvAs<AttributeInfo>(attributeDateFile);
+            s_attrData = new Dictionary<int, AttributeRecord>();
+            s_attrData = Util.SimpleCsv.OpenCsvAs<AttributeRecord>(attributeDateFile);
         }
 
-        public static AttributeInfo GetRecord(int id) {
+        public static AttributeRecord GetRecord(int id) {
             if (s_attrData.ContainsKey(id)) {
                 return s_attrData[id];
             }
-            return AttributeInfo.empty;
+            return AttributeRecord.empty;
         }
 
         public static int GetID(string code) {
@@ -33,5 +34,11 @@ namespace BigRogue.Persistent {
             return -1;
         }
 
+        public static List<int> GetIDs() {
+            return s_attrData.Keys.ToList<int>();
+        }
+        public static List<AttributeRecord> GetRecords() {
+            return s_attrData.Values.ToList();
+        }
     }
 }

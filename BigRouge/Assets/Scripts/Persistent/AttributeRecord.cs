@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BigRogue.Persistent {
 
-
-    public struct AttributeInfo : IRecord {
+    [Serializable]
+    public struct AttributeRecord : IRecord {
 
         public int id { get; set; }
         public string name;
@@ -16,7 +16,7 @@ namespace BigRogue.Persistent {
         public float max;
         public string desc;
 
-        public AttributeInfo(
+        public AttributeRecord(
             int id,
             string name = "",
             string code= "",
@@ -32,7 +32,7 @@ namespace BigRogue.Persistent {
             this.desc = desc;
         }
 
-        public static AttributeInfo empty { get { return new AttributeInfo(-1); } }
+        public static AttributeRecord empty { get { return new AttributeRecord(-1); } }
 
         void IRecord.InitFromLine(string s) {
             try {

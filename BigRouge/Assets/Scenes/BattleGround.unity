@@ -353,7 +353,7 @@ MonoBehaviour:
   - {fileID: 6822894477235222113, guid: 25d6c3e9b2092594ba70596a5f3416db, type: 3}
   - {fileID: 9060110725578084467, guid: 296e51094b5c2f34590eb41358a0bd0a, type: 3}
   selectedBlocks: []
-  allowMultiple: 1
+  allowMultiple: 0
   movingArea: []
 --- !u!4 &747682557
 Transform:
@@ -601,8 +601,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectPrefab: {fileID: 2378580114007485486, guid: c17bef2e3ab6f8643bc5c5cb41bac043, type: 3}
-  aviable: 1
-  selected: 0
 --- !u!1 &1113027416
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,8 +952,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectPrefab: {fileID: 2378580114007485486, guid: c17bef2e3ab6f8643bc5c5cb41bac043, type: 3}
-  aviable: 1
-  selected: 0
 --- !u!1 &1922439562
 GameObject:
   m_ObjectHideFlags: 0
