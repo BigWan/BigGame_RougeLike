@@ -18,10 +18,8 @@ namespace BigRogue.BattleSystem {
     /// 地图方块(一个Cube所代表的地形方块)
     /// </summary>
     [RequireComponent(typeof(BoxCollider))]
-    [RequireComponent(typeof(SelectAble))]
     public class Block : Entity {
 
-        private SelectAble selectAble;
         private BoxCollider boxCollider;
 
         public BattleGround battleGround;
@@ -29,23 +27,10 @@ namespace BigRogue.BattleSystem {
 
 
         private void Awake() {
-            selectAble = GetComponent<SelectAble>();
             boxCollider = GetComponent<BoxCollider>();
-            selectAble.SelectEventHandler += OnSelect;
         }
 
-
-        void OnSelect() {
-            battleGround.SelectBlock(this);
-        }
-
-        public void Deselect() {
-            selectAble.Deselect();
-        }
-
-
-
-
+        
     }
 
 }

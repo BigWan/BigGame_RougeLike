@@ -9,11 +9,9 @@ using BigRogue.ATB;
 
 namespace BigRogue {
 
-
     /// <summary>
     /// 角色
     /// </summary>
-    [RequireComponent(typeof(SelectAble))]
     public class Actor : Entity {
 
 
@@ -21,8 +19,6 @@ namespace BigRogue {
 
         public float moveSpeed = 3f;
         public float rotationSpeed = 180f;
-
-
 
         /// <summary>
         /// 配置表记录ID
@@ -67,7 +63,7 @@ namespace BigRogue {
         public BattleManager battleManager;
         private AttributeGroup attributeGroup;
 
-        private SelectAble selectAble;
+        //private SelectAble selectAble;
 
         private Animator m_animator {
             get {
@@ -101,14 +97,28 @@ namespace BigRogue {
 
         // MonoBehaviour Message
 
+
+
+
+
         private void Awake() {
 
-            attributeGroup = new AttributeGroup();
 
+            
+
+
+            attributeGroup = new AttributeGroup();
             battleManager = FindObjectOfType<BattleManager>();
-            selectAble = GetComponent<SelectAble>();
-            selectAble.SelectEventHandler += OnSelect;
+            //selectAble = GetComponent<SelectAble>();
+            //selectAble.SelectEventHandler += OnSelect;
             GetCharInfo();
+            
+        }
+
+        private void Start() {
+            //m_animator = GetComponentInChildren<Animator>();
+            //turnState = new IdleState(); 
+            InitTurnState();
         }
 
         AttributeModifer baseAtk;
@@ -119,30 +129,30 @@ namespace BigRogue {
         AttributeModifer baseDex;
 
 
+        AttributeModifer[] baseModifers;
+
+        string[] baseModiferCode = new string[] { };
+
+
+
 
         void InitBaseAttribute() {
-            baseAtk = new AttributeModifer("CHAR.BASE",1,)
-            attributeGroup.AddAttributeModifier(new attri)
-                //TODO
-        }
-
-
-
-        private void Start() {
-            //m_animator = GetComponentInChildren<Animator>();
-            //turnState = new IdleState(); 
-        }
-
-        void OnSelect() {
-            selectAble.SelectEventHandler += OnSelect;
-        }
-
-        public void Select() {
-            selectAble.Select();
+            baseAtk = new AttributeModifer("CHAR.BASE", "ATK", ModifierType.BaseValue, charRecord.atk);
+            baseHp = new AttributeModifer("CHAR.BASE", "HP", ModifierType.BaseValue, charRecord.hp);
+            baseDef = new AttributeModifer("CHAR.BASE", "DEF", ModifierType.BaseValue, charRecord.def);
+            baseStr = new AttributeModifer("CHAR.BASE", "STR", ModifierType.BaseValue, charRecord.str);
+            baseInt = new AttributeModifer("CHAR.BASE", "INT", ModifierType.BaseValue, charRecord.@int);
+            baseDex = new AttributeModifer("CHAR.BASE", "DEX", ModifierType.BaseValue, charRecord.dex);
+            attributeGroup.AddAttributeModifier(baseAtk);
+            attributeGroup.AddAttributeModifier(baseHp);
+            attributeGroup.AddAttributeModifier(baseDef);
+            attributeGroup.AddAttributeModifier(baseStr);
+            attributeGroup.AddAttributeModifier(baseInt);
+            attributeGroup.AddAttributeModifier(baseDex);
+            //TODO
         }
 
         private void OnDestroy() {
-            selectAble.SelectEventHandler -= OnSelect;
         }
 
         /// <summary>
@@ -215,7 +225,33 @@ namespace BigRogue {
         public bool allowAct;
         private TurnStateBase turnState;        // 回合状态
 
+        private PrepareState prepareState;
+        private MoveState moveState;
+        private ActState actState;
 
+        void InitTurnState() {
+            prepareState = new PrepareState(this);
+            moveState = new MoveState(this, battleGround);
+            actState = new ActState(this);
+        }
+
+        public void ChangeTurnState(TurnStateType stateName) {
+
+            switch (stateName) {
+                case TurnStateType.Preparing:
+                    ChangeTurnState(prepareState);
+                    break;
+                case TurnStateType.Moving:
+                    ChangeTurnState(moveState);
+                    break;
+                case TurnStateType.Acting:
+                    ChangeTurnState(actState);
+                    break;
+                default:
+                    break;
+            }
+            
+        }
 
         public void ChangeTurnState(TurnStateBase newState) {
             turnState.Exit();
@@ -237,10 +273,10 @@ namespace BigRogue {
             allowMove = true;
             allowAct = true;
 
-            EnterTurnHandler?.Invoke(this);
+            //EnterTurnHandler?.Invoke(this);
             turn++;
 
-            turnState = new PrepareState(this);
+            ChangeTurnState(prepareState);
 
             while (!turnFinished) {
                 yield return null;
@@ -253,18 +289,13 @@ namespace BigRogue {
         void FinishedTurn() {
             Debug.Log("Im done");
             turnState = null;
-            Deselect();
+            //Deselect();
             energy -= 1000f;
             battleManager.opMenu.FadeOut();
         }
 
         public void GetFinishTurnCommand() { }
 
-
-
-        private void Deselect() {
-            selectAble.Deselect();
-        }
 
         #endregion
 
@@ -338,7 +369,39 @@ namespace BigRogue {
 
         #endregion
 
+        
+        public void MoveCommand() {
+            
+        }
 
 
+        public void ShowOperateMenu() {
+            GameUI.OperateMenu opMenu = battleManager.opMenu;
+            opMenu.gameObject.SetActive(true);
+            opMenu.Bind(this);
+
+            if (allowMove) {
+                opMenu.MoveButton.onClick.RemoveAllListeners();
+                opMenu.MoveButton.onClick.AddListener(MoveCommand);
+                opMenu.MoveButton.gameObject.SetActive(true);
+            } else {
+                opMenu.MoveButton.gameObject.SetActive(false);
+            }
+            if (allowAct) {
+                opMenu.ActButton.onClick.RemoveAllListeners();
+                opMenu.ActButton.onClick.AddListener(()=> ChangeTurnState(TurnStateType.Moving));
+                opMenu.ActButton.gameObject.SetActive(true);
+            } else {
+                opMenu.ActButton.gameObject.SetActive(false);
+            }
+            opMenu.FinishButton.onClick.RemoveAllListeners();
+            opMenu.FinishButton.onClick.AddListener(()=> turnFinished = true);
+
+            opMenu.FadeIn();
+        }
+
+
+        public void HideOperateMenu() {
+        }
     }
 }

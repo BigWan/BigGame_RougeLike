@@ -13,28 +13,31 @@ namespace BigRogue.ATB {
     /// </summary>
     public class ActState : TurnStateBase {
 
+
         private int actType;
-        private Actor Target;
+        private Actor target;
         private int skillID;
 
 
-        public ActState(Actor actor) {
-            this.actor = actor;
+        public ActState(Actor actor):base(actor) {
         }
 
 
-        public override void HandlerCommand() {
+
+
+
+        public override void Enter() {
+            throw new System.NotImplementedException();
         }
 
 
-        public override void Enter () {
-        }
+
         public override void Exit() {
+            throw new System.NotImplementedException();
         }
 
-
-        public override void Update() {
-
+        public override void HandlerCommand(CommandType cmd) {
+            throw new System.NotImplementedException();
         }
 
 

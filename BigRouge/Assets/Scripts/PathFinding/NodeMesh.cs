@@ -41,8 +41,11 @@ namespace BigRogue.PathFinding {
             nodeDict.Add(key, value);
         }
 
-        public PathNode GetNode(Vector3Int coordinate) {
-            return nodeDict[coordinate];
+        public PathNode GetNode(Vector3Int coord) {
+            if (nodeDict.ContainsKey(coord))
+                return nodeDict[coord];
+            else 
+                throw new UnityException("没有这个Node"+coord.ToString());
         }
         /// <summary>
         /// 获取邻居结点

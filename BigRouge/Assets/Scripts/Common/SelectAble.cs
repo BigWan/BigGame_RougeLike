@@ -34,11 +34,12 @@ namespace BigRogue {
 
         public void Select() {
             selected = true;
-            selectgo = Instantiate(selectPrefab);
+            if( selectgo== null)
+                selectgo = Instantiate(selectPrefab);
             selectgo.transform.SetParent(transform);
             selectgo.transform.localPosition = Vector3.zero; ;
 
-            SelectEventHandler?.Invoke();
+            //SelectEventHandler?.Invoke();
         }
 
         public void Deselect() {

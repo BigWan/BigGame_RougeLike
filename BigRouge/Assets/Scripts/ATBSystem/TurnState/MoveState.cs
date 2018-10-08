@@ -20,8 +20,7 @@ namespace BigRogue.ATB {
 
         private Vector3Int moveTargetCoord;
 
-        public MoveState(Actor actor,BattleGround bg) {
-            this.actor = actor;
+        public MoveState(Actor actor,BattleGround bg):base(actor) {
             this.battleGround = bg;
             //movingArea = new List<Block>();
 
@@ -46,20 +45,32 @@ namespace BigRogue.ATB {
         //}
 
         public override void Enter () {
+
+            moveTargetCoord = Vector3Int.zero;
             battleGround.ShowMovingArea(actor.coord, actor.moveRange, 2);
             
             //Debug.Log($"可行动区域有{battleGround.movingArea.Count}");
         }
 
+        /// <summary>
+        /// 移动结束切回待机
+        /// </summary>
         void MoveFinish() {
             actor.allowMove = false;
-            actor.ChangeTurnState(new PrepareState(actor));
+            actor.ChangeTurnState(TurnStateType.Preparing);
         }
 
         public override void Exit() {
             battleGround.SelectBlockEventHandler -= SelectBlock;
             actor.MoveOverHandler -= MoveFinish;
+
+
+
             battleGround.HideMovingArea();
+        }
+
+        public override void HandlerCommand(CommandType cmd) {
+            throw new System.NotImplementedException();
         }
 
     }

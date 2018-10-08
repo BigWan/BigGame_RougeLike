@@ -55,9 +55,16 @@ namespace BigRogue.BattleSystem {
             nextGuid++;
         }
 
-        public AttributeModifer(string path,int attrID, ModifierType type,float value ):this() {
+        public AttributeModifer(string path,int attrID, ModifierType type,float value):this() {
             this.path = path;
             this.attrID = attrID;
+            this.type = type;
+            this.value = value;
+        }
+
+        public AttributeModifer(string path, string attrCode, ModifierType type, float value) : this() {
+            this.path = path;
+            this.attrID = AttributeDataHandler.GetID(attrCode);
             this.type = type;
             this.value = value;
         }

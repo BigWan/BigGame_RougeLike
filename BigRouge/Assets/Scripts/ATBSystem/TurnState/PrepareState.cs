@@ -13,74 +13,25 @@ namespace BigRogue.ATB {
     /// </summary>
     public class PrepareState : TurnStateBase {
 
-        public OperateMenu opMenu;
+        public PrepareState(Actor actor) : base(actor) {}
 
-        public PrepareState(Actor actor) {
-            this.actor = actor;
-            this.opMenu = actor.battleManager.opMenu;
-            Enter();
-        }
-
-
-        public override void HandlerCommand() {
-            throw new System.NotImplementedException();
-        }
 
         public override void Enter() {
             Debug.Log($"进入状态{this.GetType()}");
-            actor.Select();
-            ShowOperateMenu();
+            //actor.Select();
+            actor.ShowOperateMenu();
         }
 
         public override void Exit() {
-            HideOperateMenu();
+            actor.HideOperateMenu();
         }
 
-        void MoveButton() {
-            actor.ChangeTurnState(new MoveState(actor,actor.battleGround));
+        public override void HandlerCommand(CommandType cmd) {
         }
 
-        void ActButton() {
 
-        }
 
-        void FinishButton() {
-            actor.turnFinished = true;
-        }
 
-        public void ShowOperateMenu() {
-            opMenu.gameObject.SetActive(true);
-            opMenu.Bind(actor);
-            if (actor.allowMove) {
-                opMenu.MoveButton.onClick.RemoveAllListeners();
-                opMenu.MoveButton.onClick.AddListener(MoveButton);
-                opMenu.MoveButton.gameObject.SetActive(true);
-            } else {
-                opMenu.MoveButton.gameObject.SetActive(false);
-            }
-            if (actor.allowAct) {
-                opMenu.ActButton.onClick.RemoveAllListeners();
-                opMenu.ActButton.onClick.AddListener(ActButton);
-                opMenu.ActButton.gameObject.SetActive(true);
-            } else {
-                opMenu.ActButton.gameObject.SetActive(false);
-            }
-            opMenu.FinishButton.onClick.RemoveAllListeners();
-            opMenu.FinishButton.onClick.AddListener(FinishButton);
-
-            opMenu.FadeIn();
-
-            //info.gameObject.SetActive(true);
-            //info.SetCharacter(c);
-            //info.FadeIn();
-        }
-
-        public void HideOperateMenu() {
-            opMenu.gameObject.SetActive(false);
-        }
-
-        public override void Update() {
-        }
 
 
     }

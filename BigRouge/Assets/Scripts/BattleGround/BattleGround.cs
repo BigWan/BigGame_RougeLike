@@ -78,16 +78,16 @@ namespace BigRogue.BattleSystem {
         }
 
         public bool allowMultiple = true;
-        public void SelectBlock(Block block) {
-            if (!allowMultiple) {
-                foreach (var b in selectedBlocks) {
-                    b.Deselect();
-                }
-                selectedBlocks.Clear();
-            }
-            selectedBlocks.Add(block);
-            SelectBlockEventHandler?.Invoke(block);
-        }
+        //public void SelectBlock(Block block) {
+        //    if (!allowMultiple) {
+        //        foreach (var b in selectedBlocks) {
+        //            b.Deselect();
+        //        }
+        //        selectedBlocks.Clear();
+        //    }
+        //    selectedBlocks.Add(block);
+        //    SelectBlockEventHandler?.Invoke(block);
+        //}
 
 
         public List<Block> movingArea;

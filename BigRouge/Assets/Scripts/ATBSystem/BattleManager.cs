@@ -20,6 +20,22 @@ namespace BigRogue.ATB {
     }
 
 
+    public enum TurnStateType {
+        /// <summary>
+        /// 待机,等待输入
+        /// </summary>
+        Preparing,  
+        /// <summary>
+        /// 选择并移动到目的地
+        /// </summary>
+        Moving,
+        /// <summary>
+        /// 选择并攻击目标
+        /// </summary>
+        Acting
+    }
+
+
     /// <summary>
     /// 战斗管理器,从进入场景到结束战斗
     /// </summary>

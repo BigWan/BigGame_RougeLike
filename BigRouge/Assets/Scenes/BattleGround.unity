@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2637764182957339264, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
   m_PrefabInstance: {fileID: 290588180434046244}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 290588180434046245}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07e2ffd7264e7c94696edaf36791adf3, type: 3}
@@ -381,6 +381,7 @@ GameObject:
   - component: {fileID: 842035234}
   - component: {fileID: 842035233}
   - component: {fileID: 842035232}
+  - component: {fileID: 842035236}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -469,6 +470,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &842035236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842035231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7309fd41b80de24b8e3b309a9a4f805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  operateMenu: {fileID: 290588180434046245}
+  headbar: {fileID: 10381088}
 --- !u!1 &878710015
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,7 +535,7 @@ MonoBehaviour:
   moveSpeed: 5
   rotationSpeed: 3
   charInfoID: 2
-  charInfo:
+  charRecord:
     name: 
     avatarID: 0
     race: 0
@@ -871,9 +886,9 @@ MonoBehaviour:
   moveSpeed: 5
   rotationSpeed: 3
   charInfoID: 1
-  charInfo:
-    name: adfa
-    avatarID: 3
+  charRecord:
+    name: 
+    avatarID: 0
     race: 0
     moveRange: 0
     attackRange: 0
@@ -1417,6 +1432,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+--- !u!1 &290588180434046245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3253434791550658045, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
+  m_PrefabInstance: {fileID: 290588180434046244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1915790358233767248 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1915790358233767248, guid: 34fc3211952b72c43bf04d00f7c17bef, type: 3}
