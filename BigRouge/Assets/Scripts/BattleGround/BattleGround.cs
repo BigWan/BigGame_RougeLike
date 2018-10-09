@@ -25,7 +25,7 @@ namespace BigRogue.Ground {
         public float heightStep = 0.5f;
 
         [Header("Block Highlight")]
-        public GameObject[] highlightPrefabs;
+        public BlockHightLight[] highlightPrefabs;
 
 
 
@@ -48,7 +48,7 @@ namespace BigRogue.Ground {
             terrain = GetComponentsInChildren<Block>().ToList();
             selectedBlocks = new List<Block>();
             movingArea = new List<Block>();
-            movingHighlight = new List<GameObject>();
+            movingHighlight = new List<BlockHightLight>();
         }
 
         private void Start() {
@@ -92,14 +92,14 @@ namespace BigRogue.Ground {
 
 
         public List<Block> movingArea;
-        private List<GameObject> movingHighlight;
+        [SerializeField]
+        private List<BlockHightLight> movingHighlight;
         /// <summary>
         /// 显示一个单位可以移动的范围
         /// </summary>
-        public List<Block> ShowMovingArea(Vector3Int center, int range, int lightColorIndex) {
+        public List<Block> ShowMovingArea(Actor actor, int range, int lightColorIndex) {
 
-            List<Vector3Int> keys = GetManhattanCoordinate(center, range);
-            Debug.Log($"GetManhattanCoordinate:{keys.Count}");
+            List<Vector3Int> keys = GetManhattanCoordinate(actor.coord, range);
 
             movingArea.Clear();
             foreach (var block in terrain) {
@@ -108,28 +108,27 @@ namespace BigRogue.Ground {
                 }
             }
 
-            Debug.Log($"movingArea.Count:{movingArea.Count}");
 
             foreach (var block in movingArea) {
-                HighlightBlock(block,0);
+                HighlightBlock(actor, block,0);
             }
             return movingArea;
         }
 
         public List<Block> ShowMovingArea(Actor actor) {
-            throw new UnityException("功能未实现");
+            return ShowMovingArea(actor, actor.moveRange, 2);
         }
 
-        GameObject HighlightBlock(Block block,int index) {
+        void HighlightBlock(Actor actor,Block block,int index) {
 
-            if (highlightPrefabs[index] == null) return null;
+            if (highlightPrefabs[index] == null) return ;
 
-            GameObject hl = Instantiate(highlightPrefabs[index]);
+            BlockHightLight hl = Instantiate(highlightPrefabs[index]);
+            hl.SetData(block,actor);
             hl.transform.SetParent(this.transform);
 
             hl.transform.localPosition = block.transform.localPosition;
             movingHighlight.Add(hl);
-            return hl;
 
         }
 

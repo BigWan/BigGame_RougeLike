@@ -21,7 +21,9 @@ namespace BigRogue.Ground {
         void OnMouseDown() {
             if (EventSystem.current.IsPointerOverGameObject()) return;
             actor.SetMoveTarget(block);
-            Debug.Log(block.coord);
+            //Debug.Log(block.coord);
+            actor.StartMove();
+            //actor.battleManager.battleUI.PopUpSelectionBar(actor,Camera.main.WorldToScreenPoint( this.transform.position));
         }
 
     }

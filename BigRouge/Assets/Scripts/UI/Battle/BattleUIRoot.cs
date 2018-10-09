@@ -15,11 +15,12 @@ namespace BigRogue.GameUI {
 
         private OperateMenu opMenu;
         private HeadBar headbar;
-
+        private BlockHighlightMenu selectionBar;
 
         private void Awake() {
             opMenu = GetComponentInChildren<OperateMenu>();
             headbar = GetComponentInChildren<HeadBar>();
+            selectionBar = GetComponentInChildren<BlockHighlightMenu>();
         }
 
         /// <summary>
@@ -34,7 +35,7 @@ namespace BigRogue.GameUI {
            
             if (actor.allowAct) opMenu.ShowActButton(actor.OnActButtonClick);
             
-           opMenu.ShowFinishButton(actor.OnFinishButtonClick);
+            opMenu.ShowFinishButton(actor.OnFinishButtonClick);
             opMenu.FadeIn();
         }
 
@@ -48,6 +49,16 @@ namespace BigRogue.GameUI {
         /// </summary>
         public void ClearData() {
             opMenu.Reset();
+        }
+
+
+        /// <summary>
+        /// 弹出选择确认按钮组
+        /// </summary>
+        public void PopUpSelectionBar(Actor actor,Vector3 position) {
+            selectionBar._SetActive(true);
+            selectionBar.transform.position = position;
+            selectionBar.AddListeners(actor.StartMove, actor.ReSelectMoveTarget);
         }
 
     }

@@ -25,19 +25,19 @@ namespace BigRogue.ATB {
             this.battleGround = bg;
             //movingArea = new List<Block>();
 
-            battleGround.SelectBlockEventHandler += SelectBlock;
-            actor.MoveOverHandler += MoveFinish;
+            //battleGround.SelectBlockEventHandler += SelectBlock;
+            //actor.MoveOverHandler += MoveFinish;
         }
 
 
-        public void SelectBlock(Block b) {
-            if (battleGround.movingArea.Contains(b)) {
-                moveTargetCoord = b.coord;
-                //StartMoving(moveTarget); // lerp
-                battleGround.HideMovingArea();
-                actor.StartMove(b);
-            }
-        }
+        //public void SelectBlock(Block b) {
+        //    if (battleGround.movingArea.Contains(b)) {
+        //        moveTargetCoord = b.coord;
+        //        //StartMoving(moveTarget); // lerp
+        //        battleGround.HideMovingArea();
+        //        actor.StartMove(b);
+        //    }
+        //}
 
         //void StartMove(Vector3Int target) {
         //    battleGround.HideMovingArea();
@@ -48,26 +48,14 @@ namespace BigRogue.ATB {
         public override void Enter () {
 
             moveTargetCoord = Vector3Int.zero;
-            battleGround.ShowMovingArea(actor.coord, actor.moveRange, 2);
+            battleGround.ShowMovingArea(actor);
             
             //Debug.Log($"可行动区域有{battleGround.movingArea.Count}");
         }
 
-        /// <summary>
-        /// 移动结束切回待机
-        /// </summary>
-        void MoveFinish() {
-            actor.allowMove = false;
-            actor.EnterState(TurnStateType.Preparing);
-        }
 
         public override void Exit() {
-            battleGround.SelectBlockEventHandler -= SelectBlock;
-            actor.MoveOverHandler -= MoveFinish;
-
-
-
-            battleGround.HideMovingArea();
+            
         }
 
         public override void HandlerCommand(CommandType cmd) {

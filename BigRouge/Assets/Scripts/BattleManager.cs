@@ -169,14 +169,6 @@ namespace BigRogue.ATB {
             }
         }
 
-        /// <summary>
-        /// 显示移动格子
-        /// </summary>
-        /// <param name="center"></param>
-        /// <param name="range"></param>
-        public void ShowMovingArea(Vector3Int center,int range) {
-            battleGround.ShowMovingArea(center, range,2);
-        }
 
         /// <summary>
         /// 关闭移动格子显示

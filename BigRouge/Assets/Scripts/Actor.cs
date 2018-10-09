@@ -187,7 +187,6 @@ namespace BigRogue {
         }
 
         private void ToggleState(TurnStateBase newState) {
-            turnState.Exit();
             turnState = newState;
             turnState.Enter();
         }
@@ -233,10 +232,11 @@ namespace BigRogue {
         #region "移动相关"
 
         public Action MoveOverHandler;
-        public Block targetBlock;
+        public Block moveTarget;
+        
 
-        public void SetMoveTarget(Block targetBlock) {
-            this.targetBlock = targetBlock;
+        public void SetMoveTarget(Block moveTarget) {
+            this.moveTarget = moveTarget;
         }
 
         /// <summary>
@@ -249,10 +249,10 @@ namespace BigRogue {
 
             List<PathNode> path = AStar.FindPath(mesh,
                 mesh.GetNode(coord),
-                mesh.GetNode(targetBlock.coord),
+                mesh.GetNode(moveTarget.coord),
                 HeuristicsType.Manhattan, false, 10);
             if (path == null || path.Count <= 0) {
-                Debug.Log("寻路结果为空");
+                Debug.Log("寻路结果为空,强制结束移动");
                 MoveOverHandler?.Invoke();
                 return;
             }
@@ -272,6 +272,9 @@ namespace BigRogue {
             transform.localPosition = path[0].coord;
             coord = path[0].coord;
             MoveOverHandler?.Invoke();
+            allowMove = false;
+            battleGround.HideMovingArea();
+            EnterState(TurnStateType.Preparing);
         }
 
 
@@ -325,5 +328,13 @@ namespace BigRogue {
         public void HideOperateMenu() {
             battleManager.battleUI.HideOperateMenu();
         }
+
+        /// <summary>
+        /// 重新选择移动目标
+        /// </summary>
+        public void ReSelectMoveTarget() {
+            EnterState(TurnStateType.Preparing);
+        }
+
     }
 }

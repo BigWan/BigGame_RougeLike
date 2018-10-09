@@ -9,6 +9,8 @@ namespace BigRogue.Persistent {
     [Serializable]
     public struct AttributeRecord : IRecord {
 
+        static char splitor = ',';
+
         public int id { get; set; }
         public string name;
         public string code;
@@ -36,7 +38,7 @@ namespace BigRogue.Persistent {
 
         void IRecord.InitFromLine(string s) {
             try {
-                string[] cells = s.Split(',');
+                string[] cells = s.Split(splitor);
                 int i = 0;
                 id = int.Parse(cells[i]); i++;
                 name = cells[i]; i++;

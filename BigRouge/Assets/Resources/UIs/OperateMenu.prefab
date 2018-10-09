@@ -860,7 +860,7 @@ MonoBehaviour:
   btnAttack: {fileID: 3738970324126533215}
   btnSpell: {fileID: 4944886183297508125}
   btnItem: {fileID: 4190215495677149143}
-  spellGroup: {fileID: 0}
+  spellGroup: {fileID: 1002704981904931572}
 --- !u!225 &5767299498378647416
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -869,7 +869,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3253434791550658045}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
