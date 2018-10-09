@@ -10,24 +10,6 @@
 
 ## 部件信息
 
-```cs
-AvatarPart{
-    ResID,
-    MountPointType,
-}
-```
-
-## 挂点类型
-
-```cs
-MountPointType{
-    Base,
-    Head,
-    Back,
-    Left,
-    Right
-}
-```
 
 部件资源存储在一张avatar的配置表中
 

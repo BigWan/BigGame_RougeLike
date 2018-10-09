@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1145202278797004422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1145202278797004665}
+  - component: {fileID: 1145202278797004664}
+  - component: {fileID: 1145202278797004666}
+  - component: {fileID: 1145202278797004667}
+  - component: {fileID: 1145202278797004669}
+  - component: {fileID: 1145202278797004668}
+  m_Layer: 0
+  m_Name: "\u602A\u7269"
+  m_TagString: Character
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1145202278797004665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145202278797004422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1145202278797004664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145202278797004422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12915bd48494a4a44bf5a69bf0924cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coord: {x: 5, y: 0, z: 3}
+  moveSpeed: 5
+  rotationSpeed: 3
+  charInfoID: 2
+  charRecord:
+    name: 
+    avatarID: 0
+    race: 0
+    moveRange: 0
+    attackRange: 0
+    level: 0
+    chartID: 0
+    speed: 0
+    atk: 0
+    hp: 0
+    def: 0
+    str: 0
+    int: 0
+    dex: 0
+  energy: 0
+  battleManager: {fileID: 0}
+  allowMove: 1
+  allowAct: 1
+  turnFinished: 0
+--- !u!114 &1145202278797004666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145202278797004422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7874647d4042f9844b5521eebc9ecbca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1145202278797004667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145202278797004422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d70c872d214664ea557d4bfcb36a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainbodyID: 11012
+  beardID: 0
+  hairID: 0
+  earsID: 0
+  faceID: 0
+  hornsID: 0
+  wingID: 0
+  bagID: 0
+  mainHandID: 0
+  offHandID: 0
+--- !u!136 &1145202278797004669
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145202278797004422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1145202278797004668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145202278797004422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e840c69a0a36147821d960db8e1532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectPrefab: {fileID: 2378580114007485486, guid: c17bef2e3ab6f8643bc5c5cb41bac043, type: 3}

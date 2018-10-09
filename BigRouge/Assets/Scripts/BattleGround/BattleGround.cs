@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using BigRogue.PathFinding;
+using BigRogue.Ground;
 
-namespace BigRogue.BattleSystem {
+namespace BigRogue.Ground {
 
     /// <summary>
     /// 战斗场景

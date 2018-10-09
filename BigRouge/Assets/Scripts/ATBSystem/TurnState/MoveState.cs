@@ -5,6 +5,7 @@ using BigRogue.PathFinding;
 using BigRogue;
 using BigRogue.ATB;
 using BigRogue.BattleSystem;
+using BigRogue.Ground;
 
 namespace BigRogue.ATB {
     /// <summary>
@@ -35,7 +36,7 @@ namespace BigRogue.ATB {
                 //StartMoving(moveTarget); // lerp
                 battleGround.HideMovingArea();
                 actor.StartMove(b);
-            } 
+            }
         }
 
         //void StartMove(Vector3Int target) {
@@ -57,7 +58,7 @@ namespace BigRogue.ATB {
         /// </summary>
         void MoveFinish() {
             actor.allowMove = false;
-            actor.ChangeTurnState(TurnStateType.Preparing);
+            actor.EnterState(TurnStateType.Preparing);
         }
 
         public override void Exit() {

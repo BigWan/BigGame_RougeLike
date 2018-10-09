@@ -18,7 +18,6 @@ namespace BigRogue.ATB {
 
         public override void Enter() {
             Debug.Log($"进入状态{this.GetType()}");
-            //actor.Select();
             actor.ShowOperateMenu();
         }
 
@@ -27,6 +26,7 @@ namespace BigRogue.ATB {
         }
 
         public override void HandlerCommand(CommandType cmd) {
+
         }
 
 

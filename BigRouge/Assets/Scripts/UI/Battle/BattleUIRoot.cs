@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using BigRogue.ATB;
+using UnityEngine.Events;
+
 //using UnityEngine.UI;
 
 
@@ -10,8 +13,8 @@ namespace BigRogue.GameUI {
     /// </summary>
     public class BattleUIRoot : MonoBehaviour {
 
-        public OperateMenu opMenu;
-        public HeadBar headbar;
+        private OperateMenu opMenu;
+        private HeadBar headbar;
 
 
         private void Awake() {
@@ -19,30 +22,33 @@ namespace BigRogue.GameUI {
             headbar = GetComponentInChildren<HeadBar>();
         }
 
-
-        public void ShowOperateMenu(Actor actor) {
+        /// <summary>
+        /// 弹出角色的操作按钮
+        /// </summary>
+        /// <param name="actor">操作按钮的对象实例</param>
+        public void PopupOperateMenu(Actor actor) {
             opMenu.gameObject.SetActive(true);
-            opMenu.Bind(actor);
-            if (actor.allowMove) {
-                opMenu.MoveButton.onClick.RemoveAllListeners();
-                opMenu.MoveButton.onClick.AddListener(actor.move);
-                opMenu.MoveButton.gameObject.SetActive(true);
-            } else {
-                opMenu.MoveButton.gameObject.SetActive(false);
-            }
-            if (allowAct) {
-                opMenu.ActButton.onClick.RemoveAllListeners();
-                opMenu.ActButton.onClick.AddListener(() => ChangeTurnState(TurnStateType.Moving));
-                opMenu.ActButton.gameObject.SetActive(true);
-            } else {
-                opMenu.ActButton.gameObject.SetActive(false);
-            }
-            opMenu.FinishButton.onClick.RemoveAllListeners();
-            opMenu.FinishButton.onClick.AddListener(() => turnFinished = true);
+            opMenu.SetTitle(actor.name);
 
+            if (actor.allowMove) opMenu.ShowMoveButton(actor.OnMoveButtonClick);
+           
+            if (actor.allowAct) opMenu.ShowActButton(actor.OnActButtonClick);
+            
+           opMenu.ShowFinishButton(actor.OnFinishButtonClick);
             opMenu.FadeIn();
         }
 
+        public void HideOperateMenu() {
+            opMenu.Reset();
+            opMenu.FadeOut();
+        }
+
+        /// <summary>
+        /// 清除按钮状态和委托
+        /// </summary>
+        public void ClearData() {
+            opMenu.Reset();
+        }
 
     }
 }

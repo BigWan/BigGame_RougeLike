@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using BigRogue.Ground;
 namespace BigRogue.PathFinding {
 
     /// <summary>
@@ -48,7 +48,7 @@ namespace BigRogue.PathFinding {
         /// 从Block构造一个节点
         /// </summary>
         /// <param name="block"></param>
-        public PathNode(BattleSystem.Block block) {
+        public PathNode(Block block) {
             coord = block.coord;
             //coordinate2D = new Vector2Int(block.x, block.z);
             //y = block.y;

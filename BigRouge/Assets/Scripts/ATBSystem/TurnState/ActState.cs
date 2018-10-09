@@ -27,17 +27,17 @@ namespace BigRogue.ATB {
 
 
         public override void Enter() {
-            throw new System.NotImplementedException();
+            
         }
 
 
 
         public override void Exit() {
-            throw new System.NotImplementedException();
+            
         }
 
         public override void HandlerCommand(CommandType cmd) {
-            throw new System.NotImplementedException();
+            
         }
 
 

@@ -5,6 +5,7 @@ using System;
 using BigRogue.Persistent;
 using BigRogue.PathFinding;
 using BigRogue.BattleSystem;
+using BigRogue.Ground;
 using BigRogue.ATB;
 
 namespace BigRogue {
@@ -14,105 +15,36 @@ namespace BigRogue {
     /// </summary>
     public class Actor : Entity {
 
-
         [Header("Actor Config")]
 
         public float moveSpeed = 3f;
         public float rotationSpeed = 180f;
 
-        /// <summary>
-        /// 配置表记录ID
-        /// </summary>
+        /// <summary> 配置表记录ID </summary>
         public int charInfoID;
 
-        [SerializeField]
-        /// <summary>
-        /// 角色基础信息
-        /// </summary>
-        private CharacterRecord charRecord;
+        /// <summary> 角色基础信息 </summary>
+        [SerializeField] private CharacterRecord charRecord;
 
 
         [Header("Energy")]
         public float energy;
-        public float energyRegen {
-            get {
-                return charRecord.speed * 0.01f + 10;
-            }
-        }
-
-        public int moveRange {
-            get {
-                return charRecord.moveRange;
-            }
-        }
-
-        public int attackRange {
-            get {
-                return charRecord.attackRange;
-            }
-        }
-
-        public BattleGround battleGround {
-            get {
-                return battleManager.battleGround;
-            }
-        }
+        public float energyRegen {get {return charRecord.speed * 0.01f + 10;}}
+        public int moveRange {get {return charRecord.moveRange;}}
+        public int attackRange {get {return charRecord.attackRange;}}
+        public Ground.BattleGround battleGround {get {return battleManager.battleGround;}}
 
 
         [Header("Refs")]
         public BattleManager battleManager;
         private AttributeGroup attributeGroup;
 
-        //private SelectAble selectAble;
-
-        private Animator m_animator {
-            get {
-                return GetComponentInChildren<Animator>();
-            }
-        }
-
-        [Header("Event")]
-
-
-        /// <summary>
-        /// 角色进入回合
-        /// </summary>
-        public Action<Actor> EnterTurnHandler;
-        /// <summary>
-        /// 角色结束回合
-        /// </summary>
-        public Action<Actor> FinishTurnHandler;
-
-        protected Action<Actor> ActStartEventHandler;
-        protected Action<Actor> ActEndEventHandler;
-
-        /// <summary>
-        /// 角色开始移动
-        /// </summary>
-        public Action<Actor> MoveStartEventHandler;
-        /// <summary>
-        /// 角色移动完毕
-        /// </summary>
-        public Action<Actor> MoveEndEventHandler;
-
-        // MonoBehaviour Message
-
-
-
-
+        private Animator m_animator {get {return GetComponentInChildren<Animator>();}}
 
         private void Awake() {
-
-
-            
-
-
             attributeGroup = new AttributeGroup();
             battleManager = FindObjectOfType<BattleManager>();
-            //selectAble = GetComponent<SelectAble>();
-            //selectAble.SelectEventHandler += OnSelect;
             GetCharInfo();
-            
         }
 
         private void Start() {
@@ -132,8 +64,6 @@ namespace BigRogue {
         AttributeModifer[] baseModifers;
 
         string[] baseModiferCode = new string[] { };
-
-
 
 
         void InitBaseAttribute() {
@@ -223,37 +153,40 @@ namespace BigRogue {
         int turn;
         public bool allowMove;
         public bool allowAct;
-        private TurnStateBase turnState;        // 回合状态
+        private TurnStateBase turnState = null;        // 回合状态
 
         private PrepareState prepareState;
         private MoveState moveState;
         private ActState actState;
 
+
         void InitTurnState() {
+            turnState = new TurnStateBase(this);
             prepareState = new PrepareState(this);
             moveState = new MoveState(this, battleGround);
             actState = new ActState(this);
         }
 
-        public void ChangeTurnState(TurnStateType stateName) {
 
+        /// <summary> 切换回合内状态类型 </summary>
+        public void EnterState(TurnStateType stateName) {
             switch (stateName) {
                 case TurnStateType.Preparing:
-                    ChangeTurnState(prepareState);
+                    ToggleState(prepareState);
                     break;
                 case TurnStateType.Moving:
-                    ChangeTurnState(moveState);
+                    ToggleState(moveState);
                     break;
                 case TurnStateType.Acting:
-                    ChangeTurnState(actState);
+                    ToggleState(actState);
                     break;
                 default:
                     break;
             }
-            
+
         }
 
-        public void ChangeTurnState(TurnStateBase newState) {
+        private void ToggleState(TurnStateBase newState) {
             turnState.Exit();
             turnState = newState;
             turnState.Enter();
@@ -261,12 +194,8 @@ namespace BigRogue {
 
         public bool turnFinished;
 
-        /// <summary>
-        /// 进入回合
-        /// </summary>
-        /// <returns></returns>
+//        /// <summary> 进入回合 </summary>
         public IEnumerator ActiveTurn() {
-
             Debug.Log($"{name}开始行动");
 
             turnFinished = false;
@@ -276,7 +205,7 @@ namespace BigRogue {
             //EnterTurnHandler?.Invoke(this);
             turn++;
 
-            ChangeTurnState(prepareState);
+            EnterState(TurnStateType.Preparing);
 
             while (!turnFinished) {
                 yield return null;
@@ -285,13 +214,13 @@ namespace BigRogue {
             FinishedTurn();
         }
 
-
+        /// <summary> 结束回合 </summary>
         void FinishedTurn() {
             Debug.Log("Im done");
             turnState = null;
             //Deselect();
             energy -= 1000f;
-            battleManager.opMenu.FadeOut();
+            battleManager.battleUI.HideOperateMenu();
         }
 
         public void GetFinishTurnCommand() { }
@@ -301,16 +230,20 @@ namespace BigRogue {
 
 
 
-
         #region "移动相关"
 
         public Action MoveOverHandler;
+        public Block targetBlock;
+
+        public void SetMoveTarget(Block targetBlock) {
+            this.targetBlock = targetBlock;
+        }
 
         /// <summary>
         /// 朝目标移动
         /// </summary>
         /// <param name="targetBlock">行动范围内的一个地块</param>
-        public void StartMove(Block targetBlock) {
+        public void StartMove() {
 
             NodeMesh mesh = battleGround.PathNodeMesh();
 
@@ -370,38 +303,27 @@ namespace BigRogue {
         #endregion
 
         
-        public void MoveCommand() {
-            
+        /// <summary> 响应移动按钮点击 </summary>
+        public void OnMoveButtonClick() {
+            EnterState(TurnStateType.Moving);
+        }
+        /// <summary> 响应操作按钮点击 </summary>
+        public void OnActButtonClick() {
+            EnterState(TurnStateType.Acting);
+        }
+        /// <summary> 响应结束按钮点击 </summary>
+        public void OnFinishButtonClick() {
+            turnFinished = true;
         }
 
 
         public void ShowOperateMenu() {
-            GameUI.OperateMenu opMenu = battleManager.opMenu;
-            opMenu.gameObject.SetActive(true);
-            opMenu.Bind(this);
-
-            if (allowMove) {
-                opMenu.MoveButton.onClick.RemoveAllListeners();
-                opMenu.MoveButton.onClick.AddListener(MoveCommand);
-                opMenu.MoveButton.gameObject.SetActive(true);
-            } else {
-                opMenu.MoveButton.gameObject.SetActive(false);
-            }
-            if (allowAct) {
-                opMenu.ActButton.onClick.RemoveAllListeners();
-                opMenu.ActButton.onClick.AddListener(()=> ChangeTurnState(TurnStateType.Moving));
-                opMenu.ActButton.gameObject.SetActive(true);
-            } else {
-                opMenu.ActButton.gameObject.SetActive(false);
-            }
-            opMenu.FinishButton.onClick.RemoveAllListeners();
-            opMenu.FinishButton.onClick.AddListener(()=> turnFinished = true);
-
-            opMenu.FadeIn();
+            battleManager.battleUI.PopupOperateMenu(this);
         }
 
 
         public void HideOperateMenu() {
+            battleManager.battleUI.HideOperateMenu();
         }
     }
 }

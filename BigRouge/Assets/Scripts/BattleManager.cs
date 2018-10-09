@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using BigRogue.Ground;
 using UnityEngine;
 
 namespace BigRogue.ATB {
@@ -21,52 +22,37 @@ namespace BigRogue.ATB {
 
 
     public enum TurnStateType {
-        /// <summary>
-        /// 待机,等待输入
-        /// </summary>
+        /// <summary> 待机,等待输入 </summary>
         Preparing,  
-        /// <summary>
-        /// 选择并移动到目的地
-        /// </summary>
+        /// <summary> 选择并移动到目的地 </summary>
         Moving,
-        /// <summary>
-        /// 选择并攻击目标
-        /// </summary>
+        /// <summary> 选择并攻击目标 </summary>
         Acting
     }
 
 
-    /// <summary>
-    /// 战斗管理器,从进入场景到结束战斗
-    /// </summary>
+    /// <summary> 战斗管理器,从进入场景到结束战斗 </summary>
     public class BattleManager : MonoBehaviour {
 
 
-        [Header("UI Refs")]
-        public GameUI.OperateMenu opMenu;
-        public GameUI.HeadBar info;
+        //[Header("UI Refs")]
+        //public GameUI.OperateMenu opMenu;
+        //public GameUI.HeadBar info;
 
-        /// <summary>
-        /// 寻路类型,计算距离使用欧几里得还是曼哈顿还是切比雪夫距离
-        /// </summary>
+        public BattleUIRoot battleUI;
+
+
+        /// <summary> 寻路类型,计算距离使用欧几里得还是曼哈顿还是切比雪夫距离 </summary>
         public PathFinding.HeuristicsType pathFindingType;
 
 
-        /// <summary>
-        /// 战斗场景内所有的Actor对象
-        /// </summary>
+        /// <summary> 战斗场景内所有的Actor对象 </summary>
         public List<Actor> chars;
-        /// <summary>
-        /// 满足act条件的actor
-        /// </summary>
+        /// <summary> 满足act条件的actor </summary>
         public List<Actor> charQueue;
-        /// <summary>
-        /// 当前行动的对象
-        /// </summary>
+        /// <summary> 当前行动的对象 </summary>
         public Actor currentChar;
-        /// <summary>
-        /// 当前选中的对象
-        /// </summary>
+        /// <summary> 当前选中的对象 </summary>
         public Entity selectedEntity;
 
 
@@ -101,9 +87,9 @@ namespace BigRogue.ATB {
 
             // 获取对象
             chars = FindObjectsOfType<Actor>().ToList();
-            opMenu = FindObjectOfType<OperateMenu>();
-            info = FindObjectOfType<HeadBar>();
-            battleGround = FindObjectOfType<BattleGround>();
+            battleUI = FindObjectOfType<BattleUIRoot>();
+            battleGround = FindObjectOfType<Ground.BattleGround>();
+            
 
 
             //// 监听事件

@@ -3,72 +3,94 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using BigRogue.BattleSystem;
-using DG.Tweening;
-
+using System;
+using UnityEngine.Events;
 
 namespace BigRogue.GameUI {
 
     /// <summary>
-    /// 游戏中在单位点出来的菜单
-    /// //常见功能有 移动 攻击 待机
+    /// 单位的操作菜单
     /// </summary>
     public class OperateMenu : MonoBehaviour {
 
-        public Text CaptionText;
+        [SerializeField]
+        private Text CaptionText;
 
         [Header("按钮")]
-        public Button MoveButton;
-        public Button ActButton;
-        public Button FinishButton;
-
-        [Header("行动子菜单")]
-        public GameObject ActSubGroup;
-
-        public Button AttackButton;
-        public Button SpellButton;
-        public Button ItemButton;
+        [SerializeField] private  Button btnMove;
+        [SerializeField] private  Button btnAction;
+        [SerializeField] private  Button btnFinish;
+        [Header("子菜单")]
+        [SerializeField] private  GameObject actGroup;
+        [SerializeField] private  Button btnAttack;
+        [SerializeField] private  Button btnSpell;
+        [SerializeField] private  Button btnItem;
 
         [Header("法术子菜单")]
-        public GameObject SpellGroup;
+        [SerializeField] private  GameObject spellGroup;
 
-        private Actor character;
-
-        CanvasGroup cg ;
+        CanvasGroup cg;
         RectTransform rectTrans;
 
         private void Awake() {
             cg = GetComponent<CanvasGroup>();
             rectTrans = GetComponent<RectTransform>();
-            ActSubGroup.SetActive(false);
+            actGroup.SetActive(false);
         }
 
-        //public void SetCharacter(Character character) {
-        //    this.character = character;
-        //    CaptionText.text = character.name;
-        //}
+        void ShowButton(Button btn, UnityAction action) {
+            btn._SetActive(true);
+            btn.onClick.AddListener(action);
+        }
 
+        /*   public  method    */
+
+        /// <summary> 淡入 </summary>
         public void FadeIn() {
-            rectTrans.anchoredPosition3D = new Vector3(400, 50, 0);
-            var x = rectTrans.DOAnchorPos3D(new Vector3(-50, 50, 0), 0.3f);
-            cg.alpha = 0;
-            var y = cg.DOFade(1, 1f);
+            cg.alpha = 1;
         }
 
+        /// <summary> 淡出 </summary>
         public void FadeOut() {
-            var x = rectTrans.DOAnchorPos3D(new  Vector3(400, 50, 0),0.3f);
+            cg.alpha = 0f;
         }
+
+        /// <summary> 设置标题 </summary>
+        public void SetTitle(string title) {
+            CaptionText.text = title.ToUpper();
+        }
+
+        /// <summary> 绑定移动按钮 </summary>
+        public void ShowMoveButton(UnityAction action) {
+            ShowButton(btnMove, action);
+        }
+
+        /// <summary> 绑定行动按钮//TODO 行动需要分类型 </summary>
+        public void ShowActButton(UnityAction action) {
+            ShowButton(btnAction, action);
+        }
+
+        /// <summary> 绑定结束按钮 </summary>
+        /// <param name="action"></param>
+        public void ShowFinishButton(UnityAction action) {
+            ShowButton(btnFinish, action);
+        }
+
 
         /// <summary>
-        /// 绑定事件
+        /// 清除绑定
         /// </summary>
-        public void Bind(Actor character) {
-            this.character = character;
-            CaptionText.text = character.name;
+        public void Reset() {
+            btnMove._SetActive(false);
+            btnMove.onClick.RemoveAllListeners();
+
+            btnAction._SetActive(false);
+            btnAction.onClick.RemoveAllListeners();
+
+            btnFinish._SetActive(false);
+            btnFinish.onClick.RemoveAllListeners();
         }
 
-        public void Clear() {
-
-        }
 
 
     }

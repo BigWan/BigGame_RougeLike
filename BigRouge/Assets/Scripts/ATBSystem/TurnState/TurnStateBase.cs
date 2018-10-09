@@ -14,7 +14,7 @@ namespace BigRogue.ATB {
     /// <summary>
     /// 状态内的回合
     /// </summary>
-    public abstract class TurnStateBase {
+    public class TurnStateBase {
 
         protected Actor actor { get; set; }
 
@@ -22,10 +22,13 @@ namespace BigRogue.ATB {
             this.actor = actor;
         }
 
-        public abstract void Enter();
-        public abstract void Exit();
+        /// <summary> 进入状态 </summary>
+        public virtual void Enter() { }
 
-        public abstract void HandlerCommand(CommandType cmd);
+        /// <summary> 退出状态 </summary>
+        public virtual void Exit() { }
+        /// <summary> 响应操作 </summary>
+        public virtual void HandlerCommand(CommandType cmd) { }
 
 
     }

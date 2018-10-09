@@ -2,8 +2,9 @@
 using System.Collections;
 using DG.Tweening;
 using System;
+using BigRogue.Ground;
 
-namespace BigRogue.BattleSystem {
+namespace BigRogue.Ground {
 
     /// <summary>
     /// 格子高亮类型

@@ -425,10 +425,10 @@ RectTransform:
   m_Father: {fileID: 4942446577485270959}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -165}
-  m_SizeDelta: {x: 400, y: 109.333336}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5447423725295443946
 CanvasRenderer:
@@ -853,14 +853,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CaptionText: {fileID: 3157566332388160253}
-  MoveButton: {fileID: 3301812342117518218}
-  ActButton: {fileID: 6713944262471510668}
-  FinishButton: {fileID: 6272119956210937599}
-  ActSubGroup: {fileID: 8023603731072672416}
-  AttackButton: {fileID: 3738970324126533215}
-  SpellButton: {fileID: 4944886183297508125}
-  ItemButton: {fileID: 4190215495677149143}
-  SpellGroup: {fileID: 0}
+  btnMove: {fileID: 3301812342117518218}
+  btnAction: {fileID: 6713944262471510668}
+  btnFinish: {fileID: 6272119956210937599}
+  actGroup: {fileID: 8023603731072672416}
+  btnAttack: {fileID: 3738970324126533215}
+  btnSpell: {fileID: 4944886183297508125}
+  btnItem: {fileID: 4190215495677149143}
+  spellGroup: {fileID: 0}
 --- !u!225 &5767299498378647416
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1595,17 +1595,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3552717186592268511}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 8023603731072672416}
         m_MethodName: SetActive
         m_Mode: 6
@@ -1902,10 +1891,10 @@ RectTransform:
   m_Father: {fileID: 4942446577485270959}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -54.666668}
-  m_SizeDelta: {x: 400, y: 109.333336}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7475334673357322297
 CanvasRenderer:
@@ -2376,10 +2365,10 @@ RectTransform:
   m_Father: {fileID: 4942446577485270959}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -275.33334}
-  m_SizeDelta: {x: 400, y: 109.333336}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2133447555399438481
 CanvasRenderer:
