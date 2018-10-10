@@ -46,7 +46,6 @@ namespace BigRogue.ATB {
         //}
 
         public override void Enter () {
-
             moveTargetCoord = Vector3Int.zero;
             battleGround.ShowMovingArea(actor);
             

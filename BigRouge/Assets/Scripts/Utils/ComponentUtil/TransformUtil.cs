@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Transform的各种快捷操作
+/// </summary>
 public static class TransformUtil { 
 
 
@@ -23,6 +26,8 @@ public static class TransformUtil {
         trans.position = new Vector3(trans.position.x, trans.position.y, value);
     }
 
+    public static void _SetLocalScaleX(this Transform trans, float value) {
+    }
 
 
 
